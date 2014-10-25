@@ -37,15 +37,16 @@ Francois Lalonde, 2014),
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
 
-Hamiltonian K-area via quantization, (with Egor Shelukhin), in
+Family Quantization and K-theory of $BQuant$, (with Egor Shelukhin), in
 preparation
 
-Missing a few finishing touches: 
+*Missing a few finishing touches, but the second one will soon be
+updated:*
 
-[Spectral geometry of the group of Hamiltonian
+> [Spectral geometry of the group of Hamiltonian
 symplectomorphisms][12]
 
-[On the topology of the space of stable curves][13]
+> [On the topology of the space of stable curves][13]
 
 Fun/Miscellaneous
 
