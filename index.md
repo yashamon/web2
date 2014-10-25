@@ -5,7 +5,7 @@
 [Quantum characteristic classes and the Hofer metric][1]
 *(Geometry & Topology 12 (2008))*
 
-*(This is a slightly condensed version of my
+> > >*(This is a slightly condensed version of my
 thesis work.)*
 
 [Virtual Morse theory for the Hofer length functional][2] *(J.
