@@ -2,20 +2,20 @@
 
 # Articles 
 
-*[Quantum characteristic classes and the Hofer metric][1]
-(Geometry & Topology 12 (2008))*
+[Quantum characteristic classes and the Hofer metric][1]
+*(Geometry & Topology 12 (2008))*
 
-*                   (This is a slightly condensed version of my
-thesis work.) *
+*(This is a slightly condensed version of my
+thesis work.)*
 
-*[Virtual Morse theory for the Hofer length functional][2] (J.
+[Virtual Morse theory for the Hofer length functional][2] *(J.
 Differ. Geom. 84, No. 2, 409-425 (2010).)*
 
-[Bott periodicity and stable quantum classes][3], (Selecta Math.
-N.S., 2012, *Volume 19, Issue 2 (2013), Page 439-460*)
+[Bott periodicity and stable quantum classes][3], *(Selecta Math.
+N.S., 2012, Volume 19, Issue 2 (2013), Page 439-460)*
 
-[Gromov K-area and jumping curves in $CP^n$][4]  (Alg. and Geom.
-Topology, 12, 2012, 2317-2327)
+[Gromov K-area and jumping curves in $CP^n$][4]  *(Alg. and Geom.
+Topology, 12, 2012, 2317-2327)*
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
@@ -23,11 +23,11 @@ Topology, 12, 2012, 2317-2327)
 [Global Fukaya category and the space of $A_\infty$ categories
 II][6] (2014, arxiv)
 
-[Proof of the index conjecture in Hofer geometry][7] (Math. Res.
-Lett., 2013)
+[Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
+Lett., 2013)*
 
-[Morse theory for the Hofer length functional][8], (Journ. of
-Topology and Analysis, 2014)
+[Morse theory for the Hofer length functional][8], *(Journ. of
+Topology and Analysis, 2014)*
 
 [Yang-Mills theory and jumping curves][9] (2013, Arxiv)
 
@@ -37,13 +37,13 @@ Francois Lalonde, 2014),
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
 
-[Hamiltonian K-area via quantization, (with Egor Shelukhin), in
-preparation ]
+Hamiltonian K-area via quantization, (with Egor Shelukhin), in
+preparation
 
 Missing a few finishing touches: 
 
-*[Spectral geometry of the group of Hamiltonian
-symplectomorphisms][12]*
+[Spectral geometry of the group of Hamiltonian
+symplectomorphisms][12]
 
 [On the topology of the space of stable curves][13]
 
