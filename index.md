@@ -36,7 +36,7 @@ Topology and Analysis, 2014)*
 [Yang-Mills theory and jumping curves][9] (2013, Arxiv)
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
-Francois Lalonde, 2014), 
+Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted 
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
