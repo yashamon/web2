@@ -33,10 +33,11 @@ Lett., 2013)*
 [Morse theory for the Hofer length functional][8], *(Journ. of
 Topology and Analysis, 2014)*
 
-[Yang-Mills theory and jumping curves][9] (2013, Arxiv)
-
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted 
+
+[Yang-Mills theory and jumping curves][9] (2013, Arxiv)
+
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
@@ -48,9 +49,9 @@ preparation
 updated:*
 
 > [Spectral geometry of the group of Hamiltonian
-symplectomorphisms][12]
+symplectomorphisms][12], arxiv preprint
 
-> [On the topology of the space of stable curves][13]
+> [On the topology of the space of stable curves][13], arxiv preprint
 
 Fun/Miscellaneous
 
