@@ -28,10 +28,10 @@ Topology, 12, 2012, 2317-2327)*
 II][6] (2014, arxiv)
 
 [Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
-Lett., 2013)*
+Lett, Vol 20, 981-984, 2013)*
 
 [Morse theory for the Hofer length functional][8], *(Journ. of
-Topology and Analysis, 2014)*
+Topology and Analysis,  2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted 
@@ -41,8 +41,11 @@ Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
+> > *(This is also incorporated into the following article.)*
 
-Family Quantization and K-theory of $BQuant$, (with Egor Shelukhin), in
+[On the Hofer geometry injectivity radius conjecture][16] (2015, arxiv)
+
+Topological applications of K-theory quantization, (with Egor Shelukhin), in
 preparation
 
 *Missing a few finishing touches, but the second one will soon be
@@ -76,4 +79,4 @@ https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
 [14]:
 https://docs.google.com/fileview?id=0B1BCuxjt683fMTg4ZWIyMWEtN2IxZC00NDE1LThlODItNGJlMGEyNzI3ZTYx&hl=en&authkey=CMiCxt4I
-  
+[16]: https://www.dropbox.com/s/s3afox5fg29n0yx/injectivityfixed.pdf?dl=0 
