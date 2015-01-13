@@ -41,6 +41,7 @@ Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
+
 > > *(This is also incorporated into the following article.)*
 
 [On the Hofer geometry injectivity radius conjecture][16] (2015, arxiv)
