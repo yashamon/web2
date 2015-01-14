@@ -34,10 +34,8 @@ Lett, Vol 20, 981-984, 2013)*
 Topology and Analysis,  2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
-Francois Lalonde, 2014), *(Electronic Research Announcements)*, accepted 
-
+Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,  
 [Yang-Mills theory and jumping curves][9] (2013, Arxiv)
-
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
@@ -72,12 +70,12 @@ https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [7]: http://arxiv.org/abs/1204.3098
 [8]: http://arxiv.org/abs/1308.3456
 [9]: http://arxiv.org/abs/1312.0928
-[10]: http://arxiv.org/pdf/1404.4271.pdf
+[10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
 [11]: http://arxiv.org/pdf/1409.3975.pdf
 [12]:
 https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 [13]:
-https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
+https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
 [14]:
 https://docs.google.com/fileview?id=0B1BCuxjt683fMTg4ZWIyMWEtN2IxZC00NDE1LThlODItNGJlMGEyNzI3ZTYx&hl=en&authkey=CMiCxt4I
 [16]: https://www.dropbox.com/s/s3afox5fg29n0yx/injectivityfixed.pdf?dl=0 
