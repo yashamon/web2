@@ -21,11 +21,6 @@ N.S., 2012, Volume 19, Issue 2 (2013), Page 439-460)*
 [Gromov K-area and jumping curves in $CP^n$][4]  *(Alg. and Geom.
 Topology, 12, 2012, 2317-2327)*
 
-[Global Fukaya category and the space of $A_\infty$ categories I][5]
-(2013-2014 arxiv)
-
-[Global Fukaya category and the space of $A_\infty$ categories
-II][6] (2014, arxiv)
 
 [Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
 Lett, Vol 20, 981-984, 2013)*
@@ -35,6 +30,12 @@ Topology and Analysis,  2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,  
+
+[Global Fukaya category and the space of $A_\infty$ categories I][5]
+(2013-2014 arxiv)
+
+[Global Fukaya category and the space of $A_\infty$ categories
+II][6] (2014, arxiv)
 
 [Yang-Mills theory and jumping curves][9] (2013, Arxiv)
 
