@@ -37,7 +37,8 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,
 [Global Fukaya category and the space of $A_\infty$ categories
 II][6] (2014, arxiv)
 
-[Yang-Mills theory and jumping curves][9] (2013, Arxiv)
+[Yang-Mills theory and jumping curves][9] (International Journal of Math.,
+2015, accepted)
 
 [Volume preserving diffeomorphisms of $S^2$ and the injectivity
 radius conj][11], 2014. 
