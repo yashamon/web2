@@ -32,7 +32,7 @@ Topology and Analysis,  2014)*
 Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,  
 
 [Yang-Mills theory and jumping curves][9] (International Journal of Math.,
-2015, accepted)
+2015, accepted, available on publisher [website] [15]) 
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
@@ -82,3 +82,4 @@ https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
 [14]:
 https://docs.google.com/fileview?id=0B1BCuxjt683fMTg4ZWIyMWEtN2IxZC00NDE1LThlODItNGJlMGEyNzI3ZTYx&hl=en&authkey=CMiCxt4I
 [16]: https://www.dropbox.com/s/s3afox5fg29n0yx/injectivityfixed.pdf?dl=0 
+[15]: http:\\www.worldscientific.com\doi\pdf\10.1142\S0129167X15500299?src=recsys 
