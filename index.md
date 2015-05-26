@@ -31,8 +31,7 @@ Topology and Analysis,  2014)*
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,  
 
-[Yang-Mills theory and jumping curves][9] (International Journal of Math.,
-2015, accepted, available on publisher [website] [15]) 
+[Yang-Mills theory and jumping curves][9] (Int. J. Math., 26, (2015)) 
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
