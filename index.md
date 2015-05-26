@@ -49,6 +49,11 @@ II][6] (2014, arxiv)
 Topological applications of K-theory quantization, (with Egor Shelukhin), in
 preparation
 
+Towards symplectic geometry of an $\cA$ category, in preparation
+   
+> > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small $\cA$ category $C$, and when $C$ comes with 
+a filtration define a natural "Hofer metric" on these spaces.
+  
 *Missing a few finishing touches, but the second one will soon be
 updated:*
 
