@@ -51,7 +51,7 @@ preparation
 Towards symplectic geometry of an $A_{\infty}$ category, in preparation
    
 > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small $A_{\infty}$ category $C$, and when $C$ comes with 
-a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate goal of this is to attempt to prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold.
+a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate goal of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation.
   
 *Missing a few finishing touches, but the second one will soon be
 updated:*
