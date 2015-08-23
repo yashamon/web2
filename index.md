@@ -47,7 +47,8 @@ II][6] (2014, arxiv)
 
 Twisted and untwisted K-theory quantization and symplectic topology, (with Egor Shelukhin), in
 preparation
-> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (\mathbb {CP} ^r )$.
+
+> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
 Towards symplectic geometry of an $A_{\infty}$ category, in construction
    
