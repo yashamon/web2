@@ -45,7 +45,7 @@ II][6] (2014, arxiv)
 
 [On the Hofer geometry injectivity radius conjecture][16] (2015, arxiv)
 
-[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin)
+[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
