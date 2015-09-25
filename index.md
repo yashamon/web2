@@ -5,34 +5,35 @@ A{color:blue}
 -->
 </STYLE>
 
+
 # Articles 
 
 [Quantum characteristic classes and the Hofer metric][1]
-*(Geometry & Topology 12 (2008), 2277–2326)*
+*(Geometry & Topology 12, 2277–2326, (2008))*
 
 > > >*(This is a slightly condensed version of my
 thesis work.)*
 
 [Virtual Morse theory for the Hofer length functional][2] *(J.
-Differ. Geom. 84, No. 2, 409-425 (2010).)*
+Differ. Geom. 84, No. 2, 409-425, (2010))*
 
 [Bott periodicity and stable quantum classes][3], *(Selecta Math.
-N.S., 2012, Volume 19, Issue 2 (2013), Page 439-460)*
+N.S., 2012, Volume 19, Issue 2, 439-460, (2013))*
 
 [Gromov K-area and jumping curves in $CP^n$][4]  *(Alg. and Geom.
-Topology, 12, 2012, 2317-2327)*
+Topology, 12, 2317-2327, (2012))*
 
 
 [Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
-Lett, Vol 20, 981-984, 2013)*
+Lett, Vol 20, 981-984, (2013))*
 
 [Morse theory for the Hofer length functional][8], *(Journ. of
-Topology and Analysis,  2014)*
+Topology and Analysis,  2014, 15 pages)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
-Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, 2014)*,  
+Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))*,  
 
-[Yang-Mills theory and jumping curves][9] (Int. J. Math., 26, (2015)) 
+[Yang-Mills theory and jumping curves][9] (International. J. Math., 26, 13 pages, (2015)) 
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
