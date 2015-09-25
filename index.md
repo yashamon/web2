@@ -1,13 +1,14 @@
 <STYLE>
 <!--
 A{text-decoration:none}
+A{color:blue}
 -->
 </STYLE>
 
 # Articles 
 
 [Quantum characteristic classes and the Hofer metric][1]
-*(Geometry & Topology 12 (2008))*
+*(Geometry & Topology 12 (2008), 2277–2326)*
 
 > > >*(This is a slightly condensed version of my
 thesis work.)*
