@@ -7,7 +7,6 @@ A{color:blue}
 
 
 # Articles 
-
 [Quantum characteristic classes and the Hofer metric][1]
 *(Geometry & Topology 12, 2277–2326, (2008))*
 
@@ -85,8 +84,8 @@ https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 [13]:
 https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
-[14]:
-https://docs.google.com/fileview?id=0B1BCuxjt683fMTg4ZWIyMWEtN2IxZC00NDE1LThlODItNGJlMGEyNzI3ZTYx&hl=en&authkey=CMiCxt4I
+[14]: https://www.dropbox.com/s/e9jfzo3cztb8hrk/Sgo.pdf?dl=0
+
 [16]: https://www.dropbox.com/s/s3afox5fg29n0yx/injectivityfixed.pdf?dl=0 
 [15]: http:\\www.worldscientific.com\doi\pdf\10.1142\S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
