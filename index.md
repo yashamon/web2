@@ -84,8 +84,7 @@ https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 [13]:
 https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
-[14]: https://www.dropbox.com/s/e9jfzo3cztb8hrk/Sgo.pdf?dl=0
-
-[16]: https://www.dropbox.com/s/s3afox5fg29n0yx/injectivityfixed.pdf?dl=0 
-[15]: http:\\www.worldscientific.com\doi\pdf\10.1142\S0129167X15500299?src=recsys 
+[14]: https://www.dropbox.com/s/dapssg0zsake8z3/Sgo.pdf?dl=0
+[16]: https://www.dropbox.com/s/yudw58zdk3mp1m3/injectivitynoLinfty.pdf?dl=0 
+[15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
