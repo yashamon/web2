@@ -40,11 +40,12 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 [Global Fukaya category and the space of $A_\infty$ categories
 II][6] (2014, arxiv)
 
+[On the Hofer geometry injectivity radius conjecture][16] (2015, to appear in IMRN)
+
 [Floer theory and topology of $Diff (S ^2)$][11], 2014. 
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[On the Hofer geometry injectivity radius conjecture][16] (2015, arxiv)
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
