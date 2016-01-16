@@ -34,7 +34,7 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 
 [Yang-Mills theory and jumping curves][9] (International. J. Math., 26, 13 pages, (2015)) 
 
-[On the Hofer geometry injectivity radius conjecture][16] (2015, to appear in IMRN)
+[On the Hofer geometry injectivity radius conjecture][16] (2015, to appear in International Math. Res. Notices)
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
