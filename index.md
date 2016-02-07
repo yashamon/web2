@@ -27,12 +27,12 @@ Topology, 12, 2317-2327, (2012))*
 Lett, Vol 20, 981-984, (2013))*
 
 [Morse theory for the Hofer length functional][8], *(Journ. of
-Topology and Analysis,  2014, 15 pages)*
+Topology and Analysis,  2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))*,  
 
-[Yang-Mills theory and jumping curves][9] (International. J. Math., 26, 13 pages, (2015)) 
+[Yang-Mills theory and jumping curves][9] (International. J. Math., 26,  (2015)) 
 
 [On the Hofer geometry injectivity radius conjecture][16] (2016, accepted, International Math. Res. Notices)
 
