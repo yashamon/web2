@@ -36,6 +36,8 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 
 [On the Hofer geometry injectivity radius conjecture][16] (2016, accepted, International Math. Res. Notices)
 
+[Floer theory and topology of $Diff (S ^2)$][11], 2014. (To appear in Journ. of Symp. Geom. (probably, still pending revision))
+
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
 
@@ -43,7 +45,6 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 II][6] (2014, arxiv)
 
 
-[Floer theory and topology of $Diff (S ^2)$][11], 2014. 
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
@@ -56,7 +57,9 @@ Towards symplectic geometry of an $A_{\infty}$ category, in construction
    
 > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small $A_{\infty}$ category $C$, and when $C$ comes with 
 a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation.
-  
+
+Gromov Witten theory of locally conformal symplectic manifolds, and the Weinstein conjecture, in construction and top secret :)
+
 *Missing a few finishing touches, but the second one will soon be
 updated:*
 
