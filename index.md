@@ -78,9 +78,9 @@ classical game Go, I have recently added details as I am interested in actually 
 https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [3]: http://arxiv.org/pdf/0912.2948.pdf
 [4]: http://arxiv.org/pdf/1006.4383.pdf
-[5]: http://arxiv.org/pdf/1204.3098v3 
+[5]: http://arxiv.org/abs/1307.3991
 [6]: http://arxiv.org/pdf/1408.3250.pdf
-[7]: http://arxiv.org/abs/1204.3098
+[7]:http://arxiv.org/pdf/1204.3098v3 
 [8]: http://arxiv.org/abs/1308.3456
 [9]: http://arxiv.org/abs/1312.0928
 [10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
