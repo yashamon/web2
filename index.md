@@ -22,7 +22,6 @@ N.S., 2012, Volume 19, Issue 2, 439-460, (2013))*
 [Gromov K-area and jumping curves in $CP^n$][4]  *(Alg. and Geom.
 Topology, 12, 2317-2327, (2012))*
 
-
 [Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
 Lett, Vol 20, 981-984, (2013))*
 
@@ -80,7 +79,7 @@ https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [4]: http://arxiv.org/pdf/1006.4383.pdf
 [5]: http://arxiv.org/abs/1307.3991
 [6]: http://arxiv.org/pdf/1408.3250.pdf
-[7]:http://arxiv.org/pdf/1204.3098v3 
+[7]: http://arxiv.org/pdf/1204.3098v3 
 [8]: http://arxiv.org/abs/1308.3456
 [9]: http://arxiv.org/abs/1312.0928
 [10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
