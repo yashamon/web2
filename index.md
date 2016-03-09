@@ -77,8 +77,8 @@ classical game Go, I have recently added details as I am interested in actually 
 [2]:
 https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [3]: http://arxiv.org/pdf/0912.2948.pdf
-[4]: http://front.math.ucdavis.edu/1006.4383
-[5]: http://arxiv.org/abs/1307.3991
+[4]: http://arxiv.org/pdf/1006.4383.pdf
+[5]: http://arxiv.org/pdf/1204.3098v3 
 [6]: http://arxiv.org/pdf/1408.3250.pdf
 [7]: http://arxiv.org/abs/1204.3098
 [8]: http://arxiv.org/abs/1308.3456
