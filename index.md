@@ -13,7 +13,7 @@ A{color:blue}
 > > >*(This is a slightly condensed version of my
 thesis work.)*
 
-[Virtual Morse theory for the Hofer length functional][2] *(J.
+[Virtual Morse theory on $\Omega \text {Ham} (M, \omega)$][2] *(J.
 Differ. Geom. 84, No. 2, 409-425, (2010))*
 
 [Bott periodicity and stable quantum classes][3], *(Selecta Math.
