@@ -37,16 +37,15 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 
 [Floer theory and topology of $Diff (S ^2)$][11], 2014. (To appear in Journ. of Symp. Geom. (probably, still pending revision))
 
+> > *(Note the title change, previously: "Volume preserving ...")*
+
+Submitted papers
+
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
 
 [Global Fukaya category and the space of $A_\infty$ categories
-II][6] (2014, arxiv)
-
-
-
-> > *(Note the title change, previously: "Volume preserving ...")*
-
+II][6] (2014, arxiv )
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
