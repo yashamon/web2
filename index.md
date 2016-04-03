@@ -33,7 +33,8 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 
 [Yang-Mills theory and jumping curves][9] (Inter. J. Math., 26,  (2015)) 
 
-[On the Hofer geometry injectivity radius conjecture][16] (2016, accepted, International Math. Res. Notices)
+[On the Hofer geometry injectivity radius conjecture][16] (International Mathematics Research Notices 2016;
+doi: 10.1093/imrn/rnw023)
 
 Submitted papers
 
