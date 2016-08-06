@@ -36,11 +36,12 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 [On the Hofer geometry injectivity radius conjecture][16] (International Mathematics Research Notices 2016;
 doi: 10.1093/imrn/rnw023)
 
-Submitted papers
-
-[Floer theory and topology of $Diff (S ^2)$][11], 2014, arxiv
+[Floer theory and topology of $Diff (S ^2)$][11], 2014, to appear in JSG pending minor revision
 
 > > *(Note the title change, previously: "Volume preserving ...")*
+
+Submitted papers
+
 
 [Global Fukaya category and the space of $A_\infty$ categories I][5]
 (2013-2014 arxiv)
