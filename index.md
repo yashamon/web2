@@ -1,7 +1,5 @@
 <STYLE>
 <!--
-    font-family: verdana;
-    font-size: 300%;
 A{text-decoration:none}
 A{color:blue}
 -->
