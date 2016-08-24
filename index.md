@@ -55,9 +55,15 @@ II][6] (2014, arxiv )
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
-In Construction
+In preparation:
 
-Towards symplectic geometry of an $A_{\infty}$ category, in construction
+Gromov-Witten theory of a locally conformally symplectic manifold and the Fuller index
+
+>> As interesting as it sounds
+
+In Construction:
+
+Towards symplectic geometry of an $A_{\infty}$ category
    
 > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with 
 a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation.
