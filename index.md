@@ -36,7 +36,7 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 [On the Hofer geometry injectivity radius conjecture][16] (International Mathematics Research Notices 2016;
 doi: 10.1093/imrn/rnw023)
 
-[Floer theory and topology of $Diff (S ^2)$][11], 2014, to appear in JSG pending minor revision
+[Floer theory and topology of $Diff (S ^2)$][11], 2016, Journal of Symplectic Geometry, accepted for publication
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
@@ -59,7 +59,7 @@ In preparation:
 
 Gromov-Witten theory of a locally conformally symplectic manifold and the Fuller index
 
->> As interesting as it sounds
+>> As interesting as it sounds.
 
 In Construction:
 
