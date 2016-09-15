@@ -71,7 +71,7 @@ a filtration define a natural "Hofer metric" on these spaces. Possibly the main 
 <!-- Gromov Witten theory of locally conformal symplectic manifolds, and the Weinstein conjecture, in construction and top secret :) -->
 
 *Missing a few finishing touches, but the second one should eventually be
-updated (the problem is that I get too many fascinating new projects to think about):*
+updated (the problem is that I get too many new projects to think about):*
 
 > [Spectral geometry of the group of Hamiltonian
 symplectomorphisms][12], arxiv preprint
