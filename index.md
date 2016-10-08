@@ -55,11 +55,14 @@ II][6] (2014, arxiv )
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
-In preparation:
+Preprints 
 
-Gromov-Witten theory of a locally conformally symplectic manifold and the Fuller index
+[Gromov-Witten theory of a locally conformally symplectic manifold and the Fuller index] [18], arXiv 2016
 
->> As interesting as it sounds.
+<!-- In preparation: -->
+<!--  -->
+<!--  -->
+<!-- >> As interesting as it sounds. -->
 
 In Construction:
 
@@ -67,8 +70,6 @@ Towards symplectic geometry of an $A_{\infty}$ category
    
 > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with 
 a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation.
-
-<!-- Gromov Witten theory of locally conformal symplectic manifolds, and the Weinstein conjecture, in construction and top secret :) -->
 
 *Missing a few finishing touches, but the second one should eventually be
 updated (the problem is that I get too many new projects to think about):*
@@ -103,3 +104,4 @@ https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
 [15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
+[18]: https://arxiv.org/pdf/1609.08991.pdf
