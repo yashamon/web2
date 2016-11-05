@@ -37,7 +37,7 @@ From 1.6: 1, 2, 3, 8a, 9, 10, 12, 15, 16<br />
 <p>9.3: 1,2<br />
 10.1: 1:a,b,c, 2<br />
 </p>
-<h1 id="surface-integrals-divergence-and-stokes-theorem" class="unnumbered">Surface Integrals Divergence and Stokes theorem</h1>
+<h1 id="surface-integrals-divergence-and-stokes-theorem">Surface Integrals Divergence and Stokes theorem</h1>
 <h2 id="homework-set-8" class="unnumbered">Homework set 8</h2>
 <p>11.3: 1,2<br />
 12.1: 2<br />
@@ -47,10 +47,4 @@ From 1.6: 1, 2, 3, 8a, 9, 10, 12, 15, 16<br />
 <p>12.3: 1:a,b, 12<br />
 12.5: 2,3,6<br />
 12.6: 7, 9<br />
-</p>
-<h1 id="change-of-variables" class="unnumbered">Change of variables</h1>
-<h2 id="homework-set-10" class="unnumbered">Homework set 10</h2>
-<p>1) Find the derivative a.k.a Jacobian <span class="math inline"><em>L</em>′=<em>D</em><em>L</em></span> of a linear map <span class="math inline"><em>L</em> : ℝ<sup><em>n</em></sup> → <em>R</em><sup><em>m</em></sup></span>.<br />
-17.3: 1, 6, 8, 9<br />
-17.5: 1, 2, 3 (just use change of variables method), 4<br />
 </p>
