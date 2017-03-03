@@ -48,7 +48,7 @@ Submitted papers
 [Global Fukaya category and the space of $A_\infty$ categories
 II][6] (2014, arxiv )
 
-> > I have now received a positive referee report, but it will take me some time to get to work on it
+> > This is being revised in accordance to a referee report.
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
