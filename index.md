@@ -54,7 +54,7 @@ II][6] (2014, arxiv )
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture] [19]
+[Extended Fuller index, sky catastrophes and the Seifert conjecture] [19] (arxiv, 2017)
 
 Preprints 
 
