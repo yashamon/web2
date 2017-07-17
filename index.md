@@ -42,13 +42,12 @@ doi: 10.1093/imrn/rnw023)
 
 Submitted papers
 
-[Global Fukaya category and the space of $A_\infty$ categories I][5]
-(2013-2014 arxiv)
+[Global Fukaya category and quantum Novikov conjecture I][5]
 
-[Global Fukaya category and the space of $A_\infty$ categories
-II][6] (2014, arxiv )
+[Global Fukaya category and quantum Novikov conjecture
+II][6] 
 
-> > This is being revised in accordance to a referee report.
+> > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
@@ -94,8 +93,8 @@ classical game Go, I have recently added details as I am interested in actually 
 https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [3]: http://arxiv.org/pdf/0912.2948.pdf
 [4]: http://arxiv.org/pdf/1006.4383.pdf
-[5]: http://arxiv.org/abs/1307.3991
-[6]: http://arxiv.org/pdf/1408.3250.pdf
+[5]:http://yashamon.github.io/web2/papers/GlobalFukayaPartI.pdf 
+[6]: http://yashamon.github.io/web2/papers/GlobalFukayaPartII.pdf 
 [7]: http://arxiv.org/pdf/1204.3098v3 
 [8]: http://arxiv.org/pdf/1308.3456v3 
 [9]: http://arxiv.org/pdf/1312.0928v3 
