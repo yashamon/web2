@@ -6,4 +6,4 @@ Hw Set 3 for (thurs)
 Hw set 4 
 
 2.1: 3, 5
-
+2
