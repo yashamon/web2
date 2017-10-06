@@ -36,7 +36,7 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 [On the Hofer geometry injectivity radius conjecture][16] (International Mathematics Research Notices 2016;
 doi: 10.1093/imrn/rnw023)
 
-[Floer theory and topology of $Diff (S ^2)$][11], 2016, Journal of Symplectic Geometry, accepted for publication
+[Floer theory and topology of $Diff (S ^2)$][11], (Journal of Symplectic Geometry, Vol. 15, No. 3 (2017))
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
