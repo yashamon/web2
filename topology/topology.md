@@ -18,3 +18,5 @@ set 6
 
 3.1: 4, 5, 6, 7, 8
 3.2: 2, 3, 6, 11, 12
+
+For thurs: Read 3.3 def 3.3.1 up to and including Thm 3.3.18
