@@ -28,6 +28,6 @@ set 8
 3.4: 2, 3, 4, 12
 5.1: 4, 5, 6
 
-set 9
-
+set 9 (You may also take a look at Munkres, Topology, as well Concise course in algebraic topology by Peter May) 
 5.2: 1, 2, 3, 4
+
