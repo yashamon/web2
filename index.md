@@ -37,7 +37,7 @@ Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))
 doi: 10.1093/imrn/rnw023)
 
 [Floer theory and topology of $Diff (S ^2)$][11], (Journal of Symplectic Geometry, Vol. 15, No. 3 (2017))
-
+DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > *(Note the title change, previously: "Volume preserving ...")*
 
 Submitted papers
