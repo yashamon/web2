@@ -53,11 +53,12 @@ II][6]
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19] (arxiv, 2017)
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], arxiv, 2017
 
-Preprints 
+[Gromov-Witten theory of a locally conformally symplectic manifold][18], arXiv 2016
 
-[Gromov-Witten theory of a locally conformally symplectic manifold and the Fuller index][18], arXiv 2016
+<!-- Preprints  -->
+
 
 <!-- In preparation: -->
 <!--  -->
