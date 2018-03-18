@@ -28,4 +28,9 @@ HW set 4 thurs
 4.3 1
 4.4 1a,b
 
+HW set 5 thurs
 
+4.4 1 g,h
+4.5 1, 3
+5.2 1, 2
+5.3 1 a,b, 2 a,b
