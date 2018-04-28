@@ -21,3 +21,9 @@ set 4
 read 2.2 up to cellular homology
 
 2.2 1, 2, 3, 4, 5, 6
+
+set 5
+
+finish reading 2.2
+
+9, 10, 27, 28, 29, 31
