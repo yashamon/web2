@@ -27,3 +27,13 @@ set 5
 finish reading 2.2
 
 9, 10, 27, 28, 29, 31
+
+set 6 
+
+read additional topics A,B,C:
+
+1,2,3,7 from (A,B)
+
+1,2 from C
+
+
