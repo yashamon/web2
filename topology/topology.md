@@ -1,5 +1,11 @@
 Topology
 
+Hw set 1 for tue
+
+1.1: 1, 2, 3, 4 
+1.2: 1, 2, 3, 4
+
+
 Hw Set 3
 
 2.2: 1,2,4,5
