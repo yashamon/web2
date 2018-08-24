@@ -4,10 +4,13 @@ HW Set 1 for tue
 1) Prove that an infinite subset of a countably infinite set is countably infinite.
 1.1:  2, 3, 4, 5, 6a, 10
 
-Hw Set 3 for (thurs)
+HW Set 2 for tue
 
+1) Prove that a bounded sequence has a convergent subsequence.
+
+1.2 14, 17, 20
 1.3: 26, 31
-1.4: 34, 41, 42, 43, 45
+1.4: 34, 41, 42, 43
 
 Hw set 4 (thurs)
 
