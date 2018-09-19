@@ -40,6 +40,8 @@ doi: 10.1093/imrn/rnw023)
 DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > *(Note the title change, previously: "Volume preserving ...")*
 
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., to appear
+
 Submitted papers
 
 [Global Fukaya category and quantum Novikov conjecture I][5]
@@ -53,7 +55,6 @@ II][6]
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], arxiv, 2017
 
 [Gromov-Witten theory of a locally conformally symplectic manifold][18], arXiv 2016
 
