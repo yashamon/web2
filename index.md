@@ -88,7 +88,7 @@ symplectomorphisms][12], arxiv preprint
 
 Fun/Miscellaneous
 
-[Time symmetric Go][14] (on a time symmetric version of the
+[Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [1]: http://arxiv.org/pdf/0709.4510.pdf
