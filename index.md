@@ -40,7 +40,9 @@ doi: 10.1093/imrn/rnw023)
 DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., to appear
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., accepted
+
+[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), Journal of Symplectic Geometry, 2018, to appear
 
 Submitted papers
 
@@ -51,7 +53,6 @@ II][6]
 
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
-[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), arxiv 2015
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
