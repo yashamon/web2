@@ -42,7 +42,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., accepted
 
->> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields
+>> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), Journal of Symplectic Geometry, 2018, to appear
 
