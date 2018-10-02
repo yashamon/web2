@@ -42,7 +42,12 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., accepted
 
+>> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields
+
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), Journal of Symplectic Geometry, 2018, to appear
+
+> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
+
 
 Submitted papers
 
@@ -54,7 +59,6 @@ II][6]
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
-> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP ^n)$.
 
 
 [Gromov-Witten theory of a locally conformally symplectic manifold][18], arXiv 2016
