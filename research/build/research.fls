@@ -1,4 +1,4 @@
-PWD /home/yasha/workspace/research2018
+PWD /home/yasha/web/research
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf

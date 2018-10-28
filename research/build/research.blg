@@ -5,11 +5,10 @@ The style file: siam.bst
 Database file #1: /home/yasha/texmf/bibtex/bib/link.bib
 Warning--I'm ignoring citeSavelyevConformalSymplectic's extra "journal" field
 --line 613 of file /home/yasha/texmf/bibtex/bib/link.bib
-Warning--I didn't find a database entry for "cite"
 Warning--empty year in citeEliashbergMurphyMakingcobordisms
 You've used 21 entries,
             2030 wiz_defined-function locations,
-            653 strings with 7472 characters,
+            652 strings with 7468 characters,
 and the built_in function-call counts, 6931 in all, are:
 = -- 730
 > -- 175
@@ -48,4 +47,4 @@ warning$ -- 1
 while$ -- 83
 width$ -- 23
 write$ -- 185
-(There were 3 warnings)
+(There were 2 warnings)
