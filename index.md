@@ -69,20 +69,7 @@ classical game Go, I have recently added details as I am interested in actually 
 [Noncomputability of human intelligence] [20], arxiv, 2018 
 
 <!-- Preprints  -->
-
-
-<!-- <!-- In preparation: --> -->
-<!-- <!--  --> -->
-<!-- <!--  --> -->
-<!-- <!-- >> As interesting as it sounds. --> -->
-<!--  -->
-<!-- <!-- In Construction: --> -->
-<!-- <!-- <!--  --> --> -->
-<!-- <!-- <!-- Towards symplectic geometry of an $A_{\infty}$ category --> --> -->
-<!-- <!-- <!--     --> --> -->
-<!-- <!-- <!-- > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with  --> --> -->
-<!-- <!-- <!-- a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation. --> --> -->
-<!-- <!--  --> -->
+<!-- In construction -->
 <!-- <!-- Geometric cycles in secondary K-theory --> -->
 <!-- <!--  --> -->
 <!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
