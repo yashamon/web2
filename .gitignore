@@ -1,0 +1,8 @@
+build/
+tags/
+!*.pdf
+*.log
+*.bbl
+*.aux
+/undo
+/tags

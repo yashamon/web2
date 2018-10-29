@@ -59,9 +59,14 @@ II][6]
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
-
-
 [Gromov-Witten theory of a locally conformally symplectic manifold][18], arXiv 2016
+
+Computer science and game theory
+
+[Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
+classical game Go, I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
+
+[Noncomputability of human intelligence], arxiv, 2018 
 
 <!-- Preprints  -->
 
@@ -71,15 +76,15 @@ II][6]
 <!--  -->
 <!-- >> As interesting as it sounds. -->
 
-In Construction:
+<!-- In Construction: -->
+<!-- <!--  --> -->
+<!-- <!-- Towards symplectic geometry of an $A_{\infty}$ category --> -->
+<!-- <!--     --> -->
+<!-- <!-- > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with  --> -->
+<!-- <!-- a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation. --> -->
 <!--  -->
-<!-- Towards symplectic geometry of an $A_{\infty}$ category -->
-<!--     -->
-<!-- > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with  -->
-<!-- a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation. -->
-
-Geometric cycles in secondary K-theory
-
+<!-- Geometric cycles in secondary K-theory -->
+<!--  -->
 > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory.
 
 
@@ -91,10 +96,7 @@ symplectomorphisms][12], arxiv preprint
 
 > [On the topology of the space of stable curves][13], arxiv preprint
 
-Fun/Miscellaneous
 
-[Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
-classical game Go, I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [1]: http://arxiv.org/pdf/0709.4510.pdf
 [2]:
