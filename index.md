@@ -4,47 +4,50 @@ A{text-decoration:none}
 A{color:blue}
 -->
 </STYLE>
-
+body {
+    font: normal 12px Verdana, Arial, sans-serif;
+}
 
 # Articles 
-[Quantum characteristic classes and the Hofer metric][1]
-*(Geometry & Topology 12, 2277–2326, (2008))*
+[Quantum characteristic classes and the Hofer metric][1],
+*Geometry & Topology 12, 2277–2326, (2008)*
 
 > > >*(This is a slightly condensed version of my
 thesis work.)*
 
-[Virtual Morse theory on $\Omega \text {Ham} (M, \omega)$][2] *(J.
-Differ. Geom. 84, No. 2, 409-425, (2010))*
+[Virtual Morse theory on $\Omega \text {Ham} (M, \omega)$][2], *J.
+Differ. Geom. 84, No. 2, 409-425, (2010)*
 
-[Bott periodicity and stable quantum classes][3], *(Selecta Math.
-N.S., 2012, Volume 19, Issue 2, 439-460, (2013))*
+[Bott periodicity and stable quantum classes][3], *Selecta Math.
+N.S., 2012, Volume 19, Issue 2, 439-460, (2013)*
 
-[Gromov K-area and jumping curves in $CP^n$][4]  *(Alg. and Geom.
-Topology, 12, 2317-2327, (2012))*
+[Gromov K-area and jumping curves in $CP^n$][4],  *Alg. and Geom.
+Topology, 12, 2317-2327, (2012)*
 
-[Proof of the index conjecture in Hofer geometry][7] *(Math. Res.
-Lett, Vol 20, 981-984, (2013))*
+[Proof of the index conjecture in Hofer geometry][7], *Math. Res.
+Lett, Vol 20, 981-984, (2013)*
 
-[Morse theory for the Hofer length functional][8], *(Journ. of
-Topology and Analysis,  2014)*
+[Morse theory for the Hofer length functional][8], *Journ. of
+Topology and Analysis,  (2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
-Francois Lalonde), *(Electronic Research Announcements, Vol 21, 177-185, (2014))*,  
+Francois Lalonde), *Electronic Research Announcements, Vol 21, 177-185, (2014)*
 
-[Yang-Mills theory and jumping curves][9] (Inter. J. Math., 26,  (2015)) 
+[Yang-Mills theory and jumping curves][9], *Inter. J. Math., 26,  (2015)*
 
-[On the Hofer geometry injectivity radius conjecture][16] (International Mathematics Research Notices 2016;
-doi: 10.1093/imrn/rnw023)
+[On the Hofer geometry injectivity radius conjecture][16], *International Mathematics Research Notices (2016)*;
+doi: 10.1093/imrn/rnw023
 
-[Floer theory and topology of $Diff (S ^2)$][11], (Journal of Symplectic Geometry, Vol. 15, No. 3 (2017))
+[Floer theory and topology of $Diff (S ^2)$][11], *Journal of Symplectic Geometry, Vol. 15, No. 3 (2017)*
 DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
+
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19], 2018, Inter. J. Math., accepted
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, accepted
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
-[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), Journal of Symplectic Geometry, 2018, to appear
+[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), *Journal of Symplectic Geometry, (2018)*, to appear
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
@@ -59,7 +62,7 @@ II][6]
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
-[Gromov-Witten theory of a locally conformally symplectic manifold][18], arXiv 2016
+[Gromov-Witten theory of a locally conformally symplectic manifold][18] 
 
 Computer science and game theory
 
