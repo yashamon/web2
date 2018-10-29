@@ -68,12 +68,9 @@ classical game Go, I have recently added details as I am interested in actually 
 
 [Noncomputability of human intelligence] [20], arxiv, 2018 
 
-<!-- Preprints  -->
 <!-- In construction -->
-<!-- <!-- Geometric cycles in secondary K-theory --> -->
-<!-- <!--  --> -->
+<!-- Geometric cycles in secondary K-theory --> 
 <!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
-<!--  -->
 
 *Missing a few finishing touches, but the second one should eventually be
 updated:*
