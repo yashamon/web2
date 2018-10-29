@@ -3,7 +3,7 @@
 A{text-decoration:none}
 A{color:blue}
 body {
-    font: normal 12px Verdana, Arial, sans-serif;
+    font: normal 16px Verdana, Arial, sans-serif;
 }
 
 -->
