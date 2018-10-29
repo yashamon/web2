@@ -66,27 +66,27 @@ Computer science and game theory
 [Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
-[Noncomputability of human intelligence], arxiv, 2018 
+[Noncomputability of human intelligence] [20], arxiv, 2018 
 
 <!-- Preprints  -->
 
 
-<!-- In preparation: -->
-<!--  -->
-<!--  -->
-<!-- >> As interesting as it sounds. -->
-
-<!-- In Construction: -->
+<!-- <!-- In preparation: --> -->
 <!-- <!--  --> -->
-<!-- <!-- Towards symplectic geometry of an $A_{\infty}$ category --> -->
-<!-- <!--     --> -->
-<!-- <!-- > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with  --> -->
-<!-- <!-- a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation. --> -->
+<!-- <!--  --> -->
+<!-- <!-- >> As interesting as it sounds. --> -->
 <!--  -->
-<!-- Geometric cycles in secondary K-theory -->
+<!-- <!-- In Construction: --> -->
+<!-- <!-- <!--  --> --> -->
+<!-- <!-- <!-- Towards symplectic geometry of an $A_{\infty}$ category --> --> -->
+<!-- <!-- <!--     --> --> -->
+<!-- <!-- <!-- > > I  construct here natural spaces of "Hamiltonian isotopic"  objects in a general small (triangulated) $A_{\infty}$ category $C$, and when $C$ comes with  --> --> -->
+<!-- <!-- <!-- a filtration define a natural "Hofer metric" on these spaces. Possibly the main immediate hope of this is to either prove the algebraic analogue of the nearby Lagrangians conjecture of Arnold, or perhaps potentially to disprove this conjecture using the new invariant of algebraic isotopy relation. --> --> -->
+<!-- <!--  --> -->
+<!-- <!-- Geometric cycles in secondary K-theory --> -->
+<!-- <!--  --> -->
+<!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
 <!--  -->
-> > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory.
-
 
 *Missing a few finishing touches, but the second one should eventually be
 updated:*
@@ -120,3 +120,4 @@ https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
 [17]: http://arxiv.org/pdf/1508.06793.pdf
 [18]: https://arxiv.org/pdf/1609.08991.pdf
 [19]: https://arxiv.org/abs/1703.07801
+[20]: https://arxiv.org/abs/1810.06985  
