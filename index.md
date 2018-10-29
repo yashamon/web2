@@ -2,11 +2,12 @@
 <!--
 A{text-decoration:none}
 A{color:blue}
--->
-</STYLE>
 body {
     font: normal 12px Verdana, Arial, sans-serif;
 }
+
+-->
+</STYLE>
 
 # Articles 
 [Quantum characteristic classes and the Hofer metric][1],
