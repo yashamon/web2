@@ -40,6 +40,11 @@ HW set 5 for fri
 3.4: 2, 3, 4, 12
 5.1: 4
 
+HW set 6 for fri
+
+5.1: 5,6,7  
+Read concise course in algebraic topology first chapter
+
 
 <!-- , 5, 6 -->
 <!--  -->
