@@ -222,7 +222,7 @@ limit of a homotopy of smooth non-singular vector fields on $S ^{2n+1} $
 starting at the Hopf vector field must have a periodic orbit.
 The difficulty in answering this is that
 although our orbits cannot ``disappear into the sky'', as there are infinitely
-many of them, they may ``cancel each other out'' even if the Fuller index is
+many of them they may ``cancel each other out'', even if the Fuller index is
 ``locally positive'' - that is the index of isolated components in the orbit space is positive.
 In the $C ^{0} $ nearby case this cancellation is prevented as orbits from isolated components of the orbit space may not
 interact.
@@ -248,7 +248,7 @@ a very strong restriction on the kinds of sky catastrophes that can happen, for
 general contact manifolds. 
 It is likely, that if they exist, they must be pathological, and very hard to construct.
 
-We note however that in the proof of \cite[Theorem 1.19]{citeKerman2017} a kind of partial Reeb plug is constructed, which is missing the matching condition, see for instance \cite{citeKKuperbergSmoothCounterexample} for terminology of plugs.
+We note however that in the proof of \cite[Theorem 1.19]{citeKerman2017} a kind of partial Reeb plug is constructed, which is missing the matching condition, see for instance \cite{citeKKuperbergSmoothCounterexample} for terminology of plugs, also see Kerman \cite{citeKermanHamiltonianSeifert}, Ginzburg \cite{citeGinzburgHamiltonianSeifert}, where plugs are utilized in Hamiltonian context.
 If one had a plug with all conditions, then it is simple to construct a sky catastrophe. For we may deform such a plug through partial plugs satisfying all conditions except the trapping condition (condition 3 in \cite{citeKKuperbergSmoothCounterexample}) to a trivial plug. This deformation then readily gives a sky catastrophe corresponding to the trapped orbit.
 Without matching, this argument does not obviously work.
 %
@@ -492,7 +492,7 @@ Specifically let $R ^{2n}   \times S ^{1}  $ be the prequantization space of $R 
 \begin{question} \label{question:loose} If $R\geq 1$ is there a compactly supported, loose endomorphism of the $\lcsm$ $\mathbb{R} ^{2n} \times S ^{1} \times S ^{1}  $ which takes the closure of $U := B _{R} \times S ^{1} \times S ^{1}  $ into $U$? 
 \end{question}
 Naturally we expect the answer is no. We can prove this assuming the following $\lcs$ analogue of the Weinstein conjecture.
-\subsection {Holomorphic Weinstein conjecture} In contact geometry, rigidity phenomena circulate around existence phenomena of Reeb orbits. The most important conjecture concerning Reeb orbits is the Weinstein conjecture, which says that a closed contact manifold always has a Reeb orbit. If $\lcsm$'s are generalizations of contact manifolds, what is the analogue of this conjecture in $\lcs$ geometry?
+\subsection {Holomorphic Weinstein conjecture} In contact geometry rigidity phenomena circulate around existence phenomena of Reeb orbits. The most important conjecture concerning Reeb orbits is the Weinstein conjecture, which says that a closed contact manifold always has a Reeb orbit. If $\lcsm$'s are generalizations of contact manifolds, what is the analogue of this conjecture in $\lcs$ geometry?
 To start we propose the following:
 % We shall say that an $\lcs$ form $\omega$ on $C \times S ^{1} $ is \emph{simple} if its lift to the cover $C \times \mathbb{R}$ is (globally) conformally symplectic.
 \begin{conjecture} \label{conj:Hol} For any compatible pair  $(\omega, J)$, for $\omega$ $\lcs$ form on $C \times S ^{1}  $ for $C$ a threefold or $S ^{2k+1} $, there is an elliptic, non-constant $J$-holomorphic curve in $C \times S ^{1}  $.
@@ -502,15 +502,17 @@ We also show there that this conjecture implies the Weinstein conjecture for $S 
 
 Of course it is natural to ask, other then curiosity what is the significance of the above conjecture? Well as we mentioned contact geometry rigidity is linked to existence of Reeb orbits, for example there are certain capacities called ECH capacities, and related constructions \cite{citeHutchingsBeyond} that come from the machine of embedded contact homology of Huchings-Taubes, (and built using Reeb orbits) constructed partly for the proof of the three dimensional Weinstein conjecture. There is an analogous story in the $\lcs$ setting, and using it we will get new rigidity phenomena in $\lcs$ geometry that we are looking for, in particular Question \ref{question:loose} on loose $\lcs$ non-squeezing will be answered.
 \subsection {Outline of the proof of Conjecture \ref{conj:Hol} when $C$ is a 3-fold}
-In this section we shall assume that the reader knows some basic language of symplectic field theory, Seiberg-Witten theory and embedded contact homology. When $C$ is a 3-fold, and the Seiberg-Witten invariant of $M = C \times S ^{1} $ is non-vanishing the path to the proof of Conjecture \ref{conj:Hol} is almost obvious. First we take a separating contact hypersurface $\Sigma$ in $M$, and perform neck-stretching on the pair $(\omega, J)$ at $\Sigma$. In the end we brake up $M$ into a pair of pieces $M _{i} $ with cylindrical ends, with $\lcs$ forms $\omega _{i} $ which are in fact globally conformally symplectic. (At least when $C$ is simply connected, for a general $C$ we have to make additional assumptions on the Lee class of $\omega$).
+In this section we shall assume that the reader knows some basic language of symplectic field theory, Seiberg-Witten theory and embedded contact homology. When $C$ is a 3-fold, and the Seiberg-Witten invariant of $M = C \times S ^{1} $ is non-vanishing the path to the proof of Conjecture \ref{conj:Hol} is almost obvious. First we take a separating contact hypersurface $\Sigma$ in $M$, and perform neck-stretching on the pair $(\omega, J)$ at $\Sigma$. In the end we brake up $M$ into a pair of pieces $M _{i} $ with cylindrical ends, with $\lcs$ forms $\omega _{i} $ which are in fact globally conformally symplectic,  at least when $M _{i} $ are simply connected - for a general $C$ we have to make additional assumptions on the Lee class of $\omega$, and or the hypersurface $\Sigma$. (Lee class is a certain invariant of an $\lcs$ form which vanishes when it is symplectic, see my \cite{citeSavelyevConformalSymplectic} for instance.)
+
+
 Globally conformally symplectic is as good as symplectic for the purpose of Gromov-Witten or SFT analysis. We may then consider the count (in the homology class determined by the spin-c structure induced by $\omega$) of holomorphic buildings consisting of a pair of holomorphic curves with ECH index 0 in each part $M _{i} $ 
 with the same asymptotic constraints at the cylindrical end. This count  is an invariant of the $\lcs$ $(M,\omega)$, even though the count of $J$-holomorphic curves in $M$ by itself is not a priori an invariant, and we claim that this invariant is the Seiberg-Witten invariant of $M$, for the spin-c structure determined by $\omega$.
 This of course builds on the foundational work of Hutchings and Taubes. Luckily the technical work for this correspondence in a setup closely analogous to the above is worked out in the thesis of Chris Gerig, which generalizes work of Taubes on GW-SW correspondence to general smooth 4-folds.
  
-So if the Seiberg-Witten invariant of $M$ is non-vanishing then a gluing argument gives an existence of a non-constant $J$-holomorphic curve in $M$. This is actually enough for the applications that we have in mind (e.g.
+So if the Seiberg-Witten invariant of $M$ is non-vanishing then a gluing argument gives an existence of a non-constant $J$-holomorphic curve in $M$. This is enough for the applications that we have in mind (e.g.
 Question \ref{question:loose}), however a more careful analysis should yield that this curve is actually an elliptic curve.
 
-The above assumes non-vanishing of the SW invariant of $M$, it is actually tempting to guess that this always happens, analogously with the symplectic case. This would then be the goal of further research, towards complete resolution of the conjecture above.
+The above assumes non-vanishing of the SW invariant of $M$, it is tempting to guess that this always happens, analogously with the symplectic case. This would then be the goal of further research, towards complete resolution of the conjecture above.
 \bibliographystyle{siam}  
   \bibliography{/home/yasha/texmf/bibtex/bib/link} 
 % \bibliography{/root/texmf/bibtex/bib/link} 

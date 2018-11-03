@@ -4,47 +4,47 @@ The top-level auxiliary file: research.aux
 The style file: siam.bst
 Database file #1: /home/yasha/texmf/bibtex/bib/link.bib
 Warning--I'm ignoring citeSavelyevConformalSymplectic's extra "journal" field
---line 613 of file /home/yasha/texmf/bibtex/bib/link.bib
+--line 642 of file /home/yasha/texmf/bibtex/bib/link.bib
 Warning--empty year in citeEliashbergMurphyMakingcobordisms
-You've used 21 entries,
+You've used 23 entries,
             2030 wiz_defined-function locations,
-            652 strings with 7468 characters,
-and the built_in function-call counts, 6931 in all, are:
-= -- 730
-> -- 175
+            666 strings with 7885 characters,
+and the built_in function-call counts, 7695 in all, are:
+= -- 813
+> -- 195
 < -- 0
-+ -- 74
-- -- 52
-* -- 481
-:= -- 1012
-add.period$ -- 21
-call.type$ -- 21
-change.case$ -- 90
++ -- 82
+- -- 58
+* -- 535
+:= -- 1120
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 369
-empty$ -- 535
-format.name$ -- 52
-if$ -- 1532
+cite$ -- 24
+duplicate$ -- 407
+empty$ -- 593
+format.name$ -- 58
+if$ -- 1703
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 21
-newline$ -- 66
-num.names$ -- 40
-pop$ -- 62
+int.to.str$ -- 23
+missing$ -- 23
+newline$ -- 72
+num.names$ -- 44
+pop$ -- 67
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 76
 quote$ -- 0
-skip$ -- 345
+skip$ -- 384
 stack$ -- 0
-substring$ -- 584
-swap$ -- 180
+substring$ -- 658
+swap$ -- 200
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 92
 warning$ -- 1
-while$ -- 83
-width$ -- 23
-write$ -- 185
+while$ -- 93
+width$ -- 25
+write$ -- 203
 (There were 2 warnings)

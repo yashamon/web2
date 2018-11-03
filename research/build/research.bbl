@@ -29,6 +29,11 @@
 \leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {An index of fixed
   point type for periodic orbits.}}, {Am. J. Math.}, 89 (1967), pp.~133--145.
 
+\bibitem{citeGinzburgHamiltonianSeifert}
+{\sc V.~L. {Ginzburg} and B.~sak Z.~{G\"urel}}, {\em {A $C^2$-smooth
+  counterexample to the Hamiltonian Seifert conjecture in $\mathbb R^4$.}},
+  {Ann. Math. (2)}, 158 (2003), pp.~953--976.
+
 \bibitem{citeGromovPseudoholomorphiccurvesinsymplecticmanifolds.}
 {\sc M.~Gromov}, {\em {Pseudo holomorphic curves in symplectic manifolds.}},
   Invent. Math., 82 (1985), pp.~307--347.
@@ -40,6 +45,10 @@
 \bibitem{citeHutchingsBeyond}
 {\sc M.~{Hutchings}}, {\em {Beyond ECH capacities.}}, {Geom. Topol.}, 20
   (2016), pp.~1085--1126.
+
+\bibitem{citeKermanHamiltonianSeifert}
+{\sc E.~{Kerman}}, {\em {New smooth counterexamples to the Hamiltonian Seifert
+  conjecture.}}, {J. Symplectic Geom.}, 1 (2002), pp.~253--267.
 
 \bibitem{citeKerman2017}
 {\sc E.~Kerman}, {\em Rigid constellations of closed reeb orbits}, Compositio
