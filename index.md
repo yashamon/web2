@@ -34,12 +34,12 @@ Topology and Analysis,  (2014)*
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *Electronic Research Announcements, Vol 21, 177-185, (2014)*
 
-[Yang-Mills theory and jumping curves][9], *Inter. J. Math., 26,  (2015)*
+[Yang-Mills theory and jumping curves][9], *Inter. J. Math., 26, 13 pgs, (2015)*
 
-[On the Hofer geometry injectivity radius conjecture][16], *International Mathematics Research Notices (2016)*;
+[On the Hofer geometry injectivity radius conjecture][16], *International Mathematics Research Notices, 7253-7267, (2016)*; 
 doi: 10.1093/imrn/rnw023
 
-[Floer theory and topology of $Diff (S ^2)$][11], *Journal of Symplectic Geometry, Vol. 15, No. 3 (2017)*
+[Floer theory and topology of $Diff (S ^2)$][11], *Journal of Symplectic Geometry, Vol. 15, No. 3, 853-859, (2017)*
 DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > *(Note the title change, previously: "Volume preserving ...")*
