@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex build/research"] 1541263918 "build/research.aux" "build/research.bbl" "build/research" 1541266577
-  "/home/yasha/texmf/bibtex/bib/link.bib" 1541263384 96975 17e3bcf763e450c075c45c8a3bea1976 ""
+["bibtex build/research"] 1541266684 "build/research.aux" "build/research.bbl" "build/research" 1541266712
+  "/home/yasha/texmf/bibtex/bib/link.bib" 1541266683 96974 86509b7f17169cd945baf1bfe43b20e8 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/siam.bst" 1480098433 19403 812681d329611d2a1625ad7ae5186edc ""
-  "build/research.aux" 1541266577 4523 a1636cff9c8db503b42985c8d45f66e2 ""
+  "build/research.aux" 1541266712 4523 a1636cff9c8db503b42985c8d45f66e2 ""
   "build/research.bcf" 0 -1 0 ""
   (generated)
-  "build/research.blg"
   "build/research.bbl"
-["pdflatex"] 1541266577 "research.tex" "build/research.pdf" "research" 1541266577
+  "build/research.blg"
+["pdflatex"] 1541266711 "research.tex" "build/research.pdf" "research" 1541266712
   "/etc/texmf/web2c/texmf.cnf" 1524681037 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -138,12 +138,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503024366 32036 8f10cb8f6ef259fb5791f09c065d3d13 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1525885366 164837 f472f40ab643c6b1fa7fff8b04d446df ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1524681054 811887 840c2b15713d1e844ad2092c95aa31fb ""
-  "build/research.aux" 1541266577 4523 a1636cff9c8db503b42985c8d45f66e2 ""
-  "build/research.bbl" 1541263918 4064 5803abf0f8c3d4ecc88214f16754ddbe "bibtex build/research"
-  "build/research.out" 1541266577 537 2d18526d91eab125c6d46498bc31719d ""
-  "research.tex" 1541266577 38263 61a5ffadf2013cdef857975f37c242dd ""
+  "build/research.aux" 1541266712 4523 a1636cff9c8db503b42985c8d45f66e2 ""
+  "build/research.bbl" 1541266684 4060 eb3cc3cb9ec11ab2413a9dd8b4ccc45e "bibtex build/research"
+  "build/research.out" 1541266712 537 2d18526d91eab125c6d46498bc31719d ""
+  "research.tex" 1541266711 38264 6adddfc1b95853c65173a655eb90c756 ""
   (generated)
   "build/research.out"
-  "build/research.pdf"
   "build/research.aux"
+  "build/research.pdf"
   "build/research.log"
