@@ -45,6 +45,9 @@ HW set 6 for fri
 5.1: 5,6,7  
 Read concise course in algebraic topology first chapter
 
+Hw set 7 for tue
+
+5.2: 1,2,3,4
 
 <!-- , 5, 6 -->
 <!--  -->
