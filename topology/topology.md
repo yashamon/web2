@@ -2,13 +2,13 @@ Topology
 
 Hw set 1 for tue
 
-2.1: 1, 2, 3, 4 
-2.2: 1, 2, 3, 4
+2.1: 1, 2, 3, 4  
+2.2: 1, 2, 3, 4  
 
 Hw set 2 for tue
-2.2: 5
-2.3: 1, 3, 4, 5
-2.4: 1, 2, 3, 4
+2.2: 5  
+2.3: 1, 3, 4, 5  
+2.4: 1, 2, 3, 4  
 
 <!-- Hw Set 3 -->
 <!--  -->
@@ -26,8 +26,8 @@ Hw set 2 for tue
 <!--  -->
 Hw set 3
 
-3.1: 4, 5, 6, 7, 8
-3.2: 2, 3, 6, 11, 12
+3.1: 4, 5, 6, 7, 8  
+3.2: 2, 3, 6, 11, 12  
 
 Hw set 4 for fri
 
@@ -37,8 +37,8 @@ HW set 5 for fri
 
 1. Show that rationals Q are totally disconnected with its topology inherited from R
 
-3.4: 2, 3, 4, 12
-5.1: 4
+3.4: 2, 3, 4, 12  
+5.1: 4  
 
 HW set 6 for fri
 
