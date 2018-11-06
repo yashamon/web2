@@ -47,7 +47,7 @@ Read concise course in algebraic topology first chapter
 
 Hw set 7 for tue
 
-5.2: 1,2,3,4
+5.2: 1,2,3,4  
 
 <!-- , 5, 6 -->
 <!--  -->
