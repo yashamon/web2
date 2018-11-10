@@ -177,12 +177,12 @@
 \address{University of Colima, CUICBAS}
 \keywords{}
  \maketitle
-Broadly I am working in differential geometry, particularly symplectic, dynamical systems, and algebraic topology.
-My recent work is in a number of research directions. For example, I am researching rigidity phenomena in locally conformally symplectic geometry as partly initiated by my recent work \cite{citeSavelyevConformalSymplectic}, and thinking about the holomorphic Weinstein conjecture that appears there.  This is a relatively new  subject, but has the potential to become big, as it has a number of connections to other branches of differential geometry and dynamical systems.
+Broadly I am working in differential geometry, particularly symplectic, dynamical systems, and algebraic topology. I also recently became interested in computer science.
+My most recent work is in a number of research directions. For example, I am researching rigidity phenomena in locally conformally symplectic geometry as partly initiated by my recent work \cite{citeSavelyevConformalSymplectic}, and thinking about the holomorphic Weinstein conjecture that appears there.  This is a relatively new  subject, but has the potential to become big, as it has a number of connections to other branches of differential geometry and dynamical systems.
 I am also working towards the conjecture on non-existence, or $C ^{0} $-nearby non-existence of sky catastrophes for homotopies of Reeb vector fields.
 The latter conjecture appears in my \cite{citeSavelyevFuller} and its resolution would likely be one of the most exciting possibilities that is presented in this research statement, as the are a number of applications, in particular new existence results for Reeb orbits which traditionally needed techniques of elliptic pde's. 
 I now describe in more detail the pair of research directions mentioned above, and their relationship, as this is where most of my most recent activity concentrated.
-\section {Sky catastrophes, Reeb vector fields, and the no sky-catastrophe conjecture}
+\section {Sky catastrophes, Reeb vector fields, and the no Reeb sky catastrophe conjecture}
 The original Seifert conjecture  \cite{citeSeifert} asked if a non-singular vector field on $S
 ^{3} $ must have a periodic orbit. 
 In this formulation the answer was shown to
@@ -259,7 +259,7 @@ Without matching, this argument does not obviously work.
 % bifurcations of orbits for all sufficiently large periods. 
 \begin{theorem} \label{prop:AdmissibleReeb} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
 vector fields on a contact manifold $M$. (Informally) let $S$ denote the space of orbits of the family $\{X _{t} \}$, where period is allowed to vary.
-Then there is no unbounded from above locally Lipschitz  continuous $p: [0,\infty)
+Then there is no (period) unbounded from above locally Lipschitz  continuous $p: [0,\infty)
 \to S$ whose composition with the projection $\pi: S
 \to [0,1]$ has finite length, with $\pi$ the projection to the time coordinate $t$.
 
@@ -505,11 +505,11 @@ Of course it is natural to ask, other then curiosity what is the significance of
 In this section we shall assume that the reader knows some basic language of symplectic field theory, Seiberg-Witten theory and embedded contact homology. When $C$ is a 3-fold, and the Seiberg-Witten invariant of $M = C \times S ^{1} $ is non-vanishing the path to the proof of Conjecture \ref{conj:Hol} is almost obvious. First we take a separating contact hypersurface $\Sigma$ in $M$, and perform neck-stretching on the pair $(\omega, J)$ at $\Sigma$. In the end we brake up $M$ into a pair of pieces $M _{i} $ with cylindrical ends, with $\lcs$ forms $\omega _{i} $ which are in fact globally conformally symplectic,  at least when $M _{i} $ are simply connected - for a general $C$ we have to make additional assumptions on the Lee class of $\omega$, and or the hypersurface $\Sigma$. (Lee class is a certain invariant of an $\lcs$ form which vanishes when it is symplectic, see my \cite{citeSavelyevConformalSymplectic} for instance.)
 
 
-Globally conformally symplectic is as good as symplectic for the purpose of Gromov-Witten or SFT analysis. We may then consider the count (in the homology class determined by the spin-c structure induced by $\omega$) of holomorphic buildings consisting of a pair of holomorphic curves with ECH index 0 in each part $M _{i} $ 
+Globally conformally symplectic is as good as symplectic for the purpose of Gromov-Witten or SFT analysis. We may then consider the count (in the total homology class $A$ determined by the spin-c structure induced by $\omega$) of holomorphic buildings consisting of a pair of holomorphic curves with ECH index 0 in each part $M _{i} $ 
 with the same asymptotic constraints at the cylindrical end. This count  is an invariant of the $\lcs$ $(M,\omega)$, even though the count of $J$-holomorphic curves in $M$ by itself is not a priori an invariant, and we claim that this invariant is the Seiberg-Witten invariant of $M$, for the spin-c structure determined by $\omega$.
 This of course builds on the foundational work of Hutchings and Taubes. Luckily the technical work for this correspondence in a setup closely analogous to the above is worked out in the thesis of Chris Gerig, which generalizes work of Taubes on GW-SW correspondence to general smooth 4-folds.
  
-So if the Seiberg-Witten invariant of $M$ is non-vanishing then a gluing argument gives an existence of a non-constant $J$-holomorphic curve in $M$. This is enough for the applications that we have in mind (e.g.
+So if the Seiberg-Witten invariant of $M$ is non-vanishing then a gluing argument gives an existence of a non-constant, class $A$, $J$-holomorphic curve in $M$. This is enough for the applications that we have in mind (e.g.
 Question \ref{question:loose}), however a more careful analysis should yield that this curve is actually an elliptic curve.
 
 The above assumes non-vanishing of the SW invariant of $M$, it is tempting to guess that this always happens, analogously with the symplectic case. This would then be the goal of further research, towards complete resolution of the conjecture above. 
