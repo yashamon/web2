@@ -257,14 +257,11 @@ Without matching, this argument does not obviously work.
 % a branched smooth submanifold of $M \times (0, \infty) \times [0,1]$, and there
 % are no birth
 % bifurcations of orbits for all sufficiently large periods. 
-\begin{theorem} \label{prop:AdmissibleReeb} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
-vector fields on a contact manifold $M$. (Informally) let $S$ denote the space of orbits of the family $\{X _{t} \}$, where period is allowed to vary.
+\begin{theorem} \cite{citeSavelyevFuller} \label{prop:AdmissibleReeb} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
+vector fields on a contact manifold $M$. (Informally) let $S$ denote the space of closed orbits of the family $\{X _{t} \}$, where period is allowed to vary.
 Then there is no (period) unbounded from above locally Lipschitz  continuous $p: [0,\infty)
 \to S$ whose composition with the projection $\pi: S
 \to [0,1]$ has finite length, with $\pi$ the projection to the time coordinate $t$.
-
-
-
 % Suppose that there is an $E$ so that:
 % \begin{itemize}
 %   \item For all $b>a>E$ there exists an
@@ -282,7 +279,6 @@ Then there is no (period) unbounded from above locally Lipschitz  continuous $p:
 % $M \times (0,b) \times
 % [0,1]$ non-trivially.
 % \end{itemize}
-
 % such that only finitely many connected components of the
 % associated set $S$
 % intersect $M \times (0,  a) \times [0,1]$ non-trivially for all $a$ sufficiently
@@ -298,7 +294,7 @@ The above rules out for example Fuller's sky catastrophe that appears in
 \begin{conjecture} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
 vector fields on a compact contact manifold $M$. Then there is a $C ^{0} $ nearby smooth family $\{X' _{t} \}$, $t \in [0,1]$, $X' _{i}=X _{i}  $, $i=0,1$, such that $\{X' _{t} \}$ has no sky catastrophes.
 \end{conjecture}
-Given this conjecture we may readily apply general analogues in \cite{citeSavelyevConformalSymplectic} of Theorem \ref{conj:preliminary} to get applications to existence of Reeb orbits.
+Given this conjecture we may readily apply general analogues in \cite{citeSavelyevFuller} of Theorem \ref{conj:preliminary} to get applications to existence of Reeb orbits.
 Of course one exciting thing here is that it will be without so called ``hard'' elliptic pde techniques of pseudo-holomorphic curves. And that moreover we would obtain new qualitative dynamical-topological information about Reeb vector fields.
 \section {Locally conformally symplectic geometry and rigidity}
 A locally conformally symplectic manifold or $\lcsm$ is a smooth $2n$-fold $M$ with an $\lcs$ structure: which is a
@@ -380,7 +376,7 @@ Of course what we are really interested in is what kind of rigidity phenomenon c
 The most well known formulation of this is that there does not exist a  symplectic embedding $B _{R} \to D ^{2} (r)  \times \mathbb{R} ^{2n-2}   $ for $R>r$, with $ B _{R}  $ the standard closed radius $R$ ball 
 in $\mathbb{R} ^{2n} $ centered at $0$.
 Gromov's non-squeezing is $C ^{0} $ persistent in the following sense.      
-\begin{theorem} Given $R>r$, there is an $\epsilon>0$ s.t. for any symplectic form $\omega' $ on $S ^{2} \times T ^{2n-2}  $ $C ^{0} $ close to a split symplectic form $\omega$ and satisfying $$ \langle \omega, (A=[S ^{2} ] \otimes [pt])  \rangle = \pi r ^{2},  $$  there is no symplectic embedding $\phi: B _{R} \hookrightarrow (S ^{2} \times T ^{2n-2}, \omega')   $.
+\begin{theorem} Given $R>r$, there is an $\epsilon>0$ s.t. for any symplectic form $\omega' $ on $S ^{2} \times T ^{2n-2}  $ $C ^{0} $ $\epsilon$-close to a split symplectic form $\omega$, which satisfies: $$ \langle \omega, (A=[S ^{2} ] \otimes [pt])  \rangle = \pi r ^{2},  $$  there is no symplectic embedding $\phi: B _{R} \hookrightarrow (S ^{2} \times T ^{2n-2}, \omega')   $.
 \end{theorem}
  On the other hand it is natural to ask: 
 \begin{question} \label{thm:nonrigidity} Given $R>r$ and every $\epsilon > 0 $ is there
@@ -500,7 +496,8 @@ To start we propose the following:
 In \cite{citeSavelyevConformalSymplectic} we prove this conjecture for $\omega$ $C ^{\infty} $ nearby to the Hopf $\lcs$ structure on $S ^{2k+1} \times S ^{1}  $, by exploiting the connection with Fuller index, to which we already alluded in our discussion of sky catastrophes.
 We also show there that this conjecture implies the Weinstein conjecture for $S ^{2k+1} $ and for $C$ a contact three-fold.
 
-Of course it is natural to ask, other then curiosity what is the significance of the above conjecture? Well as we mentioned contact geometry rigidity is linked to existence of Reeb orbits, for example there are certain capacities called ECH capacities, and related constructions \cite{citeHutchingsBeyond} that come from the machine of embedded contact homology of Huchings-Taubes, (and built using Reeb orbits) constructed partly for the proof of the three dimensional Weinstein conjecture. There is an analogous story in the $\lcs$ setting, and using it we will get new rigidity phenomena in $\lcs$ geometry that we are looking for, in particular Question \ref{question:loose} on loose $\lcs$ non-squeezing will be answered.
+Of course it is natural to ask, other then curiosity what is the significance of the above conjecture? Well as we mentioned contact geometry rigidity is linked to existence of Reeb orbits, for example there are certain capacities called ECH capacities, and related constructions \cite{citeHutchingsBeyond} that come from the machine of embedded contact homology of Huchings-Taubes, (and built using Reeb orbits). Recall that the embedded contact homology is
+constructed by Hutchings in part for the proof of the three dimensional Weinstein conjecture. There is an analogous story in the $\lcs$ setting, and using it we will get new rigidity phenomena in $\lcs$ geometry that we are looking for, in particular Question \ref{question:loose} on loose $\lcs$ non-squeezing will be answered, given the conjecture above.
 \subsection {Outline of the proof of Conjecture \ref{conj:Hol} when $C$ is a 3-fold}
 In this section we shall assume that the reader knows some basic language of symplectic field theory, Seiberg-Witten theory and embedded contact homology. When $C$ is a 3-fold, and the Seiberg-Witten invariant of $M = C \times S ^{1} $ is non-vanishing the path to the proof of Conjecture \ref{conj:Hol} is almost obvious. First we take a separating contact hypersurface $\Sigma$ in $M$, and perform neck-stretching on the pair $(\omega, J)$ at $\Sigma$. In the end we brake up $M$ into a pair of pieces $M _{i} $ with cylindrical ends, with $\lcs$ forms $\omega _{i} $ which are in fact globally conformally symplectic,  at least when $M _{i} $ are simply connected - for a general $C$ we have to make additional assumptions on the Lee class of $\omega$, and or the hypersurface $\Sigma$. (Lee class is a certain invariant of an $\lcs$ form which vanishes when it is symplectic, see my \cite{citeSavelyevConformalSymplectic} for instance.)
 
