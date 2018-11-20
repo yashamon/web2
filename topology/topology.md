@@ -49,6 +49,12 @@ Hw set 7 for tue
 
 5.2: 1,2,3,4  
 
+Hw set 8 (From concise course in algebraic topology)
+
+Chapter 1: 1,2  
+Chapter 2: 1, 2, 3
+
+
 <!-- , 5, 6 -->
 <!--  -->
 <!-- set 9 (You may also take a look at Munkres, Topology, as well Concise course in algebraic topology by Peter May)  -->
