@@ -29,6 +29,15 @@
 \leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {An index of fixed
   point type for periodic orbits.}}, {Am. J. Math.}, 89 (1967), pp.~133--145.
 
+\bibitem{citeGerigChrisSW}
+{\sc C.~Gerig}, {\em {Seiberg-Witten and Gromov invariants for self-dual
+  harmonic 2-forms }}, {arXiv:1809.03405 }.
+
+\bibitem{citeGerigChrisTaming}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {Taming the
+  pseudoholomorphic beasts in $R \times S ^1 \times S ^2$}}, {arXiv:1711.02069
+  }.
+
 \bibitem{citeGinzburgHamiltonianSeifert}
 {\sc V.~L. {Ginzburg} and B.~Z. {G\"urel}}, {\em {A $C^2$-smooth counterexample
   to the Hamiltonian Seifert conjecture in $\mathbb R^4$.}}, {Ann. Math. (2)},
@@ -42,9 +51,19 @@
 {\sc J.~{Harrison}}, {\em {$C\sp 2$ counterexamples to the Seifert
   conjecture.}}, {Topology}, 27 (1988), pp.~249--278.
 
+\bibitem{citeHutchingsECHindex}
+{\sc M.~{Hutchings}}, {\em {An index inequality for embedded pseudoholomorphic
+  curves in symplectizations.}}, {J. Eur. Math. Soc. (JEMS)}, 4 (2002),
+  pp.~313--361.
+
 \bibitem{citeHutchingsBeyond}
-{\sc M.~{Hutchings}}, {\em {Beyond ECH capacities.}}, {Geom. Topol.}, 20
-  (2016), pp.~1085--1126.
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {Beyond ECH
+  capacities.}}, {Geom. Topol.}, 20 (2016), pp.~1085--1126.
+
+\bibitem{citeHutchingsSullivanRoundingCorners}
+{\sc M.~{Hutchings} and M.~{Sullivan}}, {\em {Rounding corners of polygons and
+  the embedded contact homology of $T^3$.}}, {Geom. Topol.}, 10 (2006),
+  pp.~169--266.
 
 \bibitem{citeKermanHamiltonianSeifert}
 {\sc E.~{Kerman}}, {\em {New smooth counterexamples to the Hamiltonian Seifert
@@ -94,6 +113,15 @@
 \bibitem{citeMuller}
 {\sc {Stefan M\"uller}}, {\em {Epsilon-non-squeezing and $C_0$-rigidity of
   epsilon-symplectic embeddings}}, {arXiv:1805.01390},  (2018).
+
+\bibitem{citeTaubesCountingPseudoHolomorphic}
+{\sc C.~H. {Taubes}}, {\em {Counting pseudo-holomorphic submanifolds in
+  dimension 4.}}, {J. Differ. Geom.}, 44 (1996), pp.~818--893.
+
+\bibitem{citeTaubesWeinsteinconjecture}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {The Seiberg-Witten
+  equations and the Weinstein conjecture.}}, {Geom. Topol.}, 11 (2007),
+  pp.~2117--2202.
 
 \bibitem{citeVaismanConformal}
 {\sc I.~{Vaisman}}, {\em {Locally conformal symplectic manifolds.}}, {Int. J.
