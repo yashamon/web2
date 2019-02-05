@@ -54,7 +54,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 
 Submitted papers
-[Relating mean curvature and diameter in general Riemannian manifolds] 
+[Relating mean curvature and diameter in general Riemannian manifolds][]
 
 [Global Fukaya category and quantum Novikov conjecture I][5]
 
