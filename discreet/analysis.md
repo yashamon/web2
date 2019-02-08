@@ -2,7 +2,8 @@ my email: yashasavelyev@gmail.com
 
 HW Set 1 for wed
 
-pg 9: 
+pg 9: 1,2,4  
+
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
