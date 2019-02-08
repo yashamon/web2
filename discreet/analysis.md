@@ -1,5 +1,4 @@
-my email: yashasavelyev@gmail.com
-
+my email: yashasavelyev@gmail.com 
 HW Set 1 for tue
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
