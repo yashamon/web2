@@ -3,7 +3,7 @@ my email: yashasavelyev@gmail.com
 HW Set 1 for wed
 
 1-23, 1-24, 1-28, 1-29  
-22-1, 2-2-1, 2-22-1, 2-2-1, 2-2
+22-1, 2-2-1, 2-22-1, 2-2
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
