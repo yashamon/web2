@@ -7,7 +7,8 @@ HW Set 1 for wed
 
 HW Set 2 for thur
 
-2-17, a,b, c 
+2-17, a,b, c, 2-19 
+2-22 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
