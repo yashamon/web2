@@ -7,7 +7,7 @@ pg 26: 2,5,6
 
 HW Set 2 for thurs
 
-1) Draw a graph with 
+1) Show that any graph can be made into a graph all of whose vertices have even degree by adding some collection of vertices and edges.
 pg 196: 2
 pg 27: 12, 15
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
