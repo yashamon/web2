@@ -7,7 +7,6 @@ pg 26: 2,5,6
 
 HW Set 2 for thurs
 
-
 pg 196: 2
 pg 27: 12, 15
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
