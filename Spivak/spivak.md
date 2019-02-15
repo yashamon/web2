@@ -5,9 +5,9 @@ HW Set 1 for wed
 1-23, 1-24, 1-28, 1-29  
 2-1, 2-2, 2-3
 
-HW Set 1 for thur
+HW Set 2 for thur
 
-   
+2-17, a,b c 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
