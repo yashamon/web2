@@ -7,7 +7,7 @@ pg 26: 2,5,6
 
 HW Set 2 for thurs
 
-1) Debujan un graf conectado con tres  
+1) Debujan un graf conectado con tres vertex 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
