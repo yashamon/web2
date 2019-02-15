@@ -7,8 +7,9 @@ pg 26: 2,5,6
 
 HW Set 2 for thurs
 
+1) Draw a graph with 
 pg 196: 2
-pg 27: 15
+pg 27: 12, 15
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
