@@ -12,7 +12,7 @@ pg 27: 12, 15
 
 HW 3 for wed
 
-pg 196 3,4
+pg 196 3,4  
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
