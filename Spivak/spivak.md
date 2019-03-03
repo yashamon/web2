@@ -11,8 +11,8 @@ HW Set 2 for thur
 
 HW set 3 for wed
 
-Show that the special case of inverse function theorem for an $f$ with $f' (a) = id$, implies the general case.
-2-40, 2-41, 2-36, 2-37, 2-38
+Show that the special case of inverse function theorem for an $f$ with $f' (a) = id$, implies the general case.  
+2-40, 2-41, 2-36, 2-37, 2-38  
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
