@@ -12,9 +12,9 @@ pg 27: 12, 15
 
 HW 3 for wed
 
-pg 196 3,4, 6   
+pg 196 3,4, 6  
 Provide details for Corollary 9.3  
-
+Wilson
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
