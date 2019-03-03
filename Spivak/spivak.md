@@ -11,7 +11,7 @@ HW Set 2 for thur
 
 HW set 3 for wed
 
-Show that the special case of inverse function theorem for an $f$ with $f' (a)$
+Show that the special case of inverse function theorem for an $f$ with $f' (a) = id$, 
 2-40, 2-41, 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
