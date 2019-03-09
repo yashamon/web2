@@ -18,7 +18,7 @@ Wilson, Introduction to Graph theory: 8.4, 8.7
 
 HW 3 for thur
 
-9.3, 
+Wilson: 9.1, 9.3, 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
