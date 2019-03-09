@@ -16,7 +16,7 @@ pg 196 3,4, 6
 Provide details for Corollary 9.3  
 Wilson, Introduction to Graph theory: 8.4, 8.7  
 
-HW 3 for wed
+HW 4 for wed
 
 pg 228 Walk: 1
 Wilson: 9.1, 9.3, 9.5, 9.6
