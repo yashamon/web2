@@ -16,7 +16,7 @@ Show that the special case of inverse function theorem for an $f$ with $f' (a) =
 
 Hw 4 for wed
 
-3-8, 3-10, 3-14, 
+3-7, 3-8, 3-10, 3-14, 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
