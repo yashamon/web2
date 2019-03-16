@@ -21,6 +21,9 @@ HW 4 for wed
 pg 228 Walk: 1
 Wilson: 9.1, 9.3, 9.5, 9.6
 
+HW 5 for wed
+
+
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
