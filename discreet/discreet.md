@@ -24,7 +24,7 @@ Wilson: 9.1, 9.3, 9.5, 9.6
 HW 5 for wed
 
 Wilson: 11.1, 11.4  
-12.1, 12.3, 12.6  
+12.1, 12.3, 12.6,   
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
