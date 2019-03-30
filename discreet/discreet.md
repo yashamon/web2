@@ -30,7 +30,7 @@ HW 6 for wed
 
 Find the Euler characteristic of a surface of genus 2 from which two disks have been cut out.
 
-Wilson: 15.1, 
+Wilson: 15.1, 15.2, 15.3, 15.5
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
