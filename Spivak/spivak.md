@@ -22,9 +22,9 @@ hw 5 wed
 
 3.16, 3.22, 3-23, 3-26, 3-28, 3-36
 
-hw 6
+hw 6 wed
 
-
+3-37, 3-41
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
