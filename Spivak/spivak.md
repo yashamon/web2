@@ -26,6 +26,9 @@ hw 6 wed
 
 3-37, 3-41
 
+hw 7 
+
+4-1, 4-2, 4-3, 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
