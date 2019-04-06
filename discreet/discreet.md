@@ -34,7 +34,7 @@ Wilson: 15.1, 15.2, 15.3, 15.5
 
 HW 7 
 
-Hopfcroft: 2.2.1, 2.2.2, 2.2.9, 2.3.4
+Hopfcroft: 2.2.1, 2.2.2, 2.2.9, 2.3.4 a)
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
