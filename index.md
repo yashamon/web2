@@ -29,7 +29,7 @@ Topology, 12, 2317-2327, (2012)*
 Lett, Vol 20, 981-984, (2013)*
 
 [Morse theory for the Hofer length functional][8], *Journ. of
-Topology and Analysis,  (2014)*
+Topology and Analysis, 6:2, (2014)*
 
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *Electronic Research Announcements, Vol 21, 177-185, (2014)*
