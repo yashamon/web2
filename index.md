@@ -34,7 +34,7 @@ Topology and Analysis, 6:2, (2014)*
 [On the injectivity radius in Hofer geometry][10], (Joint with
 Francois Lalonde), *Electronic Research Announcements, Vol 21, 177-185, (2014)*
 
-[Yang-Mills theory and jumping curves][9], *Inter. J. Math., 26, 13 pgs, (2015)*
+[Yang-Mills theory and jumping curves][9], *Inter. J. Math., 26:5, 13 pgs, (2015)*
 
 [On the Hofer geometry injectivity radius conjecture][16], *International Mathematics Research Notices, 7253-7267, (2016)*; 
 doi: 10.1093/imrn/rnw023
