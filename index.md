@@ -100,8 +100,7 @@ https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [9]: http://arxiv.org/pdf/1312.0928v3 
 [10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
 [11]: http://arxiv.org/pdf/1409.3975.pdf
-[12]:
-https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
+[12]: https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 [13]: https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
 [14]: https://www.dropbox.com/s/dapssg0zsake8z3/Sgo.pdf?dl=0
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
