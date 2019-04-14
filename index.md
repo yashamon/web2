@@ -89,8 +89,7 @@ symplectomorphisms][12], arxiv preprint
 
 
 [1]: http://arxiv.org/pdf/0709.4510.pdf
-[2]:
-https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
+[2]: https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [3]: http://arxiv.org/pdf/0912.2948.pdf
 [4]: http://arxiv.org/pdf/1006.4383.pdf
 [5]:http://yashamon.github.io/web2/papers/GlobalFukayaPartI.pdf 
