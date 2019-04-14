@@ -108,7 +108,8 @@ https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
 [15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
-[18]: 
+[18]: http://yashamon.github.io/web2/papers/immitation.pdf
+
 [19]: https://arxiv.org/abs/1703.07801
 [20]: http://yashamon.github.io/web2/papers/immitation.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
