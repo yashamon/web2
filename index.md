@@ -55,7 +55,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 Submitted papers
 
-[Mean curvature vers diameter and energy quantization][T]
+[Mean curvature versus diameter and energy quantization][T]
 
 [Global Fukaya category and quantum Novikov conjecture I][5]
 
