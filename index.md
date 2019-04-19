@@ -68,6 +68,7 @@ II][6]
 [Non-squeezing in l.c.s. geometry and holomorphic Weinstein conjecture][18], arxiv
 
 >> Title change from arxiv version 
+
 Computer science and game theory
 
 [Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
