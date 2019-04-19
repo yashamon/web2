@@ -65,7 +65,7 @@ II][6]
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
-[Gromov-Witten theory of a locally conformally symplectic manifold][18], arxiv
+[Non-squeezing in l.c.s. geometry and holomorphic Weinstein conjecture][18], arxiv
 
 Computer science and game theory
 
