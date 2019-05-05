@@ -36,9 +36,9 @@ HW 7 for same wed
 
 Hopfcroft: 2.2.1, 2.2.2, 2.2.9, 2.3.4 a)
 
-HW for thurs,
+HW 8 for thurs,
 
-Ho
+Hopfcroft: 2.3.4, 2.3.5
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
