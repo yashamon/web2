@@ -36,7 +36,7 @@ Hw 8 for thurs
 
 HW 9 for thurs
 
-4-23, 4-24, 4-25, 4-26
+4-23, 4-24, 4-25, 4-26, 4-27
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
