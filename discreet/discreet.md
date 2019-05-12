@@ -40,6 +40,9 @@ HW 8 for thurs,
 
 Hopfcroft: 2.3.4 a), 2.3.5
 
+Hw 9
+
+Prove that an infinite subset of a countable set is countable.
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
