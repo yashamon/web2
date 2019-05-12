@@ -43,7 +43,7 @@ Hopfcroft: 2.3.4 a), 2.3.5
 Hw 9
 
 1) Prove that an infinite subset of a countable set is countable (enumerable).
-2) Show that the map $$
+2) Show that the map $\mathbb{}$
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
