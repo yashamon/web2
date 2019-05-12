@@ -43,7 +43,7 @@ Hopfcroft: 2.3.4 a), 2.3.5
 Hw 9
 
 1) Prove that an infinite subset of a countable set is countable (enumerable).
-2) Show that the set of positive rational numbers is countable, hint the slick way to do this is to use 1) by finding an injection from rationals to the 
+2) Show that the set of positive rational numbers is countable, hint the slick way to do this is to use 1) by finding an injection from positve rationals to the 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
