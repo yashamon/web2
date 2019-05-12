@@ -33,6 +33,10 @@ hw 7 same wed
 Hw 8 for thurs
 
 4-13, 4-14, 4-19
+
+HW 9 for thurs
+
+
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
