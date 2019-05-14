@@ -71,7 +71,7 @@ II][6]
 
 Computer science and game theory
 
-[Time symmetric Go][14] (on a time symmetric, that is simultaneous version of the
+[Simultaneous Go via quantum collapse][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Noncomputability of human intelligence] [20], arxiv, 2018
