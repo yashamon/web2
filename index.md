@@ -103,7 +103,7 @@ symplectomorphisms][12], arxiv preprint
 [11]: http://arxiv.org/pdf/1409.3975.pdf
 [12]: https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
 [13]: https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
-[14]: http://yashamon.github.io/web2/papers/
+[14]: http://yashamon.github.io/web2/papers/Sgo.pdf
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
 [15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
