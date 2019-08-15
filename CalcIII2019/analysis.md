@@ -1,4 +1,6 @@
 my email: yashasavelyev@gmail.com
 
-HW Set 1 for tue
+HW Set 1 for fri
+
+
 
