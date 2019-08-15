@@ -2,7 +2,7 @@ Topology
 
 Hw set 1 for tue
 
-2.1: 1, 2, 3, 4  
+2.1:  2, 3, 4  
 2.2: 1, 2, 3, 4  
 
 Hw set 2 for tue
