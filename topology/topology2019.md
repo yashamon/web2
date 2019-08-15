@@ -1,6 +1,6 @@
 Topology
 
-Hw set 1 for tue
+Hw set 1 for wed
 
 2.1: 2, 3  
 3.1: 1, 4, 5, 6, 7, 8  
