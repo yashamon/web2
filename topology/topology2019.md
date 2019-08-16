@@ -7,7 +7,7 @@ Hw set 1 for wed
 
 Hw set 2 for wed
 
-<!-- 3.2: 2, 3, 6, 11, 12   -->
+3.2: 2, 3, 6, 11, 12  
 
 <!-- Hw set 4 for fri -->
 <!--  -->
