@@ -7,7 +7,7 @@ HW Set 1 for fri
 1.4: 1a, 2 a,b, 6a, 7  
 1.5: 1, 4a,b, 5
 
-HW Set 3 for fri
+HW Set 2 for fri
 
-
+2.1 3,4, 5a,b, 7, 8, 9, 13
 
