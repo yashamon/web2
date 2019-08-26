@@ -5,7 +5,7 @@ Hw set 1 for wed
 2.1: 2, 3  
 3.1: 1, 2, 6, 8
 
-Hw set 2 for wed
+Hw set 3 for wed
 
 3.2: 2, 3, 6, 11, 12  
 
