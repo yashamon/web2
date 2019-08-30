@@ -12,6 +12,7 @@ Hw set 2 for wed
 Hw set 3 for wed
 
 3.2: 2, 3, 6, 11, 12  
+3.3: 1, 2,3
 
 <!-- Hw set 4 for fri -->
 <!--  -->
