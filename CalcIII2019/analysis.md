@@ -13,3 +13,7 @@ HW Set 2 for fri
 1.7: 1, 6
 2.1: 3,4, 5a,b, 7, 8, 9, 13  
 
+HW Set 3 for fri
+
+ 
+
