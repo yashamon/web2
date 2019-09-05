@@ -18,12 +18,12 @@ Hw set 3 for wed
 <!--  -->
 <!-- 3.3: 1,3 -->
 <!--  -->
-HW set 4 for fri
+HW set 4 for wed
 <!--  -->
 <!-- 1. Show that rationals Q are totally disconnected with its topology inherited from R -->
 <!--  -->
-<!-- 3.4: 2, 3, 4, 12   -->
-<!-- 5.1: 4   -->
+3.4: 2, 3, 4, 12  
+5.1: 4  
 <!--  -->
 <!-- HW set 6 for fri -->
 <!--  -->
