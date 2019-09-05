@@ -23,5 +23,5 @@ HW Set 3 for fri
 HW Set 4 for fri
 
 3.4: 10,11  
-4.1 2, 3, 4  
+4.1: 2, 3, 4  
 
