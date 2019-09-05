@@ -22,6 +22,7 @@ HW set 4 for wed
 <!--  -->
 <!-- 1. Show that rationals Q are totally disconnected with its topology inherited from R -->
 <!--  -->
+
 3.4: 2, 3, 4, 12  
 5.1: 4  
 <!--  -->
