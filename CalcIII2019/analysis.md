@@ -27,4 +27,4 @@ HW Set 4 for fri
 
 HW Set 5 for fri
 
-
+4.2: 1 a,b, 3a, 12
