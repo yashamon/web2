@@ -25,7 +25,7 @@ HW set 4 for wed
 3.3: 9,10  
 3.4: 2, 3, 4
 
-HW set 5 for fri
+HW set 5 for wed
 
 3.4: 5, 6, 8, 9
 
