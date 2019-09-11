@@ -178,10 +178,12 @@
 \keywords{}
  \maketitle
 Broadly I am working in differential geometry, particularly symplectic, dynamical systems, and algebraic topology. I also recently became interested in computer science.
-My most recent work is in a number of research directions. For example, I am researching rigidity phenomena in locally conformally symplectic geometry as partly initiated by my recent work \cite{citeSavelyevConformalSymplectic}, and thinking about the holomorphic Weinstein conjecture that appears there.  This is a relatively new  subject, but has the potential to become big, as it has a number of connections to other branches of differential geometry and dynamical systems.
-I am also working towards the conjecture on non-existence, or $C ^{0} $-nearby non-existence of sky catastrophes for homotopies of Reeb vector fields.
+My most recent work branches in a number of research directions. For example, I am researching rigidity phenomena in locally conformally symplectic geometry as partly initiated in \cite{citeSavelyevConformalSymplectic}. Locally conformally symplectic manifolds of $\lcs$ manifolds for short, are an extremely natural generalization of both contact and symplectic manifolds. At the moment this subject is full of fundamental mysteries, and is relatively new.
+
+Particularly, I am interested in extensions of contact and symplectic Gromov non-squeezing theorems to locally conformally symplectic setting.
+   I am also working towards the conjecture on non-existence, or $C ^{0} $-nearby non-existence of sky catastrophes for homotopies of Reeb vector fields.
 The latter conjecture appears in my \cite{citeSavelyevFuller} and its resolution would likely be one of the most exciting possibilities that is presented in this research statement, as the are a number of applications, in particular new existence results for Reeb orbits which traditionally needed techniques of elliptic pde's. 
-I now describe in more detail the pair of research directions mentioned above, and their relationship, as this is where most of my most recent activity concentrated.
+I now describe in more detail the pair of research directions mentioned above, and their relationship.
 \section {Sky catastrophes, Reeb vector fields, and the no Reeb sky catastrophe conjecture}
 The original Seifert conjecture  \cite{citeSeifert} asked if a non-singular vector field on $S
 ^{3} $ must have a periodic orbit. 
@@ -205,7 +207,7 @@ on a solid torus,
 for which there is a continuous (and isolated) family of $\{X _{t}\} $ periodic orbits
 $\{o _{t}\} $,  with the period of $o _{t} $ going
 to infinity as $t \mapsto 1$, and so that for $t =1$ the orbit
-disappears. Let us give the following a bit more general but still incomplete definition here, a full definition (according to us) appears in \cite{citeSavelyevFuller}.
+disappears. Let us give the following, a bit more general, but still incomplete definition here, a full definition (according to us) appears in \cite{citeSavelyevFuller}.
 \begin{definition} [Incomplete] 
   A \textbf{\emph{sky catastrophe}} for a smooth family $\{X _{t} \}$, $t \in [0,1]$,
    of vector
@@ -259,7 +261,7 @@ Without matching, this argument does not obviously work.
 % bifurcations of orbits for all sufficiently large periods. 
 \begin{theorem} \cite{citeSavelyevFuller} \label{prop:AdmissibleReeb} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
 vector fields on a contact manifold $M$. (Informally) let $S$ denote the space of closed orbits of the family $\{X _{t} \}$, where period is allowed to vary.
-Then there is no (period) unbounded from above locally Lipschitz  continuous $p: [0,\infty)
+Then there is no (period) unbounded from above locally Lipschitz  continuous path $p: [0,\infty)
 \to S$ whose composition with the projection $\pi: S
 \to [0,1]$ has finite length, with $\pi$ the projection to the time coordinate $t$.
 % Suppose that there is an $E$ so that:
@@ -290,14 +292,21 @@ Then there is no (period) unbounded from above locally Lipschitz  continuous $p:
 %  Then $\{X _{t}\}$ is admissible.
 \end{theorem}
 The above rules out for example Fuller's sky catastrophe that appears in
-\cite{citeFullerBlueSky}, and described in the beginning of our paper.
+\cite{citeFullerBlueSky}, and described in the beginning of our paper. Inspired by this we may further conjecture:
 \begin{conjecture} Let $\{X _{t} \}$, $t \in [0,1]$ be a smooth homotopy through Reeb
 vector fields on a compact contact manifold $M$. Then there is a $C ^{0} $ nearby smooth family $\{X' _{t} \}$, $t \in [0,1]$, $X' _{i}=X _{i}  $, $i=0,1$, such that $\{X' _{t} \}$ has no sky catastrophes.
 \end{conjecture}
 Given this conjecture we may readily apply general analogues in \cite{citeSavelyevFuller} of Theorem \ref{conj:preliminary} to get applications to existence of Reeb orbits.
-Of course one exciting thing here is that it will be without so called ``hard'' elliptic pde techniques of pseudo-holomorphic curves. And that moreover we would obtain new qualitative dynamical-topological information about Reeb vector fields.
-\section {Locally conformally symplectic geometry and rigidity}
-A locally conformally symplectic manifold or $\lcsm$ is a smooth $2n$-fold $M$ with an $\lcs$ structure: which is a
+Of course one exciting thing here is that it will be without so called ``hard'' elliptic pde techniques of pseudo-holomorphic curves. Instead the methods would just be conceptual methods of topology. It might be possible however that the proof of the conjecture above, itself may initially involve elliptic techniques. Not surprisingly given how powerful and far reaching these techniques have become.
+However whatever the method of proof, if we could verify this conjecture,  we would obtain new qualitative dynamical-topological information about Reeb vector fields.  
+
+This is an ambitious problem, but we could also set some near term goals. For example we can at first restrict to homotopies $\{X _{t} \}$ of vector fields where the space of orbits $S$ is well behaved, for example:
+\begin{question} \label{quest:rect} Suppose $S$ that is rectifiable in the sense of measure theory, does the conclusion of the Conjecture \ref{conj:preliminary} hold in this case?
+   \end{question}
+If $S$ is rectifiable, then there are powerful additional tools at our disposal,  most important of which is Sullivan's theory \cite{cite:} which develops a connection between measure theory, and Hahn-Banach theorem with dynamics. Indeed under the rectifiable hypothesis it should be technically possible to just build on the proof of Theorem \ref{}, to produce this special case of the conjecture.
+
+
+\section {Locally conformally symplectic geometry and rigidity} A locally conformally symplectic manifold or $\lcsm$ is a smooth $2n$-fold $M$ with an $\lcs$ structure: which is a
 non-degenerate 2-form $\omega$, which is locally diffeomorphic to $
 {f} \cdot \omega _{st}  $, for some (non-fixed) positive smooth function $f$, with $\omega _{st}  $ the standard symplectic form on
 $\mathbb{R} ^{2n} $.
