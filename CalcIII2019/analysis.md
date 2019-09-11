@@ -33,5 +33,5 @@ HW Set 5 for fri
 4.5: 1  
 5.1: 1,2
 
-HW Set 5 for fri
+HW Set 6 for fri
 
