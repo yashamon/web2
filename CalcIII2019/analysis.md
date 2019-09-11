@@ -35,5 +35,6 @@ HW Set 5 for fri
 
 HW Set 6 for fri
 
-5.2: 1, 3, 5  
+5.2: 1, 3, 5, 10
+5.3: 1, 2, 3  
 
