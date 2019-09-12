@@ -50,7 +50,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), *Journal of Symplectic Geometry, (2019)*, accepted
 
-[Mean curvature versus diameter and energy quantization][T] (Annales mathematiques du Quebec, 2019, accepted)
+[Mean curvature versus diameter and energy quantization][T], (Annales mathematiques du Quebec, 2019, accepted)
 
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
