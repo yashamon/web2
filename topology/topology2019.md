@@ -31,7 +31,7 @@ HW set 5 for wed
 
 HW set 6 for wed
 
-5.1: 1, 2, 3, 
+5.1: 1, 2, 3, 4, 5,6,7  
 <!--  -->
 <!-- HW set 6 for fri -->
 <!--  -->
