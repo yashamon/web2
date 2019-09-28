@@ -35,7 +35,7 @@ HW set 6 for wed
 
 HW set 7 for wed
 
-5.1: 5, 6, 7  
+5.1: 5, 6, 7   
 
 
 <!--  -->
