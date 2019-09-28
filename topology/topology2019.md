@@ -35,7 +35,7 @@ HW set 6 for wed
 <!--  -->
 <!-- HW set 6 for fri -->
 <!--  -->
-!-- 5.1:    -->
+<!-- !-- 5.1:    --> -->
 <!-- Read concise course in algebraic topology first chapter -->
 <!--  -->
 <!-- Hw set 7 for tue -->
