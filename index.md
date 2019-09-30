@@ -77,7 +77,7 @@ Computer science and game theory
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Noncomputability of human intelligence][20], arxiv, 2018
->> A more compact version  
+>> A more compact version and clarified version  
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
 <!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
