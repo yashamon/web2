@@ -76,8 +76,8 @@ Computer science and game theory
 [Simultaneous Go via quantum collapse][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
-[Noncomputability of human intelligence][20], arxiv, 2018
->> This is a more compact, submitted version, then the arxiv version
+[Noncomputability of human intelligence][20],  2018
+>> This is a more compact, submitted version, then the arxiv version.
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
 <!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
