@@ -37,6 +37,8 @@ HW set 7 for wed
 
 5.1: 5, 6, 7   (You already did it)
 
+HW 8
+
 5.2: 1,2,3,4  
 
 <!--  -->
