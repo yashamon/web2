@@ -86,14 +86,14 @@
   its application to exterior calculus.}}, {Am. J. Math.}, 65 (1943),
   pp.~433--438.
 
-\bibitem{citeSavelyevConformalSymplectic}
-{\sc Y.~Savelyev}, {\em {Gromov Witten theory of a locally conformally
-  symplectic manifold and the Fuller index}}, arXiv,  (2016).
-
 \bibitem{citeSavelyevFuller}
-\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {Extended Fuller
-  index, sky catastrophes and the Seifert conjecture}}, arXiv:1703.07801,
-  (2017).
+{\sc Y.~Savelyev}, {\em {Extended Fuller index, sky catastrophes and the
+  Seifert conjecture}}, International Journal of mathematics, to appear.
+
+\bibitem{citeSavelyevConformalSymplectic}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em {Gromov Witten
+  theory of a locally conformally symplectic manifold and the Fuller index}},
+  arXiv,  (2016).
 
 \bibitem{citeSchweitzerC1Counterexample}
 {\sc P.~A. Schweitzer}, {\em Counterexamples to the {S}eifert conjecture and
@@ -113,6 +113,10 @@
 \bibitem{citeMuller}
 {\sc {Stefan M\"uller}}, {\em {Epsilon-non-squeezing and $C_0$-rigidity of
   epsilon-symplectic embeddings}}, {arXiv:1805.01390},  (2018).
+
+\bibitem{citeSullivanCycles}
+{\sc D.~{Sullivan}}, {\em {Cycles for the dynamical study of foliated manifolds
+  and complex manifolds.}}, {Invent. Math.}, 36 (1976), pp.~225--255.
 
 \bibitem{citeTaubesCountingPseudoHolomorphic}
 {\sc C.~H. {Taubes}}, {\em {Counting pseudo-holomorphic submanifolds in
