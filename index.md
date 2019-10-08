@@ -44,7 +44,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, accepted
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, https://doi.org/10.1142/S0129167X18500969
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
