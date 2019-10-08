@@ -77,6 +77,7 @@ Computer science and game theory
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Noncomputability of human intelligence][20], 2018
+
 >> This is a more compact, submitted version, then the arxiv version.
 
 <!-- In construction -->
