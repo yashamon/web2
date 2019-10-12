@@ -50,7 +50,7 @@ HW 8
 7.2: 1,2,5, 12, 14  
 7.3: 1,2
 
-HW 9
+HW 9 for fri
 
 Wed oct 16 exam. Based on hw's 1-8.
 
