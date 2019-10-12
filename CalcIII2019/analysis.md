@@ -52,4 +52,7 @@ HW 8
 
 HW 9
 
+Wed oct 16 exam. Based on hw's 1-9.
+
+8.3: 
 
