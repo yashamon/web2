@@ -44,23 +44,25 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, accepted
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, https://doi.org/10.1142/S0129167X18500969
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
-[Twisted and untwisted K-theory quantization and symplectic topology][17], (with Egor Shelukhin), *Journal of Symplectic Geometry, (2019)*, accepted
+[K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), *Journal of Symplectic Geometry, (2019)*, accepted
+
+
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
+
+[Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), accepted
 
 
 Submitted papers
 
-[Mean curvature versus diameter and energy quantization][T]
 
 [Global Fukaya category and quantum Novikov conjecture I][5]
 
-[Global Fukaya category and quantum Novikov conjecture
-II][6] 
+[Global Fukaya category and quantum Novikov conjecture II][6] 
 
 > > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
@@ -74,7 +76,9 @@ Computer science and game theory
 [Simultaneous Go via quantum collapse][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
-[Noncomputability of human intelligence] [20], arxiv, 2018
+[Noncomputability of human intelligence][20], 2018
+
+>> This is a more compact, submitted version, then the arxiv version.
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
