@@ -53,3 +53,5 @@ HW 10
 1. Show that the mobius band $M=[0,1] \times R /(0,x) \sim (1,-x)$ is a vector bundle over $S^1$. That is check local triviality.  
 
 Lee: 3-1, 3-2, 3-4, 3-5  
+
+HW 
