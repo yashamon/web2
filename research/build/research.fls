@@ -1,4 +1,4 @@
-PWD /home/yasha/web2/research
+PWD /home/yasha/web/research
 INPUT /var/lib/texmf/web2c/luatex/lualatex.fmt
 INPUT ./research.tex
 OUTPUT build/research.log

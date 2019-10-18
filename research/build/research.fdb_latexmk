@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex build/research"] 1568744757 "build/research.aux" "build/research.bbl" "build/research" 1568745161
-  "/home/yasha/texmf/bibtex/bib/link.bib" 0 -1 0 ""
+["bibtex build/research"] 1569348866 "build/research.aux" "build/research.bbl" "build/research" 1570471097
+  "/home/yasha/texmf/bibtex/bib/link.bib" 1569346689 104972 3654bef67379e9052e7390d684ca7578 ""
   "/usr/share/texmf-dist/bibtex/bst/base/siam.bst" 1557554374 19403 812681d329611d2a1625ad7ae5186edc ""
-  "build/research.aux" 1568745161 5352 b6021ed98bca1d1267b169748aa0cdd9 "pdflatex"
+  "build/research.aux" 1569348867 5430 068e26f3fc81cc1f5c13e5dfd1275989 "pdflatex"
   (generated)
-  "build/research.bbl"
   "build/research.blg"
-["pdflatex"] 1568745160 "research.tex" "build/research.pdf" "research" 1568745161
+  "build/research.bbl"
+["pdflatex"] 1569348866 "research.tex" "build/research.pdf" "research" 1570471097
   "/home/yasha/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1561575189 77236 4fd5a96d6e08f826fb9f23012064bdf5 ""
   "/home/yasha/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1561575188 124178 679b3d1d35c7ee4de2c1859d7b10e906 ""
   "/home/yasha/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bolditalic.luc" 1561575188 132279 7c357337bd3a4701faf8176662a1fd0f ""
@@ -155,12 +155,12 @@
   "/usr/share/texmf-dist/tex/luatex/lualibs/lualibs-extended.lua" 1557554374 4863 71ebb63cd7b26b0bd5592f889e94f08d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1566936387 3106380 436fef8c2e0ca660ce1dd89198cfa583 ""
   "/var/lib/texmf/web2c/luatex/lualatex.fmt" 1566936371 1376797 d863bd85022b7acc4aac1ab9d7f7a096 ""
-  "build/research.aux" 1568745161 5352 b6021ed98bca1d1267b169748aa0cdd9 "pdflatex"
-  "build/research.bbl" 1565648475 5231 dec1b86eb36be4b4ad90b75c8de3e3a6 "bibtex build/research"
-  "build/research.out" 1568745161 542 6572ebc71f79ac534fc9d00722add9a3 "pdflatex"
-  "research.tex" 1568745161 40271 b7b351713cbf4adad492e21c83143298 ""
+  "build/research.aux" 1569348867 5430 068e26f3fc81cc1f5c13e5dfd1275989 "pdflatex"
+  "build/research.bbl" 1569348866 5434 6bbb1c115b0dd739b202ac4048da31c6 "bibtex build/research"
+  "build/research.out" 1569348867 542 6572ebc71f79ac534fc9d00722add9a3 "pdflatex"
+  "research.tex" 1569348882 40397 3f2760b425d105bf9a55284e94e8bcf6 ""
   (generated)
-  "build/research.log"
   "build/research.pdf"
-  "build/research.out"
+  "build/research.log"
   "build/research.aux"
+  "build/research.out"
