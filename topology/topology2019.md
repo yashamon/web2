@@ -50,7 +50,7 @@ pg 96 2
 
 HW 10
 
-1. Show that the mobius band $$
+1. Show that the mobius band $M=[0,1] \times \mathbb {R}/~(0,x)$
 <!--  -->
 <!-- HW set 6 for fri -->
 <!--  -->
