@@ -50,7 +50,7 @@ pg 96 2
 
 HW 10
 
-1. Show that the mobius band $M=[0,1] \times \mathbb {R}/(0,x)~(1,-x)$ is a vector bundle over $S^1$.
+1. Show that the mobius band $M=[0,1] \times \mathbb {R}/(0,x)~(1,-x)$ is a vector bundle over $S^1$. That is check local triviality.
 
 
 <!--  -->
