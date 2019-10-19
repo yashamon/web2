@@ -76,7 +76,7 @@ Computer science and game theory
 [Simultaneous Go via quantum collapse][14] (on a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
-[Analogues of G\"odel statements][20], 2018
+[Analogues of G\"odel statements and computability of intelligence][20], 2018
 
 >> This is a more compact, submitted version, then the arxiv version.
 
