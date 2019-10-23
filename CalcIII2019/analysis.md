@@ -58,3 +58,7 @@ Wed oct 16 exam. Based on hw's 1-8.
 8.2: 2, 3  
 8.3: 1, 2, 3, 4, 9  
 
+Hw 10 for fri
+
+
+
