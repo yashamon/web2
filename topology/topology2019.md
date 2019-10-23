@@ -45,7 +45,8 @@ HW 9
 
 In the proof of Theorem 17 show that the map is a homeomorphism onto image.
 
-pg 53: 1, 2, 7, 9 
+pg 53: 1, 2, 7, 9
+pg 96 2
 
 <!--  -->
 <!-- HW set 6 for fri -->
