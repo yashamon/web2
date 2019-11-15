@@ -60,7 +60,9 @@ Lee: 4-1, 4-2
 
 HW 12 for fri
 
-Lee, Edition 2
+Lee, Edition 2:
+
+14-1, 14-5, 14-6  
 
 
 
