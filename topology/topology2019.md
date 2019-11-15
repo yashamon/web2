@@ -58,7 +58,11 @@ HW 11 fri
 
 Lee: 4-1, 4-2  
 
-HW 12 for wed
+HW 12 for fri
+
+Lee, Edition 2
+
+
 
 
 
