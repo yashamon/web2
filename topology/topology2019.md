@@ -58,6 +58,8 @@ HW 11 fri
 
 Lee: 4-1, 4-2  
 
-HW 12 
+HW 12 for wed
+
+
 
 
