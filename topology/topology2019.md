@@ -48,8 +48,12 @@ In the proof of Theorem 17 show that the map is a homeomorphism onto image.
 pg 53: 1, 2, 7, 9  
 pg 96 2  
 
-HW 10
+HW 10 mon
 
 1. Show that the mobius band $M=[0,1] \times R /(0,x) \sim (1,-x)$ is a vector bundle over $S^1$. That is check local triviality.  
 
 Lee: 3-1, 3-2, 3-4, 3-5  
+
+HW 11 fri
+
+Lee: 4-1, 4-2  
