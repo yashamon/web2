@@ -54,7 +54,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
-[Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), accepted
+[Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), 1-7, (2019), 10.1007/s40316-019-00127-0
 
 
 Submitted papers
