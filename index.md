@@ -39,12 +39,12 @@ Francois Lalonde), *Electronic Research Announcements, Vol 21, 177-185, (2014)*
 [On the Hofer geometry injectivity radius conjecture][16], *International Mathematics Research Notices, 7253-7267, (2016)*; 
 doi: 10.1093/imrn/rnw023
 
-[Floer theory and topology of $Diff (S ^2)$][11], *Journal of Symplectic Geometry, Vol. 15, No. 3, 853-859, (2017)*
+[Floer theory and topology of $Diff (S ^2)$][11], *Journal of Symplectic Geometry, Vol. 15, No. 3, pg 853-859, (2017)*
 DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > *(Note the title change, previously: "Volume preserving ...")*
 
-[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, 1-22, https://doi.org/10.1142/S0129167X18500969
+[Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, pg 1-22, https://doi.org/10.1142/S0129167X18500969
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
