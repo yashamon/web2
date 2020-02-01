@@ -1,6 +1,10 @@
 my email: yashasavelyev@gmail.com 
 
-HW Set 1 for wed
+HW Set 1 for wed:
+
+1-14, 1-15, 1-16, 1-22, 1-23, 1-29, 1-30
+
+
 
 1-23, 1-24, 1-28, 1-29  
 2-1, 2-2, 2-3
