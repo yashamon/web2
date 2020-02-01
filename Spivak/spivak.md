@@ -3,44 +3,44 @@ my email: yashasavelyev@gmail.com
 HW Set 1 for wed:
 
 1-14, 1-15, 1-16, 1-22, 1-23, 1-29, 1-30
-
-
-
-1-23, 1-24, 1-28, 1-29  
-2-1, 2-2, 2-3
-
-HW Set 2 for thur
-
-2-17: a,b, c, 2-19, 2-22, 2-23, 2-28, 2-29
-
-HW set 3 for wed
-
-Show that the special case of inverse function theorem for an $f$ with $f' (a) = id$, implies the general case.  
-2-40, 2-41, 2-36, 2-37, 2-38  
-
-Hw 4 for wed
-
-3-7, 3-8, 3-10, 3-14
-
-hw 5 wed
-
-3.16, 3.22, 3-23, 3-26, 3-28, 3-36
-
-hw 6 wed
-
-3-37, 3-41
-
-hw 7 same wed
-
-4-1, 4-2, 4-3
-
-Hw 8 for thurs
-
-4-13, 4-14, 4-19
-
-HW 9 for thurs
-
-4-23, 4-24, 4-25, 4-26, 4-27
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- 1-23, 1-24, 1-28, 1-29   -->
+<!-- 2-1, 2-2, 2-3 -->
+<!--  -->
+<!-- HW Set 2 for thur -->
+<!--  -->
+<!-- 2-17: a,b, c, 2-19, 2-22, 2-23, 2-28, 2-29 -->
+<!--  -->
+<!-- HW set 3 for wed -->
+<!--  -->
+<!-- Show that the special case of inverse function theorem for an $f$ with $f' (a) = id$, implies the general case.   -->
+<!-- 2-40, 2-41, 2-36, 2-37, 2-38   -->
+<!--  -->
+<!-- Hw 4 for wed -->
+<!--  -->
+<!-- 3-7, 3-8, 3-10, 3-14 -->
+<!--  -->
+<!-- hw 5 wed -->
+<!--  -->
+<!-- 3.16, 3.22, 3-23, 3-26, 3-28, 3-36 -->
+<!--  -->
+<!-- hw 6 wed -->
+<!--  -->
+<!-- 3-37, 3-41 -->
+<!--  -->
+<!-- hw 7 same wed -->
+<!--  -->
+<!-- 4-1, 4-2, 4-3 -->
+<!--  -->
+<!-- Hw 8 for thurs -->
+<!--  -->
+<!-- 4-13, 4-14, 4-19 -->
+<!--  -->
+<!-- HW 9 for thurs -->
+<!--  -->
+<!-- 4-23, 4-24, 4-25, 4-26, 4-27 -->
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
