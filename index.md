@@ -78,7 +78,7 @@ classical game Go, using some ideas of quantum mechanics. I have recently added 
 
 [Turing analogues of G\"odel statements and computability of intelligence][20] 
 
->>More up  
+>> 
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
