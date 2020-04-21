@@ -48,7 +48,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
-[K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), *Journal of Symplectic Geometry, (2019)*, pg 1-22, accepted
+[K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 
 
 
