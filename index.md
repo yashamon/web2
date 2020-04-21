@@ -47,6 +47,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, pg. 1-22, https://doi.org/10.1142/S0129167X18500969
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
+[Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), 1-7, (2019), 10.1007/s40316-019-0012
 
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
