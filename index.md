@@ -48,6 +48,8 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 >> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
+[Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), 1-7, (2019), 10.1007/s40316-019-00127-0
+
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
 
