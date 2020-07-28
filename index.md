@@ -1,4 +1,3 @@
-
 <STYLE>
 <!--
 A{text-decoration:none}
@@ -9,6 +8,7 @@ body {
 
 -->
 </STYLE>
+<html manifest="my.cache">
 
 # Articles 
 [Quantum characteristic classes and the Hofer metric][1],
