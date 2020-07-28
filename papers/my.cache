@@ -3,4 +3,4 @@ CACHE
 # dont force any caching 
 NETWORK:
 #force downloads form your site not to use cache
-/http://yashamon.github.io/web2/papers.com
+http://yashamon.github.io/web2/papers.com
