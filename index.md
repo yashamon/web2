@@ -9,7 +9,6 @@ body {
 -->
 </STYLE>
 <html manifest="my.cache">
-
 # Articles 
 [Quantum characteristic classes and the Hofer metric][1],
 *Geometry & Topology 12, 2277–2326, (2008)*
