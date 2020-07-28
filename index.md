@@ -8,6 +8,8 @@ body {
 
 -->
 </STYLE>
+echo '<a href="files/pdfs/filename.pdf?q='.microtime(true).'">PDF</a>';
+
 <html manifest="my.cache">
 # Articles 
 [Quantum characteristic classes and the Hofer metric][1],
