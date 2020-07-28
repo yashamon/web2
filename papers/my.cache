@@ -1,0 +1,6 @@
+CACHE MANIFEST  
+CACHE  
+# dont force any caching 
+NETWORK:
+#force downloads form your site not to use cache
+your-site.com
