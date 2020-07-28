@@ -8,6 +8,7 @@ body {
 
 -->
 </STYLE>
+<!DOCTYPE html>
 
 <html manifest="my.cache">
 
