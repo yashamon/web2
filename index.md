@@ -10,7 +10,7 @@ body {
 </STYLE>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="timestamp" />
+<meta http-equiv="Expires" content="0" />
 <!-- <html manifest="my.cache"> -->
 # Articles 
 [Quantum characteristic classes and the Hofer metric][1],
