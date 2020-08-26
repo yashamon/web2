@@ -12,7 +12,9 @@ body {
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 # Articles 
-
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 [Quantum characteristic classes and the Hofer metric][1],
 *Geometry & Topology 12, 2277–2326, (2008)*
 
