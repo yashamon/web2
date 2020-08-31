@@ -83,7 +83,7 @@ Computer science and game theory
 
 [Simultaneous Go via quantum collapse][14] 
 
-(on a time symmetric, that is simultaneous version of the
+>> On a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Incompleteness for stably sound Turing machines][20] 
