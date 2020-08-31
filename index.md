@@ -85,7 +85,7 @@ Computer science and game theory
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Incompleteness for stably sound Turing machines][20] 
->> This was in development for quiet some time due to difficult underlying philosophical issues. The current version distills the main ideas a purely mathematical result
+>> This was in development for quiet some time due to difficult underlying philosophical issues. The current version distills the main ideas a purely mathematical result, an incompleteness 
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
