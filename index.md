@@ -72,7 +72,7 @@ Submitted papers
 
 [Global Fukaya category and quantum Novikov conjecture II][6] 
 
-> > These papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
+> > These pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
 [Non-squeezing in l.c.s. geometry and holomorphic Weinstein conjecture][18], arxiv
