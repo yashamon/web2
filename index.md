@@ -72,7 +72,7 @@ Submitted papers
 
 [Global Fukaya category and quantum Novikov conjecture II][6] 
 
-> > These pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
+> > This pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
 [Non-squeezing in l.c.s. geometry and holomorphic Weinstein conjecture][18], arxiv
@@ -81,7 +81,9 @@ Submitted papers
 
 Computer science and game theory
 
-[Simultaneous Go via quantum collapse][14] (on a time symmetric, that is simultaneous version of the
+[Simultaneous Go via quantum collapse][14] 
+
+(on a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.)
 
 [Incompleteness for stably sound Turing machines][20] 
