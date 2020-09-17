@@ -109,7 +109,7 @@ symplectomorphisms][12], arxiv preprint
 [3]: http://arxiv.org/pdf/0912.2948.pdf
 [4]: http://arxiv.org/pdf/1006.4383.pdf
 [5]: http://yashamon.github.io/web2/papers/fukayaI.pdf 
-[6]: http://yashamon.github.io/web2/papers/GlobalFukayaPartII.pdf 
+[6]: http://yashamon.github.io/web2/papers/fukayaII.pdf 
 [7]: http://arxiv.org/pdf/1204.3098v3 
 [8]: http://arxiv.org/pdf/1308.3456v3 
 [9]: http://arxiv.org/pdf/1312.0928v3 
