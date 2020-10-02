@@ -3,8 +3,8 @@ my email: yashasavelyev@gmail.com
 HW Set 1 for wed
 
 From the book linear algebra done right:
-1, 3, 4 
-From Rudin principles of math analysis:
+1, 3, 4  
+From Rudin principles of math analysis:  
 2, 5, 6, 7
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
