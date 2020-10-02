@@ -1,6 +1,6 @@
 my email: yashasavelyev@gmail.com
 
-HW Set 1 for tue
+HW Set 1 for wed
 
 From the book linear algebra done right:
 1, 3, 4
