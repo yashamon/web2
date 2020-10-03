@@ -3,7 +3,7 @@ my email: yashasavelyev@gmail.com
 HW Set 1 for wed
 
 From the book linear algebra done right:
-1, 3, 4  
+6A: 1, 3, 4  
 From Rudin principles of math analysis:  
 2, 5, 6, 7
 
