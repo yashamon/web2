@@ -5,7 +5,7 @@ HW Set 1 for wed
 From the book linear algebra done right:
 6A: 1, 3, 4  
 From Rudin principles of math analysis:  
-pg43: 2, 5, 6, 7
+pg 43: 2, 5, 6, 7
 
 
 
