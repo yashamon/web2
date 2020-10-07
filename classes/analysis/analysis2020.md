@@ -11,7 +11,7 @@ HW Set 2 for wed
 
 1) Complete the proof of Theorem 2.27 a) (the book has a gap)
 
-pg 43: 9, 10, 6, 7
+pg 43: 8, 9, 10, 6, 7
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
