@@ -7,6 +7,7 @@ From the book linear algebra done right:
 From Rudin principles of math analysis:  
 pg 43: 2, 5, 6, 7
 
+HW Set 1 for wed
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
