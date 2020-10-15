@@ -15,6 +15,8 @@ pg 43: 8, 9, 10
 
 HW Set 3 for wed
 
+11, 
+
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
