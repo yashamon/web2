@@ -13,6 +13,7 @@ HW Set 2 for wed
 
 pg 43: 8, 9, 10  
 
+HW Set 3 for wed
 
 
 
