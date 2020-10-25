@@ -17,7 +17,8 @@ HW Set 3 for wed
 
 pg 43:  12, 13, 14, 15, 16
 
-HW Set 4 for fri
+HW Set 4 for this fri
+
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
