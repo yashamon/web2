@@ -17,7 +17,8 @@ Hw set 3 for wed
 
 Hw set 4 for wed
 
-3.3 1,2,3
+3.3: 1,2,3
+
 <!--  -->
 <!-- Hw set 3 for wed -->
 <!--  -->
