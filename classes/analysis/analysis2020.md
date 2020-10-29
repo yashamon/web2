@@ -19,7 +19,7 @@ pg 43:  12, 13, 14, 15, 16
 
 HW Set 4 for this fri
 
-pg 78: 1,2,3
+pg 78: 1,2,3, 4,5
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
