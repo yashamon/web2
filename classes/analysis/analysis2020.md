@@ -20,7 +20,8 @@ pg 43:  12, 13, 14, 15, 16
 HW Set 4 for wed
 
 pg 78: 1,2,3,4,5
-Prove
+
+Prove that a sequence converges iff all of its subsequences converge to the same value.
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
