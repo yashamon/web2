@@ -23,6 +23,9 @@ pg 78: 1,2,3,4,5
 
 Prove that a sequence converges iff all of its subsequences converge to the same value.
 
+HW Set 5 for wed
+
+pg 78: 1,2,3,4,5
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
