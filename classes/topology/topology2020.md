@@ -19,6 +19,10 @@ Hw set 4 for wed
 
 3.3: 1,2,3  
 
+Hw set 5 for wed
+
+3:3: 4, 5, 6, 7,8, 9
+
 
 <!--  -->
 <!-- Hw set 3 for wed -->
