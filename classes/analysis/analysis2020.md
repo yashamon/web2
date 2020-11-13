@@ -30,7 +30,7 @@ pg 98: 1,2,3,4
 
 HW Set 6 for wed
 
- pg 98: 5,6,7,8  
+pg 98: 5,6,7,8  
 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
