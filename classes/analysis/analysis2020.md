@@ -28,6 +28,7 @@ HW Set 5 for wed
 pg 78: 7,8  
 pg 98: 1,2,3,4  
 
+
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
