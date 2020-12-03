@@ -35,6 +35,7 @@ pg 98: 5,6,7,8,14
 HW Set 6 for wed, 
 
 Rudin, pg 114: 1, 2, 3, 4, 5, 9  
+Gaghan 5.1: 
 
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
