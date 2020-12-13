@@ -38,6 +38,8 @@ Rudin, pg 114: 1, 2, 3, 4, 9
 Gaghan 5.1: 2,3  
 
 
+
+
 <!-- 1) Prove that an infinite subset of a countably infinite set is countably infinite. -->
 <!-- 1.1:  2, 3, 4, 5, 6a, 10 -->
 <!--  -->
