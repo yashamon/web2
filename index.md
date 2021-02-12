@@ -75,7 +75,7 @@ Submitted papers
 > > This pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
 
-[Non-squeezing in l.c.s. geometry and holomorphic Weinstein conjecture][18], arxiv
+[Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv
 
 >> Title change from arxiv version 
 
