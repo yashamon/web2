@@ -68,7 +68,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 Submitted papers
 
 
-[Global Fukaya category I: Novikov conjecture][5]
+[Global Fukaya category I: Quantum Novikov conjecture][5]
 
 [Global Fukaya category II: Singular connections and other applications][6] 
 
