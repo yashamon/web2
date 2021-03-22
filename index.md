@@ -72,8 +72,7 @@ Submitted papers
 
 [Global Fukaya category II: Singular connections and other applications][6] 
 
-> > This pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
-
+> > This pairs papers have a slightly different title on arxiv. 
 
 [Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv
 
