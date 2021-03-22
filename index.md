@@ -70,7 +70,7 @@ Submitted papers
 
 [Global Fukaya category I: Novikov conjecture][5]
 
-[Global Fukaya category II: Application to  ][6] 
+[Global Fukaya category II: Application to singular connections  ][6] 
 
 > > This pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
