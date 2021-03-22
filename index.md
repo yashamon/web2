@@ -70,7 +70,7 @@ Submitted papers
 
 [Global Fukaya category and quantum Novikov conjecture I][5]
 
-[Global Fukaya category  II][6] 
+[Global Fukaya category II: ][6] 
 
 > > This pairs papers have a slightly different title on arxiv. Compared to arxiv versions these are much more polished and corrected.
 
