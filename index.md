@@ -77,7 +77,7 @@ Submitted papers
 
 >> Title change from arxiv version 
 
-Computer science and game theory
+Other topics
 
 [Simultaneous Go via quantum collapse][14] 
 
