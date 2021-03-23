@@ -77,7 +77,7 @@ Submitted papers
 
 >> Title change from arxiv version 
 
-Other topics
+Other topics:
 
 [Simultaneous Go via quantum collapse][14] 
 
