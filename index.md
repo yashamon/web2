@@ -86,7 +86,7 @@ Other topics:
 [Simultaneous Go via quantum collapse][14] 
 
 >> On a time symmetric, that is simultaneous version of the
-classical game Go, using some ideas of quantum mechanics. I am interested in actually writing a program, any help would be appreciated.
+classical game Go, using some ideas of quantum mechanics. I am interested in writing a program, any help would be appreciated.
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
