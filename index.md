@@ -83,6 +83,10 @@ Other topics:
 
 > > This generalizes the original Godel incompleteness theorems to the context of stably consistent formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.
 
+[Simultaneous Go via quantum collapse][14] 
+
+>> On a time symmetric, that is simultaneous version of the
+classical game Go, using some ideas of quantum mechanics. I have recently added details as I am interested in actually writing a program, any help would be appreciated.
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
