@@ -86,7 +86,7 @@ classical game Go, using some ideas of quantum mechanics. I have recently added 
 
 [Incompleteness for stably consistent formal systems][20] 
 
-> > This was in development for quiet some time due to difficult underlying philosophical issues. The current version distills the main ideas into a purely mathematical result - a Godel incompleteness type theorem for Turing machines satisfying a certain weakened condition of soundness, I call stable soundness.
+> > l.
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
