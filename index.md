@@ -86,7 +86,7 @@ classical game Go, using some ideas of quantum mechanics. I have recently added 
 
 [Incompleteness for stably consistent formal systems][20] 
 
-> > l.
+> > This 
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
