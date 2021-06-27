@@ -69,7 +69,7 @@ Submitted papers
 
 [Global Fukaya category I: Quantum Novikov conjecture][5]
 
-[Global Fukaya category II: Singular connections and other applications][6] 
+[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6] 
 
 > > This pairs papers have a slightly different title on arxiv. 
 
