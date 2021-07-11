@@ -73,10 +73,10 @@ Submitted papers and preprints
 
 > > The above pair of papers have a slightly different title on arxiv. 
 
-[Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv 26 pages
+[Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv, 26 pages
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds][Oh]
+manifolds][Oh] 
 
 [Incompleteness for stably consistent formal systems][20] 
 
