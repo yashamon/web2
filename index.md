@@ -78,7 +78,7 @@ Submitted papers and preprints
 >> Title change from arxiv version 
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds] [Oh]
+manifolds][Oh]
 
 Other topics:
 
@@ -126,4 +126,4 @@ symplectomorphisms][12], arxiv preprint
 [19]: https://arxiv.org/abs/1703.07801
 [20]: http://yashamon.github.io/web2/papers/stableconsistency.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
-[Oh]https://arxiv.org/abs/2107.03551
+[Oh]: https://arxiv.org/abs/2107.03551
