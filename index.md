@@ -71,7 +71,7 @@ Submitted papers and preprints
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6] 
 
-> > This pairs papers have a slightly different title on arxiv. 
+> > This pair papers have a slightly different title on arxiv. 
 
 [Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv
 
