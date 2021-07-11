@@ -76,7 +76,7 @@ Submitted papers and preprints
 [Conformal symplectic Weinstein conjecture and non-squeezing][18], arxiv, 26 pages
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds][Oh] 
+manifolds][Oh] 55 pages
 
 [Incompleteness for stably consistent formal systems][20] 
 
