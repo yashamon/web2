@@ -78,7 +78,7 @@ Submitted papers and preprints
 >> Title change from arxiv version 
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds] []
+manifolds] [Oh]
 
 Other topics:
 
