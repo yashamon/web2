@@ -65,7 +65,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 
 
-Submitted papers and preprints
+Submitted papers and preprints ()
 
 [Global Fukaya category I: Quantum Novikov conjecture][5], 42 pages
 
