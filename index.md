@@ -69,7 +69,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 
 [Global Fukaya category I: Quantum Novikov conjecture][5], 42 pages
 
-[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6] 44 pages
+[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
 
 [Conformal symplectic Weinstein conjecture and non-squeezing][18], 26 pages
 
