@@ -8,6 +8,7 @@ Hw set 1 for wed
 
 Show that the topological space Y from the lecture which was the quotient 
 
+
 <!--  -->
 <!-- Hw set 2 for wed  -->
 <!-- <!--  --> -->
