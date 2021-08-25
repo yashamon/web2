@@ -4,7 +4,7 @@ Hw set 1 for wed
 1.3: 1  
 2.1: 2, 3, 4, 5  
 
-3.1: 1, 4  
+3.1: 1, 4 ()  
 Show that the topological space 
 
 <!--  -->
