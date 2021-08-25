@@ -6,7 +6,7 @@ Hw set 1 for wed
 
 3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
 
-Show that the topological space 
+Show that the topological space Y which was the quotient 
 
 <!--  -->
 <!-- Hw set 2 for wed  -->
