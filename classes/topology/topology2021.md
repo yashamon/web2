@@ -5,6 +5,7 @@ Hw set 1 for wed
 2.1: 2, 3, 4, 5  
 
 3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
+
 Show that the topological space 
 
 <!--  -->
