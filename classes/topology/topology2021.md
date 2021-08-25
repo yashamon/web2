@@ -7,7 +7,7 @@ Hw set 1 for wed
 3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
 
 Show that the topological space Y from the lecture which was the quotient 
-of $L1 \sqcup L2$ by the equivalence relation $(x,y) \in L1$ is  equivalent to $(z,h) \in L_2$
+of $L1 \sqcup L2$ by the equivalence relation $(x,y) \in L1$ is  equivalent to $(z,h) \in L2$
 
 <!--  -->
 <!-- Hw set 2 for wed  -->
