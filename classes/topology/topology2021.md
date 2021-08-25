@@ -4,7 +4,7 @@ Hw set 1 for wed
 1.3: 1  
 2.1: 2, 3, 4, 5  
 
-3.1: 1, 4 (See section 2 for definition of seperable metric space)  
+3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
 Show that the topological space 
 
 <!--  -->
