@@ -5,6 +5,7 @@ Hw set 1 for wed
 2.1: 2, 3, 4, 5  
 
 3.1: 1  
+Show that the topological space 
 
 <!--  -->
 <!-- Hw set 2 for wed  -->
