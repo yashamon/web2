@@ -71,7 +71,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
 
-[A locally conformal symplectic Weinstein conjecture][18], 23 pages
+[A locally conformally symplectic Weinstein conjecture][18], 23 pages
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 8 pages
 
