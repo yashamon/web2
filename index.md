@@ -73,7 +73,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 
 [A locally conformal symplectic Weinstein conjecture][18], 23 pages
 
-[A locally conformally symplectic deformation of G]
+[A locally conformally symplectic deformation of Gromov non-squeezing]
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages
