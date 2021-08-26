@@ -71,7 +71,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
 
-[A locally conformal symplectic Weinstein conjecture and non-squeezing][18], 26 pages
+[A locally conformal symplectic Weinstein conjecture ][18], 26 pages
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages
