@@ -7,7 +7,6 @@ Hw set 1 for wed
 3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
 
 
-
 Hw set 2 for wed  
 3.1: 2, 4, 6 (extra credit), 8  
 
