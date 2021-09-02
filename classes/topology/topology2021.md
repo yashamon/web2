@@ -11,7 +11,7 @@ of $L1 \sqcup L2$ by the equivalence relation: $(x,y) \in L1$ is equivalent to $
 
 Hw set 2 for wed 
 <!-- <!--  --> -->
-3.1: 2, 4, 6 (extra credit), 8  
+3.1: 2, 4, 6 (extra credit), 8    
 <!--  -->
 <!-- Hw set 3 for wed  -->
 <!--  -->
