@@ -6,8 +6,6 @@ Hw set 1 for wed
 
 3.1: 1, 4 (See chapter 2 for definition of seperable metric space)  
 
-Let $Y$ be the topological space from the lecture, which was the quotient 
-of $L1 \sqcup L2$ by the equivalence relation: $(x,y) \in L1$ is equivalent to $(z,h) \in L2$ iff $x=z$ and $x>0$. Here $L1, L2$ are parallel horizontal lines in $R^2$. This space looks like the letter $Y$. Show that this space is not metrizable with its quotient topology.
 
 
 Hw set 2 for wed  
