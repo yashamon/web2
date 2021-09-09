@@ -18,6 +18,7 @@ of $L1 \sqcup L2$ by the equivalence relation: $(x,y) \in L1$ is equivalent to $
 Hw set 3 for wed 
 <!--  -->
 3.2: 1,2,3,4,6,10  
+
 <!--  -->
 <!-- Hw set 4 for wed -->
 <!--  -->
