@@ -25,10 +25,11 @@ Hw set 4 for wed
 3.2: 12  
 3.3: 1,2,3  
 
-
 Hw set 5 for wed 
    
- 3:3: 4, 5, 6, 7, 8, 9 (extra credit)   
+3:3: 4, 5, 6, 7, 8, 9 (extra credit)    
+
+
 <!--  -->
 <!-- HW set 6 for wed -->
 <!--  -->
