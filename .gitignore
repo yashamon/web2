@@ -4,5 +4,5 @@ tags/
 *.log
 *.bbl
 *.aux 
-/undo
+undo
 /tags
