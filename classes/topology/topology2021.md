@@ -32,8 +32,7 @@ Hw set 5 for wed
 
 HW set 6
 
-<!-- HW set 6 for wed -->
-<!--  -->
+
 <!-- 3.4: 2, 3, 4, 5, 6 -->
 <!--  -->
 <!-- HW set 7 for wed -->
