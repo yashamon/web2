@@ -3,6 +3,7 @@ tags/
 !*.pdf
 *.log
 *.bbl
-*.aux
+*.aux 
+
 /undo
 /tags
