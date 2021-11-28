@@ -58,6 +58,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
 
+[Global Fukaya category I: Quantum Novikov conjecture][5], 42 pages, ()
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
