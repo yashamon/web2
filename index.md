@@ -63,7 +63,6 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
 
-
 Submitted papers and preprints (all of these are also on arxiv but the versions below may be more updated)
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
