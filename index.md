@@ -64,7 +64,6 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 
 
-
 Submitted papers and preprints (all of these are also on arxiv but the versions below may be more updated)
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
