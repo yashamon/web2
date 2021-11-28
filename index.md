@@ -78,7 +78,7 @@ manifolds][Oh] (With Yong-Geun Oh), 55 pages
 
 > > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably consistent formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.
 
-Unsubmitted (lacking polish):
+Unsubmitted (lacking polish, or detail):
 
 [Simultaneous Go via quantum collapse][14] 
 
