@@ -76,6 +76,7 @@ manifolds][Oh] (With Yong-Geun Oh), 55 pages
 
 [Incompleteness for stably consistent formal systems][20], 19 pages 
 
+[Incompleteness for stably consistent formal systems][20], 19 pages 
 
 
 > > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably consistent formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.
