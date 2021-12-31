@@ -123,5 +123,5 @@ symplectomorphisms][12], arxiv preprint
 [20]: http://yashamon.github.io/web2/papers/stableconsistency.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
-[Kan]: http://yashamon.github.io/web2/papers/conformalsymplectic.pdf
+[Kan]: http://yashamon.github.io/web2/papers/kan.pdf
 
