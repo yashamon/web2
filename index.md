@@ -61,7 +61,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [Global Fukaya category I: Quantum Novikov conjecture][5], 42 pages, IMRN (to appear, final title may change.)
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds][Oh] (With Yong-Geun Oh), 55 pages
+manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, ()
 
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
