@@ -1,6 +1,6 @@
 <STYLE>
 <!--
-Atext-decoration:none}
+A{text-decoration:none}
 A{color:blue}
 body {
     font: normal 16px Verdana, Arial, sans-serif;
