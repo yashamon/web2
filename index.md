@@ -71,7 +71,6 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 8 pages
 
-
 [Incompleteness for stably consistent formal systems][20], 19 pages 
 
  
