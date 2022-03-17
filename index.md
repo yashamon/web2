@@ -59,7 +59,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
-[Global Fukaya category I: Quantum Novikov conjecture][5], 42 pages, IMRN (to appear, final title may change.)
+[Global Fukaya category I][5], 57 pages, IMRN (to appear.)
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (to appear)
