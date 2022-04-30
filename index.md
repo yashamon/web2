@@ -62,7 +62,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [Global Fukaya category I][5], 57 pages, IMRN (to appear.)
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
-manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (to appear)
+manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted)
 
 
 
@@ -81,7 +81,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 > > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably consistent formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.  
  
 [Smooth simplicial sets and universal
-Chern-Weil homomorphism][Kan], 32 pages
+Chern-Weil homomorphism][Kan], 35 pages
 
 Unsubmitted (lacking polish):
 
