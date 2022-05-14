@@ -81,7 +81,7 @@ Submitted papers and preprints (all of these are also on arxiv but the versions 
 > > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably consistent formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.  
  
 [Smooth simplicial sets and universal
-Chern-Weil homomorphism][Kan], 39 pages
+Chern-Weil homomorphism][Kan], 38 pages
 
 Unsubmitted (lacking polish):
 
