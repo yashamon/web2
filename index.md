@@ -121,7 +121,7 @@ symplectomorphisms][12], arxiv preprint
 [18]: http://yashamon.github.io/web2/papers/conformalsymplectic.pdf
 [non-squeezing]: http://yashamon.github.io/web2/papers/nonsqueezing.pdf
 [19]: https://arxiv.org/abs/1703.07801
-[20]: http://yashamon.github.io/web2/papers/stableconsistency.pdf
+[20]: http://yashamon.github.io/web2/papers/stableincompleteness.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
