@@ -63,6 +63,13 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted)
 
 [Global Fukaya category I][5], 57 pages, IMRN (revision stage)
+> > In particular this contains a proof of one 
+> > sense of a conjecture of Teleman on existence 
+> > of continuous action of the group of 
+> > Hamiltonian symplectomorphisms on the Fukaya 
+> > category of a symplectic manifold.
+
+
 
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
