@@ -1,0 +1,133 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/952bd1e9/
+Basic linear algebra	calculus.tex	/^\\section* {Basic linear algebra}$/;"	s
+Change of variables	calculus.tex	/^\\section* {Change of variables}$/;"	s
+Cotangent bundle, due thurs	diffgeomcourse.tex	/^\\section {Cotangent bundle, due thurs}$/;"	s
+Derivatives	calculus.tex	/^\\section* {Derivatives}$/;"	s
+Differential forms	diffgeomcourse.tex	/^\\section {Differential forms}$/;"	s
+Homework set 1	calculus.tex	/^\\subsection* {Homework set 1}$/;"	u	section:Basic linear algebra
+Homework set 1	diffgeomcourse.tex	/^\\subsection {Homework set 1}$/;"	u	section:Manifolds, and smooth structures
+Homework set 10	calculus.tex	/^\\subsection* {Homework set 10}$/;"	u	section:Change of variables
+Homework set 2	calculus.tex	/^\\subsection* {Homework set 2}$/;"	u	section:Derivatives
+Homework set 3	calculus.tex	/^\\subsection* {Homework set 3}$/;"	u	section:Maxima and minima
+Homework set 4	calculus.tex	/^\\subsection* {Homework set 4}$/;"	u	section:Maxima and minima
+Homework set 5	calculus.tex	/^\\subsection* {Homework set 5}$/;"	u	section:Potential functions, line integrals
+Homework set 6	calculus.tex	/^\\subsection* {Homework set 6}$/;"	u	section:Potential functions, line integrals
+Homework set 7	calculus.tex	/^\\subsection* {Homework set 7}$/;"	u	section:Potential functions, line integrals
+Homework set 8	calculus.tex	/^\\subsection* {Homework set 8}$/;"	u	section:Surface Integrals Divergence and Stokes theorem
+Homework set 9	calculus.tex	/^\\subsection* {Homework set 9}$/;"	u	section:Surface Integrals Divergence and Stokes theorem
+Integration of differential forms	diffgeomcourse.tex	/^\\section {Integration of differential forms}$/;"	s
+Introduction	diffgeomcourse.tex	/^\\section {Introduction}$/;"	s
+Manifolds, and smooth structures	diffgeomcourse.tex	/^\\section {Manifolds, and smooth structures}$/;"	s
+Maxima and minima	calculus.tex	/^\\section* {Maxima and minima}$/;"	s
+Potential functions, line integrals	calculus.tex	/^\\section* {Potential functions, line integrals}$/;"	s
+Question 1	exam.tex	/^\\subsection* {Question 1}$/;"	u	section:Stokes theorem
+Question 1	exam2021.tex	/^\\subsection* {Question 1} $/;"	u	section:Stokes theorem
+Question 2	exam.tex	/^\\subsection* {Question 2}$/;"	u	section:Stokes theorem
+Question 2	exam2021.tex	/^\\subsection* {Question 2}$/;"	u	section:Stokes theorem
+Question 3	exam.tex	/^\\subsection* {Question 3}$/;"	u	section:Stokes theorem
+Question 3	exam2021.tex	/^\\subsection* {Question 3}$/;"	u	section:Stokes theorem
+Question 4	exam.tex	/^\\subsection*{Question 4}$/;"	u	section:Stokes theorem
+Question 4	exam2021.tex	/^\\subsection*{Question 4}$/;"	u	section:Stokes theorem
+Sheafs, and Tangent bundle as derivations	diffgeomcourse.tex	/^\\subsection {Sheafs, and Tangent bundle as derivations}$/;"	u	section:Tangent bundle
+Stokes theorem	diffgeomcourse.tex	/^\\section {Stokes theorem}$/;"	s
+Surface Integrals Divergence and Stokes theorem	calculus.tex	/^\\section* {Surface Integrals Divergence and Stokes theorem}$/;"	s
+Tangent bundle	diffgeomcourse.tex	/^\\section  {Tangent bundle}$/;"	s
+Tangent bundle hw problems, due thurs	diffgeomcourse.tex	/^\\section {Tangent bundle hw problems, due thurs}$/;"	s
+\\G	calculus.tex	/^\\newcommand{\\G}{\\bar {\\Gamma}}$/;"	C
+\\G	diffgeomcourse.tex	/^\\newcommand{\\G}{\\bar {\\Gamma}}$/;"	C
+\\G	exam.tex	/^\\newcommand{\\G}{\\bar {\\Gamma}}$/;"	C
+\\G	exam2021.tex	/^\\newcommand{\\G}{\\bar {\\Gamma}}$/;"	C
+\\Om	calculus.tex	/^\\newcommand{\\Om}{\\bar{\\Omega}}$/;"	C
+\\Om	diffgeomcourse.tex	/^\\newcommand{\\Om}{\\bar{\\Omega}}$/;"	C
+\\Om	exam.tex	/^\\newcommand{\\Om}{\\bar{\\Omega}}$/;"	C
+\\Om	exam2021.tex	/^\\newcommand{\\Om}{\\bar{\\Omega}}$/;"	C
+\\base	calculus.tex	/^\\newcommand {\\base} {B}$/;"	C
+\\base	diffgeomcourse.tex	/^\\newcommand {\\base} {B}$/;"	C
+\\base	exam.tex	/^\\newcommand {\\base} {B}$/;"	C
+\\base	exam2021.tex	/^\\newcommand {\\base} {B}$/;"	C
+\\cM	calculus.tex	/^\\newcommand{\\cM}{\\mathcal M^*_ {0,2}(P_D, {A}, \\{J_n\\})}$/;"	C
+\\cM	diffgeomcourse.tex	/^\\newcommand{\\cM}{\\mathcal M^*_ {0,2}(P_D, {A}, \\{J_n\\})}$/;"	C
+\\cM	exam.tex	/^\\newcommand{\\cM}{\\mathcal M^*_ {0,2}(P_D, {A}, \\{J_n\\})}$/;"	C
+\\cM	exam2021.tex	/^\\newcommand{\\cM}{\\mathcal M^*_ {0,2}(P_D, {A}, \\{J_n\\})}$/;"	C
+\\cMc	calculus.tex	/^\\newcommand{\\cMc}{\\mathcal M^*_ {0,1}(P ^{\\chi} _{f \\ast g}, {A}, \\{J_n\\})}$/;"	C
+\\cMc	diffgeomcourse.tex	/^\\newcommand{\\cMc}{\\mathcal M^*_ {0,1}(P ^{\\chi} _{f \\ast g}, {A}, \\{J_n\\})}$/;"	C
+\\cMc	exam.tex	/^\\newcommand{\\cMc}{\\mathcal M^*_ {0,1}(P ^{\\chi} _{f \\ast g}, {A}, \\{J_n\\})}$/;"	C
+\\cMc	exam2021.tex	/^\\newcommand{\\cMc}{\\mathcal M^*_ {0,1}(P ^{\\chi} _{f \\ast g}, {A}, \\{J_n\\})}$/;"	C
+\\cMn	calculus.tex	/^\\newcommand{\\cMn}{\\mathcal M_ {0}(A, \\{J_n\\})}  $/;"	C
+\\cMn	diffgeomcourse.tex	/^\\newcommand{\\cMn}{\\mathcal M_ {0}(A, \\{J_n\\})}  $/;"	C
+\\cMn	exam.tex	/^\\newcommand{\\cMn}{\\mathcal M_ {0}(A, \\{J_n\\})}  $/;"	C
+\\cMn	exam2021.tex	/^\\newcommand{\\cMn}{\\mathcal M_ {0}(A, \\{J_n\\})}  $/;"	C
+\\delbar	calculus.tex	/^\\newcommand{\\delbar}{\\bar{\\partial}}  $/;"	C
+\\delbar	diffgeomcourse.tex	/^\\newcommand{\\delbar}{\\bar{\\partial}}  $/;"	C
+\\delbar	exam.tex	/^\\newcommand{\\delbar}{\\bar{\\partial}}  $/;"	C
+\\delbar	exam2021.tex	/^\\newcommand{\\delbar}{\\bar{\\partial}}  $/;"	C
+\\df	calculus.tex	/^\\newcommand{\\df} {\\Omega^t _{r,s}}  $/;"	C
+\\df	diffgeomcourse.tex	/^\\newcommand{\\df} {\\Omega^t _{r,s}}  $/;"	C
+\\df	exam.tex	/^\\newcommand{\\df} {\\Omega^t _{r,s}}  $/;"	C
+\\df	exam2021.tex	/^\\newcommand{\\df} {\\Omega^t _{r,s}}  $/;"	C
+\\dlim	calculus.tex	/^\\newcommand{\\dlim}{\\mathop{\\varinjlim} \\limts}$/;"	C
+\\dlim	diffgeomcourse.tex	/^\\newcommand{\\dlim}{\\mathop{\\varinjlim} \\limts}$/;"	C
+\\dlim	exam.tex	/^\\newcommand{\\dlim}{\\mathop{\\varinjlim} \\limts}$/;"	C
+\\dlim	exam2021.tex	/^\\newcommand{\\dlim}{\\mathop{\\varinjlim} \\limts}$/;"	C
+\\eqfreels	calculus.tex	/^\\newcommand{\\eqfreels}{L ^{S^1} (\\textrm {Ham})}  $/;"	C
+\\eqfreels	diffgeomcourse.tex	/^\\newcommand{\\eqfreels}{L ^{S^1} (\\textrm {Ham})}  $/;"	C
+\\eqfreels	exam.tex	/^\\newcommand{\\eqfreels}{L ^{S^1} (\\textrm {Ham})}  $/;"	C
+\\eqfreels	exam2021.tex	/^\\newcommand{\\eqfreels}{L ^{S^1} (\\textrm {Ham})}  $/;"	C
+\\fiber	calculus.tex	/^\\newcommand{\\fiber}{X}$/;"	C
+\\fiber	diffgeomcourse.tex	/^\\newcommand{\\fiber}{X}$/;"	C
+\\fiber	exam.tex	/^\\newcommand{\\fiber}{X}$/;"	C
+\\fiber	exam2021.tex	/^\\newcommand{\\fiber}{X}$/;"	C
+\\freels	calculus.tex	/^\\newcommand{\\freels}{L \\textrm {Ham}}  $/;"	C
+\\freels	diffgeomcourse.tex	/^\\newcommand{\\freels}{L \\textrm {Ham}}  $/;"	C
+\\freels	exam.tex	/^\\newcommand{\\freels}{L \\textrm {Ham}}  $/;"	C
+\\freels	exam2021.tex	/^\\newcommand{\\freels}{L \\textrm {Ham}}  $/;"	C
+\\ham	calculus.tex	/^\\newcommand{\\ham}{\\Ham (S ^{2}, \\omega)}$/;"	C
+\\ham	diffgeomcourse.tex	/^\\newcommand{\\ham}{\\Ham (S ^{2}, \\omega)}$/;"	C
+\\ham	exam.tex	/^\\newcommand{\\ham}{\\Ham (S ^{2}, \\omega)}$/;"	C
+\\ham	exam2021.tex	/^\\newcommand{\\ham}{\\Ham (S ^{2}, \\omega)}$/;"	C
+\\hams	calculus.tex	/^\\newcommand{\\hams}{\\Ham (\\Sigma, \\omega)}$/;"	C
+\\hams	diffgeomcourse.tex	/^\\newcommand{\\hams}{\\Ham (\\Sigma, \\omega)}$/;"	C
+\\hams	exam.tex	/^\\newcommand{\\hams}{\\Ham (\\Sigma, \\omega)}$/;"	C
+\\hams	exam2021.tex	/^\\newcommand{\\hams}{\\Ham (\\Sigma, \\omega)}$/;"	C
+\\ilim	calculus.tex	/^\\newcommand{\\ilim}{\\mathop{\\varprojlim}\\limits}$/;"	C
+\\ilim	diffgeomcourse.tex	/^\\newcommand{\\ilim}{\\mathop{\\varprojlim}\\limits}$/;"	C
+\\ilim	exam.tex	/^\\newcommand{\\ilim}{\\mathop{\\varprojlim}\\limits}$/;"	C
+\\ilim	exam2021.tex	/^\\newcommand{\\ilim}{\\mathop{\\varprojlim}\\limits}$/;"	C
+\\ls	calculus.tex	/^\\newcommand{\\ls}{\\Omega \\Ham (M, \\omega)} $/;"	C
+\\ls	diffgeomcourse.tex	/^\\newcommand{\\ls}{\\Omega \\Ham (M, \\omega)} $/;"	C
+\\ls	exam.tex	/^\\newcommand{\\ls}{\\Omega \\Ham (M, \\omega)} $/;"	C
+\\ls	exam2021.tex	/^\\newcommand{\\ls}{\\Omega \\Ham (M, \\omega)}  $/;"	C
+\\minus	calculus.tex	/^\\newcommand{\\minus}{(s \\times M\\times D^2)_\\infty}$/;"	C
+\\minus	diffgeomcourse.tex	/^\\newcommand{\\minus}{(s \\times M\\times D^2)_\\infty}$/;"	C
+\\minus	exam.tex	/^\\newcommand{\\minus}{(s \\times M\\times D^2)_\\infty}$/;"	C
+\\minus	exam2021.tex	/^\\newcommand{\\minus}{(s \\times M\\times D^2)_\\infty}$/;"	C
+\\neigh	calculus.tex	/^\\newcommand{\\neigh}{{ \\mathcal$/;"	C
+\\neigh	diffgeomcourse.tex	/^\\newcommand{\\neigh}{{ \\mathcal$/;"	C
+\\neigh	exam.tex	/^\\newcommand{\\neigh}{{ \\mathcal$/;"	C
+\\neigh	exam2021.tex	/^\\newcommand{\\neigh}{{ \\mathcal$/;"	C
+\\paths	calculus.tex	/^\\newcommand{\\paths}{\\mathcal {P} _{g,l,m} (\\phi _{ \\{l\\}} ^{-}, \\phi _{ \\{m\\}} ^{+})}$/;"	C
+\\paths	diffgeomcourse.tex	/^\\newcommand{\\paths}{\\mathcal {P} _{g,l,m} (\\phi _{ \\{l\\}} ^{-}, \\phi _{ \\{m\\}} ^{+})}$/;"	C
+\\paths	exam.tex	/^\\newcommand{\\paths}{\\mathcal {P} _{g,l,m} (\\phi _{ \\{l\\}} ^{-}, \\phi _{ \\{m\\}} ^{+})}$/;"	C
+\\paths	exam2021.tex	/^\\newcommand{\\paths}{\\mathcal {P} _{g,l,m} (\\phi _{ \\{l\\}} ^{-}, \\phi _{ \\{m\\}} ^{+})}$/;"	C
+\\plus	calculus.tex	/^\\newcommand{\\plus}{(s \\times M \\times D ^{2})_{+}}$/;"	C
+\\plus	diffgeomcourse.tex	/^\\newcommand{\\plus}{(s \\times M \\times D ^{2})_{+}}$/;"	C
+\\plus	exam.tex	/^\\newcommand{\\plus}{(s \\times M \\times D ^{2})_{+}}$/;"	C
+\\plus	exam2021.tex	/^\\newcommand{\\plus}{(s \\times M \\times D ^{2})_{+}}$/;"	C
+\\rect	calculus.tex	/^\\newcommand {\\rect} {[0,4] \\times [0,1]}$/;"	C
+\\rect	diffgeomcourse.tex	/^\\newcommand {\\rect} {[0,4] \\times [0,1]}$/;"	C
+\\rect	exam.tex	/^\\newcommand {\\rect} {[0,4] \\times [0,1]}$/;"	C
+\\rect	exam2021.tex	/^\\newcommand {\\rect} {[0,4] \\times [0,1]}$/;"	C
+\\ring	calculus.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
+\\ring	diffgeomcourse.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
+\\ring	exam.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
+\\ring	exam2021.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
+sub:question_4	exam.tex	/^\\label{sub:question_4}$/;"	l
+sub:question_4	exam2021.tex	/^\\label{sub:question_4}$/;"	l
