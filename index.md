@@ -57,18 +57,14 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
-> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
+>> This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted)
 
 [Global Fukaya category I][5], 57 pages, IMRN (revision stage)
-> > In particular this contains a proof of one 
-> > sense of a conjecture of Teleman on existence 
-> > of continuous action of the group of 
-> > Hamiltonian symplectomorphisms on the Fukaya 
-> > category of a symplectic manifold.
-
+>> In particular this contains a proof of one sense of a conjecture of Teleman on existence 
+of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
 
 
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
