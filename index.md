@@ -51,19 +51,20 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [Extended Fuller index, sky catastrophes and the Seifert conjecture][19],  *Inter. J. Math.,  (2018)*, pg. 1-22, https://doi.org/10.1142/S0129167X18500969
 
->> Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
+> > Author note: There is a very interesting conjecture here on non-existence of sky catastrophes for Reeb vector fields, and for which I welcome aid.
 
 [Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), 1-7, (2019), 10.1007/s40316-019-00127-0
 
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
->> This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
+> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
 [Pseudoholomoprhic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted)
 
 [Global Fukaya category I][5], 57 pages, IMRN (revision stage)
->> In particular this contains a proof of one sense of a conjecture of Teleman on existence 
+
+> > In particular this contains a proof of one sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
 
 
