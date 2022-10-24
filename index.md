@@ -60,7 +60,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
 [Pseudoholomorphic curves on the lcs-fication of contact
-manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted)
+manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (accepted), 2022
 
 [Global Fukaya category I][5], 57 pages, IMRN (revision stage)
 
