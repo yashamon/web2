@@ -72,7 +72,7 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
 
-[A conformal symplectic Weinstein conjecture][18], 23 pages
+[A conformal symplectic Weinstein conjecture][18], 26 pages
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 9 pages
 
