@@ -76,7 +76,7 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 9 pages
 
-[Incompleteness for stably consistent formal systems][20], 20 pages 
+[Incompleteness for stably computable formal systems][20], 20 pages 
 
  
 > > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably computable formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.  
