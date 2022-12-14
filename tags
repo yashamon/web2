@@ -9,7 +9,6 @@
 !_TAG_PROGRAM_VERSION	5.9.0	/952bd1e9/
 3.4: 5, 6, 8, 9, 10, 11	classes/topology/topology2021.html	/^<h2 id="section">3.4: 5, 6, 8, 9, 10, 11<\/h2>$/;"	i
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (\\mathbb {CP} ^r )$.	indexbackAug.md	/^> > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, an/;"	c
-Articles	index.html	/^<h1 id="articles">Articles<\/h1>$/;"	h
 Articles	index.md	/^# Articles $/;"	c
 Articles	indexback.html	/^<h1 id="articles">Articles<\/h1>$/;"	h
 Articles	indexbackAug.md	/^# Articles $/;"	c
@@ -248,7 +247,6 @@ Tangent bundle hw problems, due thurs	classes/backup/diffgeomcourse.tex	/^\\sect
 \\ring	classes/backup/calculus.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
 \\ring	classes/backup/diffgeomcourse.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
 \\ring	classes/backup/exam.tex	/^\\newcommand{\\ring}{\\widehat{QH}( \\mathbb{CP} ^{\\infty})}$/;"	C
-articles	index.html	/^<h1 id="articles">Articles<\/h1>$/;"	I
 articles	indexback.html	/^<h1 id="articles">Articles<\/h1>$/;"	I
 basic-linear-algebra	classes/backup/calculus.html	/^<h1 id="basic-linear-algebra" class="unnumbered">Basic linear algebra<\/h1>$/;"	I
 change-of-variables	classes/backup/calculus.html	/^<h1 id="change-of-variables" class="unnumbered">Change of variables<\/h1>$/;"	I
