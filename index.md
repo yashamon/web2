@@ -57,6 +57,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
 *Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
+
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
 [Pseudoholomorphic curves on the lcs-fication of contact
@@ -72,7 +73,7 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
 
-[A conformal symplectic Weinstein conjecture][18], 26 pages
+[A conformal symplectic Weinstein conjecture][18], 29 pages
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 9 pages
 
