@@ -63,7 +63,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [Pseudoholomorphic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), 55 pages, Advances in Geometry, (Accepted), 2022
 
-[Global Fukaya category I][5], 57 pages, IMRN (Accepted), 2022
+[Global Fukaya category I][5], 61 pages, IMRN (Accepted), 2022
 
 > > In particular this contains a proof of one sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
@@ -71,7 +71,7 @@ of continuous action of the group of Hamiltonian symplectomorphisms on the Fukay
 
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
-[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 44 pages
+[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 50 pages
 
 [A conformal symplectic Weinstein conjecture][18], 29 pages
 
