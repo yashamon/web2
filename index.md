@@ -79,11 +79,11 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 
 [Incompleteness for stably computable formal systems][20], 20 pages 
 
- 
-> > This generalizes the original first and more crucially second Godel incompleteness theorems to the context of stably computable formal systems. This allows us in particular to formalize the famous Godel disjunction concerning computability of intelligence.  
- 
 [Smooth simplicial sets and universal
 Chern-Weil homomorphism][Kan], 40 pages
+
+[A remark on deformation of Gromov non-squeezing][gromov], 3 pages
+
 
 Other manuscripts:
 
@@ -101,8 +101,7 @@ symplectomorphisms][12], arxiv preprint
 
 > [On the topology of the space of stable curves][13], arxiv preprint
 
-
-
+[gromov]: http://yashamon.github.io/web2/papers/gromov.pdf
 [1]: http://arxiv.org/pdf/0709.4510.pdf
 [2]: https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
 [3]: http://arxiv.org/pdf/0912.2948.pdf
