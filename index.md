@@ -81,7 +81,7 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 [Incompleteness for stably computable formal systems][20], 20 pages 
 
 [Smooth simplicial sets and universal
-Chern-Weil homomorphism][Kan], 40 pages
+Chern-Weil homomorphism][Kan], 44 pages
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
