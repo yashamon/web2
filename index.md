@@ -62,13 +62,11 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 [Global Fukaya category I][5], 61 pages, International Mathematics Research Notices,  https://doi.org/10.1093/imrn/rnad013, 2023
 
-[Pseudoholomorphic curves on the lcs-fication of contact
-manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
-
-
 > > In particular this contains a proof of one sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
 
+[Pseudoholomorphic curves on the lcs-fication of contact
+manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
