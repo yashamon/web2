@@ -68,13 +68,14 @@ of continuous action of the group of Hamiltonian symplectomorphisms on the Fukay
 [Pseudoholomorphic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
+[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], (Accepted) 9 pages
+
+
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 50 pages
 
 [A conformal symplectic Weinstein conjecture][18], 34 pages
-
-[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], 9 pages
 
 [Incompleteness for stably computable formal systems][20], 20 pages 
 
