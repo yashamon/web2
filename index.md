@@ -103,7 +103,7 @@ symplectomorphisms][12], arxiv preprint
 
 [gromov]: http://yashamon.github.io/web2/papers/gromov.pdf
 [1]: http://arxiv.org/pdf/0709.4510.pdf
-[2]: https://docs.google.com/file/d/0B1BCuxjt683fbnVpaTNrUEQxeVk/edit
+[2]: http://yashamon.github.io/web2/papers/virt.google.pdf
 [3]: http://arxiv.org/pdf/0912.2948.pdf
 [4]: http://arxiv.org/pdf/1006.4383.pdf
 [5]: http://yashamon.github.io/web2/papers/fukayaI.pdf 
@@ -113,8 +113,9 @@ symplectomorphisms][12], arxiv preprint
 [9]: http://arxiv.org/pdf/1312.0928v3 
 [10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
 [11]: http://arxiv.org/pdf/1409.3975.pdf
-[12]: https://docs.google.com/file/d/0B1BCuxjt683fNGtVc3Y3OG9TMTA/edit
-[13]: https://docs.google.com/file/d/0B1BCuxjt683fSkNHdjA4QXJwSm8/edit 
+[12]: http://yashamon.github.io/web2/papers/spectral.pdf
+
+[13]: http://yashamon.github.io/web2/papers/stablemap.pdf
 [14]: http://yashamon.github.io/web2/papers/Sgo.pdf
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
 [15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
