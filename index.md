@@ -60,7 +60,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
-[Global Fukaya category I][5], 61 pages, International Mathematics Research Notices,  https://doi.org/10.1093/imrn/rnad013, 2023
+[Global Fukaya category I][5], 61 pages, International Mathematics Research Notices,  https://doi.org/10.1093/imrn/rnad013, (2023)
 
 > > In particular this contains a proof of one sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
@@ -68,7 +68,7 @@ of continuous action of the group of Hamiltonian symplectomorphisms on the Fukay
 [Pseudoholomorphic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
-[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], (Accepted) 9 pages
+[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Archiv der Mathematik, (Accepted) 9 pages, (2023)
 
 [Smooth simplicial sets and universal
 Chern-Weil homomorphism][Kan], J. Differ. Geom. (revision stage), 44 pages
