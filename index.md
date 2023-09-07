@@ -70,6 +70,8 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], (Accepted) 9 pages
 
+[Smooth simplicial sets and universal
+Chern-Weil homomorphism][Kan], JDG (revision stage), 44 pages
 
 Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
@@ -78,9 +80,6 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 [A conformal symplectic Weinstein conjecture][18], 34 pages
 
 [Incompleteness for stably computable formal systems][20], 20 pages 
-
-[Smooth simplicial sets and universal
-Chern-Weil homomorphism][Kan], 44 pages
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
