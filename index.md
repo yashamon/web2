@@ -83,6 +83,8 @@ Submitted: (all of these are also on arxiv but the versions below may be more up
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
+[Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 12 pages
+
 
 Other manuscripts:
 
@@ -126,4 +128,5 @@ symplectomorphisms][12], arxiv preprint
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
+[GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
 
