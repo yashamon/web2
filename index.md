@@ -12,7 +12,7 @@ body {
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 # Articles (Yasha Savelyev)  
-### [<span style="color:red">Link to parent website</span>][website]
+### [<span style="color:red">Link to parent website (test) </span>][website]
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
@@ -131,4 +131,4 @@ symplectomorphisms][12], arxiv preprint
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
 [GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
 [website]: https://sites.google.com/view/yashasavelyev/home
-<!-- test -->
+
