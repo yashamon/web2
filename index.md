@@ -87,7 +87,7 @@ Chern-Weil homomorphism][Kan], J. Differ. Geom. (revision stage), 44 pages
 [Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 12 pages
 
 
-Other manuscripts:
+### Other manuscripts:
 
 [Simultaneous Go via quantum collapse][14] 
 
