@@ -81,13 +81,13 @@ Chern-Weil homomorphism][Kan], J. Differ. Geom. (revision stage), 44 pages
 
 [Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 50 pages
 
-[A conformal symplectic Weinstein conjecture][18], 34 pages
+[Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
 
 [Incompleteness for stably computable formal systems][20], 20 pages 
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
-[Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 12 pages
+[Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 14 pages
 
 
 ### Other manuscripts:
