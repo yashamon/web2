@@ -75,7 +75,7 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
 
 [Smooth simplicial sets and universal
-Chern-Weil homomorphism][Kan], J. Differ. Geom. (revision stage), 44 pages
+Chern-Weil homomorphism][Kan], J. Differ. Geom. (revision stage), 46 pages
 
 ### Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
