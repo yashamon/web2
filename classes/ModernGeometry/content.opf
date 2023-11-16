@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="dcidid" version="2.0"> 
+<metadata 
+xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:opf="http://www.idpf.org/2007/opf"> 
+<dc:title>Modern Geometry</dc:title> 
+<dc:language>en-US</dc:language> 
+<dc:identifier id="dcidid"  opf:scheme="URI">http://example.com/2023</dc:identifier> 
+<dc:creator>Yasha Savelyev</dc:creator> 
+<dc:date>2023-11-16T17:05:00Z</dc:date></metadata>   
+<manifest> 
+<item id="ncx" href="2023.ncx" media-type="application/x-dtbncx+xml" /> 
+<item id="stylesheet" href="2023.css" media-type="text/css"/> 
+<item id="file1"  href="2023.html" media-type="application/xhtml+xml" /> 
+<item id="file2"  href="2023se1.html" media-type="application/xhtml+xml" /> 
+ 
+<item id='x20230x_png' href='20230x.png' media-type='image/png' />
+<item id='x20231x_png' href='20231x.png' media-type='image/png' />
+<item id='x20232x_png' href='20232x.png' media-type='image/png' />
+</manifest> 
+   
+<spine toc="ncx"> 
+<itemref idref="file1" /> 
+<itemref idref="file2" /> 
+  
+ 
+</spine> 
+</package> 

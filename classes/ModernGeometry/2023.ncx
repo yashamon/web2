@@ -1,0 +1,22 @@
+
+  <?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" 
+"http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"> 
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">                            <head> 
+<meta name="dtb:uid" content="http://example.com/2023"/> 
+<meta name="dtb:depth" content="3"/> 
+<meta name="dtb:totalPageCount" content="0"/> 
+<meta name="dtb:maxPageNumber" content="0"/> 
+</head> 
+<docTitle> 
+<text>Modern Geometry</text> 
+</docTitle> 
+<navMap> 
+<navPoint id="navPoint-1" playOrder="1"> 
+<navLabel> 
+<text><navmark type="section">1</navmark>   </text> 
+</navLabel> 
+<content src="2023se1.html#x2-10001" />
+  </navPoint> 
+</navMap>
+  </ncx>
