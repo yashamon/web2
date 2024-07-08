@@ -87,7 +87,7 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
-[Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 14 pages
+[Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 18 pages
 
 
 ### Other manuscripts:
