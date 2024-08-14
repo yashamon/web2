@@ -1,0 +1,153 @@
+
+\documentclass{amsart}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip} 
+\usepackage{amsfonts, amscd, mathrsfs, amsmath, amssymb, amsthm}
+\usepackage{url}
+\usepackage{hyperref} 
+\hypersetup{backref,pdfpagemode=FullScreen,colorlinks=true}
+\usepackage{tikz-cd}
+\usepackage{}
+\usepackage{color, verbatim}
+\usepackage{bm}
+\usepackage[hmargin=3cm,vmargin=3cm]{geometry}
+\numberwithin{equation}{section}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{axiom}[equation]{Axiom}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{condition}[Condition]{Theorem}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{lma}[equation]{Lemma} 
+\newtheorem{lemma}[equation]{Lemma} 
+\newtheorem{cpt}[equation]{Computation} 
+\newtheorem{corollary}[equation]{Corollary} 
+\newtheorem{clm}[equation]{Claim} 
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{definition}[equation]{Definition}
+\theoremstyle{definition}
+\newtheorem{ft}{Fact}
+\newtheorem{notation}{Notation}
+\newtheorem{terminology}{Terminology}
+\newtheorem{descr}{Description}[equation]
+\theoremstyle{remark}
+\newtheorem*{pf}{Proof}
+\newtheorem*{pfs}{Proof (sketch)}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{example}{Example}
+\newtheorem{question}{Question}
+\newcommand {\vol}{\operatorname{vol}}
+\newcommand{\hatcp}{\widehat{\mathbb {CP}} ^{r-1}}
+\DeclareMathOperator {\spann} {span}
+\DeclareMathOperator {\period} {period}
+\DeclareMathOperator {\sign} {sign}
+\DeclareMathOperator {\Id} {Id}
+\DeclareMathOperator {\floor} {floor}
+\DeclareMathOperator {\ceil} {ceil}
+\DeclareMathOperator {\mult} {mult}
+\DeclareMathOperator {\Symp} {Symp}
+\DeclareMathOperator {\Det} {Det}
+\DeclareMathOperator {\comp} {comp}
+\DeclareMathOperator {\growth} {growth}
+\DeclareMathOperator {\energy} {energy}
+\DeclareMathOperator {\Reeb} {Reeb}
+\DeclareMathOperator {\Lin} {Lin}
+\DeclareMathOperator {\Diff} {Diff}
+\DeclareMathOperator {\fix} {fix}
+\DeclareMathOperator {\grad} {grad}
+\DeclareMathOperator {\area} {area}
+\DeclareMathOperator {\diam} {diam}
+\DeclareMathOperator {\dvol} {dvol}
+\DeclareMathOperator {\quant} {Quant}
+\DeclareMathOperator {\ho} {ho}
+\DeclareMathOperator {\length} {length}
+\DeclareMathOperator {\Proj} {P}
+\renewcommand{\i}{\sqrt{-1}}
+\DeclareMathOperator{\mVol}{\mathrm{Vol}(M_0,\omega_0)}
+\DeclareMathOperator{\Lie}{\mathrm{Lie}}
+\DeclareMathOperator{\lie}{\mathrm{lie}}
+\DeclareMathOperator{\op}{\mathrm{op}}
+\DeclareMathOperator{\rank}{\mathrm{rank}}
+\DeclareMathOperator{\ind}{\mathrm{ind}}
+\DeclareMathOperator{\trace}{\mathrm{trace}}
+\DeclareMathOperator{\image}{\mathrm{image}}
+\DeclareMathOperator{\Sym}{\mathrm{Sym}}
+\DeclareMathOperator{\Ham}{\mathrm{Ham}}
+\DeclareMathOperator{\Aut}{\mathrm{Aut}}
+\DeclareMathOperator{\Quant}{\mathrm{Quant}}
+\DeclareMathOperator{\Fred}{\mathrm{Fred}}
+\DeclareMathOperator{\id}{\mathrm{1}}
+\DeclareMathOperator{\lcs}{lcs}
+\DeclareMathOperator{\lcsm}{lcsm}
+\DeclareMathOperator{\coker}{coker}
+\begin{document}
+\title{Algebraic topology}
+\author{Yasha Savelyev}
+\thanks {}
+\email{yasha.savelyev@gmail.com}
+\address{University of Colima, CUICBAS}
+\keywords{}
+\maketitle
+\section{HW}
+\subsection{Set 1 for wed} \label{sec_Set 1 for wed} 
+Work out the three problems mentioned in class. Finish the
+calculation of $H _{0} (X) $ for a topological space $X$. 
+% <span
+% class="math inline"><em>X</em></span>.</p>
+% <!--  Hw Set 1 for (wed) -->
+% <!--  -->
+% <!-- # 0: 1,4,5, 6, 11, 16 -->
+% <!-- # -->
+% <!-- # Hw Set 2 for (wed) -->
+% <!-- # -->
+% <!-- # 2.1: 1, 11, 12, 13, 14 -->
+% <!-- # -->
+% <!-- # Hw Set 3 for (wed) -->
+% <!-- # -->
+% <!-- # 2.1: 15,16,17,18,19 -->
+% <!-- # -->
+% <!-- # Hw set 4, read section on degrees. Read the definition of CW complexes, and then definition of cellular homology.   -->
+% <!-- # -->
+% <!-- # HW set 5, Read 3.1, skip axioms. -->
+% <!-- # -->
+% <!-- # 3.1: 5, 6, 9 -->
+% <!-- Hw set 2 for (thurs) -->
+% <!--  -->
+% <!-- Read ch 2 up to section on exact sequences and excision. -->
+% <!--  -->
+% <!-- 2.1: 1,4,5,7,11,12 -->
+% <!--  -->
+% <!-- Set 3 -->
+% <!--  -->
+% <!-- Read the section on exact sequences and excision. -->
+% <!--  -->
+% <!-- 15,16,17,18,19 -->
+% <!--  -->
+% <!-- set 4 -->
+% <!--  -->
+% <!-- read 2.2 up to cellular homology -->
+% <!--  -->
+% <!-- 2.2 1, 2, 3, 4, 5, 6 -->
+% <!--  -->
+% <!-- set 5 -->
+% <!--  -->
+% <!-- finish reading 2.2 -->
+% <!--  -->
+% <!-- 9, 10, 27, 28, 29, 31 -->
+% <!--  -->
+% <!-- set 6  -->
+% <!--  -->
+% <!-- read additional topics A,B,C: -->
+% <!--  -->
+% <!-- 1,2,3,7 from (A,B) -->
+% <!--  -->
+% <!-- 1,2 from C -->
+% <!--  -->
+% <!--  -->
+% \bibliographystyle{siam}
+% \bibliography{C:/Users/yasha/texmf/bibtex/bib/link}
+% %  ibliography{/root/texmf/bibtex/bib/link}
+% % ibliography{/home/yashasavelyev/texmf/bibtex/bib/link}
+% % ibliography{/home/yasha/texmf/bibtex/bib/link}
+\end{document}
+
