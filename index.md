@@ -106,6 +106,7 @@ classical game Go, using some ideas of quantum mechanics. I am interested in wri
 symplectomorphisms][12], arxiv preprint
 
 > [On the topology of the space of stable curves][13], arxiv preprint
+
 [ktheory]: http://yashamon.github.io/web2/papers/KtheoryCycles.pdf
 [gromov]: http://yashamon.github.io/web2/papers/gromov.pdf
 [1]: http://arxiv.org/pdf/0709.4510.pdf
@@ -120,7 +121,6 @@ symplectomorphisms][12], arxiv preprint
 [10]: http://www.aimsciences.org/journals/doIpChk.jsp?paperID=10672&mode=full
 [11]: http://arxiv.org/pdf/1409.3975.pdf
 [12]: http://yashamon.github.io/web2/papers/spectral.pdf
-
 [13]: http://yashamon.github.io/web2/papers/stablemap.pdf
 [14]: http://yashamon.github.io/web2/papers/Sgo.pdf
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
