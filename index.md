@@ -83,7 +83,7 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
 
-[Incompleteness for stably computable formal systems][20], 20 pages 
+[Incompleteness theorems via Turing category][20], 20 pages 
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
@@ -129,7 +129,7 @@ symplectomorphisms][12], arxiv preprint
 [18]: http://yashamon.github.io/web2/papers/conformalsymplectic.pdf
 [non-squeezing]: http://yashamon.github.io/web2/papers/nonsqueezing.pdf
 [19]: https://arxiv.org/abs/1703.07801
-[20]: http://yashamon.github.io/web2/papers/stableincompleteness.pdf
+[20]: http://yashamon.github.io/web2/papers/turingcategory.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
