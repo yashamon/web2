@@ -89,7 +89,7 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [Untwisted Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 18 pages
 
-[K-theoretic invariants of Hamiltonian fibrations][ktheory], 11 pages
+[Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
 
 ### Other manuscripts:
 
