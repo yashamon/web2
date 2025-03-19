@@ -91,6 +91,10 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
 
+### Manuscripts (all of these are also on arxiv but the versions below may be more updated)
+[Quantum Maslov classes][QMaslov], 25 pages
+
+
 ### Other manuscripts:
 
 [Simultaneous Go via quantum collapse][14] 
