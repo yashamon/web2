@@ -138,7 +138,6 @@ symplectomorphisms][12], arxiv preprint
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
 [GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
-[QMaslov]:
-http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
+[QMaslov]: http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
 [website]: https://sites.google.com/view/yashasavelyev/home
 
