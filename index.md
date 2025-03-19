@@ -91,7 +91,7 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
 
-### Manuscripts (all of these are also on arxiv but the versions below may be more updated)
+### Manuscripts 
 [Quantum Maslov classes][QMaslov], 25 pages
 
 
@@ -138,5 +138,7 @@ symplectomorphisms][12], arxiv preprint
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/kan.pdf
 [GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
+[QMaslov]:
+http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
 [website]: https://sites.google.com/view/yashasavelyev/home
 
