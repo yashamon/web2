@@ -87,7 +87,8 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 [A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
-[Untwisted Gromov-Witten invariants of Riemann-Finsler manifolds][GromovFuller], 18 pages
+[Geodesic string counting invariants of
+manifolds][GromovFuller], 18 pages
 
 [Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
 
