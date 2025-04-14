@@ -74,8 +74,11 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
 
+[A remark on deformation of Gromov non-squeezing][gromov], 5 pages, accepted by Differential geometry and its applications
+
 [Smooth simplicial sets and universal Chern-Weil
 for infinite dimensional groups][Kan], (revision stage), 56 pages
+
 
 ### Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
@@ -84,8 +87,6 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 [Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
 
 [Incompleteness theorems via Turing category][20], 20 pages 
-
-[A remark on deformation of Gromov non-squeezing][gromov], 3 pages
 
 [Geodesic string counting invariants of
 manifolds][GromovFuller], 18 pages
