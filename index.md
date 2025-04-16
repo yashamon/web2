@@ -92,9 +92,7 @@ manifolds][GromovFuller], 18 pages
 
 [Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
 
-### Manuscripts 
 [Quantum Maslov classes][QMaslov], 25 pages
-
 
 ### Other manuscripts:
 
