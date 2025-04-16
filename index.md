@@ -81,7 +81,7 @@ for infinite dimensional groups][Kan], (revision stage), 56 pages
 
 ### Submitted: (all of these are also on arxiv but the versions below may be more updated)
 
-[Global Fukaya category II:  singular connections, quantum obstruction theory, and other applications][6], 50 pages
+[Global Fukaya category II: applications][6], 50 pages
 
 [Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
 
