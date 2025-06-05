@@ -111,7 +111,7 @@ symplectomorphisms][12], arxiv preprint
 > [On the topology of the space of stable curves][13], arxiv preprint
 
 [ktheory]: http://yashamon.github.io/web2/papers/KtheoryCycles.pdf
-[gromov]: http://yashamon.github.io/web2/papers/gromov.pdf
+[gromov]: https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author 
 [1]: http://arxiv.org/pdf/0709.4510.pdf
 [2]: http://yashamon.github.io/web2/papers/virt.google.pdf
 [3]: http://arxiv.org/pdf/0912.2948.pdf
