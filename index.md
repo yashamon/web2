@@ -74,7 +74,7 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
 [Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
 
-[A remark on deformation of Gromov non-squeezing][gromov], 5 pages, accepted by Differential geometry and its applications
+[A remark on deformation of Gromov non-squeezing][gromov], 5 pages, Differential geometry and its applications, https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author, (2025)
 
 [Smooth simplicial sets and universal Chern-Weil
 for infinite dimensional groups][Kan], (revision stage), 56 pages
