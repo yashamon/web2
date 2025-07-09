@@ -80,8 +80,8 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 for infinite dimensional groups][Kan], 56 pages
 
 ### Submitted: (all of these are also on arxiv but the versions below may be more updated)
-[On the space of metrics with non-positive curvature] [],
-5 pages
+[On the space of metrics with non-positive
+curvature][curvature], 5 pages
 
 [Global Fukaya category II: applications][6], 28 pages
 
