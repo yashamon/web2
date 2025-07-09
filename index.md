@@ -77,6 +77,8 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 [A remark on deformation of Gromov non-squeezing][gromov], 5 pages, Differential geometry and its applications, https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author, (2025)
 
 ### preprints: All of these are also on arxiv but the versions below may be more updated)
+[Strict contactomorphisms are scarce] [strictcontact] (With Yong-Geun Oh)
+
 [Smooth simplicial sets and universal Chern-Weil
 for infinite dimensional groups][Kan], 56 pages
 
@@ -142,4 +144,4 @@ symplectomorphisms][12], arxiv preprint
 [curvature]: http://yashamon.github.io/web2/papers/curvature.pdf
 [QMaslov]: http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
 [website]: https://sites.google.com/view/yashasavelyev/home
-
+[strictcontact]: http://arxiv.org/abs/2504.16458 
