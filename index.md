@@ -103,7 +103,7 @@ manifolds][GromovFuller], 18 pages
 [Simultaneous Go via quantum collapse][14] 
 
 > > On a time symmetric, that is simultaneous version of the
-classical game Go, using some ideas of quantum mechanics. 
+classical game Go, using some ideas of quantum mechanics.
 
 <!-- In construction -->
 <!-- Geometric cycles in secondary K-theory --> 
