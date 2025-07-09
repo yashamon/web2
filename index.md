@@ -102,7 +102,7 @@ manifolds][GromovFuller], 18 pages
 
 [Simultaneous Go via quantum collapse][14] 
 
->> On a time symmetric, that is simultaneous version of the
+> > On a time symmetric, that is simultaneous version of the
 classical game Go, using some ideas of quantum mechanics. I am interested in writing a playable program, any help would be appreciated.
 
 <!-- In construction -->
