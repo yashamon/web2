@@ -109,10 +109,10 @@ classical game Go, using some ideas of quantum mechanics. I am interested in wri
 <!-- Geometric cycles in secondary K-theory --> 
 <!-- > > I use the Global Fukaya category of  fibrations with Calabi-Yau fibers to construct geometric cycles in secondary K-theory of Bertrand Toen. Mainly the point is to give a link between geometry and secondary K-theory, of the kind that exists for ordinary K-theory. -->
 
-> [Spectral geometry of the group of Hamiltonian
-symplectomorphisms][12], arxiv preprint
+[Spectral geometry of the group of Hamiltonian
+symplectomorphisms][12]
 
-> [On the topology of the space of stable curves][13], arxiv preprint
+[On the topology of the space of stable curves][13]
 
 [ktheory]: http://yashamon.github.io/web2/papers/KtheoryCycles.pdf
 [gromov]: https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author 
