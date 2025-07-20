@@ -126,7 +126,7 @@ symplectomorphisms][12]
 [11]: http://arxiv.org/pdf/1409.3975.pdf
 [12]: http://yashamon.github.io/web2/papers/spectral.pdf
 [13]: http://yashamon.github.io/web2/papers/stablemap.pdf
-[14]: http://yashamon.github.io/web2/papers/sgo.pdf
+[14]: http://yashamon.github.io/web2/papers/Sgo.pdf
 [16]: https://www.dropbox.com/s/mf54vt1f5b9ulah/injectivitynoLinfty.pdf?dl=0
 [15]: http://www.worldscientific.com/doi/pdf/10.1142/S0129167X15500299?src=recsys 
 [17]: http://arxiv.org/pdf/1508.06793.pdf
