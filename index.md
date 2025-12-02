@@ -69,10 +69,12 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > In particular this contains a proof of one strong sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
 
+[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
+
+
 [Pseudoholomorphic curves on the lcs-fication of contact
 manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 
-[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
 
 [A remark on deformation of Gromov non-squeezing][gromov], 5 pages, Differential geometry and its applications, https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author, (2025)
 
@@ -81,7 +83,6 @@ for infinite dimensional groups][Kan], J. London Math. Soc., accepted, 60 pages
 
 ### preprints: All of these are also on arxiv but the versions below may be more updated)
 [Strict contactomorphisms are scarce][strictcontact] (With Yong-Geun Oh)
-
 
 [On the space of metrics with non-positive
 curvature][curvature], 5 pages
