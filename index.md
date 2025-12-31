@@ -114,7 +114,7 @@ symplectomorphisms][12]
 [On the topology of the space of stable curves][13]
 
 [ktheory]: http://yashamon.github.io/web2/papers/KtheoryCycles.pdf
-[gromov]: https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author 
+[gromov]: http://yashamon.github.io/web2/papers/gromov.pdf 
 [1]: http://arxiv.org/pdf/0709.4510.pdf
 [2]: http://yashamon.github.io/web2/papers/virt.google.pdf
 [3]: http://arxiv.org/pdf/0912.2948.pdf
