@@ -138,7 +138,7 @@ symplectomorphisms][12]
 [20]: http://yashamon.github.io/web2/papers/turingcategory.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
-[Kan]: http://yashamon.github.io/web2/papers/kan.pdf
+[Kan]: http://yashamon.github.io/web2/papers/chernweil.pdf
 [GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
 [curvature]: http://yashamon.github.io/web2/papers/curvature.pdf
 [QMaslov]: http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
