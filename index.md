@@ -100,7 +100,7 @@ manifolds][GromovFuller], 18 pages
 
 [Quantum Maslov classes][QMaslov], 25 pages
 
-[Simultaneous Go via quantum collapse][14], 11 pages 
+[Simultaneous Go via quantum collapse][18], 11 pages 
 
 ### manuscripts:
 
