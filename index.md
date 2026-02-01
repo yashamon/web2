@@ -60,7 +60,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 [Mean curvature versus diameter and energy quantization][T], Annales mathematiques du Quebec, (2019), 1-7, (2019), 10.1007/s40316-019-00127-0
 
 [K-theoretic invariants of Hamiltonian fibrations][17], (with Egor Shelukhin), 
-*Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pp. 251-289.
+*Journal of Symplectic Geometry*, Vol. 18, No. 1 (2020), pg. 251-289.
 
 > > This introduces some new K-theoretic quantization techniques for  Hamiltonian fibrations, and uses this to deduce some new results on topology of $Ham (CP^n)$.
 
@@ -69,7 +69,7 @@ DOI: http://dx.doi.org/10.4310/JSG.2017.v15.n3.a8
 > > In particular this contains a proof of one strong sense of a conjecture of Teleman on existence 
 of continuous action of the group of Hamiltonian symplectomorphisms on the Fukaya category of a symplectic manifold.
 
-[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023) 
+[Locally conformally symplectic deformation of Gromov non-squeezing][non-squeezing], Arch. Math. https://doi.org/10.1007/s00013-023-01922-6 (2023)
 
 
 [Pseudoholomorphic curves on the lcs-fication of contact
@@ -79,7 +79,7 @@ manifolds][Oh] (With Yong-Geun Oh), Adv. Geom. 23, No. 2, 153-190 (2023)
 [A remark on deformation of Gromov non-squeezing][gromov],  Differential geometry and its applications, https://www.sciencedirect.com/science/article/pii/S0926224525000373?dgcid=author, (2025), 5 pages
 
 [Smooth simplicial sets and universal Chern-Weil
-for infinite dimensional groups][Kan], J. London Math. Soc., accepted, 60 pages
+for infinite dimensional groups][Kan], J. London Math. Soc., 113, No. 1, 1-65 (2026) 
 
 ### preprints: All of these are also on arxiv but the versions below may be more updated)
 [Strict contactomorphisms are scarce][strictcontact] (With Yong-Geun Oh)
