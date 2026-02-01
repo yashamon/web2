@@ -96,7 +96,7 @@ curvature][curvature], 5 pages
 [Geodesic string counting invariants of
 manifolds][GromovFuller], 18 pages
 
-[Hamiltonian elements in algebraic K-theory][ktheory], 11 pages
+[Hamiltonian elements in algebraic K-theory][ktheory], 13 pages
 
 [Quantum Maslov classes][QMaslov], 25 pages
 
