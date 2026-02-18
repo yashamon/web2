@@ -2,7 +2,7 @@
 <!--
 A{text-decoration:none}
 A{color:blue}
-body {
+sody {
     font: normal 16px Verdana, Arial, sans-serif;
 }
 
