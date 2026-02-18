@@ -87,7 +87,7 @@ for infinite dimensional groups][Kan], J. London Math. Soc., 113, No. 1, 1-65 (2
 [On the space of metrics with non-positive
 curvature][curvature], 5 pages
 
-[Global Fukaya category II][6], 28 pages
+[Global Fukaya category II][6], 32 pages
 
 [Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
 
