@@ -90,7 +90,7 @@ curvature][curvature], 5 pages
 [Global Fukaya category II][6], 32 pages
 
 [Elliptic curve counts and generalized Weinstein
-conjectures][18], 34 pages
+conjectures][18], 28 pages
 
 [Incompleteness theorems via Turing category][20], 20 pages 
 
