@@ -89,7 +89,8 @@ curvature][curvature], 5 pages
 
 [Global Fukaya category II][6], 32 pages
 
-[Elliptic curves in lcs manifolds and metric invariants][18], 34 pages
+[Elliptic curve counts and generalized Weinstein
+conjectures][18], 34 pages
 
 [Incompleteness theorems via Turing category][20], 20 pages 
 
