@@ -94,8 +94,7 @@ conjectures][18], 28 pages
 
 [Incompleteness theorems via Turing category][20], 20 pages 
 
-[Geodesic string counting invariants and arithmetic of 
-mulitplicities][GromovFuller], 45 pages
+[Invariant arithmetic of closed geodesics][GromovFuller], 45 pages
 
 [Hamiltonian elements in algebraic K-theory][ktheory], 13 pages
 
