@@ -100,7 +100,7 @@ conjectures][18], 28 pages
 
 [Quantum Maslov classes][QMaslov], 25 pages
 
-[Simultaneous Go via quantum collapse][14], 20 pages 
+[][14], 20 pages 
 
 ### manuscripts:
 
