@@ -100,7 +100,8 @@ conjectures][18], 28 pages
 
 [Quantum Maslov classes][QMaslov], 25 pages
 
-[][14], 20 pages 
+[The radius spectrum of games, and simultaneous $Go$ via 
+objective quantum reduction][14], 31 pages 
 
 ### manuscripts:
 
