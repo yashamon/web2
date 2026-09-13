@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>sgolean — Lean 4 formalization of Theorem 5.2 (release 1.0)</title>
+  <title>sgolean — Lean 4 formalization of Theorem 5.2 and the simultaneization lemmas (release 1.1)</title>
   <style>
     html {
       color: #1a1a1a;
@@ -165,13 +165,17 @@
   </style>
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">sgolean — Lean 4 formalization of Theorem 5.2 and the
+simultaneization lemmas (release 1.1)</h1>
+</header>
 <h1
-id="sgolean-lean-4-formalization-of-theorem-5.2-and-the-one-stage-lemma-of-the-radius-spectrum-of-games-and-simultaneous-go-via-objective-quantum-reduction">sgolean
-— Lean 4 formalization of Theorem 5.2 and the one-stage lemma of <em>The
-radius spectrum of games, and simultaneous Go via objective quantum
-reduction</em></h1>
-<p>STATUS: COMPLETE. Both results are fully proved, sorry-free, in Lean
-4.15.0 core (no Mathlib, no other dependency), kernel-checked by
+id="sgolean-lean-4-formalization-of-theorem-5.2-the-one-stage-lemma-and-the-simultaneization-lemmas-of-the-radius-spectrum-of-games-and-simultaneous-go-via-objective-quantum-reduction">sgolean
+— Lean 4 formalization of Theorem 5.2, the one-stage lemma, and the
+simultaneization lemmas of <em>The radius spectrum of games, and
+simultaneous Go via objective quantum reduction</em></h1>
+<p>STATUS: COMPLETE. All results below are fully proved, sorry-free, in
+Lean 4.15.0 core (no Mathlib, no other dependency), kernel-checked by
 <code>lake build</code>.</p>
 <ul>
 <li><code>SgoThm.thm52</code> — Theorem 5.2: on a board of side at least
@@ -186,34 +190,51 @@ every board side n ≥ 2 and every turn, for non pass joint moves; the
 pass cases are covered inside the SGo clause of the theorem
 (<code>SgoStage1.onestage_single</code>,
 <code>SgoSemi.sgo_semiclassical</code>).</li>
+<li><code>SgoGames.lem_symmetric</code> (SgoSim.lean) —
+<code>lem_symmetric</code>: the universal simultaneization Sim(G) of a
+symmetric sequential game is symmetric (def_symmetric, all clauses;
+<code>simGame_simOK</code>: Sim(G) is a combinatorial simultaneous
+game).</li>
+<li><code>SgoGames.lem_dynamics_2</code>,
+<code>SgoGames.lem_dynamics_3</code> (SgoDyn.lean) —
+<code>lem_dynamics</code>: a dynamical isomorphism of sequential games
+transports simultaneizations with their faithfulness radii and
+simplicity (part 2), and the radius spectra coincide (part 3); part 1 is
+<code>lem_dynamics_1</code>.</li>
 </ul>
 <p>Axiom footprint of every theorem above:
 <code>[propext, Classical.choice, Quot.sound]</code> — the standard
 trio. No <code>sorryAx</code> (no incomplete proof) and no
 <code>Lean.ofReduceBool</code> (no <code>native_decide</code>, i.e. no
 trust in the compiler) in their dependency cones.</p>
-<p>Release 1.0. Hosted at <a
+<p>Release 1.1. Hosted at <a
 href="https://yashamon.github.io/web2/papers/sgoleanformalization/"
 class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
 — the files below, this <a href="README.md">README</a>, and the archive
-<a
-href="sgoleanformalization-1.0.zip">sgoleanformalization-1.0.zip</a>.</p>
+<a href="sgoleanformalization-1.1.zip">sgoleanformalization-1.1.zip</a>.
+(Release 1.0 carried the theorem and the one-stage lemma; 1.1 adds
+<code>lem_symmetric</code> and <code>lem_dynamics</code>, and the
+position normal form of a final state now resets its grading, as
+printed.)</p>
 <h2 id="verifying-this-development">Verifying this development</h2>
 <p>Four commands; no dependency beyond Lean itself:</p>
 <pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
-curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.0.zip
-unzip sgoleanformalization-1.0.zip &amp;&amp; cd sgoleanformalization
+curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.1.zip
+unzip sgoleanformalization-1.1.zip &amp;&amp; cd sgoleanformalization
 lake build          # kernel-checks the complete chain (lean-toolchain pins v4.15.0; ~2 min)</code></pre>
 <p>Then the axiom certificate:</p>
 <pre><code>lake env lean Audit.lean</code></pre>
-<p>Expected output, exactly these four lines:</p>
+<p>Expected output, exactly these seven lines:</p>
 <pre><code>&#39;lem_onestage_final&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoThm.thm52&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoThm.spectrum_full&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
-&#39;SgoKWit.not_faithful_kp1&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
+&#39;SgoKWit.not_faithful_kp1&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoGames.lem_symmetric&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoGames.lem_dynamics_2&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoGames.lem_dynamics_3&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
 <p>Gold-standard extra: replay the build through an external kernel with
 lean4checker. The CI workflow (<code>.github/workflows/ci.yml</code>,
-for a git hosting of the same files) runs the build and greps the four
+for a git hosting of the same files) runs the build and greps the seven
 lines.</p>
 <h2 id="what-is-checked-where-the-printed-notions-live">What is checked:
 where the printed notions live</h2>
@@ -258,8 +279,23 @@ core (<code>goGame</code>), the four games (<code>sgoGame</code>,
 <code>dsgoGame</code>, <code>kGame</code>), their branch semantics
 (<code>rhoSGo</code>, <code>rhoD</code>, <code>rhoK</code>), and the
 statements <code>Thm52_SGo</code>, <code>Thm52_DSGo</code>,
-<code>Thm52_kDSGo</code>, <code>Thm52</code>,
-<code>SpectrumFull</code>.</p>
+<code>Thm52_kDSGo</code>, <code>Thm52</code>, <code>SpectrumFull</code>.
+- <code>SgoSim</code> — Sim(G) as a simultaneous game
+(<code>simGame</code>, on the sets of position normal forms
+<code>NSet</code>), <code>simGame_simOK</code>, and
+<code>lem_symmetric</code>: the swap R̃ (<code>Rt</code>), the
+characterization of P as the pair of its two terms’ normal forms
+(<code>Pmap_eq</code>), P’s insensitivity to the turn grading at live
+states (<code>Pmap_flip</code> — the printed “unaffected by the
+normalization”), and P intertwining the swap (<code>Pmap_Rst</code>). -
+<code>SgoDyn</code> — dynamical isomorphisms (<code>SeqIso</code>), the
+renaming of a simultaneization (<code>renameSim</code>,
+<code>renameRho</code>), the transports of every printed condition
+(<code>lem_dynamics_2</code>), the spectrum as a set of realized radii
+(<code>HasRadius</code>, <code>InSpectrum</code>) and
+<code>lem_dynamics_3</code>;
+<code>SgoThm.spectrum_full_inSpectrum</code> restates the spectrum
+corollary.</p>
 <p>The proof of Theorem 5.2: - SGo: <code>SgoInv</code> (the
 entanglement invariant), <code>SgoOK</code> (def_simultaneous),
 <code>SgoBridge</code> (P on position normal forms =
@@ -297,25 +333,25 @@ exactly after a double pass turn (the <code>final</code> flag); Go’s
 finals arise from a pass at pass grading 1 (<code>SgoGames.sE</code>);
 no core state of Go is ended by play. def_faithful’s finality clause is
 as printed (<code>FaithfulAt</code>).</li>
-<li>The sequential-game layer is the printed core presentation. One
-nuance: the position normal form <code>sN</code> keeps the turn grading
-of a FINAL state, while the printed N resets it. On Go the two agree on
-every branch that occurs (a final branch arises only by a double pass
-from a normal form, which lands at grading 0), so Theorem 5.2 is
-unaffected; the difference is visible only to the printed lemma that
-Sim(G) is symmetric (<code>lem_symmetric</code>), which is not
-formalized.</li>
+<li>The sequential-game layer is the printed core presentation; the
+position normal form <code>sN</code> is the printed N exactly (gradings
+reset, the core kept, for live states and finals alike).</li>
 <li>Radii are stated in explicit form — faithful within d, not faithful
 within d+1 — with no supremum; the spectrum is the existence statement
 over these (<code>SpectrumFull</code>).</li>
 <li>Not carried: the partition of the final states into wins and draws
-(unused by the theorem’s clauses); finiteness of the move alphabet; the
-printed lemmas <code>lem_symmetric</code> (Sim(G) is symmetric) and
-<code>lem_dynamics</code> (isomorphism invariance of the radii) are not
-formalized. Symmetry of the four games is <code>SimSym</code>, with
-states compared up to equality of the entanglement as a SET
-(<code>sgoEqv</code>, <code>kEqv</code>), matching the printed set-based
-definition.</li>
+(unused by the theorem’s clauses), and finiteness of the move alphabet.
+Consequently def_symmetric’s clause that R maps W_0 onto W_1 and D onto
+D is carried as the preservation of finality (<code>SimSym</code>), and
+the scoring clause of <code>lem_dynamics</code>(3) — repartitioning the
+final states does not change the spectrum — has no formal counterpart
+beyond the fact that no formal notion reads a partition
+(<code>InSpectrum</code> is defined on the scoring-free
+<code>SeqGame</code>). Symmetry of the four games is
+<code>SimSym</code>, with states compared up to equality of the
+entanglement as a SET (<code>sgoEqv</code>, <code>kEqv</code>), matching
+the printed set-based definition; for Sim(G) the comparison is equality
+(<code>lem_symmetric</code>).</li>
 <li>Moves are <code>Option (Bool × Nat)</code>: the pass, or a colored
 intersection; off-board indices are undefined moves. Availability is
 read from the display, as printed.</li>
