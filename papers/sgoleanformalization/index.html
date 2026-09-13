@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>sgolean — Lean 4 formalization of Theorem 5.2 (release 1.0)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1
+id="sgolean-lean-4-formalization-of-theorem-5.2-and-the-one-stage-lemma-of-the-radius-spectrum-of-games-and-simultaneous-go-via-objective-quantum-reduction">sgolean
+— Lean 4 formalization of Theorem 5.2 and the one-stage lemma of <em>The
+radius spectrum of games, and simultaneous Go via objective quantum
+reduction</em></h1>
+<p>STATUS: COMPLETE. Both results are fully proved, sorry-free, in Lean
+4.15.0 core (no Mathlib, no other dependency), kernel-checked by
+<code>lake build</code>.</p>
+<ul>
+<li><code>SgoThm.thm52</code> — Theorem 5.2: on a board of side at least
+five, SGo, the delayed games k-DSGo (k ≥ 1) and DSGo are simple
+symmetric simultaneizations of Go with faithfulness radii zero, exactly
+k, and infinity; Go itself is symmetric.
+<code>SgoThm.spectrum_full</code> — the corollary: every element of ℕ ⊔
+{∞} is the radius of a simple symmetric simultaneization of Go.</li>
+<li><code>lem_onestage_final</code> (Step8.lean) — the one-stage lemma
+(<code>lem_onestage</code>), the resolution of commuting joint moves: at
+every board side n ≥ 2 and every turn, for non pass joint moves; the
+pass cases are covered inside the SGo clause of the theorem
+(<code>SgoStage1.onestage_single</code>,
+<code>SgoSemi.sgo_semiclassical</code>).</li>
+</ul>
+<p>Axiom footprint of every theorem above:
+<code>[propext, Classical.choice, Quot.sound]</code> — the standard
+trio. No <code>sorryAx</code> (no incomplete proof) and no
+<code>Lean.ofReduceBool</code> (no <code>native_decide</code>, i.e. no
+trust in the compiler) in their dependency cones.</p>
+<p>Release 1.0. Hosted at <a
+href="https://yashamon.github.io/web2/papers/sgoleanformalization/"
+class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
+— the files below, this <a href="README.md">README</a>, and the archive
+<a
+href="sgoleanformalization-1.0.zip">sgoleanformalization-1.0.zip</a>.</p>
+<h2 id="verifying-this-development">Verifying this development</h2>
+<p>Four commands; no dependency beyond Lean itself:</p>
+<pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.0.zip
+unzip sgoleanformalization-1.0.zip &amp;&amp; cd sgoleanformalization
+lake build          # kernel-checks the complete chain (lean-toolchain pins v4.15.0; ~2 min)</code></pre>
+<p>Then the axiom certificate:</p>
+<pre><code>lake env lean Audit.lean</code></pre>
+<p>Expected output, exactly these four lines:</p>
+<pre><code>&#39;lem_onestage_final&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoThm.thm52&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoThm.spectrum_full&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoKWit.not_faithful_kp1&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
+<p>Gold-standard extra: replay the build through an external kernel with
+lean4checker. The CI workflow (<code>.github/workflows/ci.yml</code>,
+for a git hosting of the same files) runs the build and greps the four
+lines.</p>
+<h2 id="what-is-checked-where-the-printed-notions-live">What is checked:
+where the printed notions live</h2>
+<p>The default target <code>Sgolean</code> (lakefile.toml) builds the
+whole sorry-free chain. Correspondence with the print is documented at
+the top of each file.</p>
+<p>Classical Go and the display calculus (Section 2): -
+<code>SgoGo</code> — classical Go on diagrams: the placed diagram B + m,
+go_captures, go_suicide, go_closure (<code>goMoveN</code>). -
+<code>SgoDisplay</code> — the display calculus: q-stones and time
+stamps, def_trapped, def_captured 1/2/3a/3b, the basic capture
+reduction, its fixpoint (Cap_n), placeJoint (collision → q-stone), the
+stage recursion (OR).</p>
+<p>The one-stage lemma (<code>lem_onestage_final</code>):
+<code>SgoLemma</code> (statement, goMoveN factored through named
+stages), <code>Infra</code>..<code>Infra6</code> (components, liberties,
+legality), <code>Step0</code>, <code>Step1</code>, <code>Step3</code>,
+<code>Step4</code>, <code>Step5</code>, <code>DispInfra</code>,
+<code>Step6</code>, <code>Step7</code>, <code>Step8</code>
+(assembly).</p>
+<p>The games (Sections 4–5): - <code>SgoSerial</code> — the branch step
+<code>#</code>, the serialization map P (<code>serialP</code>, the four
+priority cases), <code>simEv</code>, and E_SGo (<code>sgoEv</code>). -
+<code>SgoDelta</code> — the postprocessing Δ (<code>deltaRound</code>,
+<code>recut</code>, <code>delta</code>), E_DSGo (<code>dsgoEv</code>),
+the objective reduction <code>orOp</code>, verdicts (<code>verOf</code>,
+<code>execV</code>), and E_k (<code>kEv</code>). - <code>SgoGames</code>
+— the abstract layer: def_sequential in its core presentation (core
+states, the action of the non pass moves, ended-by-play cores; states
+bigraded by turn and pass grading; finals), the evolution, bar and
+<code>#</code> (<code>hashOp</code>), the position normal form
+(<code>sN</code>), P (<code>Pmap</code>), Sim(G) (<code>simDefP</code>,
+<code>simVal</code>, <code>simFinal</code>), def_simultaneous
+(<code>SimulGame</code>, <code>SimOK</code>), symmetry
+(<code>SeqSym</code>, <code>SimSym</code>), def_semiclassical
+(<code>CommuteAt</code>, <code>SemiC</code>), def_symmetrization
+conditions 3–4 (<code>IsSimultaneization</code>), the interfaces,
+def_faithful (<code>FaithfulAt</code>, <code>WithinD</code>,
+<code>FaithfulWithin</code>), def_simplesymmetrization
+(<code>IsSimple</code>). - <code>SgoInst</code> — Go presented by its
+core (<code>goGame</code>), the four games (<code>sgoGame</code>,
+<code>dsgoGame</code>, <code>kGame</code>), their branch semantics
+(<code>rhoSGo</code>, <code>rhoD</code>, <code>rhoK</code>), and the
+statements <code>Thm52_SGo</code>, <code>Thm52_DSGo</code>,
+<code>Thm52_kDSGo</code>, <code>Thm52</code>,
+<code>SpectrumFull</code>.</p>
+<p>The proof of Theorem 5.2: - SGo: <code>SgoInv</code> (the
+entanglement invariant), <code>SgoOK</code> (def_simultaneous),
+<code>SgoBridge</code> (P on position normal forms =
+<code>serialP</code>), <code>SgoNat</code> (naturality),
+<code>SgoStage1</code> (the single-placement one-stage lemma — the pass
+cases), <code>SgoSemi</code> (the semi-classical recursion tracks the
+display), <code>SgoFaith</code> (faithful within 0),
+<code>SgoSimple</code> (simplicity), <code>SgoWit</code> (not faithful
+within 1, side ≥ 3). - DSGo: <code>SgoDInv</code>, <code>SgoDOK</code>,
+<code>SgoDNat</code>, <code>SgoDSemi</code> (Δ is the resolution at
+semi-classical states), <code>SgoDFaith</code> (faithful within every
+distance). - k-DSGo: <code>SgoKInv</code>, <code>SgoKNat</code>
+(faithful within k, by projection to a DSGo history),
+<code>SgoKWit</code> + <code>SgoKFin</code> (not faithful within k+1,
+side ≥ 5: the delayed-verdict witness — collision, pocket-suicide
+padding, final turn). - Symmetry: <code>SgoSwap</code> (the color swap
+through the whole capture stack; Go is symmetric, <code>GoOK</code>),
+<code>SgoSym</code> (the four games are symmetric). -
+<code>SgoThm</code> — the assembly: <code>thm52_SGo</code>,
+<code>thm52_DSGo</code>, <code>thm52_kDSGo</code>, <code>thm52</code>,
+<code>spectrum_full</code>.</p>
+<h2 id="statement-audit-what-the-kernel-cannot-check-for-you">Statement
+audit — what the kernel cannot check for you</h2>
+<p>That the checked statements SAY what the paper says. Points to
+compare against the print:</p>
+<ol type="1">
+<li>Board side. <code>thm52</code> and <code>spectrum_full</code> assume
+<code>5 ≤ n</code>, as the printed theorem. Per clause: SGo faithful
+within 0 at n ≥ 2 and not within 1 at n ≥ 3; DSGo faithful within every
+distance at n ≥ 2; k-DSGo faithful within k at n ≥ 2 and not within k+1
+at n ≥ 5. The 2×2 board is not covered (the paper’s footnote cites a
+separate exhaustion).</li>
+<li>Finality, as printed: a state of any game of the family is final
+exactly after a double pass turn (the <code>final</code> flag); Go’s
+finals arise from a pass at pass grading 1 (<code>SgoGames.sE</code>);
+no core state of Go is ended by play. def_faithful’s finality clause is
+as printed (<code>FaithfulAt</code>).</li>
+<li>The sequential-game layer is the printed core presentation. One
+nuance: the position normal form <code>sN</code> keeps the turn grading
+of a FINAL state, while the printed N resets it. On Go the two agree on
+every branch that occurs (a final branch arises only by a double pass
+from a normal form, which lands at grading 0), so Theorem 5.2 is
+unaffected; the difference is visible only to the printed lemma that
+Sim(G) is symmetric (<code>lem_symmetric</code>), which is not
+formalized.</li>
+<li>Radii are stated in explicit form — faithful within d, not faithful
+within d+1 — with no supremum; the spectrum is the existence statement
+over these (<code>SpectrumFull</code>).</li>
+<li>Not carried: the partition of the final states into wins and draws
+(unused by the theorem’s clauses); finiteness of the move alphabet; the
+printed lemmas <code>lem_symmetric</code> (Sim(G) is symmetric) and
+<code>lem_dynamics</code> (isomorphism invariance of the radii) are not
+formalized. Symmetry of the four games is <code>SimSym</code>, with
+states compared up to equality of the entanglement as a SET
+(<code>sgoEqv</code>, <code>kEqv</code>), matching the printed set-based
+definition.</li>
+<li>Moves are <code>Option (Bool × Nat)</code>: the pass, or a colored
+intersection; off-board indices are undefined moves. Availability is
+read from the display, as printed.</li>
+<li>Branches: a live branch of the entanglement is the position normal
+form of its diagram (time stamps in branch diagrams ride as 0 and are
+never read). That P’s outputs land exactly there is a proved bridge
+(<code>SgoBridge</code>), not an assumption.</li>
+<li>Array encoding: displays are <code>Display n</code> with
+<code>cells.size = n*n</code> pinned by <code>WFD</code>; cell i =
+column * n + row.</li>
+</ol>
+<h2 id="separate-artifacts-larger-trusted-base-native_decide">Separate
+artifacts (larger trusted base: native_decide)</h2>
+<p>Not in the default target; build or run individually.</p>
+<ul>
+<li><code>lake build Exhaust</code> —
+<code>lem_onestage_3x3_exhaustive</code> (ExhaustBase.lean +
+Exhaust.lean): all 19,683 assignments of the 3×3 board, legality
+filtered in-proof, every commuting non pass ordered pair; ~3 min.</li>
+<li><code>lake build Counts</code> — the 3×3 legal-state census
+cross-check (12,675).</li>
+<li>Differential tests against the paper’s Python engine
+(<code>lake env lean   &lt;file&gt;</code>): <code>Tests.lean</code>
+(1,844 legal Go transitions), <code>TestsDAll.lean</code> (display
+resolution, 1,722 playout turns; <code>TestsD300.lean</code> a 300-turn
+slice), <code>TestSerial.lean</code> (SGo, 240 games / 2,009 turns),
+<code>TestDelta.lean</code> (DSGo and k-DSGo, 390 games / 3,262 turns);
+<code>TestsD.lean</code> is an eval sheet.</li>
+<li><code>EvalKWit.lean</code> — an <code>#eval</code> replay of the
+k-DSGo witness (side 5 for k = 1..4, and sides 6, 7, 8 for k = 3, 5, 8):
+the violation at A3 each time; a sanity check of the construction that
+<code>SgoKFin</code> proves.</li>
+</ul>
+<p><code>tools/</code> holds the Python generators of the test sheets
+and the witness search; they need the paper’s engine
+(<code>sgo_engine.py</code>, not included). <code>attic/</code> holds
+inactive scratch, unrun variants and superseded checkpoints; nothing
+there is built.</p>
+<h2 id="notes-on-core-lean-for-readers-of-the-proofs">Notes on core Lean
+(for readers of the proofs)</h2>
+<p>Core Lean 4.15 lacks Mathlib’s <code>by_contra</code>,
+<code>split_ifs</code>, <code>Subperm</code> and
+<code>LawfulBEq (Array _)</code>: components are handled by a
+filter-complement measure, array equality through
+<code>Array.isEqv</code> bridges, and case analysis by
+<code>by_cases</code> with <code>if_pos</code>/<code>if_neg</code>.
+Symbolic board sides make the component search (fuel n*n) irreducible
+under <code>whnf</code>, so the witness files are written entirely with
+rewriting lemmas rather than evaluation.</p>
+</body>
+</html>
