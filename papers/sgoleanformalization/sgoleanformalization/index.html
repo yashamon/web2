@@ -173,20 +173,24 @@ id="sgolean-lean-4-formalization-of-the-main-theorems-the-one-stage-lemma-and-th
 — Lean 4 formalization of the main theorems, the one-stage lemma, and
 the simultaneization theory of <em>The radius spectrum of games, and
 simultaneous Go via objective quantum reduction</em></h1>
-<p>The sequential-game layer is the paper’s S(G)-theoretic
-<code>def_sequential</code>: a game is presented by its cores, its
-states are <code>C(G) × Z₂ × Z₂ ⊔ C(G) × Z₂</code>, and the printed
-axioms of the evolution are theorems of the construction
-(<code>SgoGames</code>: <code>prop_finalnomove</code>,
+<p>The sequential-game layer is the paper’s <code>def_sequential</code>
+(Definition 4.3): a game is presented by its cores, its states are
+<code>C(G) × Z₂ × Z₃</code> — here <code>PState.live c g j</code> for
+pass grading j = 0, 1 and <code>PState.done c g</code> for pass grading
+2 — and the printed properties of the evolution are theorems of the
+construction (<code>SgoGames</code>: <code>prop_finalnomove</code>,
 <code>sfinal_iff_no_pass</code>, <code>prop_pass0</code>,
-<code>prop_pass1</code>, <code>sE_nonpass</code>,
-<code>prop_nonpass_j</code>, <code>prop_doublepass</code>).</p>
+<code>prop_pass1</code>, <code>prop_pass_j</code>,
+<code>sE_nonpass</code>, <code>prop_nonpass_j</code>,
+<code>prop_doublepass</code>). The paper itself carries no verification
+claims beyond the link in its introduction; this README is the
+audit.</p>
 <p>STATUS: COMPLETE. All results below are fully proved, sorry-free, in
 Lean 4.15.0 core (no Mathlib, no other dependency), kernel-checked by
 <code>lake build</code>.</p>
 <ul>
 <li><code>SgoThm.thm52</code> — the main theorem
-(<code>thm_simplesymetrization</code>, numbered 5.3 in the current
+(<code>thm_simplesymetrization</code>, Theorem 6.3 in the current
 draft): on a board of side at least five, SGo, the delayed games k-DSGo
 (k ≥ 1) and DSGo are simple symmetric simultaneizations of Go with
 faithfulness radii zero, exactly k, and infinity; Go itself is
@@ -237,24 +241,26 @@ hence within every distance: radius infinity.</li>
 trio. No <code>sorryAx</code> (no incomplete proof) and no
 <code>Lean.ofReduceBool</code> (no <code>native_decide</code>, i.e. no
 trust in the compiler) in their dependency cones.</p>
-<p>Release 1.2. Hosted at <a
+<p>Release 1.3. Hosted at <a
 href="https://yashamon.github.io/web2/papers/sgoleanformalization/"
 class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
 — the files below, this <a href="README.md">README</a>, and the archive
-<a href="sgoleanformalization-1.2.zip">sgoleanformalization-1.2.zip</a>.
+<a href="sgoleanformalization-1.3.zip">sgoleanformalization-1.3.zip</a>.
 (Release 1.0 carried the main theorem and the one-stage lemma; 1.1 added
-<code>lem_symmetric</code> and <code>lem_dynamics</code>; 1.2 adds
+<code>lem_symmetric</code> and <code>lem_dynamics</code>; 1.2 added
 <code>thm_zero</code>, <code>lem_familysymmetric</code> and
-<code>lem_universal</code>, and the sequential-game layer is now the
-paper’s S(G)-theoretic def_sequential, its axioms verified of the
-construction.)</p>
+<code>lem_universal</code>, with the sequential-game layer as the
+paper’s def_sequential; 1.3 aligns the definitions with the current
+print: def_faithful is the single interface equation
+(<code>FaithfulAt</code>), <code>#</code> is undefined at pass grading 2
+(<code>hashOp_done</code>), and the pass grading is read in Z₃.)</p>
 <h2 id="verifying-this-development">Verifying this development</h2>
 <p>Four commands; no dependency beyond Lean itself:</p>
 <pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
-curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.2.zip
-unzip sgoleanformalization-1.2.zip &amp;&amp; cd sgoleanformalization
+curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.3.zip
+unzip sgoleanformalization-1.3.zip &amp;&amp; cd sgoleanformalization
 lake build          # kernel-checks the complete chain (lean-toolchain pins v4.15.0; ~2 min)</code></pre>
-<p>On Windows, <code>tar -xf sgoleanformalization-1.2.zip</code> unpacks
+<p>On Windows, <code>tar -xf sgoleanformalization-1.3.zip</code> unpacks
 the archive in place (PowerShell’s Extract-All wraps it in a second
 folder of the same name, and <code>lake build</code> then finds no
 lakefile); on Linux use <code>unzip</code>, GNU tar not reading zip
@@ -295,25 +301,29 @@ legality), <code>Step0</code>, <code>Step1</code>, <code>Step3</code>,
 <code>Step4</code>, <code>Step5</code>, <code>DispInfra</code>,
 <code>Step6</code>, <code>Step7</code>, <code>Step8</code>
 (assembly).</p>
-<p>The games (Sections 4–5): - <code>SgoSerial</code> — the branch step
+<p>The games (Sections 4–6): - <code>SgoSerial</code> — the branch step
 <code>#</code>, the serialization map P (<code>serialP</code>, the four
 priority cases), <code>simEv</code>, and E_SGo (<code>sgoEv</code>). -
 <code>SgoDelta</code> — the postprocessing Δ (<code>deltaRound</code>,
 <code>recut</code>, <code>delta</code>), E_DSGo (<code>dsgoEv</code>),
 the objective reduction <code>orOp</code>, verdicts (<code>verOf</code>,
 <code>execV</code>), and E_k (<code>kEv</code>). - <code>SgoGames</code>
-— the abstract layer: def_sequential in its core presentation (core
-states, the action of the non pass moves, ended-by-play cores; states
-bigraded by turn and pass grading; finals), the evolution, bar and
-<code>#</code> (<code>hashOp</code>), the position normal form
-(<code>sN</code>), P (<code>Pmap</code>), Sim(G) (<code>simDefP</code>,
-<code>simVal</code>, <code>simFinal</code>), def_simultaneous
-(<code>SimulGame</code>, <code>SimOK</code>), symmetry
-(<code>SeqSym</code>, <code>SimSym</code>), def_semiclassical
-(<code>CommuteAt</code>, <code>SemiC</code>), def_symmetrization
-conditions 3–4 (<code>IsSimultaneization</code>), the interfaces,
-def_faithful (<code>FaithfulAt</code>, <code>WithinD</code>,
-<code>FaithfulWithin</code>), def_simplesymmetrization
+— the abstract layer: def_sequential (core states, the turn and pass
+gradings, the ended cores where the pass is undefined; finals), the
+evolution, bar and <code>#</code> (<code>hashOp</code>, undefined at
+pass grading 2), the position normal form (<code>sN</code>), P
+(<code>Pmap</code>), Sim(G) (<code>simDefP</code>, <code>simVal</code>,
+<code>simFinal</code>), def_simultaneous (<code>SimulGame</code>,
+<code>SimOK</code>), symmetry (<code>SeqSym</code>,
+<code>SimSym</code>), def_semiclassical (<code>CommuteAt</code>,
+<code>SemiC</code>), def_symmetrization conditions 3–4
+(<code>IsSimultaneization</code>), the interfaces
+(<code>Interface0</code>, <code>Interface1</code>;
+<code>interface0_empty_iff</code>: 𝕀(a) is empty exactly when a is
+final), def_faithful as the interface equation (<code>FaithfulAt</code>,
+<code>WithinD</code>, <code>FaithfulWithin</code>), its three-clause
+form (<code>FaithfulAt3</code>) and their equivalence at reachable
+states (<code>faithfulAt_iff</code>), def_simplesymmetrization
 (<code>IsSimple</code>). - <code>SgoInst</code> — Go presented by its
 core (<code>goGame</code>), the four games (<code>sgoGame</code>,
 <code>dsgoGame</code>, <code>kGame</code>), their branch semantics
@@ -351,7 +361,7 @@ smallest form: two moves, each undefined after the other, so that P
 falls to its lowest priority case and has two distinct non final
 elements; <code>tGame_zero_inSpectrum</code> concludes
 <code>InSpectrum tGame (some 0)</code> from <code>thm_zero</code>.</p>
-<p>The proof of Theorem 5.2: - SGo: <code>SgoInv</code> (the
+<p>The proof of the main theorem (6.3): - SGo: <code>SgoInv</code> (the
 entanglement invariant), <code>SgoOK</code> (def_simultaneous),
 <code>SgoBridge</code> (P on position normal forms =
 <code>serialP</code>), <code>SgoNat</code> (naturality),
@@ -384,18 +394,33 @@ distance at n ≥ 2; k-DSGo faithful within k at n ≥ 2 and not within k+1
 at n ≥ 5. The 2×2 board is not covered (the paper’s footnote cites a
 separate exhaustion).</li>
 <li>Finality, as printed: a state is final exactly when the pass is
-undefined there (<code>SgoGames.sfinal_iff_no_pass</code>), which at a
-live state depends on the core alone (<code>ended</code>); the pairs,
-reached by a double pass, are final. For a game of the SGo family a
-state is final exactly after a double pass turn (the <code>final</code>
-flag); no core of Go is ended by play, so Go’s finals are the pairs.
-def_faithful’s finality clause is as printed
-(<code>FaithfulAt</code>).</li>
-<li>The sequential-game layer is the printed S(G)-theoretic
-def_sequential, its three axioms verified of the construction (the
-theorems listed at the top); the position normal form <code>sN</code> is
-the printed N exactly (gradings reset, the core kept, for live states
-and pairs alike).</li>
+undefined there (<code>SgoGames.sfinal_iff_no_pass</code>), which at
+pass grading 0 or 1 depends on the core alone (<code>ended</code>,
+<code>prop_pass_j</code>); the states of pass grading 2
+(<code>done</code>), reached by a double pass, are final. For a game of
+the SGo family a state is final exactly after a double pass turn (the
+<code>final</code> flag); no core of Go is ended by play, so Go’s finals
+are the states of pass grading 2.</li>
+<li>def_faithful (4.15) is the single equation I(s) = ⋂ 𝕀(a) with ρ(s)
+nonempty (<code>FaithfulAt</code>). The proofs for the four games
+establish the earlier three-clause form (<code>FaithfulAt3</code>:
+nonempty; final only if some branch is final; the equation at non final
+states) and pass through <code>faithfulAt_iff</code>, which shows the
+two forms agree at every reachable state of a combinatorial simultaneous
+game — because 𝕀(a) is empty exactly when a is final
+(<code>interface0_empty_iff</code>), which in turn is because
+<code>#</code> is undefined at every final state
+(<code>hashOp_done</code>, <code>hashOp_ended</code>), as printed after
+def_hash (4.7).</li>
+<li>The sequential-game layer is the printed def_sequential (4.3):
+<code>live c g j</code> is (x, i, j) for j &lt; 2 and
+<code>done c g</code> is (x, i, 2); the printed properties are theorems
+of the construction (the list at the top; property (2)’s “definedness
+depending on x and m alone” is <code>prop_nonpass_j</code> and
+<code>prop_pass_j</code>); the position normal form <code>sN</code> is
+the printed N exactly (gradings reset, the core and the finality kept).
+The bar <code>sBar</code> carries a value at a <code>done</code> for
+definitional convenience; <code>hashOp</code> never reads it.</li>
 <li>Radii are stated in explicit form — faithful within d, not faithful
 within d+1 — with no supremum; the spectrum is the existence statement
 over these (<code>SpectrumFull</code>).</li>
@@ -422,18 +447,27 @@ never read). That P’s outputs land exactly there is a proved bridge
 <li>Array encoding: displays are <code>Display n</code> with
 <code>cells.size = n*n</code> pinned by <code>WFD</code>; cell i =
 column * n + row.</li>
-<li><code>thm_zero</code> assumes only that G is symmetric. Its conflict
-hypothesis is <code>HasConflict</code> — P (a, m_0, m_1) has two
-distinct non final elements at a semi-classical state — read off P
+<li><code>thm_zero</code> (6.9) assumes only that G is symmetric. Its
+conflict hypothesis is <code>HasConflict</code> — P (a, m_0, m_1) has
+two distinct non final elements at a semi-classical state — read off P
 itself, so the printed chess witness (P’s lowest priority case, neither
 composite defined) is covered; <code>SgoZeroWit</code> is a witness game
 of that shape. The hypothesis of part (3) is <code>AllCommute</code>,
 stated over the associated states of the semi-classical states of Sim(G)
-(<code>scAssoc_iff_semiC</code> identifies them as printed). Part
+(<code>scAssoc_iff_semiC</code> identifies them as printed). Part</li>
+</ol>
 <ol start="3" type="1">
-<li>uses the naturality of the branch semantics where the print appeals
-to faithfulness.</li>
-</ol></li>
+<li>uses the naturality of the branch semantics, as the print now
+does.</li>
+</ol>
+<ol start="11" type="1">
+<li>Not formalized, by decision: Theorem 6.7 (augmented chess has no
+simple simultaneization of positive radius — a retrograde statement
+about legally obtainable chess positions), the Nash theorem 5.3 and its
+corollary 5.4, and the empirical Section 7. The rules of SGo are
+formalized as the engine of
+<code>SgoDisplay</code>/<code>SgoSerial</code>/<code>SgoDelta</code> and
+differentially tested against the paper’s Python engine (below).</li>
 </ol>
 <h2 id="separate-artifacts-larger-trusted-base-native_decide">Separate
 artifacts (larger trusted base: native_decide)</h2>

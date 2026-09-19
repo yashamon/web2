@@ -1,0 +1,30 @@
+# sgolean — Lean 4 formalization for "The radius spectrum of games,
+# and simultaneous Go via objective quantum reduction".
+# No dependencies (core Lean only, no mathlib): `lake build` works offline
+# and kernel-checks the complete chain of the default target.
+name = "sgolean"
+defaultTargets = ["Sgolean"]
+
+# The sorry-free, axiom-clean chain culminating in lem_onestage_final,
+# plus the theorem-5.2 game level as it grows (SgoSerial, ...).
+[[lean_lib]]
+name = "Sgolean"
+globs = ["Sgolean", "SgoGo", "SgoDisplay", "SgoLemma",
+         "Infra", "Infra2", "Infra3", "Infra4", "Infra5", "Infra6",
+         "Step0", "Step1", "Step3", "Step4", "Step5", "Step6", "Step7",
+         "Step8", "DispInfra", "SgoSerial", "SgoDelta", "SgoGames",
+         "SgoInst", "SgoInv", "SgoOK", "SgoBridge", "SgoNat",
+         "SgoStage1", "SgoSemi", "SgoFaith", "SgoSimple", "SgoWit",
+         "SgoDInv", "SgoDOK", "SgoDNat", "SgoDSemi", "SgoDFaith",
+         "SgoKInv", "SgoKNat", "SgoSwap", "SgoSym", "SgoKWit",
+         "SgoKFin", "SgoThm", "SgoSim", "SgoDyn", "SgoZero", "SgoZeroWit"]
+
+# Separate artifact: the 3×3 exhaustive theorem (native_decide; larger
+# trusted base — trusts the compiler). Build with `lake build Exhaust`.
+[[lean_lib]]
+name = "Exhaust"
+globs = ["Exhaust", "ExhaustBase"]
+
+# Cross-check: the 3×3 legal-state count (12,675, matching the census).
+[[lean_lib]]
+name = "Counts"
