@@ -140,7 +140,8 @@ http://yashamon.github.io/web2/papers/generalizedWeinstein.pdf
 [T]:http://yashamon.github.io/web2/papers/topping.pdf 
 [Oh]: https://arxiv.org/abs/2107.03551 
 [Kan]: http://yashamon.github.io/web2/papers/chernweil.pdf
-[GromovFuller]: http://yashamon.github.io/web2/papers/GromovFuller.pdf
+[GromovFuller]: 
+http://yashamon.github.io/web2/papers/geodesicarithmetic.pdf
 [curvature]: http://yashamon.github.io/web2/papers/curvature.pdf
 [QMaslov]: http://yashamon.github.io/web2/papers/QuantumMaslov.pdf
 [website]: https://sites.google.com/view/yashasavelyev/home
