@@ -84,8 +84,7 @@ for infinite dimensional groups][Kan], J. London Math. Soc., 113, No. 1, 1-65 (2
 ### preprints: All of these are also on arxiv but the versions below may be more updated)
 [Strict contactomorphisms are scarce][strictcontact] (With Yong-Geun Oh)
 
-[On the space of metrics with non-positive
-curvature][curvature], 5 pages
+[][curvature], 10 pages
 
 [Global Fukaya category II][6], 32 pages
 
