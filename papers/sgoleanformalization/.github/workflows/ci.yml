@@ -1,0 +1,31 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan (reads lean-toolchain for the pinned version)
+        run: |
+          curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Build (kernel-checks the full chain)
+        run: lake build
+
+      - name: Axiom audit of the main theorem
+        run: |
+          lake env lean Audit.lean | tee audit.out
+          grep -F "'lem_onestage_final' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoThm.thm52' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoThm.spectrum_full' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoKWit.not_faithful_kp1' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGames.lem_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGames.lem_dynamics_2' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGames.lem_dynamics_3' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGames.thm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoThm.lem_familysymmetric' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGames.lem_universal' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          test "$(grep -c 'sorryAx\|ofReduceBool' audit.out)" = 0

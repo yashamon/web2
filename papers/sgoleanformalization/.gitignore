@@ -1,0 +1,5 @@
+*.olean
+.lake/
+*.zip
+nohup.out
+lake.log
