@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Lean 4 formalizations — Invariant arithmetic of closed geodesics</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Lean 4 formalizations — Invariant arithmetic of closed
+geodesics</h1>
+</header>
+<h1
+id="lean-4-formalizations-for-invariant-arithmetic-of-closed-geodesics">Lean
+4 formalizations for <em>Invariant arithmetic of closed
+geodesics</em></h1>
+<p>Two Lean 4 / Mathlib formalizations accompany the paper. Both compile
+with no <code>sorry</code>, and every main theorem depends only on the
+three standard Lean axioms (<code>propext</code>,
+<code>Classical.choice</code>, <code>Quot.sound</code>), as checked by
+the <code>AxiomCheck.lean</code> file in each repository.</p>
+<p>Each repository below is self-contained: its own
+<code>README.md</code> is the audit, mapping every Lean theorem to the
+paper statement it formalizes and listing each named hypothesis against
+the lemma it stands for.</p>
+<h2
+id="surfacegroupformalization-the-potency-lemma-lemma-lem_potency">1.
+<code>surfacegroupformalization/</code> — the potency lemma (Lemma
+<code>lem_potency</code>)</h2>
+<p>Surface groups admit, for every nontrivial element <code>a</code> and
+every prime <code>p</code>, a finite quotient in which <code>a</code>
+has order exactly <code>p</code>. The single named hypothesis is
+Baumslag’s residual freeness of surface groups; everything else — in
+particular the potency of free groups, via a truncated Magnus embedding
+and the syllable-coefficient computation — is proved from scratch.</p>
+<ul>
+<li>Sources: <a
+href="surfacegroupformalization/"><code>surfacegroupformalization/</code></a>
+— <code>Potency/NC.lean</code> (noncommutative power series and their
+truncations), <code>Potency/Magnus.lean</code> (the Magnus homomorphism
+and its injectivity payload), <code>Potency/Order.lean</code> (the
+exact-order engine), <code>Potency/Main.lean</code>.</li>
+<li>Archive: <a
+href="surfacegroupformalization.zip"><code>surfacegroupformalization.zip</code></a>.</li>
+<li>Audit: <a
+href="surfacegroupformalization/README.md"><code>surfacegroupformalization/README.md</code></a>.</li>
+</ul>
+<h2
+id="arithmeticlaws-the-arithmetic-law-layer-theorem-thm_mobius-11">2.
+<code>arithmeticlaws/</code> — the arithmetic law layer (Theorem
+<code>thm_mobius</code>, §11)</h2>
+<p>The number-theoretic backbone of the paper, with the geometry
+entering only as named hypotheses: the Möbius-inverted odd-class law and
+its two consequences, the §11 divisor system
+(<code>eq_evendivisors</code>, Proposition
+<code>prop_primitivelaw</code> in both directions), the unconditional
+laws on the torus and on higher-genus surfaces (the latter also solved:
+<code>s_1 = 1</code>, <code>s_d = −b_{d/2}</code> for
+<code>d &gt; 1</code>), the ±1 sign cancellation that produces the
+master identity from the covering bijection and the surface sign law,
+and the passage from signed counts to counts (parity of
+<code>#P_d</code>, and <code>#P_d ≥ |s_d|</code>).</p>
+<ul>
+<li>Sources: <a href="arithmeticlaws/"><code>arithmeticlaws/</code></a>
+— <code>ArithLaw/Mobius.lean</code>,
+<code>ArithLaw/DivisorSystem.lean</code>,
+<code>ArithLaw/SignLaw.lean</code>,
+<code>ArithLaw/Counting.lean</code>.</li>
+<li>Archive: <a
+href="arithmeticlaws.zip"><code>arithmeticlaws.zip</code></a>.</li>
+<li>Audit: <a
+href="arithmeticlaws/README.md"><code>arithmeticlaws/README.md</code></a>.</li>
+</ul>
+<h2 id="building-either-repository">Building either repository</h2>
+<p>Both pin the toolchain <code>leanprover/lean4:v4.35.0-rc3</code> and
+Mathlib at commit <code>282fbb865d53622ef7f9ef29f6763a0327ee6b5f</code>.
+In the repository directory:</p>
+<pre><code>lake exe cache get
+lake build
+lake env lean AxiomCheck.lean</code></pre>
+</body>
+</html>

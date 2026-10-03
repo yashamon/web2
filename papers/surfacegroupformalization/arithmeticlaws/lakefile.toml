@@ -1,0 +1,10 @@
+name = "arithmeticlaws"
+defaultTargets = ["ArithLaw"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "282fbb865d53622ef7f9ef29f6763a0327ee6b5f"
+
+[[lean_lib]]
+name = "ArithLaw"
