@@ -1,5 +1,8 @@
 # sgolean — Lean 4 formalization of the main theorems, the one-stage lemma, and the simultaneization theory of *The radius spectrum of games, and simultaneous Go via objective quantum reduction*
 
+The manuscript: [sgo.pdf](https://yashamon.github.io/web2/papers/sgo.pdf).
+Section, theorem and definition numbers below refer to it.
+
 The sequential-game layer is the paper's `def_sequential` (Definition 4.3): a
 game is presented by its cores, its states are `C(G) × Z₂ × Z₃` — here
 `PState.live c g j` for pass grading j = 0, 1 and `PState.done c g` for pass
