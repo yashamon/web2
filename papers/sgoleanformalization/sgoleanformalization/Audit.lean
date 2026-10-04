@@ -14,6 +14,9 @@
      'SgoGames.thm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
      'SgoThm.lem_familysymmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
      'SgoGames.lem_universal' depends on axioms: [propext, Classical.choice, Quot.sound]
+     'SgoGames.lem_bisimulation' depends on axioms: [propext, Classical.choice, Quot.sound]
+     'SgoGames.thm_zero_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+     'SgoThm.go_radius_spectrum_full' depends on axioms: [propext, Classical.choice, Quot.sound]
 
    Those three axioms are the standard axioms of classical reasoning in Lean's
    core library. What must NOT appear:
@@ -37,9 +40,19 @@
    `lem_familysymmetric` is the lemma that the SGo family are
    symmetric simultaneous combinatorial games; `lem_universal` is the
    lemma that Sim(G) is a simultaneization of G with ρ the identity,
-   faithful at every legally obtainable state (SgoZero). -/
+   faithful at every legally obtainable state (SgoZero);
+   `lem_bisimulation` is the bisimulation lemma (SgoBisim): the minimal
+   quotient G/~ is a symmetric sequential game with the projection a
+   bisimulation, bisimilar games have the same radius spectrum, over a
+   minimal game the radius spectrum is the raw one, and the projection
+   commutes with Sim; `thm_zero_radius` is the radius spectrum clause of
+   the zero theorem (a conflict of non bisimilar outcomes; all turns
+   commuting); `go_radius_spectrum_full` is the radius spectrum clause
+   of the main theorem, under the hypothesis that Go is minimal (Lemma
+   lem_gominimal of the print, not formalized). -/
 import Step8
 import SgoThm
+import SgoBisimThm
 
 #print axioms lem_onestage_final
 #print axioms SgoThm.thm52
@@ -51,3 +64,6 @@ import SgoThm
 #print axioms SgoGames.thm_zero
 #print axioms SgoThm.lem_familysymmetric
 #print axioms SgoGames.lem_universal
+#print axioms SgoGames.lem_bisimulation
+#print axioms SgoGames.thm_zero_radius
+#print axioms SgoThm.go_radius_spectrum_full

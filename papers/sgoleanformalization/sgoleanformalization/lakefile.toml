@@ -17,7 +17,8 @@ globs = ["Sgolean", "SgoGo", "SgoDisplay", "SgoLemma",
          "SgoStage1", "SgoSemi", "SgoFaith", "SgoSimple", "SgoWit",
          "SgoDInv", "SgoDOK", "SgoDNat", "SgoDSemi", "SgoDFaith",
          "SgoKInv", "SgoKNat", "SgoSwap", "SgoSym", "SgoKWit",
-         "SgoKFin", "SgoThm", "SgoSim", "SgoDyn", "SgoZero", "SgoZeroWit"]
+         "SgoKFin", "SgoThm", "SgoSim", "SgoDyn", "SgoZero", "SgoZeroWit",
+         "SgoBisim", "SgoBisimThm"]
 
 # Separate artifact: the 3×3 exhaustive theorem (native_decide; larger
 # trusted base — trusts the compiler). Build with `lake build Exhaust`.

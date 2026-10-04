@@ -235,39 +235,70 @@ form.</li>
 identity, its semi-classical states are the singletons of their
 associated states, and it is faithful at every legally obtainable state,
 hence within every distance: radius infinity.</li>
+<li><code>SgoGames.lem_bisimulation</code> (SgoBisim.lean) —
+<code>lem_bisimulation</code> (Lemma 4.20), on Definition 4.19:
+bisimulations between sequential games (<code>IsBisim</code>),
+bisimilarity (<code>Bisimilar</code>: an equivalence relation and itself
+a bisimulation), the minimal quotient G/~ (<code>QGame</code>, on the
+classes of legally obtainable cores) and the radius spectrum as the raw
+radius spectrum of the quotient (<code>InRadiusSpectrum</code>; the raw
+one is <code>InSpectrum</code>). (1) G/~ is a symmetric sequential game
+and the projection is a bisimulation; (2) bisimilar games have the same
+radius spectrum;
+<ol start="3" type="1">
+<li>over a minimal game (<code>Minimal</code>) the radius spectrum is
+the raw radius spectrum; (4) the projection π is onto the legally
+obtainable states of G/~ and of Sim(G/~) and commutes with the
+interfaces, availability, finality, the evolution of Sim and the
+semi-classical states.</li>
+</ol></li>
+<li><code>SgoGames.thm_zero_radius</code> (SgoBisim.lean) — the radius
+spectrum clauses of <code>thm_zero</code> (6.9): a conflict whose two
+outcomes have non bisimilar cores (<code>HasConflictNB</code>) puts 0 in
+the radius spectrum (part 2), and if every joint move available at a
+semi-classical state commutes, the radius spectrum is {∞} (part 3).</li>
+<li><code>SgoThm.go_radius_spectrum_full</code> (SgoBisimThm.lean) — the
+radius spectrum clause of the main theorem (6.3): every element of ℕ ⊔
+{∞} lies in the radius spectrum of Go, UNDER THE HYPOTHESIS
+<code>Minimal (goGame n)</code> — that distinct legally obtainable
+diagrams of Go are not bisimilar, Lemma 6.13
+(<code>lem_gominimal</code>) of the print, which is not formalized
+(statement audit, item 12).</li>
 </ul>
 <p>Axiom footprint of every theorem above:
 <code>[propext, Classical.choice, Quot.sound]</code> — the standard
 trio. No <code>sorryAx</code> (no incomplete proof) and no
 <code>Lean.ofReduceBool</code> (no <code>native_decide</code>, i.e. no
 trust in the compiler) in their dependency cones.</p>
-<p>Release 1.3. Hosted at <a
+<p>Release 1.4. Hosted at <a
 href="https://yashamon.github.io/web2/papers/sgoleanformalization/"
 class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
 — the files below, this <a href="README.md">README</a>, and the archive
-<a href="sgoleanformalization-1.3.zip">sgoleanformalization-1.3.zip</a>.
+<a href="sgoleanformalization-1.4.zip">sgoleanformalization-1.4.zip</a>.
 (Release 1.0 carried the main theorem and the one-stage lemma; 1.1 added
 <code>lem_symmetric</code> and <code>lem_dynamics</code>; 1.2 added
 <code>thm_zero</code>, <code>lem_familysymmetric</code> and
 <code>lem_universal</code>, with the sequential-game layer as the
-paper’s def_sequential; 1.3 aligns the definitions with the current
+paper’s def_sequential; 1.3 aligned the definitions with the current
 print: def_faithful is the single interface equation
 (<code>FaithfulAt</code>), <code>#</code> is undefined at pass grading 2
-(<code>hashOp_done</code>), and the pass grading is read in Z₃.)</p>
+(<code>hashOp_done</code>), and the pass grading is read in Z₃; 1.4 adds
+the bisimulation layer: Definition 4.19, Lemma 4.20, the radius spectrum
+clauses of Theorems 6.3 and 6.9.)</p>
 <h2 id="verifying-this-development">Verifying this development</h2>
 <p>Four commands; no dependency beyond Lean itself:</p>
 <pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
-curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.3.zip
-unzip sgoleanformalization-1.3.zip &amp;&amp; cd sgoleanformalization
+curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.4.zip
+unzip sgoleanformalization-1.4.zip &amp;&amp; cd sgoleanformalization
 lake build          # kernel-checks the complete chain (lean-toolchain pins v4.15.0; ~2 min)</code></pre>
-<p>On Windows, <code>tar -xf sgoleanformalization-1.3.zip</code> unpacks
+<p>On Windows, <code>tar -xf sgoleanformalization-1.4.zip</code> unpacks
 the archive in place (PowerShell’s Extract-All wraps it in a second
 folder of the same name, and <code>lake build</code> then finds no
 lakefile); on Linux use <code>unzip</code>, GNU tar not reading zip
 archives.</p>
 <p>Then the axiom certificate:</p>
 <pre><code>lake env lean Audit.lean</code></pre>
-<p>Expected output, exactly these ten lines:</p>
+<p>Expected output, exactly these thirteen lines:</p>
 <pre><code>&#39;lem_onestage_final&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoThm.thm52&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoThm.spectrum_full&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -277,11 +308,14 @@ archives.</p>
 &#39;SgoGames.lem_dynamics_3&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoGames.thm_zero&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
 &#39;SgoThm.lem_familysymmetric&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
-&#39;SgoGames.lem_universal&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
+&#39;SgoGames.lem_universal&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoGames.lem_bisimulation&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoGames.thm_zero_radius&#39; depends on axioms: [propext, Classical.choice, Quot.sound]
+&#39;SgoThm.go_radius_spectrum_full&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
 <p>Gold-standard extra: replay the build through an external kernel with
 lean4checker. The CI workflow (<code>.github/workflows/ci.yml</code>,
-for a git hosting of the same files) runs the build and greps the ten
-lines.</p>
+for a git hosting of the same files) runs the build and greps the
+thirteen lines.</p>
 <h2 id="what-is-checked-where-the-printed-notions-live">What is checked:
 where the printed notions live</h2>
 <p>The default target <code>Sgolean</code> (lakefile.toml) builds the
@@ -360,7 +394,28 @@ the conflict hypothesis is satisfiable, in the printed chess mechanism’s
 smallest form: two moves, each undefined after the other, so that P
 falls to its lowest priority case and has two distinct non final
 elements; <code>tGame_zero_inSpectrum</code> concludes
-<code>InSpectrum tGame (some 0)</code> from <code>thm_zero</code>.</p>
+<code>InSpectrum tGame (some 0)</code> from <code>thm_zero</code>. -
+<code>SgoBisim</code> — Definition 4.19 and Lemma 4.20: bisimulations
+(<code>IsBisim</code>), bisimilarity (<code>Bisimilar</code>,
+<code>isBisim_bisimilar</code>), the legally obtainable cores
+(<code>ObC</code>, <code>CoreOb</code>), the minimal quotient
+(<code>QGame</code>), the projection on states (<code>qS</code>) and its
+commutation with the evolution, <code>#</code>, N, P, the interfaces,
+finality, reachability and Sim (<code>sE_qS</code>,
+<code>hashOp_qS</code>, <code>Pmap_qS</code>,
+<code>interface0_qS</code>, <code>seqReach_qS_surj</code>,
+<code>simGame_pairE_qN</code>, <code>semiC_qN</code>), the symmetry of
+the quotient (<code>seqSym_QGame</code>), the isomorphism of minimal
+quotients induced by a bisimulation (<code>bisimIso</code>, with
+<code>lem_dynamics_3</code>), the transport of simultaneizations along π
+over a minimal game (<code>isSimultaneization_push</code>,
+<code>isSimultaneization_pull</code>), <code>Minimal</code>,
+<code>InRadiusSpectrum</code>, <code>lem_bisimulation</code>, and the
+radius spectrum clauses of <code>thm_zero</code>
+(<code>HasConflictNB</code>, <code>thm_zero_radius</code>). -
+<code>SgoBisimThm</code> — the radius spectrum clause of the main
+theorem for Go, under the hypothesis <code>Minimal (goGame n)</code>
+(<code>go_radius_spectrum_full</code>).</p>
 <p>The proof of the main theorem (6.3): - SGo: <code>SgoInv</code> (the
 entanglement invariant), <code>SgoOK</code> (def_simultaneous),
 <code>SgoBridge</code> (P on position normal forms =
@@ -457,17 +512,63 @@ stated over the associated states of the semi-classical states of Sim(G)
 (<code>scAssoc_iff_semiC</code> identifies them as printed). Part</li>
 </ol>
 <ol start="3" type="1">
-<li>uses the naturality of the branch semantics, as the print now
-does.</li>
+<li>uses the naturality of the branch semantics, as the print now does.
+The radius spectrum clauses of parts (2) and (3) are
+<code>thm_zero_radius</code>: the printed “if the core states of the two
+elements are not bisimilar” is <code>HasConflictNB</code>
+(<code>HasConflict</code> with
+<code>¬Bisimilar G x.coreOf y.coreOf</code>), and both clauses are
+proved as the print proves them, by applying <code>thm_zero</code> to
+the quotient through the transfer lemmas of part (4)
+(<code>hasConflict_QGame</code>, <code>allCommute_QGame</code>).</li>
 </ol>
 <ol start="11" type="1">
 <li>Not formalized, by decision: Theorem 6.7 (augmented chess has no
 simple simultaneization of positive radius — a retrograde statement
-about legally obtainable chess positions), the Nash theorem 5.3 and its
-corollary 5.4, and the empirical Section 7. The rules of SGo are
-formalized as the engine of
+about legally obtainable chess positions) and its minimal quotient
+clause, the Nash theorem 5.3 and its corollary 5.4, and the empirical
+Section
+<ol start="7" type="1">
+<li>Not formalized, for its size: Lemma 6.13
+(<code>lem_gominimal</code>, Go is minimal — the liberty-filling
+procedure on diagrams), see item 12. The rules of SGo are formalized as
+the engine of
 <code>SgoDisplay</code>/<code>SgoSerial</code>/<code>SgoDelta</code> and
 differentially tested against the paper’s Python engine (below).</li>
+</ol></li>
+<li>Bisimulation (Definition 4.19, Lemma 4.20; <code>SgoBisim</code>). A
+bisimulation is as printed (<code>IsBisim</code>: the initial cores
+related; at related cores, for every turn grading, pass grading j &lt; 2
+and move, the evolution defined on one side exactly when on the other,
+with related cores of the values). The print’s convention that C(G)
+consists of the legally obtainable cores is explicit here: the minimal
+quotient <code>QGame G</code> is the quotient of the legally obtainable
+cores (<code>ObC</code>, <code>CoreOb</code>) by bisimilarity, and
+<code>Minimal G</code> says that bisimilar legally obtainable cores are
+equal. The quotient’s action is the action of G where the evolution
+reads it (a graded non pass move at a non ended core) and undefined
+elsewhere (<code>qmvAux</code>); its finality is lifted; its scoring is
+not carried (the print declares all its finals drawn). The projection
+<code>qS</code> is extended to every state by sending an unobtainable
+core to the class of the initial core; each lemma about it carries the
+hypothesis <code>CoreOb</code>, which holds wherever the theory reads a
+state (<code>coreOb_of_seqReach</code>, <code>rho_coreOb</code>,
+<code>semiC_coreOb'</code>). The radius spectrum is
+<code>InRadiusSpectrum G r := InSpectrum (QGame G) r</code>. Part (2) is
+proved through <code>lem_dynamics_3</code> on the isomorphism of
+quotients <code>bisimIso</code> (a chosen partner for each legally
+obtainable core; the partners of bisimilar cores are bisimilar by the
+composite bisimulation R⁻¹ ∘ ~ ∘ R). Part (3) is proved in both
+directions by transporting a simultaneization along π — the pushforward
+<code>BSet.img (qS G) ∘ ρ</code> and the pullback <code>pullRho</code> —
+where the print applies <code>lem_dynamics</code>; minimality makes π
+injective on the states of legally obtainable core
+(<code>qS_inj</code>), which is what the transport of the semi-classical
+states needs (<code>semiC_qS_rev</code>). The Go clause of Theorem 6.3 —
+the radius spectrum of Go is all of ℕ ⊔ {∞} — is
+<code>SgoThm.go_radius_spectrum_full</code>, with
+<code>Minimal (goGame n)</code> as an explicit hypothesis: Lemma 6.13 is
+not formalized.</li>
 </ol>
 <h2 id="separate-artifacts-larger-trusted-base-native_decide">Separate
 artifacts (larger trusted base: native_decide)</h2>
