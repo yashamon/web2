@@ -66,12 +66,12 @@ STATUS: COMPLETE. All results below are fully proved, sorry-free, in Lean
   cores (`HasConflictNB`) puts 0 in the radius spectrum (part 2), and if
   every joint move available at a semi-classical state commutes, the
   radius spectrum is {∞} (part 3).
-- `SgoThm.go_radius_spectrum_full` (SgoBisimThm.lean) — the radius
-  spectrum clause of the main theorem (6.3): every element of ℕ ⊔ {∞} lies
-  in the radius spectrum of Go, UNDER THE HYPOTHESIS `Minimal (goGame n)`
-  — that distinct legally obtainable diagrams of Go are not bisimilar,
-  Lemma 6.13 (`lem_gominimal`) of the print, which is not formalized
-  (statement audit, item 12).
+- `SgoGoMin.go_minimal` (SgoGoMin.lean) — `lem_gominimal` (Lemma 6.13): Go
+  is minimal, distinct legally obtainable diagrams are not bisimilar, at
+  every board side. `SgoGoMin.go_radius_spectrum` — the radius spectrum
+  clause of the main theorem (6.3): every element of ℕ ⊔ {∞} lies in the
+  radius spectrum of Go (`SgoThm.go_radius_spectrum_full` is the same
+  clause with the minimality as an explicit hypothesis).
 
 Axiom footprint of every theorem above: `[propext, Classical.choice,
 Quot.sound]` — the standard trio. No `sorryAx` (no incomplete proof) and no
@@ -88,8 +88,8 @@ and `lem_dynamics`; 1.2 added `thm_zero`, `lem_familysymmetric` and
 1.3 aligned the definitions with the current print: def_faithful is the single
 interface equation (`FaithfulAt`), `#` is undefined at pass grading 2
 (`hashOp_done`), and the pass grading is read in Z₃; 1.4 adds the
-bisimulation layer: Definition 4.19, Lemma 4.20, the radius spectrum clauses
-of Theorems 6.3 and 6.9.)
+bisimulation layer: Definition 4.19, Lemma 4.20, Lemma 6.13 and the radius
+spectrum clauses of Theorems 6.3 and 6.9.)
 
 ## Verifying this development
 
@@ -109,7 +109,7 @@ Then the axiom certificate:
 
     lake env lean Audit.lean
 
-Expected output, exactly these thirteen lines:
+Expected output, exactly these fifteen lines:
 
     'lem_onestage_final' depends on axioms: [propext, Classical.choice, Quot.sound]
     'SgoThm.thm52' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -124,10 +124,12 @@ Expected output, exactly these thirteen lines:
     'SgoGames.lem_bisimulation' depends on axioms: [propext, Classical.choice, Quot.sound]
     'SgoGames.thm_zero_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
     'SgoThm.go_radius_spectrum_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'SgoGoMin.go_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'SgoGoMin.go_radius_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
 
 Gold-standard extra: replay the build through an external kernel with
 lean4checker. The CI workflow (`.github/workflows/ci.yml`, for a git
-hosting of the same files) runs the build and greps the thirteen lines.
+hosting of the same files) runs the build and greps the fifteen lines.
 
 ## What is checked: where the printed notions live
 
@@ -208,6 +210,13 @@ The games (Sections 4–6):
   spectrum clauses of `thm_zero` (`HasConflictNB`, `thm_zero_radius`).
 - `SgoBisimThm` — the radius spectrum clause of the main theorem for Go,
   under the hypothesis `Minimal (goGame n)` (`go_radius_spectrum_full`).
+- `SgoGoMin` — Lemma 6.13, Go is minimal (`go_minimal`), and the clause
+  without the hypothesis (`go_radius_spectrum`): the invariant of the
+  legally obtainable displays (well-formed, classical, legal, stamps zero:
+  `goOb`), bisimilar displays have the same occupancy (`bisim_occ`) and
+  bisimilar successors (`bisim_step_b`, `bisim_step_w`), the fill step
+  (`fill_step`), the final move (`final_black`, `final_white`), the
+  induction on the measure of the black component (`no_bisim_diff`).
 
 The proof of the main theorem (6.3):
 - SGo: `SgoInv` (the entanglement invariant), `SgoOK` (def_simultaneous),
@@ -301,9 +310,7 @@ against the print:
     simultaneization of positive radius — a retrograde statement about
     legally obtainable chess positions) and its minimal quotient clause,
     the Nash theorem 5.3 and its corollary 5.4, and the empirical Section
-    7. Not formalized, for its size: Lemma 6.13 (`lem_gominimal`, Go is
-    minimal — the liberty-filling procedure on diagrams), see item 12. The
-    rules of SGo are formalized as the engine of
+    7. The rules of SGo are formalized as the engine of
     `SgoDisplay`/`SgoSerial`/`SgoDelta` and differentially tested against
     the paper's Python engine (below).
 12. Bisimulation (Definition 4.19, Lemma 4.20; `SgoBisim`). A bisimulation
@@ -333,8 +340,34 @@ against the print:
     legally obtainable core (`qS_inj`), which is what the transport of the
     semi-classical states needs (`semiC_qS_rev`). The Go clause of
     Theorem 6.3 — the radius spectrum of Go is all of ℕ ⊔ {∞} — is
-    `SgoThm.go_radius_spectrum_full`, with `Minimal (goGame n)` as an
-    explicit hypothesis: Lemma 6.13 is not formalized.
+    `SgoGoMin.go_radius_spectrum`, from `SgoThm.go_radius_spectrum_full`
+    (the clause under the hypothesis `Minimal (goGame n)`) and Lemma 6.13.
+13. Lemma 6.13 (`SgoGoMin.go_minimal`): `Minimal (goGame n)` for every
+    board side — bisimilar legally obtainable displays are equal; the
+    legally obtainable displays are the print's legal diagrams reached by
+    play (well-formed arrays, no q-stone, every component with a liberty,
+    stamps zero, `goOb`), and two of them are equal exactly when every
+    intersection carries the same stone (`display_ext`). The proof is the
+    printed liberty-filling argument in a simplified form: bisimilar
+    displays have the same occupancy (`bisim_occ`: a colored move is
+    defined exactly at an empty intersection), so take i black in one and
+    white in the other, K the black component of i and j a liberty of K;
+    while K has a liberty l ≠ j, Black fills l — the stone joins K, which
+    keeps j, so it stands, and K gains a stone (`fill_step`); the same
+    move is legal in the partner, which stays bisimilar with i white
+    (`fill_case`); the induction is on the number of board cells outside
+    K (`compMeasure`). When the liberties of K are {j}, White at j
+    captures K and stands (`final_black`: i empty, j occupied) while in
+    the partner a White move removes a white stone only with the placed
+    stone's component, which contains j (`final_white`): the occupancies
+    differ at i or at j, against bisimilarity (`final_case`). The print's
+    proof fills with White where White's stone would stand and with Black
+    otherwise, and ends on the move to i alone; the Lean fills with Black
+    throughout and ends on the dichotomy at i or j — the stone at j can
+    suicide with i's component in the partner, so the move to i alone
+    does not always separate (a 5×5 instance, checked with the engine, has
+    i empty on both sides and j white on one). The print's proof now
+    follows the same version.
 
 ## Separate artifacts (larger trusted base: native_decide)
 

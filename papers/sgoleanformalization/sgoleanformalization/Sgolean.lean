@@ -49,3 +49,4 @@ import SgoZero
 import SgoZeroWit
 import SgoBisim
 import SgoBisimThm
+import SgoGoMin

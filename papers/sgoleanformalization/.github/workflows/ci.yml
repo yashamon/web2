@@ -31,4 +31,6 @@ jobs:
           grep -F "'SgoGames.lem_bisimulation' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
           grep -F "'SgoGames.thm_zero_radius' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
           grep -F "'SgoThm.go_radius_spectrum_full' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGoMin.go_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
+          grep -F "'SgoGoMin.go_radius_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]" audit.out
           test "$(grep -c 'sorryAx\|ofReduceBool' audit.out)" = 0

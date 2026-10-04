@@ -17,6 +17,8 @@
      'SgoGames.lem_bisimulation' depends on axioms: [propext, Classical.choice, Quot.sound]
      'SgoGames.thm_zero_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
      'SgoThm.go_radius_spectrum_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+     'SgoGoMin.go_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+     'SgoGoMin.go_radius_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
 
    Those three axioms are the standard axioms of classical reasoning in Lean's
    core library. What must NOT appear:
@@ -48,11 +50,14 @@
    commutes with Sim; `thm_zero_radius` is the radius spectrum clause of
    the zero theorem (a conflict of non bisimilar outcomes; all turns
    commuting); `go_radius_spectrum_full` is the radius spectrum clause
-   of the main theorem, under the hypothesis that Go is minimal (Lemma
-   lem_gominimal of the print, not formalized). -/
+   of the main theorem, under the hypothesis that Go is minimal;
+   `go_minimal` is that hypothesis discharged — Lemma lem_gominimal, Go
+   is minimal (SgoGoMin) — and `go_radius_spectrum` the clause in full:
+   every element of ℕ ⊔ {∞} lies in the radius spectrum of Go. -/
 import Step8
 import SgoThm
 import SgoBisimThm
+import SgoGoMin
 
 #print axioms lem_onestage_final
 #print axioms SgoThm.thm52
@@ -67,3 +72,5 @@ import SgoBisimThm
 #print axioms SgoGames.lem_bisimulation
 #print axioms SgoGames.thm_zero_radius
 #print axioms SgoThm.go_radius_spectrum_full
+#print axioms SgoGoMin.go_minimal
+#print axioms SgoGoMin.go_radius_spectrum
