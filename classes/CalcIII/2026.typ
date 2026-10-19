@@ -42,6 +42,7 @@ my email: yashasavelyev\@gmail.com, book: Stewart
 = Hw set 7
 
 15.3: 9, 13, 14, 39, 49, 50
+
 // 15.2: 11, 12, 13, 14, 69 
 //
 // HW Set 3 for wed
