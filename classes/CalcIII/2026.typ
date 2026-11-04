@@ -11,7 +11,7 @@ my email: yashasavelyev\@gmail.com, book: Stewart
 12.5: 2 ,3, 12, 13, 23, 25, 59, 65, 71 
 13.2: 1,9
 
-= HW Set 2 for fri
+HW Set 2 for fri
 
 13.3: 3, 4 
 13.4: 15, 15, 19
@@ -42,6 +42,9 @@ my email: yashasavelyev\@gmail.com, book: Stewart
 = Hw set 7
 
 15.3: 9, 13, 14, 39, 49, 50
+
+= Hw set 8
+
 
 // 15.2: 11, 12, 13, 14, 69 
 //
