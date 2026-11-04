@@ -165,9 +165,6 @@
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">sgolean — Lean 4 formalization</h1>
-</header>
 <h1
 id="sgolean-lean-4-formalization-of-the-main-theorems-the-one-stage-lemma-and-the-simultaneization-theory-of-the-radius-spectrum-of-games-and-simultaneous-go-via-objective-quantum-reduction">sgolean
 — Lean 4 formalization of the main theorems, the one-stage lemma, and
@@ -545,7 +542,12 @@ Section
 <ol start="7" type="1">
 <li>The rules of SGo are formalized as the engine of
 <code>SgoDisplay</code>/<code>SgoSerial</code>/<code>SgoDelta</code> and
-differentially tested against the paper’s Python engine (below).</li>
+differentially tested against the paper’s engines (below). The placement
+rule formalized is the simplest one, a q-stone at every conflict, the
+rule of the submitted text; the three-tier rule of the
+<code>threetier</code> branch (its Section 2.3) is implemented and
+tested in the C++ engine, not formalized — see “The engine and the
+experiments”.</li>
 </ol></li>
 <li>Bisimulation (Definition 4.19, Lemma 4.20; <code>SgoBisim</code>). A
 bisimulation is as printed (<code>IsBisim</code>: the initial cores
@@ -631,10 +633,62 @@ the violation at A3 each time; a sanity check of the construction that
 <code>SgoKFin</code> proves.</li>
 </ul>
 <p><code>tools/</code> holds the Python generators of the test sheets
-and the witness search; they need the paper’s engine
-(<code>sgo_engine.py</code>, not included). <code>attic/</code> holds
+and the witness search; they need the paper’s original Python engine
+(<code>sgo_engine.py</code>, not included). The C++ engine below replays
+the same sheets (<code>./sgo test</code>). <code>attic/</code> holds
 inactive scratch, unrun variants and superseded checkpoints; nothing
 there is built.</p>
+<h2 id="the-engine-and-the-experiments">The engine and the
+experiments</h2>
+<p>The computer experiments of the paper — the random play table of
+Section 2.2, the informed play of Sections 7.1 and 7.2, and the Elo
+ladder of Section 7.3 — were run with a single-file C++ engine,
+<code>sgo.cpp</code>: a transcription of the executable Lean layer
+(<code>SgoDisplay</code>, <code>SgoSerial</code>, <code>SgoGo</code>)
+with Monte Carlo agents on top. It is hosted here with every run
+log:</p>
+<ul>
+<li><a href="sgo_engine.zip">sgo_engine.zip</a> — <code>sgo.cpp</code>,
+the test sheets, the ladder scripts, all RESULT files and per-game logs,
+and a README with the conventions and the command for every figure of
+the paper.</li>
+</ul>
+<p>What ties it to this formalization. <code>./sgo test</code> replays
+the three Lean test sheets through the engine — <code>TestsDAll</code>
+(1,722 display resolutions), <code>Tests</code> (1,844 classical moves),
+<code>TestSerial</code> (240 SGo games, 2,009 turns, displays and
+entanglement states alike) — with 0 mismatches. The engine keeps the
+slow, literal transcription of the rules as an oracle and drives play
+through a chain-table layer; <code>./sgo difftest 300</code> plays 300
+lockstep random games on the boards 3×3 to 9×9 comparing the two, cell
+by cell, and <code>SGO_CHECK=1</code> cross-checks every capture
+evaluation inside a match. Caveats: the formalization fixes the simplest
+placement rule (a conflict always yields a q-stone); the three-tier rule
+of the <code>threetier</code> text is <code>SGO_PLACE=3</code> in the
+engine, tested against the oracle, not formalized. The conditions of the
+main theorem concern commuting turns, at which no conflict occurs.</p>
+<p>Reproducing the Elo ladder of Section 7.3 (13×13, both games under a
+simple Ko rule, budgets 16·2^k playouts per turn, 100 games a rung up to
+2048 and 60 beyond; about thirty hours on two cores, resumable):</p>
+<pre><code>unzip sgo_engine.zip &amp;&amp; cd sgo_engine
+g++ -O2 -std=c++17 sgo.cpp -o sgo &amp;&amp; ./sgo test
+SGO_N=13 SGO_PLACE=3 ./ladder13.sh sgo 300 250    # SGo: cap 300 turns, playouts 250 turns
+SGO_N=13 ./ladder13.sh go 600 400                 # Go: cap 600 plies, playouts 400 plies
+python3 summarize.py                              # the rung table with 68% bands</code></pre>
+<p>The scripts write RESULT lines to
+<code>runs/&lt;game&gt;_ko1_n13[_p3]_tot.txt</code> and per-game logs
+beside them; a killed run resumes where it stopped (each game is seeded
+on its own, so the figures reproduce exactly). The tables of Sections
+2.2 and 7.1–7.2 take seconds to minutes:</p>
+<pre><code>SGO_PLACE=3 ./sgo table sgo 1000 40      # random play, SGo 5×5, bound 40 turns
+SGO_N=19 SGO_PLACE=3 ./sgo table sgo 1000 0
+./sgo table go 1000 40 ; SGO_N=19 ./sgo table go 200 1500
+SGO_PLACE=3 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
+./sgo greedygo 1000 6 12 5 800           # greedy rollout Go</code></pre>
+<p>The engine’s README lists the remaining commands (the
+disabled-reduction run, the Ko variants, the smaller boards) and the
+conventions: the playout policy, the fiat Ko rule, the caps, the Elo
+formula.</p>
 <h2 id="notes-on-core-lean-for-readers-of-the-proofs">Notes on core Lean
 (for readers of the proofs)</h2>
 <p>Core Lean 4.15 lacks Mathlib’s <code>by_contra</code>,
