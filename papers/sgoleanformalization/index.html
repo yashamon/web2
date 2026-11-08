@@ -545,9 +545,9 @@ Section
 differentially tested against the paper’s engines (below). The placement
 rule formalized is the simplest one, a q-stone at every conflict, the
 rule of the submitted text; the three-tier rule of the
-<code>threetier</code> branch (its Section 2.3) is implemented and
-tested in the C++ engine, not formalized — see “The engine and the
-experiments”.</li>
+<code>threetier</code> and <code>Dec</code> branches (its Section 2.3,
+in the August and the December wording) is implemented and tested in the
+C++ engine, not formalized — see “The engine and the experiments”.</li>
 </ol></li>
 <li>Bisimulation (Definition 4.19, Lemma 4.20; <code>SgoBisim</code>). A
 bisimulation is as printed (<code>IsBisim</code>: the initial cores
@@ -642,11 +642,11 @@ there is built.</p>
 experiments</h2>
 <p>The computer experiments of the paper — the random play table of
 Section 2.2, the informed play of Sections 7.1 and 7.2, and the Elo
-ladder of Section 7.3 — were run with a single-file C++ engine,
-<code>sgo.cpp</code>: a transcription of the executable Lean layer
-(<code>SgoDisplay</code>, <code>SgoSerial</code>, <code>SgoGo</code>)
-with Monte Carlo agents on top. It is hosted here with every run
-log:</p>
+ladders of Section 7.3 and Remark 2.1 — were run with a single-file C++
+engine, <code>sgo.cpp</code>: a transcription of the executable Lean
+layer (<code>SgoDisplay</code>, <code>SgoSerial</code>,
+<code>SgoGo</code>) with Monte Carlo agents on top. It is hosted here
+with every run log:</p>
 <ul>
 <li><a href="sgo_engine.zip">sgo_engine.zip</a> — <code>sgo.cpp</code>,
 the test sheets, the ladder scripts, all RESULT files and per-game logs,
@@ -664,31 +664,45 @@ lockstep random games on the boards 3×3 to 9×9 comparing the two, cell
 by cell, and <code>SGO_CHECK=1</code> cross-checks every capture
 evaluation inside a match. Caveats: the formalization fixes the simplest
 placement rule (a conflict always yields a q-stone); the three-tier rule
-of the <code>threetier</code> text is <code>SGO_PLACE=3</code> in the
-engine, tested against the oracle, not formalized. The conditions of the
-main theorem concern commuting turns, at which no conflict occurs.</p>
-<p>Reproducing the Elo ladder of Section 7.3 (13×13, both games under a
-simple Ko rule, budgets 16·2^k playouts per turn, 100 games a rung up to
-2048 and 60 beyond; about thirty hours on two cores, resumable):</p>
+of Section 2.3 is <code>SGO_PLACE=3</code> in the engine in its August
+wording (the <code>threetier</code> text) and <code>SGO_PLACE=4</code>
+in its December wording (the <code>Dec</code> text: the local color only
+when no q-stone is adjacent either), tested against the oracle, not
+formalized. The conditions of the main theorem concern commuting turns,
+at which no conflict occurs.</p>
+<p>The conventions of the <code>Dec</code> text: SGo by its rules,
+without any Ko rule; Go under the positional superko rule
+(<code>SGO_SUPERKO=1</code>, a move that recreates an earlier position
+of the game is illegal; the playouts keep a simple Ko); the Monte Carlo
+move set admits the fill of an own single point eye at which an own
+chain has its last liberty (<code>SGO_EYEDEF=1</code>), which in SGo is
+the Ko defense of Section 3.3 — without it the agents could not defend a
+Ko and informed SGo play cycled; komi 0.</p>
+<p>Reproducing the 13×13 Elo ladder of Section 7.3 (budgets 16·2^k
+playouts per turn, each rung played until its 68% band is at most 40 Elo
+wide, 100 to 600 games; about four hours for SGo and a day for Go on two
+cores, resumable):</p>
 <pre><code>unzip sgo_engine.zip &amp;&amp; cd sgo_engine
 g++ -O2 -std=c++17 sgo.cpp -o sgo &amp;&amp; ./sgo test
-SGO_N=13 SGO_PLACE=3 ./ladder13.sh sgo 300 250    # SGo: cap 300 turns, playouts 250 turns
-SGO_N=13 ./ladder13.sh go 600 400                 # Go: cap 600 plies, playouts 400 plies
-python3 summarize.py                              # the rung table with 68% bands</code></pre>
+SGO_N=13 SGO_PLACE=4 SGO_KOFLAG=0 SGO_EYEDEF=1 ./ladder13p.sh sgo 300 250   # SGo: cap 300 turns, playouts 250 turns
+SGO_N=13 SGO_SUPERKO=1 ./ladder13p.sh go 600 400                            # Go: cap 600 plies, playouts 400 plies
+python3 summarize.py                                                        # the rung tables with 68% bands</code></pre>
 <p>The scripts write RESULT lines to
-<code>runs/&lt;game&gt;_ko1_n13[_p3]_tot.txt</code> and per-game logs
-beside them; a killed run resumes where it stopped (each game is seeded
-on its own, so the figures reproduce exactly). The tables of Sections
-2.2 and 7.1–7.2 take seconds to minutes:</p>
-<pre><code>SGO_PLACE=3 ./sgo table sgo 1000 40      # random play, SGo 5×5, bound 40 turns
-SGO_N=19 SGO_PLACE=3 ./sgo table sgo 1000 0
+<code>runs/&lt;game&gt;_ko&lt;k&gt;_n13[_p4][_sk][_ed]_tot.txt</code>
+and per-game logs beside them; a killed run resumes where it stopped
+(each game is seeded on its own, so the figures reproduce exactly). The
+smaller boards of Section 7.3 and the simplest-rule ladders of Remark
+2.1 are <code>runsmall.sh</code>. The tables of Sections 2.2 and 7.1–7.2
+take seconds to minutes (<code>runstats4.sh</code>):</p>
+<pre><code>SGO_PLACE=4 ./sgo table sgo 1000 40                   # random play, SGo 5×5, bound 40 turns
+SGO_N=19 SGO_PLACE=4 ./sgo table sgo 1000 0
 ./sgo table go 1000 40 ; SGO_N=19 ./sgo table go 200 1500
-SGO_PLACE=3 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
-./sgo greedygo 1000 6 12 5 800           # greedy rollout Go</code></pre>
+SGO_PLACE=4 SGO_EYEDEF=1 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
+SGO_SUPERKO=1 ./sgo greedygo 1000 6 12 5 800          # greedy rollout Go</code></pre>
 <p>The engine’s README lists the remaining commands (the
-disabled-reduction run, the Ko variants, the smaller boards) and the
-conventions: the playout policy, the fiat Ko rule, the caps, the Elo
-formula.</p>
+disabled-reduction run, the earlier conventions, the Ko variants, the
+position analysis and the exact solver of small boards) and the
+conventions: the playout policy, the caps, the Elo formula.</p>
 <h2 id="notes-on-core-lean-for-readers-of-the-proofs">Notes on core Lean
 (for readers of the proofs)</h2>
 <p>Core Lean 4.15 lacks Mathlib’s <code>by_contra</code>,

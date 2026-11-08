@@ -317,9 +317,10 @@ against the print:
     `SgoDisplay`/`SgoSerial`/`SgoDelta` and differentially tested against
     the paper's engines (below). The placement rule formalized is the
     simplest one, a q-stone at every conflict, the rule of the submitted
-    text; the three-tier rule of the `threetier` branch (its Section 2.3)
-    is implemented and tested in the C++ engine, not formalized — see
-    "The engine and the experiments".
+    text; the three-tier rule of the `threetier` and `Dec` branches (its
+    Section 2.3, in the August and the December wording) is implemented and
+    tested in the C++ engine, not formalized — see "The engine and the
+    experiments".
 12. Bisimulation (Definition 4.19, Lemma 4.20; `SgoBisim`). A bisimulation
     is as printed (`IsBisim`: the initial cores related; at related cores,
     for every turn grading, pass grading j < 2 and move, the evolution
@@ -402,11 +403,11 @@ nothing there is built.
 ## The engine and the experiments
 
 The computer experiments of the paper — the random play table of Section
-2.2, the informed play of Sections 7.1 and 7.2, and the Elo ladder of
-Section 7.3 — were run with a single-file C++ engine, `sgo.cpp`: a
-transcription of the executable Lean layer (`SgoDisplay`, `SgoSerial`,
-`SgoGo`) with Monte Carlo agents on top. It is hosted here with every run
-log:
+2.2, the informed play of Sections 7.1 and 7.2, and the Elo ladders of
+Section 7.3 and Remark 2.1 — were run with a single-file C++ engine,
+`sgo.cpp`: a transcription of the executable Lean layer (`SgoDisplay`,
+`SgoSerial`, `SgoGo`) with Monte Carlo agents on top. It is hosted here with
+every run log:
 
 - [sgo_engine.zip](sgo_engine.zip) — `sgo.cpp`, the test sheets, the ladder
   scripts, all RESULT files and per-game logs, and a README with the
@@ -421,35 +422,49 @@ play through a chain-table layer; `./sgo difftest 300` plays 300 lockstep
 random games on the boards 3×3 to 9×9 comparing the two, cell by cell, and
 `SGO_CHECK=1` cross-checks every capture evaluation inside a match. Caveats:
 the formalization fixes the simplest placement rule (a conflict always
-yields a q-stone); the three-tier rule of the `threetier` text is
-`SGO_PLACE=3` in the engine, tested against the oracle, not formalized. The
-conditions of the main theorem concern commuting turns, at which no conflict
-occurs.
+yields a q-stone); the three-tier rule of Section 2.3 is `SGO_PLACE=3` in
+the engine in its August wording (the `threetier` text) and `SGO_PLACE=4`
+in its December wording (the `Dec` text: the local color only when no
+q-stone is adjacent either), tested against the oracle, not formalized. The
+conditions of the main theorem concern commuting turns, at which no
+conflict occurs.
 
-Reproducing the Elo ladder of Section 7.3 (13×13, both games under a simple
-Ko rule, budgets 16·2^k playouts per turn, 100 games a rung up to 2048 and
-60 beyond; about thirty hours on two cores, resumable):
+The conventions of the `Dec` text: SGo by its rules, without any Ko rule;
+Go under the positional superko rule (`SGO_SUPERKO=1`, a move that
+recreates an earlier position of the game is illegal; the playouts keep a
+simple Ko); the Monte Carlo move set admits the fill of an own single point
+eye at which an own chain has its last liberty (`SGO_EYEDEF=1`), which in
+SGo is the Ko defense of Section 3.3 — without it the agents could not
+defend a Ko and informed SGo play cycled; komi 0.
+
+Reproducing the 13×13 Elo ladder of Section 7.3 (budgets 16·2^k playouts
+per turn, each rung played until its 68% band is at most 40 Elo wide,
+100 to 600 games; about four hours for SGo and a day for Go on two cores,
+resumable):
 
     unzip sgo_engine.zip && cd sgo_engine
     g++ -O2 -std=c++17 sgo.cpp -o sgo && ./sgo test
-    SGO_N=13 SGO_PLACE=3 ./ladder13.sh sgo 300 250    # SGo: cap 300 turns, playouts 250 turns
-    SGO_N=13 ./ladder13.sh go 600 400                 # Go: cap 600 plies, playouts 400 plies
-    python3 summarize.py                              # the rung table with 68% bands
+    SGO_N=13 SGO_PLACE=4 SGO_KOFLAG=0 SGO_EYEDEF=1 ./ladder13p.sh sgo 300 250   # SGo: cap 300 turns, playouts 250 turns
+    SGO_N=13 SGO_SUPERKO=1 ./ladder13p.sh go 600 400                            # Go: cap 600 plies, playouts 400 plies
+    python3 summarize.py                                                        # the rung tables with 68% bands
 
-The scripts write RESULT lines to `runs/<game>_ko1_n13[_p3]_tot.txt` and
-per-game logs beside them; a killed run resumes where it stopped (each game
-is seeded on its own, so the figures reproduce exactly). The tables of
-Sections 2.2 and 7.1–7.2 take seconds to minutes:
+The scripts write RESULT lines to `runs/<game>_ko<k>_n13[_p4][_sk][_ed]_tot.txt`
+and per-game logs beside them; a killed run resumes where it stopped (each
+game is seeded on its own, so the figures reproduce exactly). The smaller
+boards of Section 7.3 and the simplest-rule ladders of Remark 2.1 are
+`runsmall.sh`. The tables of Sections 2.2 and 7.1–7.2 take seconds to
+minutes (`runstats4.sh`):
 
-    SGO_PLACE=3 ./sgo table sgo 1000 40      # random play, SGo 5×5, bound 40 turns
-    SGO_N=19 SGO_PLACE=3 ./sgo table sgo 1000 0
+    SGO_PLACE=4 ./sgo table sgo 1000 40                   # random play, SGo 5×5, bound 40 turns
+    SGO_N=19 SGO_PLACE=4 ./sgo table sgo 1000 0
     ./sgo table go 1000 40 ; SGO_N=19 ./sgo table go 200 1500
-    SGO_PLACE=3 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
-    ./sgo greedygo 1000 6 12 5 800           # greedy rollout Go
+    SGO_PLACE=4 SGO_EYEDEF=1 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
+    SGO_SUPERKO=1 ./sgo greedygo 1000 6 12 5 800          # greedy rollout Go
 
 The engine's README lists the remaining commands (the disabled-reduction
-run, the Ko variants, the smaller boards) and the conventions: the playout
-policy, the fiat Ko rule, the caps, the Elo formula.
+run, the earlier conventions, the Ko variants, the position analysis and the
+exact solver of small boards) and the conventions: the playout policy, the
+caps, the Elo formula.
 
 ## Notes on core Lean (for readers of the proofs)
 
