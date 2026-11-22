@@ -653,16 +653,8 @@ theorem captured_dead_entire (A D : Display n) (t i0 i1 : Nat)
     · rw [hP] at h
       exact DKind.noConfusion (Option.some.inj h)
   have hknr : k ≠ .r := fun hkr => hclassE p (hkr ▸ hkE)
-  -- decompose the capture condition
-  have hcap' := hcap
-  simp only [isCaptured] at hcap'
-  rw [Bool.and_eq_true, Bool.and_eq_true] at hcap'
-  obtain ⟨⟨htrapE, _⟩, hthird⟩ := hcap'
-  have hnoLibE : noLibD E (componentD E p) = true := by
-    have h := htrapE
-    simp only [trappedOnTurn] at h
-    rw [Bool.and_eq_true] at h
-    exact h.1
+  -- the component is trapped, by either route of def_captured
+  have hnoLibE : noLibD E (componentD E p) = true := noLibD_of_isCaptured hcap
   -- occupancy embedding
   have hEoccle : ∀ w, occD E w = true → occD (PJ D t i0 i1) w = true := by
     intro w hw
@@ -755,6 +747,22 @@ theorem captured_dead_entire (A D : Display n) (t i0 i1 : Nat)
           unfold stampAt
           rw [hcell]
           exact PJ_stamp_i1 D t i0 i1 hwfD hi1 hne
+      -- trapped on turn t, a stone of the turn standing in it: the capture
+      -- satisfies Conditions 1-3 (the residual route implies them)
+      have hOT : isCapturedOT E (componentD E p) k t = true := by
+        rcases hfreshstamp with ⟨f, hfmem, hfstamp⟩
+        refine isCapturedOT_of_isCaptured hcap
+          (trappedOnTurn_of_member E (componentD E p) t hnoLibE ?_ ?_
+            f hfmem hfstamp)
+        · intro z hz
+          unfold stampAt
+          rw [CapIter_occ_cell A D t i0 i1 c1 E hE z hz]
+          exact PJ_stamp_le D t i0 i1 hwfD hi0 hi1 hne hst z
+        · intro z hz
+          exact occD_of_kind (componentD_kind E p k hkE z hz)
+      simp only [isCapturedOT] at hOT
+      rw [Bool.and_eq_true, Bool.and_eq_true] at hOT
+      obtain ⟨_, hthird⟩ := hOT
       -- the donor's stone-level analysis
       rw [Bool.or_eq_true] at hthird
       rcases hthird with h3a | h3b

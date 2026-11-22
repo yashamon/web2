@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>stablelean — Lean 4 formalization</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 50em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="stablelean--a-lean-4-formalization-of-incompleteness-theorems-via-stable-computability">stablelean — a Lean 4 formalization of <em>Incompleteness theorems via stable computability</em></h1>
+<p>The manuscript: <a href="https://yashamon.github.io/web2/papers/turingcategory.pdf">turingcategory.pdf</a>.
+Section, theorem and definition numbers below refer to its latest version of 21 November 2026, in which the second incompleteness theorem is Theorem 1.1, except in the dated items of “Remarks on the manuscript”; labels (<code>lemma_closure</code>, …) are given where a number may drift. The numbers which changed with respect to the version of 10 November 2026 are listed in “The restructured manuscript” below. With respect to the version of 15 November 2026 there is one new number, Corollary A.3.</p>
+<p>Release 0.4.9 (21 November 2026). Hosted at <a href="https://yashamon.github.io/web2/papers/turingcategory/">https://yashamon.github.io/web2/papers/turingcategory/</a>:
+this <a href="README.md">README</a>, the archive <a href="stablelean-0.4.9.zip">stablelean-0.4.9.zip</a>, and the files of
+the archive, unpacked, under <code>stablelean/</code>. To check everything, see “Building and checking”.</p>
+<p><strong>Status.</strong> Sections 2–6 are formalized: the category of encoded sets and its computability axioms
+(Section 2.1), first order theories and translations (2.2), stability, decision maps and the
+stabilizer lemma (3), the stable halting problem (4), the first incompleteness theorem (5) with the
+second incompleteness theorem in its abstract form (5.1), and the whole <code>Σ⁰ₙ₊₁</code> generalization (6)
+including <code>Dec^n</code>, <code>C^n</code>, <code>Spec^n</code>, the level-<code>n</code> stable halting theorem, Theorems 6.8 and 6.9, and Theorem 1.1 at level <code>n</code>.
+Theorem 1.1, the second incompleteness theorem for a <code>Σ⁰₂</code>-definable theory, is
+<code>second_incompleteness_sigma</code>; it is deduced from its form for a theory presented by a machine,
+Theorem 5.11.
+Theorem A.2 (Penrose), that <code>{b ∈ 𝓑₂ | 𝓗 ∪ {ε} ⊢ b*}</code> is not <code>1</code>-consistent, is formalized in
+the same abstract form as the second incompleteness theorem, see “Second incompleteness”.
+Corollary A.3 uses truth in a universe of set theory, and is not formalized.</p>
+<p><strong>Appendix B is now a note.</strong> In the manuscript of 12 November 2026 the former Appendix B is
+replaced by Remark 5.25, which states its two propositions and refers here for the proofs. The
+written proofs are in <a href="stablelean/doc/undefinable.pdf">doc/undefinable.pdf</a> (source
+<code>doc/undefinable.tex</code>). The note keeps the numbering of the appendix. So “Appendix B”,
+“Definition B.1”, …, “Proposition B.10” in this file and in the sources refer to the note.</p>
+<p>Proposition B.7 (a
+<code>2</code>-translation <code>𝓐 → 𝓐</code> inducing a non-arithmetical theory from <code>PA</code>) is proved relative to the
+interface <code>UndefData</code> described below. Proposition B.10 (if <code>ZFC</code> is arithmetically sound, a
+<code>2</code>-translation <code>i : 𝓩 → 𝓩</code> with <code>ZFC ⊢ⁱ ZFC</code> inducing a non-arithmetical theory of arithmetic from <code>ZFC</code>:
+an undefinable instance of the hypotheses of Theorem 5.11) is proved relative to the interface
+<code>UndefZData</code>, also described below. Every headline
+statement is checked by <code>Audit.lean</code> to depend only on <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>;
+there are no <code>sorry</code>s and no <code>axiom</code> declarations. The development is relative to two interfaces:</p>
+<ul>
+<li><code>TuringModel</code> (Proposition 2.4, parts (1)–(4) and (6), the computability axioms) — <strong>discharged</strong>:
+the package <code>model/</code> builds a concrete instance <code>StableModel.mathlibModel</code> from Mathlib’s
+<code>Nat.Partrec.Code</code>, with the same three Lean axioms. So the computability claims derived from it
+are theorems about the standard model of partial recursive functions. Part (5) of
+Proposition 2.4 is the interface <code>Language</code>, on which <code>Arith</code> is built; its fields are assumed.</li>
+<li><code>Arith</code> (the classical facts about first order arithmetic used by the paper: the <code>Σ⁰ₙ/Π⁰ₙ</code>
+hierarchy and its instance maps, decidability of <code>Δ₀</code> truth, <code>Q</code> deciding <code>Δ₀</code> sentences, and the
+representability of computable relations by arithmetic sentences, Lemma 4.2) — <strong>assumed</strong>, exactly
+as the paper assumes them (citing Tarski–Mostowski–Robinson and Hájek–Pudlák). The full list is in
+“Trusted base” below.</li>
+</ul>
+<p>The steps of the paper that are <em>not</em> theorems about these interfaces are its assertions of
+provability in <code>ZFC</code>, first of all equation (5.12), the formalization <em>inside</em> <code>ZFC</code> of
+Proposition 5.5 (3). Equation (5.12) and the equivalence of Lemma 5.16 enter the second
+incompleteness theorems as explicit hypotheses (see “Second incompleteness”).</p>
+<p><strong>Exceptions</strong>, in the terms of the footnote of the manuscript’s Introduction. The standard facts
+taken as axioms are the fields of the structures <code>Language</code>, <code>Arith</code>, <code>UndefData</code> and <code>UndefZData</code>,
+listed in “Trusted base”, and the computability of the sets <code>𝓑ₙ</code> (point 1 of “The restructured
+manuscript”). The standard interpretation <code>i_{𝓐,𝓩}</code> of Example 2.8 is an arbitrary translation
+<code>iAZ</code>: that it is a translation is not proved here. The assertions of provability in <code>ZFC</code> taken as
+hypotheses are listed in “Second incompleteness”. Accordingly the sentences <code>Con₁</code> and <code>Sndₙ</code>
+(Lemma 5.9, Definition 5.10, and their forms at level <code>n</code>) are not constructed: the second
+incompleteness theorems are proved for an arbitrary sentence in their place, subject to these
+hypotheses. The remarks and examples which are not formalized: Remark 2.5 (<code>𝒮</code> is a Turing
+category); Remark 2.7 (interpretations and guards); Example 3.2, Remark 3.3 and Example 3.19 (the
+halting and Diophantine examples); the comparison with experimental logics after Corollary 3.7; the
+notes on re-indexing and dovetailing in Remark 3.18; Remarks 5.14, 5.22 and 5.24; the first
+paragraph of Remark 5.25; and Corollary A.3. Remarks 5.15 and 6.10 state an
+expectation and facts from the literature. Of Proposition 2.4, the computability of <code>Halt</code> in
+part (2), used only in Example 3.2, and part (4)(c) are not formalized. The last claim of
+Theorem 1.5, that <code>𝒢</code> and a machine computing it are given explicitly, is not formalized:
+<code>first_incompleteness_arith</code> is an existence statement, and <code>G₀</code> is defined through
+<code>Classical.choose</code>. The other assertions of provability in <code>ZFC</code> (the paragraph “Fixed choices”,
+Lemma 4.2, and their forms in Section 6.3) are not hypotheses of a theorem here, and have no
+counterpart. Beyond these, every statement depends only on the three axioms of Lean named above.</p>
+<h2 id="the-restructured-manuscript-11-november-2026">The restructured manuscript (11 November 2026)</h2>
+<p>In the manuscript of 11 November 2026 the theorems are stated for stably c.e. theories of
+arithmetic, with no translation, and other languages enter through <em>readings</em> (Section 5.2).
+Earlier versions stated the theorems relative to a translation. Everything new is formalized, in
+five modules.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Paper</th>
+<th>Lean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Definition 2.9 (<code>1</code>-, <code>2</code>-consistency) and Definition 6.5 (<code>Σₙ</code>-soundness) of a theory of arithmetic</td>
+<td><code>Arith.OneConsistent</code>, <code>Arith.TwoConsistent</code>, <code>Arith.SigmaSound</code> (<code>Stable/Plain.lean</code>)</td>
+</tr>
+<tr class="even">
+<td>Definition B.6 (the same relative to a translation)</td>
+<td><code>Translation.OneConsistent</code>, …; <code>Translation.oneConsistent_iff_induced</code> etc. hold by <code>Iff.rfl</code></td>
+</tr>
+<tr class="odd">
+<td><code>𝓑₂</code>, <code>𝓑ₙ₊₁</code></td>
+<td><code>Arith.BoolComb 2</code>, <code>Arith.BoolComb (m + 2)</code> (<code>∨</code> omitted, as everywhere)</td>
+</tr>
+<tr class="even">
+<td>Theorem 1.5, Proposition 5.5</td>
+<td><code>first_incompleteness_arith</code>; <code>G₀</code>, <code>Arith.not_deriv_G₀</code>, <code>Arith.not_deriv_neg_G₀</code>, <code>Arith.trueN_G₀</code></td>
+</tr>
+<tr class="odd">
+<td>Lemma 6.6 (1), (2)</td>
+<td><code>Arith.oneConsistent_iff_sigmaSound</code>, <code>Arith.twoConsistent_iff_sigmaSound</code>, <code>Arith.SigmaSound.mono</code></td>
+</tr>
+<tr class="even">
+<td>Theorem 5.11, Corollary 5.13</td>
+<td><code>second_incompleteness_H</code>, <code>second_incompleteness_H_corollary</code></td>
+</tr>
+<tr class="odd">
+<td>The simplest case of Theorem 5.11</td>
+<td><code>second_incompleteness_simple</code></td>
+</tr>
+<tr class="even">
+<td>Theorem 1.1</td>
+<td><code>second_incompleteness_sigma</code>, for every machine presenting <code>F</code>; <code>exists_machine_of_isSigma2Set</code> gives such a machine, by Corollary 3.7 (<code>Stable/Plain.lean</code>)</td>
+</tr>
+<tr class="odd">
+<td>Lemma 5.16</td>
+<td>a machine presenting <code>F</code> is given by <code>exists_machine_of_isSigma2Set</code>; the machine <code>T_σ</code> is not constructed from a formula <code>σ</code>, and the equivalence <code>Con₁ (σ)* ↔︎ Con₁ (T_σ)*</code> in <code>ZFC</code> is a hypothesis of Theorem 1.1, see “Second incompleteness”</td>
+</tr>
+<tr class="even">
+<td>Corollary 5.17</td>
+<td><code>second_incompleteness_sigma_simple</code></td>
+</tr>
+<tr class="odd">
+<td>Definition 5.18</td>
+<td><code>Asserted</code> (= <code>F₀^R</code>), <code>IsReadingOn</code>, <code>IsTwoReading</code> (<code>Stable/Readings.lean</code>)</td>
+</tr>
+<tr class="even">
+<td>Lemma 5.19</td>
+<td><code>RSh</code>, <code>compSet_RSh</code>, <code>SR_RSh_iff</code>, <code>exists_shadow</code>, <code>Shadow</code>, <code>Shadow_Ts</code>; <code>shadow_two</code></td>
+</tr>
+<tr class="odd">
+<td>Corollary 5.20</td>
+<td><code>reading_first</code>; <code>corollary_readingfirst</code></td>
+</tr>
+<tr class="even">
+<td>Corollary 5.21</td>
+<td><code>reading_second</code>, <code>reading_second_corollary</code>; <code>corollary_readingsecond</code></td>
+</tr>
+<tr class="odd">
+<td>Example 5.23</td>
+<td><code>isReadingOn_translation</code>, <code>asserted_graph_eq_induced</code>, <code>first_incompleteness_via_readings</code>, <code>second_incompleteness_via_readings</code> (<code>Stable/ReadingsTranslations.lean</code>)</td>
+</tr>
+<tr class="even">
+<td>Theorem 6.8</td>
+<td><code>n_first_incompleteness_arith</code>; <code>NG₀</code>, <code>Arith.not_deriv_NG₀</code>, … (<code>Stable/NPlain.lean</code>)</td>
+</tr>
+<tr class="odd">
+<td>Theorem 6.9 and its simplest case</td>
+<td><code>n_second_incompleteness_H</code>, <code>n_second_incompleteness_H_corollary</code>, <code>n_second_incompleteness_simple</code></td>
+</tr>
+<tr class="even">
+<td>Theorem 1.1 and Corollary 5.17 at level <code>n</code> (Section 6.3)</td>
+<td><code>n_second_incompleteness_sigma</code>, <code>n_second_incompleteness_sigma_simple</code>, for every machine presenting <code>F</code>; <code>exists_nmachine_of_isSigmaNSet</code> gives such a machine, by Corollary 6.3 (<code>Stable/NPlain.lean</code>)</td>
+</tr>
+<tr class="odd">
+<td>Section 6.3, readings at level <code>n</code></td>
+<td><code>NSR_and_absorb</code>, <code>IsNReadingOn</code>, <code>IsNReading</code>, <code>exists_nShadow</code>, <code>NShadow</code>, <code>NShadow_NTs</code>, <code>n_corollary_readingfirst</code>, <code>n_corollary_readingsecond</code> (<code>Stable/NReadings.lean</code>); <code>n_reading_first</code>, <code>n_reading_second</code> (<code>Stable/NPlain.lean</code>)</td>
+</tr>
+<tr class="even">
+<td>Theorem A.2</td>
+<td><code>penrose_family</code>, deduced from Corollary 5.21 as in the manuscript; for a family with one member, with the sentence <code>ε → Con₁ (δ + ε)</code> in axiom (3): <code>penrose_two_way_delta</code>; with <code>Con₁ (Sh_R (T₀))*</code> in place of <code>Con₁ (δ + ε)</code>: <code>penrose_two_way</code>; <code>Tplus</code> = the machine <code>Sh_R (T₀)</code> of the proof, <code>Tplus_Ts</code>, <code>Tplus_Ts_closed</code>, <code>isReadingOn_graph</code>; the deduction from Theorem 5.11: <code>penrose_conditional</code> (<code>Stable/Penrose.lean</code>)</td>
+</tr>
+<tr class="odd">
+<td>Corollary A.3</td>
+<td>not formalized: it uses truth in the universe <code>𝒰</code> of Appendix A</td>
+</tr>
+<tr class="even">
+<td>Remark A.3 of the versions up to 12 November (now removed), last paragraph</td>
+<td>Corollary 5.13 for <code>H = 𝓗</code>: <code>second_incompleteness_H_corollary</code>; for a reading: <code>penrose_reading</code></td>
+</tr>
+</tbody>
+</table>
+<p>Four points.</p>
+<ol type="1">
+<li><strong><code>𝓑ₙ</code> is computable: a hypothesis.</strong> The paper uses that <code>𝓑₂</code> (resp. <code>𝓑ₙ₊₁</code>) is a computable
+subset of <code>𝓐</code>. The interface <code>Arith</code> has no syntax from which to prove this. So Lemma 5.19 and
+Corollaries 5.20, 5.21 are proved for any computable <code>P ⊇ 𝓑ₙ</code>, with <code>R ∩ (P × 𝓛)</code> a <code>Σ⁰ₙ</code> set.
+The paper’s statements are the case <code>P = 𝓑ₙ</code>, under the explicit hypothesis
+<code>CompSet M (A.BoolComb n)</code> (<code>shadow_two</code>, <code>corollary_readingfirst</code>, <code>corollary_readingsecond</code>
+and their level-<code>n</code> forms).</li>
+<li><strong>Equation (5.12) is still a hypothesis</strong> (<code>hcon</code>, <code>hsnd</code>), stated for an arbitrary sentence
+<code>con ∈ 𝓩</code>, exactly as in <code>Stable/Second.lean</code>. The standard interpretation <code>i_{𝓐,𝓩}</code> enters as an
+arbitrary <code>Translation A.toLanguage Z</code>.</li>
+<li><strong>The simplest case has a direct proof.</strong> If <code>F ⊢ Con₁ (T)</code>, then by (5.12) <code>ZFC</code> proves the
+translation of <code>c := ¬(Con₁ (T) ∧ ¬𝒢 (T))</code>, so <code>F ⊢ c</code> and hence <code>F ⊢ 𝒢 (T)</code>. The hypothesis
+“<code>F ⊢ a</code> whenever <code>ZFC ⊢ a*</code>” is used for this one sentence. The manuscript deduces the case
+from Theorem 5.11 through the theory <code>H</code>; both proofs are valid.</li>
+<li><strong>The earlier modules keep the form for translations.</strong> <code>Stable/Incompleteness.lean</code>,
+<code>Stable/Second.lean</code> and <code>Stable/NIncompleteness.lean</code> state the theorems relative to a
+translation <code>i</code>. In the present manuscript that form is Example 5.23, read with the notation of
+Appendix B. The new statements are their case <code>𝓛 = 𝓐</code>, <code>i = id</code> (<code>Translation.id</code>).
+Not formalized: Remark 5.24.</li>
+</ol>
+<p>Numbers which changed (manuscript of 10 November 2026 → 11 November 2026): Definitions 2.9,
+2.10, 2.12 and Lemmas 2.11, 2.13 → B.1, B.2, B.4, B.3, B.5; Definition 2.14 → 2.9, with its form
+relative to a translation now Definition B.6; Proposition B.1 → B.7; (B.2) → (B.8); Remark B.3 →
+B.9; Proposition B.4 → B.10. New: Definition 5.14, Lemma 5.15, Corollaries 5.16, 5.17,
+Example 5.18, Remark 5.19.</p>
+<p>Numbers which changed on 12 November 2026 (manuscript of 11 November → the latest of 12 November):
+Definition 1.1, Remark 1.2, Definition 1.3 → 1.2, 1.3, 1.4; Theorem 1.4 → 5.11; Corollary 1.5 →
+5.13; Theorem 1.6 → 1.5; equation (5.11) → (5.12); Remarks 5.12, 5.13 → 5.14, 5.15; Definition
+5.14 → 5.18; Lemma 5.15 → 5.19; Corollaries 5.16, 5.17 → 5.20, 5.21; Example 5.18 → 5.23; Remark
+5.19 → 5.24. New: Theorem 1.1, Lemma 5.16, Corollary 5.17 (not the earlier Corollary 5.17),
+Remark 5.22, and Remark 5.25, which is the Remark 5.20 of item 16 below. Appendix B became a note,
+see above. Remark A.3 was removed.</p>
+<h2 id="building-and-checking">Building and checking</h2>
+<p>Lean 4.35.0 (pinned by <code>lean-toolchain</code>), no dependencies: core Lean only, no Mathlib, no Batteries.
+Five commands, the first of which installs Lean’s version manager <code>elan</code>:</p>
+<pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+curl -LO https://yashamon.github.io/web2/papers/turingcategory/stablelean-0.4.9.zip
+unzip stablelean-0.4.9.zip &amp;&amp; cd stablelean
+lake build                 # the whole library, kernel-checked (about a minute)
+lake env lean Audit.lean   # the axioms of the 65 headline statements</code></pre>
+<p>On Windows, <code>tar -xf stablelean-0.4.9.zip</code> unpacks the archive. The build prints no warning. The
+audit prints 65 lines, one for each headline statement, all of the form</p>
+<pre><code>&#39;Stable.stable_halting&#39; depends on axioms: [propext, Classical.choice, Quot.sound]</code></pre>
+<p>So no headline statement depends on <code>sorryAx</code> (an incomplete proof), on an <code>axiom</code> declared by this
+project (there is none), or on <code>Lean.ofReduceBool</code> (trust in the compiler). The workflow
+<code>.github/workflows/ci.yml</code>, for a git hosting of the same files, runs the build and counts the 65
+lines.</p>
+<p><code>model/</code> is a separate Lake project depending on Mathlib (<code>v4.35.0</code>) and on this library (path <code>..</code>).
+Its build prints the axioms of <code>StableModel.mathlibModel</code>:</p>
+<pre><code>cd model &amp;&amp; lake exe cache get &amp;&amp; lake build</code></pre>
+<h2 id="module-map-print--lean">Module map (print ↔︎ Lean)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Stable/Comp.lean</code></td>
+<td><code>TuringModel</code>: machines <code>Code</code>, step semantics <code>run</code>, <code>eval</code>, <code>code = e_𝒯</code>, the pairing <code>⟨·,·⟩</code>, and the computability axioms (basic functions; closure under composition, pairing, cases on a total decidable predicate, primitive recursion, unbounded search; <code>Halt'</code> decidable; universal <code>U</code>; s-m-n). <code>IsComp</code>, <code>IsCompSet</code>, <code>IsCompT</code> and their algebra.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Prim.lean</code></td>
+<td>ℕ-level helpers: predecessor, iteration, bounded <code>∀</code>, primitive recursion as total functions.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Enc.lean</code></td>
+<td>Section 2.1. <code>Enc</code> (encoding <code>e_A</code>, injective, computable image; Definition 2.1), <code>Comp</code>/<code>CompT</code>/<code>CompSet</code> (Definition 2.3), <code>Computes</code>. Encodings of <code>ℕ</code>, <code>{±} = Bool</code> (<code>- ↦ 0</code>, <code>+ ↦ 1</code>), <code>𝒯</code>, <code>Unit</code>, products (Prop. 2.4 (1), <code>e (a,b) = ⟨e a, e b⟩</code>), <code>Option</code>, lists (Prop. 2.4 (4): <code>compT_length</code>, <code>comp_nth</code>), induced encodings <code>Enc.restrict</code>. Closure lemmas incl. cases (2.4 (6)), bounded quantifiers, bounded search <code>bmin</code>, unbounded search <code>mu</code> (2.4 (6)), <code>compSet_halt'</code>, <code>comp_univ</code> (2.4 (2)), <code>smn</code> (2.4 (3)), <code>e_A⁻¹</code> computable (Lemma 3.11 <code>comp_decode</code>), <code>ε_A</code> and its inverse (<code>epsilon</code>, <code>epsilonInv</code>), <code>CompSet.exists_decode</code>, <code>CompSet.exists_eq_some</code>, <code>Comp.ofRestrict</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Stab.lean</code></td>
+<td>Section 3.1–3.2. <code>IsStable</code>/<code>Stab</code> (Def. 1.2, 3.1), <code>IsDecided</code>/<code>Decided</code> (Def. 3.4), <code>StablyEquiv</code> (Def. 3.20), <code>decOfSeq</code> = <code>D_M</code>, <code>seqOfDec</code> = <code>M_D</code> with <code>ι (b,t) = ⟨ε_B b, t⟩</code> (Remark 3.5; <code>isDecided_decOfSeq_iff</code>, <code>isStable_seqOfDec_iff</code>, computability, totality), <code>cT</code> = <code>c_t</code>, <code>DR</code> = <code>D_R</code>, <strong>Lemma 3.6</strong> (<code>isDecided_DR_iff</code>, <code>compT_DR</code>).</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Machines.lean</code></td>
+<td>Section 3.2, 4. <code>seqOf</code> = <code>T'</code> for <code>𝒯_B</code> (Def. 3.9; defined for every <code>T</code> as <code>e⁻¹ ∘ T</code>), <code>InTB</code> = <code>T ∈ 𝒯_B</code>, <code>decOf</code>/<code>InDB</code> for <code>𝒟_B</code> (Def. 3.8), <code>Ts</code> = <code>T^s</code> (Notation 3.21), <code>TStable</code>, <code>TDecided</code> (Def. 3.10), <code>StablyComputes</code> (Def. 1.4/3.1), <code>StablyComputesDec</code>, <code>Theta</code> = <code>Θ_{D,T}</code>. <code>exists_K</code> (Lemma 3.13), <code>exists_Omega</code> (Lemma 4.1), the uniform machines <code>exists_decMachine</code>, <code>exists_stabMachine</code> (stabilizer lemma + s-m-n), <code>RB</code> = <code>R_B</code>, <code>compSet_RB</code>, <code>tStable_iff_SR_RB</code>, <strong><code>exists_Dec</code></strong> = <code>Dec_B</code> with Lemmas 3.15, 3.16, and <strong>Remark 3.18</strong> <code>exists_total_uniform</code> (the last statement of Corollary 3.7, uniformly in <code>T</code>).</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Logic.lean</code></td>
+<td>Section 2.2. <code>Language</code> (sentences, encoding, <code>Deriv</code> = <code>⊢</code>, <code>neg</code>, <code>and</code>, <code>Prf</code> (Prop. 2.4 (5)), structural and propositional rules, compactness, <code>𝓛</code> infinite), <code>closure</code>, <code>Closed</code>, <code>Consistent</code>; <code>Translation</code> (Def. 2.6; <code>∨</code> omitted: here it is a defined connective), <code>induced</code> = <code>F_{i,𝓛'}</code> (Def. B.2), <code>DerivI</code> = <code>⊢ⁱ</code> (Def. B.4), <strong>Lemma B.5</strong> <code>derivI_iff</code>, Lemma B.3 <code>induced_closed</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Arith.lean</code></td>
+<td><code>Arith</code> (interface for <code>𝓐</code>, see below), <code>TrPi n</code> = <code>Tr_{Πₙ}</code>, <code>Q_sigma1</code>, <code>Translation.OneConsistent</code>/<code>TwoConsistent</code>/<code>SigmaSound</code> (Def. B.6, relative to a translation; the forms of Def. 2.9 and 6.5 for theories of arithmetic are in <code>Stable/Plain.lean</code>), <code>Speculative</code> (Def. 3.24, relative to a translation), <code>IsNTranslation</code> (Def. B.1), <code>repr</code> (Lemma 4.2 form) derived from <code>reprN</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Closure.lean</code></td>
+<td><code>RC</code> = <code>R_C</code>, <code>compSet_RC</code>, <code>SR_RC_iff</code>, <strong>Lemma 3.22</strong> <code>exists_C</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/SpecRel.lean</code>, <code>Stable/Spec.lean</code></td>
+<td><code>RS</code> = <code>R_S</code> in the form for a translation <code>i</code> (for <code>c = 1</code> it also asks <code>w = e_𝓐 (π)</code> and <code>x = i (π)</code>; the print has no condition on <code>w</code>, and <code>S_{R_S}</code> is the same), <code>compSet_RS</code>, <code>SR_RS_iff</code>; <code>conjPi</code>, <code>specExtN</code>/<code>specExt</code> = <code>F ∪ i(Tr_{Πₙ})</code>, <strong>Lemma 3.26</strong> (<code>exists_trPiN_derivI_neg_of_not_consistent</code>, all levels), <code>consistent_specExt</code>, <strong>Theorem 3.25</strong> <code>exists_Spec</code> (parts 1–4).</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Halting.lean</code></td>
+<td>Section 4. <code>Omega</code> = <code>Ω</code>, <code>W</code>, <code>compSet_W</code>, <code>tDecided_Omega_iff</code>, <code>Arith.sigmaT</code> = <code>σ</code> (Lemma 4.2 via <code>repr</code>), <code>Arith.sT</code> = <code>s</code> (Def. 4.3), <code>StablySound</code>, <code>StablyDecides</code>, <code>StablySoundComplete</code> (Def. 4.4), <strong>Lemma 4.5</strong> <code>not_theta_or_not_decided</code>, <strong>Theorem 4.6</strong> <code>stable_halting</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Incompleteness.lean</code></td>
+<td>Section 5. <code>DecL</code>, <code>CL</code>, <code>SpecI</code>, <code>compT_i_sT</code>, <code>H</code> = <code>Λ</code>, <code>comp_H</code> (5.1), <code>Tur</code> (5.2), <code>G</code> = <code>𝒢</code> (5.4), <code>Mt</code> = <code>M̃</code>, <code>stab_Mt_iff</code>, <code>Mt_speculative</code>, <code>consistent_Mt</code>, <code>isStable_Mt_G_iff</code> ((5.6)–(5.7)), <strong>Proposition 5.5</strong> (<code>trueN_G</code>, <code>not_derivI_G</code>, <code>not_derivI_neg_G</code>), <strong>Theorem 1.5</strong> <code>first_incompleteness</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Second.lean</code></td>
+<td>Section 5.1. <code>Translation.comp</code>, <strong>Theorem 5.11</strong> <code>second_incompleteness</code>, <strong>Corollary 5.13</strong> <code>second_incompleteness_corollary</code>, <code>penrose</code> (Theorem A.2 in the form of the versions before 11 November 2026) — all with the <code>ZFC</code>-provability hypotheses explicit (see below).</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Sigma2.lean</code></td>
+<td><strong>Corollary 3.7</strong>: <code>StablyCE</code>, <code>DecidedByTotal</code>, <code>IsSigma2Set</code>, <code>stablyCE_iff_isSigma2Set</code>, <code>stablyCE_iff_decidedByTotal</code>, <code>exists_total_of_stablyCE</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/SoundCons.lean</code></td>
+<td><strong>Lemma 6.6</strong>: <code>oneConsistent_iff_sigmaSound</code>, <code>twoConsistent_iff_sigmaSound</code> (1), <code>SigmaSound.mono</code> (2), <code>consistent_specExtN_of_sigmaSound</code> (3).</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/NStab.lean</code></td>
+<td>Section 6.1 with <code>m = n - 1</code>. <code>NB B m = B × ℕ^m</code> (nested, <code>NB B (m+1) = NB (B × ℕ) m</code>), <code>nbBase</code>, <code>nbMapBase</code>; <code>NDec m</code> = <code>(m+1)</code>-decided, <code>nslice</code>, <code>NStable m</code> = <code>(m+1)</code>-stable (Def. 6.1); <code>NRel</code>, <code>compl</code>, <code>complPow</code>, <code>NSR m</code> = <code>S_R</code> with <code>m+2</code> alternating quantifiers; <code>NRelComp</code>; <code>NDec_iff_NSR</code>, <code>NSR_nbMapBase</code>, <code>NSR_ite</code>, <code>NSR_congr</code>, <code>NDec_assoc</code>/<code>NDec_nbMapBase</code>; <strong>Lemma 6.2</strong> <code>n_stabilizer</code>; <code>DM</code> = <code>D_M</code>, <code>MD</code> = <code>M_D</code> with <code>NDec_DM_iff</code>, <code>NStable_MD_iff</code> (the recursions of the proof of Corollary 6.3).</td>
+</tr>
+<tr class="even">
+<td><code>Stable/NList.lean</code></td>
+<td>Closure of <code>Σ⁰_{m+2}</code> conditions (uniformly in a parameter) under precomposition, cases, conjunction with a decidable predicate, an existential over an encoded set, disjunction, bounded <code>∃</code> and bounded <code>∀</code> over the entries of a list (Section 6.2; <strong>Lemma 6.4</strong>, absorption, is <code>NSR_forall_nth_absorb</code>): <code>NSR_comp_base</code>, <code>NSR_and_dec</code>, <code>NSR_exists_absorb</code>, <code>NSR_or_absorb</code>, <code>NSR_exists_nth_absorb</code>, <code>NSR_forall_nth_absorb</code>, …</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/NTruth.lean</code></td>
+<td><code>trSigma k</code>: <code>Σ⁰_{k+2}</code>-truth (and hence <code>Π⁰_{k+1}</code>-truth) as an <code>NSR k</code> condition with computable matrix (<code>NSR_trSigma</code>, <code>exists_trPi</code>) — the condition <code>π ∈ Tr_{Πₙ}</code> of Section 6.2, built from <code>instS</code>/<code>instP</code> and used for <code>Spec^n</code>; the arithmetic <code>Σ⁰ₙ</code> truth definition of Section 6.3 enters <code>Soundₙ</code> and is not constructed.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/NMachines.lean</code></td>
+<td><code>nseqOf</code> = <code>T'</code> for <code>𝒯^{m+1}_B</code>, <code>NTs</code> = <code>T^{s_{m+1}}</code>, <code>RBase</code>, <code>NTs_iff_NSR</code> (the <code>Σ⁰_{m+2}</code> form of <code>(m+1)</code>-stability), <code>exists_nDecMachine</code>, <code>exists_nStabMachine</code>, <strong><code>Dec^{m+1}</code></strong> <code>exists_nDec</code>, <code>deriv_iff_exists_prf</code>, <strong><code>C^{m+1}</code></strong> <code>exists_nC</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/NSpec.lean</code></td>
+<td><code>NSpeculative</code>, <code>compSet_isPi_eq</code>, <strong><code>Spec^{m+1}</code></strong> <code>exists_nSpec</code> (Theorem 3.25 at level <code>m+1</code>, part 4 via Lemma 6.6 (3)).</td>
+</tr>
+<tr class="even">
+<td><code>Stable/NHalting.lean</code></td>
+<td><code>NOmega</code> = <code>Ω^{m+1}</code>, <code>NTheta</code>, <code>RW</code>, <code>RWdiag</code>, <code>Arith.nsigmaT</code> = <code>σ_{m+1}</code>, <code>Arith.nsT</code> = <code>s_{m+1}</code>, <code>NStablySound</code>, <code>NStablyComplete</code>, <strong>Theorem 6.7</strong> <code>n_stable_halting</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/NIncompleteness.lean</code></td>
+<td><code>NDecL</code>, <code>NCL</code>, <code>NSpecI</code>, <code>NH</code>, <code>NTur</code> = <code>Tur_{m+1}</code>, <code>NG</code> = <code>𝒢_{m+1}</code>, <code>NTs_NG_iff</code>, <strong>Theorem 6.8</strong> (<code>trueN_NG</code>, <code>not_derivI_NG</code>, <code>not_derivI_neg_NG</code>, <code>n_first_incompleteness</code>), <strong>Theorem 6.9</strong> (<code>n_second_incompleteness</code>, <code>n_second_incompleteness_corollary</code>).</td>
+</tr>
+<tr class="even">
+<td><code>Stable/NSigma.lean</code></td>
+<td><strong>Corollary 6.3</strong>: <code>NStablyCE</code>, <code>NDecidedByTotal</code>, <code>IsSigmaNSet</code>, <code>nStablyCE_iff_isSigmaNSet</code>, <code>nStablyCE_iff_nDecidedByTotal</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/PropCalc.lean</code></td>
+<td>Derived connectives <code>∨</code>, <code>→</code>, <code>↔︎</code>, <code>F ∪ {a}</code>, finite <code>⋀</code>/<code>⋁</code>, logical validity and equivalence, and the derived propositional rules (deduction theorem, modus ponens, case analysis, <code>∨</code>-elimination, congruences) used in Appendix B.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Undefinable.lean</code></td>
+<td><strong>Appendix B.</strong> <code>Arith.InB</code> = <code>𝓑</code>, <code>TrB</code> = <code>Tr_𝓑</code>; the interface <code>UndefData</code> (see below); the identity translation and <code>exists_true_not_deriv</code> (<code>PA + w</code> is incomplete for true <code>w</code>, from Theorem 1.5); the construction <code>d_n</code>, <code>U_n</code>, <code>x_n</code>, <code>ι_n</code>, <code>w_n</code>, <code>ε_n</code> (<code>stage</code>, <code>epsN</code>, …) with its invariant <code>Good</code>; the properties <code>eps_deriv_iff_tr</code> ((B.2)), <code>eps_deriv_neg_eps</code>, <code>lt_code_neg_eps</code>; <code>thetaK</code>, <code>theta</code>, <code>thetaK_pos</code>, <code>thetaK_neg</code>, <code>thetaK_cases</code>, <code>theta_and</code>, <code>theta_neg</code>, <code>theta_equiv_inB</code>, <code>theta_valid</code>, the encoding <code>theta_neg_eps_valid</code> / <code>not_deriv_PA_theta_neg_eps</code>; <code>jmap</code>, <code>jTrans</code> = <code>j</code> with <code>jTrans_isN2</code>, <code>jTrans_id</code>, <code>jTrans_twoConsistent</code>, <code>induced_neg_eps_iff</code>; <strong>Proposition B.7</strong> as <code>undefinable_family</code> (the family <code>j_X</code>, <code>¬ε_n ∈ PA_{j_X,𝓐} ↔︎ n ∈ X</code>) and <code>exists_undefinable</code> (<code>PA_{j,𝓐}</code>, <code>Q_{j,𝓐}</code> not <code>Σ⁰ₙ</code> for any <code>n</code>, by counting: <code>cantor</code>, <code>arithEnum</code>).</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Perturb.lean</code></td>
+<td>The language-independent core of Appendix B, used for Proposition B.10. <code>SentSyntax</code> (unique readability, <code>size</code>, <code>wrap</code>), <code>BoolOver</code>, <code>Language.botOf</code>/<code>topOf</code>, <code>Language.firstN</code>, the complete conjunctions <code>Language.vals</code> over a finite list with <code>vals_decide</code>, <code>vals_excl</code>, <code>deriv_disj_vals</code>; <code>Translation.map_imp</code>, <code>map_conjList</code>, <code>deriv_single</code>; the structure <code>Perturb</code> (stages <code>s</code> with <code>E s</code>, <code>act s</code>, <code>lvl s</code>); <code>thetaK</code>, <code>theta</code> with <code>thetaK_pos</code>, <code>thetaK_neg</code>, <code>thetaK_cases</code>, <code>theta_and</code>, <code>theta_neg</code>, <code>theta_valid</code>, and <code>theta_pos</code>, <code>theta_off</code>, <code>theta_fix</code>, <code>theta_intro</code> (the syntactic form of (B.5): <code>M ⊨ θ (b)</code> iff <code>M^X ⊨ b</code>); <code>imap</code>, <code>imap_inj</code>, <code>imap_equiv_theta</code>, <code>imap_eq_of_boolOver</code>, and the translation <code>Perturb.trans</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/UndefinableZFC.lean</code></td>
+<td><strong>Proposition B.10.</strong> The interface <code>UndefZData</code> and its extension <code>UndefZSound</code> by arithmetic soundness (see below); <code>exists_true_not_deriv</code> (<code>ZFC + w*</code> is incomplete for true <code>w</code>, from Theorem 1.5 for <code>i_{𝓐,𝓩}</code>); <code>Gam</code> = <code>Γ_n</code>, <code>allV</code>, <code>Vl</code> = <code>V_n</code>, <code>aBad</code> = <code>a_ν</code>; the construction <code>dPsi</code> = <code>d_ν</code>, <code>dN</code>, <code>tauN</code> = <code>τ_ν</code>, <code>trN</code> = <code>ι_ν</code>, <code>xN</code>, <code>wN</code>, <code>cN</code>, <code>epsN</code> with its invariant <code>Good</code>; the stages <code>(n, ψ_ν)</code> with <code>EN</code> = <code>ε_n* ∧ ζ ∧ ψ_ν</code>, <code>actN</code> = <code>b ↦ (b^{ι_ν})*</code> and their properties (i)–(iv) (<code>E_deriv_act_of_deriv_ZFC</code>, <code>E_deriv_iff_act_star</code>, <code>E_deriv_iff_act_of_mem_Gam</code>, <code>E_deriv_neg_act_eps_lt</code>, <code>E_deriv_neg_act_d</code>), <code>E_excl</code>, <code>pert : Perturb 𝓩</code>, <code>P0_fix</code>; <code>iT</code> = <code>i_X</code> with <code>iT_of_deriv_ZFC</code> (<code>ZFC ⊢ⁱ ZFC</code>), <code>iT_star_equiv</code>, <code>jT_isN2</code>, <code>jT_twoConsistent</code>, the encoding <code>induced_of_mem</code> / <code>not_induced_of_not_mem</code>; <code>exists_not_arithmetical</code> (counting); <strong>Proposition B.10</strong> as <code>undefinableZFC_family</code> and <code>exists_undefinable_ZFC</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/Plain.lean</code></td>
+<td>Theories of arithmetic. <code>Translation.id</code>; <code>Arith.OneConsistent</code>, <code>Arith.TwoConsistent</code>, <code>Arith.SigmaSound</code> (Def. 2.9, 6.5) and their agreement with the notions relative to a translation; <code>Arith.BoolComb n</code> = <code>𝓑ₙ</code>; <code>G₀</code> = <code>𝒢</code>; <strong>Proposition 5.5</strong>, <strong>Theorem 1.5</strong> <code>first_incompleteness_arith</code>; <strong>Lemma 6.6</strong> for theories of arithmetic; <strong>Theorem 5.11</strong> <code>second_incompleteness_H</code>, <strong>Corollary 5.13</strong> <code>second_incompleteness_H_corollary</code>, the simplest case <code>second_incompleteness_simple</code>; <strong>Theorem 1.1</strong> <code>second_incompleteness_sigma</code>, with <code>exists_machine_of_isSigma2Set</code>, and <strong>Corollary 5.17</strong> <code>second_incompleteness_sigma_simple</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Readings.lean</code></td>
+<td>Section 5.2. <code>Asserted</code> = <code>F₀^R</code>, <code>IsReadingOn</code>, <code>IsTwoReading</code> (Def. 5.18); <code>RSh</code> = <code>R_Sh</code>, <code>compSet_RSh</code>, <code>SR_RSh_iff</code>, <strong>Lemma 5.19</strong> <code>exists_shadow</code>, <code>Shadow</code> = <code>Sh_R</code>; <strong>Corollary 5.20</strong> <code>reading_first</code>, <strong>Corollary 5.21</strong> <code>reading_second</code>, <code>reading_second_corollary</code>; <code>penrose_reading</code> (Remark A.3 of the versions up to 12 November, last paragraph, for a reading); the statements for <code>P = 𝓑₂</code>: <code>shadow_two</code>, <code>corollary_readingfirst</code>, <code>corollary_readingsecond</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/ReadingsTranslations.lean</code></td>
+<td><strong>Example 5.23.</strong> <code>IsSigma2Set.of_compSet</code>, <code>isReadingOn_translation</code>, <code>asserted_graph_eq_induced</code>, <code>ShadowT</code>, <code>first_incompleteness_via_readings</code>, <code>second_incompleteness_via_readings</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/NPlain.lean</code></td>
+<td>Section 6.3 for theories of arithmetic. <code>NG₀</code> = <code>𝒢ₙ</code>; <strong>Theorem 6.8</strong> <code>n_first_incompleteness_arith</code>; <code>not_mem_of_deriv_godel</code>, <code>not_deriv_of_deriv_godel</code> (the deductions of Theorems 5.11 and 6.9 and of their simplest cases, for an arbitrary sentence); <strong>Theorem 6.9</strong> <code>n_second_incompleteness_H</code>, <code>n_second_incompleteness_H_corollary</code>, <code>n_second_incompleteness_simple</code>; Theorem 1.1 and Corollary 5.17 at level <code>n</code>: <code>n_second_incompleteness_sigma</code>, <code>n_second_incompleteness_sigma_simple</code>, with the machine <code>exists_nmachine_of_isSigmaNSet</code>; Corollaries 5.20, 5.21 at level <code>n</code> for a given machine: <code>n_reading_first</code>, <code>n_reading_second</code>, <code>n_reading_second_corollary</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>Stable/NReadings.lean</code></td>
+<td>Section 6.3, readings at level <code>n</code>. <code>NSR_and_absorb</code> (conjunction of two <code>Σ⁰_{m+2}</code> conditions), <code>IsNReadingOn</code>, <code>IsNReading</code>, <code>exists_nShadow</code>, <code>NShadow</code> = <code>Shⁿ_R</code>, <code>n_corollary_readingfirst</code>, <code>n_corollary_readingsecond</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Stable/Penrose.lean</code></td>
+<td>Appendix A. <code>penrose_conditional</code> (the deduction of Theorem A.2 from Theorem 5.11), <code>isReadingOn_graph</code> (the graph of a map computable on <code>P</code> is a reading), <code>Tplus</code> = the machine <code>Sh_R (T₀)</code> of the proof of Theorem A.2, <code>Tplus_Ts</code>, <code>Tplus_Ts_closed</code>, <strong>Theorem A.2</strong>: <code>penrose_family</code>; for a family with one member: <code>penrose_two_way_delta</code>; with <code>Con₁ (Sh_R (T₀))*</code> in axiom (3): <code>penrose_two_way</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>model/StableModel/Basic.lean</code></td>
+<td><code>StableModel.mathlibModel : Stable.TuringModel</code> from <code>Nat.Partrec.Code</code> (<code>run := evaln</code>, <code>eval</code> the <code>Option</code>-valued <code>Code.eval</code>, <code>code := encode</code>, <code>pair := Nat.pair</code>); every field proved from Mathlib (<code>Nat.Partrec.prec</code>, <code>rfind</code>, <code>Partrec.cond</code>, <code>primrec_evaln</code>, <code>eval_part</code>, <code>smn</code>, …).</td>
+</tr>
+<tr class="even">
+<td><code>Audit.lean</code></td>
+<td><code>#print axioms</code> for the headline statements.</td>
+</tr>
+</tbody>
+</table>
+<p>Statistics: 33 files, ≈ 11 000 lines, ≈ 830 theorems (plus 280 lines for the Mathlib model).</p>
+<h2 id="how-the-papers-objects-are-modelled">How the paper’s objects are modelled</h2>
+<ul>
+<li>A partial map <code>f : A → B</code> is <code>f : A → Option B</code>; <code>none</code> is “undefined”. <code>{±}</code> is <code>Bool</code>, <code>+ = true</code>.</li>
+<li><code>M : ℕ → 𝓛 × {±}</code> is <code>ℕ → Option (L.Sent × Bool)</code>; a decision map <code>D : B × ℕ → {±}</code> is
+<code>B → ℕ → Option Bool</code>.</li>
+<li>The map <code>T'</code> of <code>𝒯_B</code> (<code>𝒟_B</code>) is defined for <strong>every</strong> <code>T</code> as <code>e⁻¹ ∘ T</code> (<code>e⁻¹ ∘ T ∘ e</code>), and
+<code>T ∈ 𝒯_B</code> (<code>InTB</code>) is the statement that <code>T</code> computes it. Consequently the lemmas stated in the
+paper for <code>T ∈ 𝒯_B</code> (Lemmas 3.16 and 3.22, Theorem 3.25 (3), Proposition 5.5, Theorems 6.8 and 6.9, …) are proved here for every <code>T</code>, with
+<code>T^s = Stab (seqOf T)</code>; for <code>T ∈ 𝒯_B</code> this is the printed statement. <code>T</code> “stably computes <code>M</code>”
+(<code>StablyComputes</code>) is <code>T ∈ 𝒯_B ∧ (T')^s = M^s</code>, as printed.</li>
+<li>Tuples of witnesses <code>n̄ ∈ ℕ^r</code> are contracted to a single number via the fixed surjections <code>β_r</code> of
+Section 2.2, bijective for <code>r ≥ 1</code> (as the paper itself does for <code>Tr_{Π₁}</code>): for <code>σ = ∃x̄ φ</code>, <code>instS σ v = φ(β_r v)</code>, and for
+<code>π = ∀x̄ φ</code>, <code>instP π v = φ(β_r v)</code>. So <code>1</code>-consistency reads: for every <code>Σ⁰₁</code> sentence <code>σ</code> with
+<code>F ⊢ⁱ σ</code> there is <code>v</code> with <code>F ⊬ⁱ ¬ instS σ v</code> (Definitions 2.9 and B.6 with <code>n̄ = β_r v</code>). The decomposition
+<code>σ = ∃x̄ φ</code> is the one chosen by <code>instS</code> (the maximal leading block, in the standard model).</li>
+<li>Level <code>n</code> of Section 6 is indexed by <code>m = n - 1</code> (the number of extra variables): <code>NDec m</code> is
+“<code>(m+1)</code>-decided”, <code>NStable m</code> is “<code>(m+1)</code>-stable”, <code>NSR m</code> is a <code>Σ⁰_{m+2}</code> condition. <code>ℕ^{m+1}</code> is
+<code>NB ℕ m</code>, where the paper’s tuple <code>(u₁, …, u_{m+1})</code> is <code>((u_{m+1}, u₁), u₂, …, u_m)</code>: the last
+variable is the base and <code>u₁</code> is next to it; the slice
+<code>M (u₁, ·)</code> of Definition 6.1 is <code>nslice m M u₁</code> (insert <code>u₁</code> next to the base). Definition 6.1’s
+identification of an <code>n</code>-decision map on <code>B</code> with an <code>(n-1)</code>-decision map on <code>B × ℕ</code> is the
+definitional equality <code>NB B (m+1) = NB (B × ℕ) m</code>, so no coercions appear.</li>
+<li>Lemma 4.2 is used only through: <code>σ (T) ∈ Σ⁰₂</code> (resp. <code>Σ⁰_{m+2}</code>), computable in <code>T</code>, with
+<code>ℕ ⊨ σ (T)</code> iff <code>T</code> is <code>Ω T</code>-decided. The explicit shape <code>∃ u ∀ v̄ γ (u, v̄)</code> with <code>γ ∈ 𝓕₀</code> is
+not needed: Proposition 5.5 (2) only uses the <code>Π⁰₁</code> instances <code>instS (σ T) u</code> and <code>Q</code>’s decision
+of their <code>Δ₀</code> instances.</li>
+<li>A <code>Σ⁰ₙ₊₁</code> subset of an encoded set is modelled by the form with a computable relation given in
+Section 2.2 (<code>IsSigma2Set</code>, <code>IsSigmaNSet</code>). Its equivalence with definability by a <code>Σ⁰ₙ₊₁</code> formula
+is a standard fact and is not formalized: <code>Arith</code> has no formulas with free variables.</li>
+<li>Here <code>∨</code> is a defined connective (<code>Stable/PropCalc.lean</code>); the manuscript counts it among the
+logical symbols (Section 2.2). So translations are only required to preserve <code>¬</code>, <code>∧</code> and
+derivability. Where a translation is a hypothesis this loses nothing. Where it is constructed,
+in the two existence statements of Remark 5.25 (<code>exists_undefinable</code>, <code>exists_undefinable_ZFC</code>),
+the statement is verified for maps preserving <code>¬</code> and <code>∧</code>. The written proof in
+<code>doc/undefinable.pdf</code> extends the maps over all connectives.</li>
+</ul>
+<h2 id="trusted-base">Trusted base</h2>
+<p>All theorems are universally quantified over <code>M : TuringModel</code>, <code>L : Language M</code>, <code>A : Arith M</code>, and a
+translation <code>i</code>. What is <em>assumed</em> is therefore exactly the content of these structures.</p>
+<p><strong><code>TuringModel</code></strong> (Proposition 2.4, parts (1)–(4) and (6)): discharged by <code>model/</code>, i.e. satisfied by Mathlib’s partial
+recursive functions. Fields: <code>run_mono</code>, <code>eval_iff</code> (step semantics), <code>code_inj</code>, <code>comp_code_mem</code>,
+pairing bijection + strict monotonicity, <code>comp_const/succ/fst/snd/add/le/eq</code>, <code>comp_comp</code>,
+<code>comp_pair</code>, <code>comp_cases</code> (total decidable predicate), <code>comp_primrec</code>, <code>comp_mu</code>, <code>comp_halt'</code>,
+<code>comp_univ</code>, <code>comp_smn</code>.</p>
+<p><strong><code>Language</code></strong> (Section 2.2, Proposition 2.4 (5)): a type of sentences with a computable encoding,
+<code>Prf</code> decidable with <code>(∃ p, Prf p l γ) ↔︎ image l ⊢ γ</code>, <code>𝓛</code> infinite, <code>¬</code> computable, and the
+properties of <code>⊢</code> the paper uses: reflexivity, monotonicity, cut, compactness, <code>¬</code>-introduction
+(from inconsistency of <code>F ∪ {α}</code>), explosion, double negation (both ways), <code>∧</code>-introduction/elimination.</p>
+<p><strong><code>Arith</code></strong> (extends <code>Language</code>; the classical facts about <code>𝓐</code>, cited in the paper from [TMR53],
+[HP93]): truth <code>TrueN</code> with <code>trueN_neg</code>, <code>trueN_and</code>, soundness of <code>⊢</code> for <code>ℕ</code>; classes <code>IsSigma n</code>,
+<code>IsPi n</code> with <code>Σ⁰₀ = Π⁰₀</code>, <code>Σ⁰ₙ ∪ Π⁰ₙ ⊆ Σ⁰ₙ₊₁ ∩ Π⁰ₙ₊₁</code> (<code>pi_sigma_succ</code>, <code>sigma_pi_succ</code>, <code>sigma_succ</code>,
+<code>pi_succ</code>), <code>Δ₀</code> closed under <code>¬</code>, all computable; instance maps <code>instS</code>, <code>instP</code> (computable) with
+<code>instS_pi</code>, <code>instP_sigma</code>, <code>trueN_sigma</code>, <code>trueN_pi</code>, <code>exists_intro</code>, <code>forall_elim</code>; <code>negPi</code>
+(<code>¬∀x̄ φ ⊢ ∃x̄ ¬φ</code>, <code>Σ⁰ₙ₊₁</code>, instances <code>¬ instP</code>, computable); <code>andPi</code> (a <code>Π⁰ₙ</code> sentence logically
+equivalent to <code>π₁ ∧ π₂</code>); <code>delta0_dec</code> (truth of <code>Δ₀</code> sentences decidable); a true <code>Δ₀</code> sentence
+exists; <code>Q</code> with <code>Q_delta0</code>, <code>Q_delta0_neg</code>; and <code>reprN</code> (representability: for a computable
+<code>R ⊂ 𝒯 × ℕ^{m+2}</code> a total computable <code>σ_R : 𝒯 → 𝓐</code> with <code>σ_R T ∈ Σ⁰_{m+2}</code> and <code>ℕ ⊨ σ_R T ↔︎ NSR m R T ()</code>;
+Lemma 4.2 and its level-<code>n</code> version).</p>
+<p><strong><code>UndefData</code></strong> (Appendix B; the classical facts and the syntax its proof uses beyond <code>Arith</code>, cited in
+the paper from [HP93] and Soare): <em>syntax</em> — <code>destruct</code> (unique readability: every sentence is prime,
+or <code>¬a</code>, or <code>a ∧ b</code>, in exactly one way), a <code>size</code> decreasing to subformulas, <code>Δ₀</code> closed under
+subformulas (<code>delta0_neg</code>, <code>delta0_and</code>), a <code>Σ⁰₂</code> or <code>Π⁰₂</code> sentence that is a negation or a conjunction
+is <code>Δ₀</code>, <code>wrap s</code> (= <code>∀y (y = y ∧ s)</code>: prime, injective, logically equivalent to <code>s</code>, in <code>Σ⁰₂ ∪ Π⁰₂</code>
+only if <code>s</code> is <code>Δ₀</code>), each axiom of <code>Q</code> logically equivalent to a sentence of <code>𝓑</code>; <em><code>PA</code></em> — sound, <code>Q ⊆ PA</code>,
+c.e., with a sentence <code>PA_r</code> (a finite fragment) provable from <code>PA</code> and proving <code>Q</code>; <em>definable theories</em> —
+a type <code>Def3</code> of <code>Σ⁰₃</code>-definable theories with <code>tau τ β</code> = <code>τ(⌜β⌝)</code>, <code>con τ</code> = <code>Con_τ</code> true when the
+defined theory is consistent, <code>satDef</code> = <code>Sat_𝓑</code> with the Tarski biconditionals over <code>PA_r</code> for <code>β ∈ 𝓑</code>
+and true only on <code>𝓑</code>, <code>addFin τ l</code> = <code>τ ∨ "v ∈ l"</code> with its three obvious properties; <em>fact (2)</em> <code>act</code>,
+the arithmetized completeness theorem: for <code>x_τ = PA_r ∧ Con_τ</code> an interpretation <code>β ↦ β^ι</code> commuting
+with <code>¬</code>, <code>∧</code>, with <code>S ⊢ β</code> implying <code>{x_τ} ∪ S^ι ⊢ β^ι</code>, and <code>{x_τ} ⊢ τ(⌜β⌝) → β^ι</code>; <em>fact (3)</em>
+<code>pi3_indep</code>: for every false <code>s</code> there is a true <code>Π⁰₃</code> sentence <code>d</code> with <code>Tr_𝓑 ⊬ d ∨ s</code>. The
+incompleteness of <code>PA + w</code> is <em>not</em> assumed: it is derived from <code>first_incompleteness</code>.</p>
+<p><strong><code>UndefZData</code></strong> (Proposition B.10; for a language <code>𝓩</code>, the language of set theory in the paper):
+<em>syntax of <code>𝓩</code></em> — <code>syn : SentSyntax 𝓩</code> (unique readability, <code>size</code>, and <code>wrap s</code> = <code>∀y (y = y ∧ s)</code>: prime,
+injective, logically equivalent to <code>s</code>), and <code>wrapAll</code>, the computable syntactic operation replacing each
+prime constituent <code>p</code> of a sentence by <code>wrap p</code>; <em>the standard interpretation</em> — <code>star</code> = <code>i_{𝓐,𝓩}</code>, a
+computable translation, the guard <code>zeta</code> = <code>ζ</code> with the list <code>zetaPC</code> of its prime constituents, and a
+set <code>P0</code> of prime sentences such that <code>a*</code> is a Boolean combination of sentences of <code>P0</code> for <code>a ∈ 𝓑</code>
+(<code>star_bool</code>), each element of <code>P0</code> being some <code>a*</code> with <code>a ∈ 𝓑</code>, or in <code>zetaPC</code>, or a sentence <code>p</code> with
+<code>η* = ζ → p</code> or <code>η* = ζ ∧ p</code> for some <code>η ∈ 𝓑</code> (<code>P0_cases</code>; this is the print’s description of the elements
+of <code>P₀</code>, which rests on its convention that <code>η^ω</code> begins with a quantifier); <em><code>ZFC</code></em> — a c.e. set of
+sentences of <code>𝓩</code> proving <code>ζ</code> and <code>q*</code> for the axioms <code>q</code> of <code>Q</code>; <em>arithmetic</em> — a true sentence <code>PA_r</code>, a type
+<code>Def3</code> of <code>Σ⁰₃</code>-definable theories in the language <code>𝓩</code> with <code>tau</code>, <code>con</code> as in <code>UndefData</code>, <code>baseDef</code> defining
+<code>ZFC ∪ Tr_𝓑*</code> (<code>base_ax</code>: <code>{PA_r} ⊢ τ(⌜φ⌝)</code> for the axioms <code>φ</code>; <code>base_sat</code>: <code>{PA_r} ⊢ β → τ(⌜β*⌝)</code> for <code>β ∈ 𝓑</code>,
+from fact (1) and <code>Σ₁</code>-completeness; <code>base_true</code>: what it defines in <code>ℕ</code>), <code>addFin</code> as before; <em>fact (2) for
+<code>𝓩</code></em> <code>act</code>, with the same three properties as in <code>UndefData</code> for interpretations of <code>𝓩</code> in <code>𝓐</code>; <em>fact (3)</em>
+<code>pi3_indep</code>: a theory <code>ZFC ∪ Tr_𝓑* ∪ l</code>, <code>l</code> a finite list, which proves <code>d*</code> only for true <code>Π⁰₃</code> sentences
+<code>d</code> does not prove <code>d*</code> for every true <code>Π⁰₃</code> sentence <code>d</code> (its set of such <code>d</code> is <code>Σ⁰₃</code>). The hypothesis of
+Proposition B.10, <code>∀ a, ZFC ⊢ a* → ℕ ⊨ a</code>, is an explicit hypothesis of <code>undefinableZFC_family</code> and
+<code>exists_undefinable_ZFC</code> (internally the field <code>sound</code> of <code>UndefZSound</code>). The incompleteness of <code>ZFC + w*</code>
+is derived from <code>first_incompleteness</code> for the translation <code>i_{𝓐,𝓩}</code>.</p>
+<h2 id="second-incompleteness-what-is-and-is-not-formalized">Second incompleteness: what is and is not formalized</h2>
+<p>In its present form Theorem 5.11 is <code>second_incompleteness_H</code> (<code>Stable/Plain.lean</code>): for <code>iAZ : 𝓐 → 𝓩</code>,
+<code>F = T^s</code> <code>1</code>-consistent, <code>H ⊂ 𝓩</code> deductively closed and containing <code>ZFC</code>, with <code>F ⊢ b</code> for every
+<code>b ∈ 𝓑₂</code> with <code>iAZ b ∈ H</code>, and <strong>any</strong> sentence <code>con ∈ 𝓩</code> such that <code>ZFC ∪ {con} ⊢ iAZ (𝒢 (T))</code>, we have
+<code>con ∉ H</code>. Applied to <code>con = Con₁ (T)*</code>, the hypothesis is equation (5.12). Corollary 5.13, the
+simplest case, Corollary 5.21 and Theorem 6.9 are proved in the same way. Theorem A.2
+(<code>penrose_family</code>) is deduced from Corollary 5.21, as in the manuscript. In it the sentence of
+axiom (3) is an arbitrary sentence <code>pen</code> of <code>𝓩</code>, and <code>ε</code> is an arbitrary sentence in place
+of <code>ε_{T₀}</code>. The claims of <code>ZFC</code>-provability in its proof are one hypothesis:
+<code>ZFC ∪ {ε, pen} ⊢ con</code>, with the same arbitrary <code>con</code>. In the manuscript these are two steps: the
+sentence of axiom (3) implies its instance for <code>T₀</code>, and <code>ε</code> together with this instance implies
+<code>Con₁ (T)*</code>. The earlier form, for a family with one member, is
+<code>penrose_two_way_delta</code>. In it the sentence
+of axiom (3) is <code>ε → conδ</code>, for arbitrary sentences <code>ε</code> and
+<code>conδ</code> in place of <code>ε_{T₀}</code> and <code>Con₁ (δ + ε_{T₀})</code>. The two claims of <code>ZFC</code>-provability in its
+proof are hypotheses: <code>ZFC ∪ {ε} ⊢ enum</code> and, as in Corollary 5.13, <code>ZFC ∪ {enum, conδ} ⊢ con</code>, with
+<code>enum</code> in place of <code>Enum (Sh_R (T₀), δ + ε_{T₀})</code> and the same arbitrary <code>con</code>. What follows
+describes the earlier form, for a translation; the remarks on (5.12) apply to both.</p>
+<p>Theorem 1.1 (<code>second_incompleteness_sigma</code>) is stated for a <code>Σ⁰₂</code> set <code>F</code> of sentences
+(<code>IsSigma2Set F</code>), not for a formula <code>σ</code>: the interface <code>Arith</code> has no syntax of formulas. It
+says that some machine presents <code>F</code>, by Corollary 3.7, and that the conclusion holds for every
+machine <code>T</code> with <code>T^s = F</code>. There are two hypotheses of provability in <code>ZFC</code>, for arbitrary
+sentences <code>con</code> and <code>conσ</code>: <code>ZFC ∪ {con} ⊢ 𝒢 (T)*</code> and <code>ZFC ∪ {conσ} ⊢ con</code>. For the machine
+<code>T = T_σ</code> of Lemma 5.16, with <code>con = Con₁ (T_σ)*</code> and <code>conσ = Con₁ (σ)*</code>, the first is (5.12) and
+the second follows from Lemma 5.16. Corollary 5.17 (<code>second_incompleteness_sigma_simple</code>) is
+treated in the same way. So are Theorem 1.1 and Corollary 5.17 at level <code>n</code>
+(<code>n_second_incompleteness_sigma</code>, <code>n_second_incompleteness_sigma_simple</code>), for a <code>Σ⁰ₙ₊₁</code> set <code>F</code>
+(<code>IsSigmaNSet m F</code>, <code>n = m + 1</code>) and every machine <code>T</code> with <code>T^{s_n} = F</code>, with <code>Sndₙ</code> in place of
+<code>Con₁</code>. Not formalized: Remark 5.22.</p>
+<p>For a translation, Theorem 5.11 is proved in the form (<code>second_incompleteness</code>): for <code>𝓩</code>, <code>iAZ : 𝓐 → 𝓩</code>, <code>i : 𝓩 → 𝓛</code> with
+<code>j = i ∘ iAZ</code> a <code>2</code>-translation, <code>F = T^s</code>, <code>F ⊢ⁱ ZFC</code>, <code>F</code> <code>1</code>-consistent relative to <code>j</code>, and <strong>any</strong>
+sentence <code>con ∈ 𝓩</code> such that <code>ZFC ∪ {con} ⊢ iAZ (𝒢 (T))</code>, we have <code>F ⊬ⁱ con</code>. Applied to
+<code>con = Con₁ (T, i)</code>, the hypothesis is equation (5.12), “<code>ZFC ⊢ Con₁ (T, i) → i_{𝓐,𝓩} (𝒢 (T))</code>”, the
+formalization of Proposition 5.5 (3) inside <code>ZFC</code>. Verifying (5.12) would require formalizing
+<code>ZFC</code>-provability and replaying the development inside it; this is outside the scope of the project,
+and the sentence <code>Con₁ (T, i)</code> itself (Lemma 5.9 and Definition 5.10 in their form before
+11 November 2026) is not constructed. Corollary 5.13,
+Theorem 6.9 and the earlier form of Theorem A.2 (<code>penrose</code>) are proved in the same form, with
+“<code>ZFC ⊢ Enum (T, δ) → (Con₁ (δ, i) ↔︎ Con₁ (T, i))</code>” as a further hypothesis. Everything else in the
+proofs of these results is a theorem here.</p>
+<h2 id="remarks-on-the-manuscript">Remarks on the manuscript</h2>
+<p>No mathematical gap was found. Small points the formalization made visible. Items 1, 2, 4 and 5 are
+now reflected in the manuscript (Remark 3.17, the clause “we may take n ≥ 1” in the proof of Lemma 3.26,
+Lemma 6.4, and the parenthetical in Section 6.2); the all-<code>T</code> reading used in the proof of
+Theorem 5.11 came out of subsequent proofreading and is consistent with what is formalized here
+(<code>hcon</code> takes an arbitrary sentence, and Proposition 5.5 is proved for every <code>T</code>).</p>
+<ol type="1">
+<li><p>Lemmas 3.16, 3.22, Theorem 3.25 (3) and Proposition 5.5 hold for every <code>T ∈ 𝒯</code>, not only <code>T ∈ 𝒯_𝓛</code>, once
+<code>T'</code> is read as the partial map <code>e⁻¹ ∘ T</code> (silent where <code>T</code> outputs a non-code).</p></li>
+<li><p>Lemma 3.26 / Theorem 3.25 (4): the proof as printed takes an <code>α</code> with <code>F ∪ i(Tr_{Π₁}) ⊢ α ∧ ¬α</code>;
+formally one needs some sentence of <code>𝓛</code> to exist (here <code>i (0 = 0)</code>), and the conjunction
+<code>π₁ ∧ … ∧ πₙ</code> needs a base case for <code>n = 0</code> (a true <code>Δ₀</code> sentence) — the degenerate case where no
+<code>π_j</code> occurs, i.e. <code>F</code> itself is inconsistent. The paper’s statement “unless for some
+<code>π ∈ Tr_{Π₁}</code>, <code>F ⊢ⁱ ¬π</code>” is then still correct.</p></li>
+<li><p>The totality claims (<code>T'_spec</code>, <code>(C T)'</code> total; Corollary 3.7 (2) ⇒ (1)) need <code>B</code> (resp. <code>𝓛</code>)
+infinite, as the paper says; the formalization carries <code>Enc.Infinite</code> as the hypothesis, and
+derives <code>B × ℕ</code> infinite for the level-<code>n</code> constructions.</p></li>
+<li><p>Section 6.2, “absorbed by quantifying over lists of witnesses”: this is where the bulk of the extra
+work lies (<code>Stable/NList.lean</code>, ≈ 400 lines). The absorption of a bounded <code>∀ j &lt; length l</code> in front
+of an <code>NSR m</code> condition proceeds level by level: at level <code>m+1</code> it produces a bounded <code>∃</code> over the
+list at level <code>m</code>, which is a separate (easier) absorption lemma. Nothing goes wrong, but the
+phrase hides a real induction.</p></li>
+<li><p>The <code>Σ⁰_{m+2}</code> form of “<code>b</code> is <code>T</code>-<code>(m+1)</code>-stable” is <code>NSR m (compl^m R_base)</code>, i.e. the matrix
+“<code>1</code>-stability of the slice” is negated <code>m</code> times, in agreement with the parenthetical “1-stability
+of a slice <em>or its negation</em>”.</p></li>
+<li><p>Lemma 4.2’s explicit form <code>∃ u ∀ v̄ γ (u, v̄)</code> is only used through the <code>Π⁰₁</code> instances; the
+Lean statement of the representability axiom (<code>reprN</code>) is correspondingly weaker.</p></li>
+<li><p>Theorem 1.5 (1), as Proposition 5.5 (1), is used in the proof of Theorem 5.11; in Lean,
+<code>Arith.not_deriv_G₀</code> in <code>second_incompleteness_H</code>. For a translation it is <code>not_derivI_G</code> for
+the composite translation <code>j = i ∘ iAZ</code> in <code>second_incompleteness</code>, with
+<code>Translation.derivI_iff</code> applied twice.</p></li>
+<li><p>Changes of the 21 Oct 2026 version, checked against the sources. (a) Theorem 1.6 now fixes a
+machine <code>K</code> computing <code>i</code> on <code>Σ⁰₂</code> sentences and says <code>𝒢</code> is obtained explicitly from <code>K</code>; here
+<code>first_incompleteness</code> is the existence statement <code>∃ G, CompT M G ∧ …</code>, with <code>G</code> obtained by choice
+from the hypothesis <code>hi : i.IsNTranslation 2</code>, so the printed statement implies the formal one and
+the constructivity clause is not formalized. (b) The level-<code>n</code> machine <code>Tur^n</code> now has its last
+argument in <code>ℕ^n</code>; this is what <code>NH : NB M.Code m → ℕ → Option Bool</code> always had. (c) <code>Ω^n</code> is
+stated total computable with <code>ZFC</code>-provable properties; <code>NOmega_compT</code>, <code>NOmega_inDB</code>,
+<code>decOf_NOmega</code> are the first three, <code>ZFC</code> is out of scope. (d) Definition 2.14 (then numbered 2.15) now says “free
+variables among <code>x̄</code>”; <code>OneConsistent</code> quantifies over all <code>Σ⁰₁</code> sentences, which is that reading.
+(e) The convention on languages (<code>ZFC</code> proves the syntax machine total), the fixed choices after
+Lemma 4.1 (Cantor pairing, <code>β_r</code>, <code>D_R</code>), and the rewritten proof of Lemma 5.9 and of Theorem 1.4
+concern <code>ZFC</code>-provability only and change nothing that is formalized.</p></li>
+<li><p>A later version of the same day renames the map of Lemma 3.13 to <code>κ</code>, since <code>K</code> now denotes
+the machine of Theorem 1.6; the Lean name <code>exists_K</code> is unchanged. The record of fixed choices after
+Lemma 4.1 and the rewritten proof of Lemma 5.9 again concern <code>ZFC</code>-provability only.</p></li>
+<li><p>The 9 Nov 2026 version. (a) Theorem 6.7 is now stated in the
+form of Theorem 4.6: no <code>n</code>-decision map <code>D</code> which is <code>n</code>-stably computed by some <code>T ∈ 𝒟ⁿ_𝒯</code> is
+<code>n</code>-stably sound and complete, in particular no computable such <code>D</code>. This is exactly the form of
+<code>n_stable_halting</code> (<code>¬ NTheta m D T</code> for every <code>T</code>), so the Lean statement now matches the print
+without the “in particular” step. (b) The uncited Lemma 2.14 (transitivity of “interprets”,
+<code>lemma_inducedinterpretation</code>) is deleted; Definition 2.15 becomes Definition 2.14, and the
+docstrings of <code>OneConsistent</code> and <code>TwoConsistent</code> follow. (c) The other changes
+are to flow and wording only (pointers, paragraph breaks, reminders, the appendix’s <code>N</code>-body
+passage); none touches a formalized statement.</p></li>
+<li><p>Appendix B (9 Nov 2026), Proposition B.1, is formalized in <code>Stable/Undefinable.lean</code> relative to
+<code>UndefData</code>. Differences from the print, none affecting the statement: (a) non-arithmeticity is
+proved by counting (<code>exists_undefinable</code>): the map <code>X ↦ PA_{j_X,𝓐}</code> is injective since
+<code>¬ε_n ∈ PA_{j_X,𝓐} ↔︎ n ∈ X</code> (<code>undefinable_family</code>), and the arithmetical sets of sentences are
+enumerated by <code>ℕ</code> (<code>arithEnum</code>, via the machine codes in <code>IsSigmaNSet</code>), so Cantor’s theorem gives an
+<code>X</code> with <code>PA_{j_X,𝓐}</code> and <code>Q_{j_X,𝓐}</code> not <code>Σ⁰ₙ</code> for any <code>n</code>; the print’s “not computable from true
+arithmetic” is a relativized statement outside the interface. (b) <code>d_n</code> and <code>b_{t(n)}</code> are chosen
+by <code>Classical.epsilon</code>, not as least elements; the choice does not matter. (c) The empty conjunction
+and disjunction are <code>¬(a₀ ∧ ¬a₀)</code> and <code>a₀ ∧ ¬a₀</code> for the fixed true <code>Δ₀</code> sentence <code>a₀</code>; <code>ρ_n</code> (Lean <code>sN</code>) is the
+disjunction of the negations of the sentences <code>b_k^ℕ</code>, <code>¬ε_m</code>, logically equivalent to the print’s
+<code>¬⋀ b_k^ℕ ∨ ⋁ ε_m</code>. (d) The paper’s <code>b_0, b_1, …</code> is the encoding <code>e</code>: <code>k(b) = e b</code>, and the
+sentences with code <code>≤ n</code> replace <code>b_0, …, b_n</code>. (e) <code>θ_K</code> is the print’s disjunction verbatim; the
+proofs go through the case analysis <code>thetaK_cases</code> along <code>X_K</code> instead of models. (f) The print’s
+argument “<code>∀y (y = y ∧ θ(p))</code> is not in <code>Σ⁰₂ ∪ Π⁰₂</code>” is <code>wrap_theta_not</code>, from <code>wrap_sigma2</code>,
+<code>wrap_pi2</code> and <code>Δ₀</code> closed under subformulas; injectivity from “the first conjunct of the first
+disjunct” is <code>eq_of_thetaK_eq</code>. (g) <code>PA + w_n</code> incomplete is Theorem 1.6 (3) and (1) for the identity
+translation and a machine enumerating <code>PA + w_n</code> (<code>exists_true_not_deriv</code>). (h) The <code>1</code>- and
+<code>2</code>-consistency of <code>PA</code>, <code>Q</code> relative to <code>j</code> use that each axiom of <code>Q</code> is logically equivalent to a
+sentence of <code>𝓑</code> (<code>Q_equivB</code>), as <code>j</code> need not fix a non-prenex axiom syntactically.</p></li>
+<li><p>The 10 Nov 2026 version. (a) The text changes in flow and wording only: the auxiliary sentence <code>s_n</code>
+of the proof of Proposition B.1 is now <code>ρ_n</code>, the bound variable of <code>wrap</code> is <code>y</code>, Definition 2.10
+names the induced theory; no formalized statement changes. (b) Proposition B.4 is formalized in
+<code>Stable/UndefinableZFC.lean</code> relative to <code>UndefZData</code>, on top of the language-independent
+<code>Stable/Perturb.lean</code>. Differences from the print, none affecting the statement: (i) the print’s
+<code>E_n</code> and <code>b^{(n)}</code> are split along the valuations: a stage is a pair <code>(n, ψ_ν)</code> with <code>ν ∈ V_n</code>,
+<code>E (n, ν) = ε_n* ∧ ζ ∧ ψ_ν</code> and <code>act (n, ν) b = (b^{ι_ν})*</code>, which commutes with <code>¬</code> and <code>∧</code> exactly;
+over <code>ZFC + ε_n*</code> some <code>E (n, ν)</code>, <code>ν ∈ V_n</code>, holds (<code>inconsistent_of_eps</code>), which is the print’s
+“<code>ZFC ⊢ ε_n* → E_n</code>”. (ii) A valuation <code>ν</code> of <code>Γ_n</code> is represented by its complete conjunction <code>ψ_ν</code>
+(<code>Language.vals</code>). (iii) <code>x_n</code> is the conjunction of the sentences <code>PA_r ∧ Con_{τ_ν}</code>, <code>ν ∈ V_n</code>.
+(iv) Equation (B.5) is used in the syntactic forms <code>theta_pos</code>, <code>theta_off</code>, <code>theta_intro</code>.
+(v) <code>ZFC + w_n*</code> incomplete is Theorem 1.6 (3) and (1) for the translation <code>i_{𝓐,𝓩}</code> and a machine
+enumerating <code>ZFC + w_n*</code> (<code>UndefZSound.exists_true_not_deriv</code>). (vi) <code>d_ν</code>, <code>c_n</code>, <code>a_ν</code> are chosen by
+<code>Classical.epsilon</code>. (vii) “Theorem 1.4 applies” is the conjunction of the hypotheses of
+<code>second_incompleteness</code> on <code>i</code>: <code>j = i ∘ i_{𝓐,𝓩}</code> is a <code>2</code>-translation, <code>ZFC ⊢ⁱ ZFC</code>, and <code>ZFC</code> is
+<code>1</code>-consistent relative to <code>j</code>; that <code>ZFC</code> is stably c.e. is not restated.</p></li>
+<li><p>The restructured manuscript (11 Nov 2026). (a) The theorems are stated for
+theories of arithmetic; <code>Stable/Plain.lean</code> and <code>Stable/NPlain.lean</code> derive them from the earlier
+modules by the identity translation. Theorems 1.4 and 6.9 take the form with an ambient theory <code>H</code>.
+(b) Section 5.2 (readings) and its level-<code>n</code> analogue are formalized in <code>Stable/Readings.lean</code>,
+<code>Stable/ReadingsTranslations.lean</code> and <code>Stable/NReadings.lean</code>, for a computable <code>P ⊇ 𝓑ₙ</code>; see “The
+restructured manuscript” above for the hypothesis that <code>𝓑ₙ</code> is computable. (c) In the manuscript the
+pairing “quantifier by quantifier” of the last paragraph of Section 6.3 is <code>NSR_and_absorb</code>: a conjunction at
+one level becomes a disjunction under the negation of the recursion, which is absorbed by
+<code>NSR_or_absorb</code>. (d) In that version Theorem A.2 had three
+alternatives, the third being that the sentence <code>Enum (Sh_R (T₀), δ)</code> is not asserted.
+This is <code>penrose_reading</code>; its alternative (1) is the case in which no machine <code>T₀</code> exists. (e) Items 8–12 above use the numbering of their dates. (f) The
+encoding <code>¬ε_n ∈ F_{j,𝓐} ↔︎ n ∈ X</code> in the proof of Proposition B.7 holds for every <code>F ⊆ PA</code>
+(<code>induced_neg_eps_iff</code>): that <code>F</code> contains <code>Q</code> is not used there.</p></li>
+<li><p>The new Appendix A (11 Nov 2026, later the same day). (a) The idealized mathematician asserts
+sentences of set theory. Axiom (3), the Penrose property, is: <code>ε_T → Con₁ (δ + ε_T)</code> is in <code>𝓗</code>,
+for every <code>T</code>. Here <code>δ + ε</code> is the formula saying that <code>x</code> is the code of some <code>b ∈ 𝓑₂</code> and that
+<code>δ</code> holds of the code of <code>ε → b*</code>. In the first version of that day the sentence was
+<code>ε_T → Con₁ (T⁺)*</code>, for the machine <code>T⁺ = Sh_R (T)</code> of the reading <code>R = {(a, ε_T → a*)}</code>. Given
+axiom (1) the two are equivalent. Theorem A.2 has two alternatives: <code>𝓗</code> is not stably c.e., or
+<code>𝓗</code> is not sound. Its first part is <code>penrose_two_way_delta</code> (<code>Stable/Penrose.lean</code>), a
+consequence of Corollary 1.5 for the machine <code>Sh_R (T₀)</code>, the formula <code>δ + ε_{T₀}</code> and the
+deductive closure of <code>𝓗 ∪ {ε_{T₀}}</code>. With the earlier sentence it is <code>penrose_two_way</code>, a
+consequence of Theorem 1.4. The passage from the first part to the two alternatives uses truth
+in the intended interpretation of <code>𝓩</code>. It is not formalized. For the version of 12 Nov see
+item 15.
+(b) Not formalized: the example of Remark 5.12 (in Corollary 1.5 the existential hypothesis does
+not suffice), and its use in Remark A.3. They assert provability in <code>ZFC</code>. (c) The last paragraph of
+Remark A.3 is Corollary 1.5 for <code>H = 𝓗</code>. (d) <code>Tplus</code> is defined under the hypotheses that <code>𝓑₂</code> is
+computable, as in point 1 of “The restructured manuscript”, and that <code>a ↦ (ε → a*)</code> is computable
+on <code>𝓑₂</code>.</p></li>
+<li><p>The 12 Nov 2026 version. No statement changes here. (a) Appendix A now fixes an <code>ω</code>-model <code>𝒰</code>
+of set theory. “True”, “sound” and “defines” refer to <code>𝒰</code>, and the appendix holds for every
+<code>𝒰</code>. So both parts of Theorem A.2 are theorems of <code>ZFC</code>. The last part is still not formalized:
+this project has no structures for <code>𝓩</code>. For the present version see item 22. (b) The proof of
+Theorem A.2 now cites Corollary 5.17,
+for <code>T₀</code> and <code>R' = {(z, ε_{T₀} → z)}</code>. <code>penrose_two_way_delta</code> is now proved in the same way, from
+<code>reading_second_corollary</code>. The theory <code>H</code> of the corollary is <code>{z | (ε_{T₀} → z) ∈ 𝓗}</code>. That it is
+deductively closed and contains <code>ZFC</code> is checked in the proof. (c) The map of (5.1) is called
+<code>Λ</code> in the manuscript, where <code>H</code> is the theory of Theorem 1.4. Here it is still <code>H</code>
+(<code>Stable/Incompleteness.lean</code>). (d) Section 1.2 now says that at level <code>n</code> the <code>Σ⁰ₙ₊₁</code> sentences
+replace the <code>Σ⁰₂</code> sentences in the definition of <code>𝓑₂</code>. Theorem 6.9 and
+<code>n_second_incompleteness_H</code> had <code>𝓑ₙ₊₁</code> before.</p></li>
+<li><p>The 12 Nov 2026 version, later the same day. Appendix B is removed from the manuscript. Its
+two propositions are stated in the new Remark 5.20, with the definition of “arithmetically
+sound”. Their proofs are in the note <code>doc/undefinable.pdf</code> of this repository, which is the
+former appendix with its numbering. The first paragraph of Remark 5.20 (a reading whose asserted
+set is not arithmetical, without deductive closure) is not formalized. No statement changes
+here.</p></li>
+<li><p>The latest version of 12 Nov 2026: Section 1.2 is reshuffled. (a) The second incompleteness
+theorem is now Theorem 1.1, in <code>Σ⁰₂</code> language, with the theory <code>H</code> as the main actor: <code>H</code> is a
+deductively closed theory of set theory containing <code>ZFC</code> which admits a <code>2</code>-<code>F</code>-reading, that
+is <code>F</code> is <code>Σ⁰₂</code>-definable and proves the sentences of <code>H₂ = {b ∈ 𝓑₂ | b* ∈ H}</code>; if <code>F</code> is
+<code>1</code>-consistent then <code>Con₁ (σ)* ∉ H</code> for every <code>Σ⁰₂</code> formula <code>σ</code> defining <code>F</code>. This is
+<code>second_incompleteness_sigma</code>. (b) The former Theorem 1.4, for a theory presented by a machine,
+is Theorem 5.11, with the same statement and the same Lean theorem <code>second_incompleteness_H</code>.
+Theorem 1.1 is deduced from it by the new Lemma 5.16: a <code>Σ⁰₂</code> formula <code>σ</code> gives a machine
+<code>T_σ</code>, and <code>ZFC</code> proves <code>Con₁ (σ)* ↔︎ Con₁ (T_σ)*</code>. (c) The definitions of stable enumeration
+come after Theorem 1.1, and the first incompleteness theorem is Theorem 1.5. (d) New
+Corollary 5.17 (the simplest case for a <code>Σ⁰₂</code> definition, <code>second_incompleteness_sigma_simple</code>)
+and Remark 5.22 (<code>H</code> admits a <code>2</code>-reading iff it arises from a stably c.e. system under a
+reading; not formalized). (e) Remark A.3 is removed from the manuscript. (f) The numbers of
+this file and of the sources follow the new numbering, see “The restructured manuscript”; the
+items above keep the numbering of their dates.</p></li>
+<li><p>Appendix A for a family of theories (12 Nov 2026, the last version of that day). (a) A formula
+<code>Δ (y, z)</code> of set theory defines a family of theories, one for each value of the parameter <code>y</code>.
+Axiom (2) is now: <code>𝓗</code> is a member of the family. Axiom (3), the Penrose property, is now: for
+every <code>T</code>, <code>𝓗</code> contains the sentence <code>∀ y, ε_T (y) → Con₁ ((Δ + ε_T)_y)</code>, where <code>ε_T (y)</code> says
+that <code>T</code> stably enumerates the member with parameter <code>y</code>, and <code>ε_T</code> is <code>∃ y, ε_T (y)</code>. Before,
+the family had one member, defined by <code>δ</code>. (b) Theorem A.2 keeps its statement. Its first part
+is <code>penrose_family</code>: the sentence of axiom (3) for <code>T₀</code> is an arbitrary sentence <code>pen ∈ 𝓗</code>, and
+the step “<code>ZFC</code> proves that <code>ε</code> and this sentence imply <code>Con₁ (T)*</code>” is the hypothesis <code>hpen</code>.
+In the manuscript this step uses the proof of Corollary 5.13 with a parameter.
+<code>penrose_two_way_delta</code> is the case of one member. (c) The last part is still not formalized.
+For the present version see item 22.</p></li>
+<li><p>The 13 Nov 2026 version, after a proofread. No numbers change. (a) Section 6.3 now states
+Theorem 1.1 at level <code>n</code>. It is formalized as <code>n_second_incompleteness_sigma</code>, with Corollary
+5.17 at level <code>n</code> as <code>n_second_incompleteness_sigma_simple</code> (<code>Stable/NPlain.lean</code>); the machine
+of Lemma 5.16 at level <code>n</code> is <code>exists_nmachine_of_isSigmaNSet</code>, by Corollary 6.3. As at level
+<code>1</code>, the two claims of provability in <code>ZFC</code> are hypotheses. (b) Remark 5.14 has a second
+paragraph: the same example with a formula of <code>𝓐</code>, which shows that the restriction to <code>Σ⁰₂</code>
+formulas in Theorem 1.1 matters. Like the first paragraph, it is not formalized. (c) Remark 6.10
+(1) now restricts its claim to <code>n</code>-consistency in its usual form, with one free variable, as in
+Salehi–Seraji. It is about the literature and is not formalized. (d) Proposition 2.4 (5) now
+encodes terms and formulas, and states the hypothesis on languages. The interface <code>Language</code>
+keeps sentences only; no formalized statement changes. The other changes are in wording.</p></li>
+<li><p>The 15 Nov 2026 version, after a second proofread. No numbers change, and no formalized
+statement changes. (a) The abstract now says that the paper is formalized in Lean “with
+exceptions of standard type”. The footnote of the Introduction adds that the sentences
+expressing <code>1</code>-consistency are not constructed, that the second incompleteness theorems are
+proved for an arbitrary sentence in their place, and that some remarks are not formalized;
+“Exceptions” above lists them. (b) In Section 6 the hypothesis “<code>B</code> infinite” is no longer a
+standing convention. It is stated in Corollary 6.3, where it is used; here it is the hypothesis
+<code>Enc.Infinite</code> of <code>nStablyCE_iff_isSigmaNSet</code>, see item 3. (c) Section 2.1 states two elementary
+facts which the manuscript uses without mention: a composition of computable maps is computable
+(<code>Comp.comp</code>), and a subset is computable iff its total <code>±</code>-valued map is
+(<code>compSet_iff_compT_decide</code>). (d) The proof of Lemma 5.16 gives the reason for
+<code>ZFC ⊢ Con₁ (σ)* ↔︎ Con₁ (σ')*</code>, where <code>σ'</code> is <code>σ</code> without repeated variables in its prefix: the two
+sentences are logically equivalent. The machine <code>T_σ</code> is <code>exists_machine_of_isSigma2Set</code>, for a
+<code>Σ⁰₂</code> set; the equivalence in <code>ZFC</code> stays a hypothesis. (e) Section 1.1 defines an “arithmetic
+theorem” of a set <code>H</code> of sentences of <code>𝓩</code>: a sentence <code>a</code> of <code>𝓐</code> with <code>H ⊢ a*</code>. The notation
+<code>β ⊢ α</code> for a single sentence <code>β</code>, which was not used, is removed. (f) Remark 6.10 (1) cites
+Kreisel’s theorem, through Salehi–Seraji, for the fact that <code>n</code>-consistency does not imply
+<code>Σₙ</code>-soundness when <code>n ≥ 3</code>. In Appendix A, the paragraph which motivates the Penrose property
+now asks that the members of the family be sound, deductively closed and contain <code>ZFC</code>, as the
+paragraph on the truth of the sentences of axiom (3) does. These parts are not formalized. The
+other changes are in wording and in the references. In this file, the numbers of Definitions
+3.4, 3.20, 4.3 and 4.4, and a few other references, are corrected to the present numbering.</p></li>
+<li><p>Release 0.4.8 (15 Nov 2026), after a third proofread, which compared the printed statements
+with the Lean statements. (a) A change in Lean. Up to release 0.4.7 the four theorems for
+Theorem 1.1 and Corollary 5.17 (<code>second_incompleteness_sigma</code>,
+<code>second_incompleteness_sigma_simple</code>, and their forms at level <code>n</code>) said: there is a machine
+<code>T</code> presenting <code>F</code> such that the conclusion holds for all <code>con</code>, <code>conσ</code>. Lemma 5.16 gives its
+equivalence only for the machine <code>T_σ</code> built from <code>σ</code>, so it could not be applied to this
+unnamed machine, and the printed theorem did not follow from the Lean statement, (5.12) and
+Lemma 5.16. The four theorems now say: some machine presents <code>F</code>, and the conclusion holds for
+every machine <code>T</code> presenting <code>F</code>. The proofs are the same. The audit is unchanged. (b) In
+this file: “Status” no longer says that all computability claims of the paper are theorems
+about the standard model, since Proposition 2.4 (5) is the interface <code>Language</code>; “Exceptions”
+lists Remark 2.7, the notes of Remark 3.18, the comparison with experimental logics, two parts
+of Proposition 2.4, the last claim of Theorem 1.5, and the remaining assertions of provability
+in <code>ZFC</code>; the rows on <code>RS</code> and <code>trSigma</code>, the order of the variables at level <code>n</code>, the
+modelling of <code>Σ⁰ₙ₊₁</code> sets, and item 7 are corrected. (c) Docstrings are corrected in
+<code>Stable/Machines.lean</code>, <code>Stable/Enc.lean</code>, <code>Stable/Arith.lean</code>, <code>Stable/NStab.lean</code> and
+<code>Stable/Penrose.lean</code>. No other statement changes. (d) The manuscript after this proofread,
+still of 15 Nov 2026. No numbers change, and no formalized statement changes.
+Proposition 2.4 (6) has a third item, closure under unbounded search. The inverse of <code>ε_A</code>
+uses it, and so does <code>M_D</code> (<code>comp_mu</code>, <code>comp_epsilonInv</code>, <code>comp_seqOfDec</code>). The footnote of
+the Introduction says that the first part of Theorem A.2 is verified in the same form as the
+second incompleteness theorems, and that its last part is not formalized. Appendix A writes
+<code>Δ (y)</code> and <code>(Δ + ε_T) (y)</code> for a formula with the parameter <code>y</code>, and keeps <code>𝓗_p</code> for the
+members of the family. The sentence of axiom (3) is <code>∀ y, ε_T (y) → Con₁ ((Δ + ε_T) (y))</code>.
+For the later changes of Appendix A see item 22.</p></li>
+<li><p>Release 0.4.9 (21 Nov 2026): the manuscript of 21 November 2026, after a revision of
+Appendix A and a fourth proofread. One new number: Corollary A.3. (a) Appendix A fixes a
+Grothendieck universe <code>𝒰</code> containing <code>ω</code>, in place of an <code>ω</code>-model. “True” and “sound” refer
+to <code>𝒰</code>. The family is a set <code>𝓕 ∈ 𝒰</code> of theories in the language <code>𝓩</code>, with a definition <code>Δ</code>
+in <code>𝒰</code>: a formula with one free variable. Formulas with a parameter are gone. In a sentence,
+“<code>∀ F ∈ 𝓕 …</code>” stands for <code>∀ F, Δ (F) → …</code>. For a set <code>F</code> of sentences of <code>𝓩</code>,
+<code>F + ε := {b ∈ 𝓑₂ | (ε → b*) ∈ F}</code>. (b) Axiom (3), the Penrose property, is one sentence:
+<code>∀ T, ∀ F ∈ 𝓕, ε_T (F) → Con₁ (F + ε_T)</code>, with the machine a variable, as in Definition
+5.10 (4). <code>ZFC</code> proves that it implies its instance for each <code>T</code>. Before, axiom (3) asked
+for the instances. (c) Theorem A.2 now says only: under axioms (1) and (3), if <code>T₀</code> stably
+enumerates <code>𝓗</code>, then <code>{b ∈ 𝓑₂ | 𝓗 ∪ {ε_{T₀}} ⊢ b*}</code> is not <code>1</code>-consistent. This is
+<code>penrose_family</code>, unchanged: <code>pen</code> stands for the sentence of axiom (3), or for its instance
+for <code>T₀</code>, and <code>hpen</code> for the claims of <code>ZFC</code>-provability. The former last part is the new
+Corollary A.3: if <code>𝓗</code> is <em>Penrose</em>, that is satisfies axioms (1)–(3) relative to some family,
+then <code>𝓗</code> is not stably c.e. or not sound. It uses truth in <code>𝒰</code> and is not formalized. The
+manuscript notes that both results use less of <code>𝒰</code>, with no assumption beyond <code>ZFC</code>.
+(d) Section 2.2 lists the logical symbols, <code>∨</code> among them, and fixes the deductive system of
+Shoenfield. Example 2.8 states how quantifiers are relativized by the guard <code>ζ</code>. Here <code>∨</code> is
+a defined connective, see “How the paper’s objects are modelled”, and <code>i_{𝓐,𝓩}</code> is an
+arbitrary translation, see “Exceptions”. (e) The footnote of the Introduction now says that
+the sentences expressing <code>1</code>-consistency and <code>Σₙ</code>-soundness are not constructed, that Theorem
+A.2 is verified in the same form as the second incompleteness theorems, and that Corollary
+A.3 is not formalized. The Introduction says that Appendix A assumes a Grothendieck universe.
+The other changes are in wording. (f) New in Lean: <code>exists_total_uniform</code>
+(<code>Stable/Machines.lean</code>), the first half of Remark 3.18. For infinite <code>B</code> it gives a total
+computable <code>St : 𝒯 → 𝒯</code> with <code>St T ∈ 𝒯_B</code>, <code>(St T)'</code> total and <code>(St T)^s = T^s</code>, for every
+<code>T</code>. It is the instance <code>R = R_B</code> of <code>exists_stabMachine</code>. Before, only the non-uniform
+<code>exists_total_of_stablyCE</code> was stated. The audit now has 65 lines. No other statement
+changes. (g) Docstrings and comments are corrected in <code>Stable/Penrose.lean</code> (the universe, the
+family, the sentence of axiom (3), Corollary A.3), <code>Stable/Halting.lean</code> (equations (4.7) and
+(4.8)), <code>Stable/Incompleteness.lean</code> (<code>first_incompleteness</code> is the form for a translation),
+<code>Stable/NPlain.lean</code> (the map <code>Shⁿ_R</code> is <code>exists_nShadow</code>), <code>Stable/NReadings.lean</code> and
+<code>Stable/Logic.lean</code>. (h) In this file: “Status”, “Exceptions”, the rows of Theorem A.2,
+“Second incompleteness”, and the remark on <code>∨</code> in “How the paper’s objects are modelled”.</p></li>
+</ol>
+<h2 id="conventions-used-in-the-sources">Conventions used in the sources</h2>
+<p>See <code>CONVENTIONS.md</code> (toolchain, core-Lean idioms, pitfalls recorded during the development).</p>
+</body>
+</html>

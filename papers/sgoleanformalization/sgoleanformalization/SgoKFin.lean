@@ -53,14 +53,6 @@ theorem filterMap_range_single {β : Type} (g : Nat → Option β) (b : β) (j m
 
 /-! ### Occupancy/kind of the collision display at the witness cells -/
 
-theorem kd5_kind_0 (hn : 5 ≤ n) : kindAt (kd5 (n := n)) 0 = some .w := by
-  rw [kd5_kind hn, if_pos rfl]
-
-theorem kd5_kind_n (hn : 5 ≤ n) : kindAt (kd5 (n := n)) n = some .b := by
-  obtain ⟨_, _, _, _, hw1_n, _, _, _, _, _, _, _, hw2_n, _⟩ := pk_ne hn
-  rw [kd5_kind hn, if_neg (by omega), if_neg (Ne.symm hw2_n),
-    if_neg (Ne.symm hw1_n), if_pos rfl]
-
 theorem kd5_kind_3 (hn : 5 ≤ n) : kindAt (kd5 (n := n)) 3 = some .b := by
   obtain ⟨_, _, _, hw1_3, _, _, _, _, _, _, _, hw2_3, _⟩ := pk_ne hn
   rw [kd5_kind hn, if_neg (by omega), if_neg (Ne.symm hw2_3),
@@ -227,7 +219,8 @@ set_option maxHeartbeats 800000 in
 theorem isCaptured0_Dcol (hn : 5 ≤ n) {D0 : Display n} (hsc : SameCells D0 (kd5 n))
     (hwf : WFD D0) {t_c : Nat} (hst : StampsBelow D0 t_c) :
     isCaptured (Dcol D0 t_c) (componentD (Dcol D0 t_c) 0) .w t_c = true := by
-  simp only [isCaptured]
+  apply isCaptured_of_OT
+  simp only [isCapturedOT]
   rw [Bool.and_eq_true, Bool.and_eq_true]
   refine ⟨⟨trapped_Dcol hn hsc hwf hst, ?_⟩, ?_⟩
   · -- cond_unambiguous0: the only red is A2, whose non-white neighbours are empty
@@ -325,9 +318,8 @@ theorem black_Dcol (hn : 5 ≤ n) {D0 : Display n} (hsc : SameCells D0 (kd5 n))
   · rw [Dcol_kind hn hsc hwf, if_neg hp1] at h; exact black_kd5 hn h
 
 theorem isCaptured_false_of_noLib {D : Display n} {comp : List Nat} {c : DKind}
-    {t : Nat} (h : noLibD D comp = false) : isCaptured D comp c t = false := by
-  have ht : trappedOnTurn D comp t = false := by unfold trappedOnTurn; rw [h]; rfl
-  simp only [isCaptured, ht, Bool.false_and]
+    {t : Nat} (h : noLibD D comp = false) : isCaptured D comp c t = false :=
+  isCaptured_false_of_noLibD h
 
 theorem noLib_Dcol_dW1 (hn : 5 ≤ n) {D0 : Display n} (hsc : SameCells D0 (kd5 n))
     (hwf : WFD D0) (t0 : Nat) :
@@ -1539,7 +1531,8 @@ theorem pj_Dpf (hn : 5 ≤ n) {D0 : Display n} (t_c t_f : Nat) :
     placeJoint (Eres D0 t_c) t_f (some (n+2)) (some 2) = Dpf D0 t_c t_f := by
   have hne : ¬ ((n+2) == 2) = true := by
     intro h; have hh : n + 2 = 2 := eq_of_beq h; omega
-  show (if (n+2) == 2 then (Eres D0 t_c).set (n+2) (some (.r, t_f)) else
+  show (if (n+2) == 2 then (Eres D0 t_c).set (n+2)
+      (some (conflictKind (Eres D0 t_c) t_f (n+2), t_f)) else
     ((Eres D0 t_c).set (n+2) (some (.b, t_f))).set 2 (some (.w, t_f)))
     = Dpf D0 t_c t_f
   rw [if_neg hne]

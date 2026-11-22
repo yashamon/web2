@@ -52,14 +52,8 @@ theorem nocap_of_legal (R c1 : Display n)
       rw [hd]
       exact List.mem_cons.mpr (Or.inl rfl)
     rcases (mem_capturedOf R t' k w).mp hw with ⟨p, _, hkp, hcap, _⟩
-    have htrap : noLibD R (componentD R p) = true := by
-      have h := hcap
-      simp only [isCaptured] at h
-      rw [Bool.and_eq_true, Bool.and_eq_true] at h
-      have h2 := h.1.1
-      simp only [trappedOnTurn] at h2
-      rw [Bool.and_eq_true] at h2
-      exact h2.1
+    -- each route of def_captured needs a trapped component
+    have htrap : noLibD R (componentD R p) = true := noLibD_of_isCaptured hcap
     have hkc1 : kindAt c1 p = some k := by
       rw [← hsame p]
       exact hkp

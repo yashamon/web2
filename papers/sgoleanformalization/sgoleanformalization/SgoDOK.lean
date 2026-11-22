@@ -114,7 +114,7 @@ theorem pJ_occ_mono (D : Display n) (t : Nat) (m0 m1 : Option Nat)
       simp only [placeJoint]
       by_cases hpp : (p0 == p1) = true
       · rw [if_pos hpp]
-        exact hset D p0 .r t hocc
+        exact hset D p0 _ t hocc
       · rw [if_neg hpp]
         exact hset _ p1 .w t (hset D p0 .b t hocc)
 

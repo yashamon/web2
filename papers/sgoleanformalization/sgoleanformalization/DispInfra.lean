@@ -134,8 +134,150 @@ theorem isCaptured_congr (D : Display n) (comp comp' : List Nat)
     funext fun p => any_congr_mem comp comp' p h
   have hall : List.all comp = List.all comp' :=
     funext fun p => all_congr_mem comp comp' p h
+  unfold isCaptured isCapturedOT residualCap
+  rw [trappedOnTurn_congr D comp comp' t h, noLibD_congr D comp comp' h,
+    hcont, hany, hall]
+
+/-! ### The two routes of def_captured: Conditions 1–3, and the residual
+    route of Conditions 2 and 4 (cond_residual). On a component trapped on
+    the turn, the residual route implies the first. -/
+
+theorem noLibD_of_trappedOnTurn {D : Display n} {comp : List Nat} {t : Nat}
+    (h : trappedOnTurn D comp t = true) : noLibD D comp = true := by
+  simp only [trappedOnTurn, Bool.and_eq_true] at h
+  exact h.1
+
+theorem stoneTrapped_of_stoneTrappedBy {D : Display n} {z : Nat}
+    {a : DKind} {t : Nat} (h : stoneTrappedBy D z a t = true) :
+    stoneTrapped D z a = true := by
+  unfold stoneTrappedBy at h
+  unfold stoneTrapped
+  cases hk : kindAt D z with
+  | none => rw [hk] at h; exact h
+  | some k =>
+    rw [hk] at h
+    cases k with
+    | r => exact noLibD_of_trappedOnTurn h
+    | b =>
+      simp only at h ⊢
+      by_cases hd : (DKind.b == a.opp) = true
+      · rw [if_pos hd] at h ⊢
+        exact noLibD_of_trappedOnTurn h
+      · rw [if_neg hd] at h
+        exact Bool.noConfusion h
+    | w =>
+      simp only at h ⊢
+      by_cases hd : (DKind.w == a.opp) = true
+      · rw [if_pos hd] at h ⊢
+        exact noLibD_of_trappedOnTurn h
+      · rw [if_neg hd] at h
+        exact Bool.noConfusion h
+
+theorem isCaptured_of_OT {D : Display n} {comp : List Nat} {c : DKind}
+    {t : Nat} (h : isCapturedOT D comp c t = true) :
+    isCaptured D comp c t = true := by
   unfold isCaptured
-  rw [trappedOnTurn_congr D comp comp' t h, hcont, hany, hall]
+  rw [h, Bool.true_or]
+
+theorem isCaptured_cases {D : Display n} {comp : List Nat} {c : DKind}
+    {t : Nat} (h : isCaptured D comp c t = true) :
+    isCapturedOT D comp c t = true ∨ residualCap D comp c = true := by
+  unfold isCaptured at h
+  exact Bool.or_eq_true _ _ ▸ h
+
+theorem noLibD_of_residual {D : Display n} {comp : List Nat} {c : DKind}
+    (h : residualCap D comp c = true) : noLibD D comp = true := by
+  simp only [residualCap, Bool.and_eq_true] at h
+  exact h.1.1
+
+theorem noLibD_of_isCapturedOT {D : Display n} {comp : List Nat}
+    {c : DKind} {t : Nat} (h : isCapturedOT D comp c t = true) :
+    noLibD D comp = true := by
+  simp only [isCapturedOT, Bool.and_eq_true] at h
+  exact noLibD_of_trappedOnTurn h.1.1
+
+theorem noLibD_of_isCaptured {D : Display n} {comp : List Nat} {c : DKind}
+    {t : Nat} (h : isCaptured D comp c t = true) : noLibD D comp = true := by
+  rcases isCaptured_cases h with h | h
+  · exact noLibD_of_isCapturedOT h
+  · exact noLibD_of_residual h
+
+/-- The residual route implies the first on a component trapped on the
+    turn: Condition 4 gives Condition 3a. -/
+theorem OT_of_residual {D : Display n} {comp : List Nat} {c : DKind}
+    {t : Nat} (hres : residualCap D comp c = true)
+    (htr : trappedOnTurn D comp t = true) :
+    isCapturedOT D comp c t = true := by
+  simp only [residualCap, Bool.and_eq_true] at hres
+  obtain ⟨⟨_, h2⟩, h4⟩ := hres
+  simp only [isCapturedOT, Bool.and_eq_true, Bool.or_eq_true]
+  refine ⟨⟨htr, h2⟩, Or.inl ?_⟩
+  rw [List.all_eq_true] at h4 ⊢
+  intro z hz
+  have hz4 := h4 z hz
+  cases hst : stoneTrappedBy D z c t
+  · simp
+  · rw [stoneTrapped_of_stoneTrappedBy hst] at hz4
+    exact hz4
+
+/-- A captured component trapped on the turn satisfies Conditions 1–3. -/
+theorem isCapturedOT_of_isCaptured {D : Display n} {comp : List Nat}
+    {c : DKind} {t : Nat} (h : isCaptured D comp c t = true)
+    (htr : trappedOnTurn D comp t = true) : isCapturedOT D comp c t = true := by
+  rcases isCaptured_cases h with h | h
+  · exact h
+  · exact OT_of_residual h htr
+
+/-- Condition 2 (cond_unambiguous0) holds on either route. -/
+theorem cond2_of_isCaptured {D : Display n} {comp : List Nat} {c : DKind}
+    {t : Nat} (h : isCaptured D comp c t = true) :
+    (((allIdx n).filter fun z =>
+        kindAt D z == some DKind.r && comp.any fun q => adjI n z q).all
+      fun r' => (allIdx n).all fun z =>
+        !(adjI n z r' && (kindAt D z == some DKind.b ||
+          kindAt D z == some DKind.w) &&
+          (let Dc := componentD D z
+           !(Dc.all comp.contains && comp.all Dc.contains) &&
+           noLibD D Dc && kindAt D z != some c))) = true := by
+  rcases isCaptured_cases h with h | h
+  · simp only [isCapturedOT, Bool.and_eq_true] at h
+    exact h.1.2
+  · simp only [residualCap, Bool.and_eq_true] at h
+    exact h.1.2
+
+/-- A trapped component holding a stone of the latest stamp t (no stamp
+    exceeding t) is trapped on turn t. -/
+theorem trappedOnTurn_of_member (D : Display n) (comp : List Nat) (t : Nat)
+    (hnl : noLibD D comp = true)
+    (hle : ∀ z, occD D z = true → stampAt D z ≤ t)
+    (hocc : ∀ z, z ∈ comp → occD D z = true)
+    (f : Nat) (hf : f ∈ comp) (hft : stampAt D f = t) :
+    trappedOnTurn D comp t = true := by
+  simp only [trappedOnTurn]
+  rw [Bool.and_eq_true]
+  refine ⟨hnl, ?_⟩
+  rw [beq_iff_eq]
+  apply Nat.le_antisymm
+  · apply foldl_max_le _ _ _ (Nat.zero_le _)
+    intro x hx
+    rcases List.mem_append.mp hx with hx | hx
+    · rcases List.mem_map.mp hx with ⟨a, ha, rfl⟩
+      exact hle a (hocc a ha)
+    · rcases List.mem_map.mp hx with ⟨a, ha, rfl⟩
+      have := (List.mem_filter.mp ha).2
+      rw [Bool.and_eq_true, Bool.and_eq_true] at this
+      exact hle a this.1.1
+  · rw [← hft]
+    exact le_foldl_max _ _ _
+      (List.mem_append.mpr (Or.inl (List.mem_map.mpr ⟨f, hf, rfl⟩)))
+
+theorem isCaptured_false_of_noLibD {D : Display n} {comp : List Nat}
+    {c : DKind} {t : Nat} (h : noLibD D comp = false) :
+    isCaptured D comp c t = false := by
+  cases hc : isCaptured D comp c t
+  · rfl
+  · rw [noLibD_of_isCaptured hc] at h
+    exact Bool.noConfusion h
 
 /-! ### The capturedOf characterization. -/
 

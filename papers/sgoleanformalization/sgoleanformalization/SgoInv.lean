@@ -117,7 +117,7 @@ theorem placeJoint_stampsBelow (D : Display n) (t : Nat) (m0 m1 : Option Nat)
       simp only [placeJoint]
       by_cases h : p0 = p1
       · rw [if_pos (by simp [h] : (p0 == p1) = true)]
-        exact set_stampsBelow D p0 .r t (t+1) hlt hD'
+        exact set_stampsBelow D p0 (conflictKind D t p0) t (t+1) hlt hD'
       · rw [if_neg (by simp [h] : ¬((p0 == p1) = true))]
         exact set_stampsBelow _ p1 .w t (t+1) hlt
           (set_stampsBelow D p0 .b t (t+1) hlt hD')

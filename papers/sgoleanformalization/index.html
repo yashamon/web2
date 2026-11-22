@@ -173,6 +173,12 @@ simultaneous Go via objective quantum reduction</em></h1>
 <p>The manuscript: <a
 href="https://yashamon.github.io/web2/papers/sgo.pdf">sgo.pdf</a>.
 Section, theorem and definition numbers below refer to it.</p>
+<p>Play SGo in the browser: <a
+href="https://claude.ai/artifact/SVrxvsBVMGSEYUu9ZyJyrw">SGo Arena</a>.
+Its opponents are the self-play networks of Section 2.1 (9×9,
+generations 1 to 48) and the Monte Carlo agents, with their ladder
+ratings; it also has an illustrated rules sheet and play against a
+person online.</p>
 <p>The sequential-game layer is the paper’s <code>def_sequential</code>
 (Definition 4.3): a game is presented by its cores, its states are
 <code>C(G) × Z₂ × Z₃</code> — here <code>PState.live c g j</code> for
@@ -270,11 +276,11 @@ clause with the minimality as an explicit hypothesis).</li>
 trio. No <code>sorryAx</code> (no incomplete proof) and no
 <code>Lean.ofReduceBool</code> (no <code>native_decide</code>, i.e. no
 trust in the compiler) in their dependency cones.</p>
-<p>Release 1.4. Hosted at <a
+<p>Release 1.6. Hosted at <a
 href="https://yashamon.github.io/web2/papers/sgoleanformalization/"
 class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
 — the files below, this <a href="README.md">README</a>, and the archive
-<a href="sgoleanformalization-1.4.zip">sgoleanformalization-1.4.zip</a>.
+<a href="sgoleanformalization-1.6.zip">sgoleanformalization-1.6.zip</a>.
 (Release 1.0 carried the main theorem and the one-stage lemma; 1.1 added
 <code>lem_symmetric</code> and <code>lem_dynamics</code>; 1.2 added
 <code>thm_zero</code>, <code>lem_familysymmetric</code> and
@@ -282,16 +288,26 @@ class="uri">https://yashamon.github.io/web2/papers/sgoleanformalization/</a>
 paper’s def_sequential; 1.3 aligned the definitions with the current
 print: def_faithful is the single interface equation
 (<code>FaithfulAt</code>), <code>#</code> is undefined at pass grading 2
-(<code>hashOp_done</code>), and the pass grading is read in Z₃; 1.4 adds
-the bisimulation layer: Definition 4.19, Lemma 4.20, Lemma 6.13 and the
-radius spectrum clauses of Theorems 6.3 and 6.9.)</p>
+(<code>hashOp_done</code>), and the pass grading is read in Z₃; 1.4
+added the bisimulation layer: Definition 4.19, Lemma 4.20, Lemma 6.13
+and the radius spectrum clauses of Theorems 6.3 and 6.9; 1.5 follows the
+capture rule of the paper’s <code>reduce</code> branch: Condition 4 of
+def_captured, the residual capture, with the notions of def_trapped
+without a turn — statement audit item 14; 1.6 formalizes the game
+exactly as printed in the paper’s <code>reduce2</code> branch: the stone
+placement rule of Section 2.3 with its rule (2), and def_captured in the
+printed numbering, Conditions 1–5 — items 14 and 15. Releases 1.5 and
+1.4, with a q-stone at every conflict, stay available as <a
+href="sgoleanformalization-1.5.zip">sgoleanformalization-1.5.zip</a> and
+<a
+href="sgoleanformalization-1.4.zip">sgoleanformalization-1.4.zip</a>.)</p>
 <h2 id="verifying-this-development">Verifying this development</h2>
 <p>Four commands; no dependency beyond Lean itself:</p>
 <pre><code>curl -sSfL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
-curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.4.zip
-unzip sgoleanformalization-1.4.zip &amp;&amp; cd sgoleanformalization
+curl -LO https://yashamon.github.io/web2/papers/sgoleanformalization/sgoleanformalization-1.6.zip
+unzip sgoleanformalization-1.6.zip &amp;&amp; cd sgoleanformalization
 lake build          # kernel-checks the complete chain (lean-toolchain pins v4.15.0; ~2 min)</code></pre>
-<p>On Windows, <code>tar -xf sgoleanformalization-1.4.zip</code> unpacks
+<p>On Windows, <code>tar -xf sgoleanformalization-1.6.zip</code> unpacks
 the archive in place (PowerShell’s Extract-All wraps it in a second
 folder of the same name, and <code>lake build</code> then finds no
 lakefile); on Linux use <code>unzip</code>, GNU tar not reading zip
@@ -327,9 +343,16 @@ the top of each file.</p>
 <code>SgoGo</code> — classical Go on diagrams: the placed diagram B + m,
 go_captures, go_suicide, go_closure (<code>goMoveN</code>). -
 <code>SgoDisplay</code> — the display calculus: q-stones and time
-stamps, def_trapped, def_captured 1/2/3a/3b, the basic capture
-reduction, its fixpoint (Cap_n), placeJoint (collision → q-stone), the
-stage recursion (OR).</p>
+stamps, def_trapped (on a turn: <code>trappedOnTurn</code>,
+<code>stoneTrappedBy</code>; without one: <code>noLibD</code>,
+<code>stoneTrapped</code>), def_captured (<code>isCapturedPrint</code>,
+Conditions 1–5 as printed, equal by <code>isCaptured_eq_print</code> to
+<code>isCaptured</code>, the form the proofs use:
+<code>isCapturedOT</code> or the residual <code>residualCap</code>), the
+basic capture reduction, its fixpoint (Cap_n), the stone placement rule
+of Section 2.3 (<code>placeJoint</code>; at a conflict
+<code>conflictKind</code>, with <code>wouldTrap</code> for the trapping
+conflict of rule (1)), the stage recursion (OR).</p>
 <p>The one-stage lemma (<code>lem_onestage_final</code>):
 <code>SgoLemma</code> (statement, goMoveN factored through named
 stages), <code>Infra</code>..<code>Infra6</code> (components, liberties,
@@ -537,18 +560,17 @@ the quotient through the transfer lemmas of part (4)
 <li>Not formalized, by decision: Theorem 6.7 (augmented chess has no
 simple simultaneization of positive radius — a retrograde statement
 about legally obtainable chess positions) and its minimal quotient
-clause, the Nash theorem 5.3 and its corollary 5.4, and the empirical
-Section
-<ol start="7" type="1">
-<li>The rules of SGo are formalized as the engine of
+clause, the Nash theorem 5.3 and its corollary 5.4, and the experiments
+of Section 2.1 (their method is Section 7). The rules of SGo are
+formalized as the engine of
 <code>SgoDisplay</code>/<code>SgoSerial</code>/<code>SgoDelta</code> and
 differentially tested against the paper’s engines (below). The placement
-rule formalized is the simplest one, a q-stone at every conflict, the
-rule of the submitted text; the three-tier rule of the
-<code>threetier</code> and <code>Dec</code> branches (its Section 2.3,
-in the August and the December wording) is implemented and tested in the
-C++ engine, not formalized — see “The engine and the experiments”.</li>
-</ol></li>
+rule formalized is the printed three-tier rule of Section 2.3, in its
+December wording (item 15); releases up to 1.5 formalized the simplest
+rule, a q-stone at every conflict, the rule of the submitted text. The
+August wording of the <code>threetier</code> branch is implemented and
+tested in the C++ engine, not formalized — see “The engine and the
+experiments”.</li>
 <li>Bisimulation (Definition 4.19, Lemma 4.20; <code>SgoBisim</code>). A
 bisimulation is as printed (<code>IsBisim</code>: the initial cores
 related; at related cores, for every turn grading, pass grading j &lt; 2
@@ -609,6 +631,61 @@ dichotomy at i or j — the stone at j can suicide with i’s component in
 the partner, so the move to i alone does not always separate (a 5×5
 instance, checked with the engine, has i empty on both sides and j white
 on one). The print’s proof now follows the same version.</li>
+<li>The capture rule (release 1.5, the paper’s <code>reduce</code>
+branch; numbered as in its <code>reduce2</code> branch since release
+1.6). Definition 2.2 captures a white component C if (1) C is trapped
+and (2) the q-stone condition holds, and one of: (3) C is trapped on
+this turn, and no black stone or q-stone adjacent to C is trapped by
+white on this turn; (4) no black stone or q-stone adjacent to C is
+trapped by white, on any turn, with the notions of def_trapped without a
+turn (the residual capture);
+<ol start="5" type="1">
+<li>the suicidal capture, C being trapped on this turn. Mirrored for
+black. <code>isCapturedPrint</code> transcribes Conditions 1–5 verbatim
+(<code>capCond1</code> … <code>capCond5</code>);
+<code>isCaptured_eq_print</code> proves it equal to
+<code>isCaptured = isCapturedOT || residualCap</code>, the form the
+proofs use: <code>isCapturedOT</code> is trapped on this turn, Condition
+2, and 3 or 5 (the 3a/3b of the <code>reduce</code> text),
+<code>residualCap</code> is Conditions 1, 2 and 4, with
+<code>stoneTrapped</code> the turn-free <code>stoneTrappedBy</code>. On
+a component trapped on the turn the second form implies the first
+(<code>OT_of_residual</code>, <code>isCapturedOT_of_isCaptured</code>):
+Condition 4 gives Condition 3. The proofs read it as the print’s proof
+of Lemma 6.4 does. Within Cap_n at a commuting turn every captured
+component still holds or touches a stone of the turn, so it is trapped
+on the turn (Step 6: <code>trappedOnTurn_of_member</code> on the live
+case’s fresh stone; <code>SgoStage1.pT_trapped_on_t</code> for the
+single placement — a libertyless component of the mover’s color holds
+the fresh stone, the state being legal, and one of the other color
+touches it); at the later stages no component is trapped, and each route
+needs one (Step 8, <code>noLibD_of_isCaptured</code>). The SGo witness
+refutes Condition 4 at the trapped q-stone as it refutes Condition 3
+(<code>SgoWit</code>). The color swap covers the new route
+(<code>stoneTrapped_swapD</code>, <code>isCaptured_swapD</code>), and so
+does the well-definedness of the conversion of q-stones
+(<code>cond2_of_isCaptured</code> in <code>recolor_excl</code>). The
+fifteen certificate lines are unchanged.</li>
+</ol></li>
+<li>The stone placement rule (release 1.6). Section 2.3 places a stone
+at a conflict, both players moving to the same intersection i: (1) a
+q-stone if the conflict is trapping — a stone of either color added at i
+would be a trapping stone, adjacent to a component of the other color
+with no liberties (<code>wouldTrap</code>); (2) a black stone if i is
+adjacent to a black stone and to no white stone and no q-stone, mirrored
+for white; (3) a q-stone otherwise. <code>conflictKind</code> is this
+rule, and <code>placeJoint</code> uses it at every conflict, so SGo,
+DSGo and k-DSGo all play it (the print’s Pl is the same rule). Rule (2)
+can place a colored stone where the entanglement holds both orders of
+the turn; SGo’s pruning drops the branch of the other color, while the
+re-cut of DSGo reads occupancy only and keeps it. The proofs needed
+three facts: the rule is color-symmetric
+(<code>conflictKind_swapD</code>, inside <code>placeJoint_swapD</code>);
+the commuting turns of the main theorem have no conflict, as before; and
+the conflicts of the two witnesses, A1/A1 of the SGo witness and A2/A2
+of the k-DSGo witness, are trapping, so they still place q-stones
+(<code>wit_trap0</code>, <code>kwit_trap1</code>). The fifteen
+certificate lines are unchanged.</li>
 </ol>
 <h2 id="separate-artifacts-larger-trusted-base-native_decide">Separate
 artifacts (larger trusted base: native_decide)</h2>
@@ -620,13 +697,25 @@ Exhaust.lean): all 19,683 assignments of the 3×3 board, legality
 filtered in-proof, every commuting non pass ordered pair; ~3 min.</li>
 <li><code>lake build Counts</code> — the 3×3 legal-state census
 cross-check (12,675).</li>
-<li>Differential tests against the paper’s Python engine
+<li>Differential tests against the paper’s engines
 (<code>lake env lean   &lt;file&gt;</code>): <code>Tests.lean</code>
 (1,844 legal Go transitions), <code>TestsDAll.lean</code> (display
 resolution, 1,722 playout turns; <code>TestsD300.lean</code> a 300-turn
-slice), <code>TestSerial.lean</code> (SGo, 240 games / 2,009 turns),
-<code>TestDelta.lean</code> (DSGo and k-DSGo, 390 games / 3,262 turns);
-<code>TestsD.lean</code> is an eval sheet.</li>
+slice), <code>TestSerial.lean</code> (SGo, 240 games / 1,917 turns),
+<code>TestDelta.lean</code> (DSGo and k-DSGo, 390 games / 3,199 turns);
+<code>TestsD.lean</code> is an eval sheet. Release 1.5 regenerated the
+five display vectors and two SGo games that Condition 4 changes
+(<code>SGO_ORPHAN=1</code>). Release 1.6 regenerated every sheet under
+the printed rules with the C++ engine
+(<code>SGO_ORPHAN=1 SGO_PLACE=4</code>; modes <code>dispgen</code>,
+<code>serialgen</code>, <code>deltagen</code>; its
+<code>tests/disp_d.txt</code>, <code>serial_d.txt</code>,
+<code>delta_d.txt</code>): 209 display vectors, 170 SGo games and 299
+DSGo/k-DSGo games change; 22 and 17 games are cut before a move that
+rule (2) makes unavailable. The DSGo/k-DSGo reference is new to the
+engine (<code>famStep</code>, written from the print, the Python one
+being lost); before the regeneration it replays the original sheet
+exactly. Every sheet passes.</li>
 <li><code>EvalKWit.lean</code> — an <code>#eval</code> replay of the
 k-DSGo witness (side 5 for k = 1..4, and sides 6, 7, 8 for k = 3, 5, 8):
 the violation at A3 each time; a sanity check of the construction that
@@ -635,74 +724,68 @@ the violation at A3 each time; a sanity check of the construction that
 <p><code>tools/</code> holds the Python generators of the test sheets
 and the witness search; they need the paper’s original Python engine
 (<code>sgo_engine.py</code>, not included). The C++ engine below replays
-the same sheets (<code>./sgo test</code>). <code>attic/</code> holds
-inactive scratch, unrun variants and superseded checkpoints; nothing
-there is built.</p>
+the same sheets (<code>./sgo test</code>) and regenerates them under a
+rule (<code>dispgen</code>, <code>serialgen</code>,
+<code>deltagen</code>). <code>attic/</code> holds inactive scratch,
+unrun variants and superseded checkpoints; nothing there is built.</p>
 <h2 id="the-engine-and-the-experiments">The engine and the
 experiments</h2>
-<p>The computer experiments of the paper — the random play table of
-Section 2.2, the informed play of Sections 7.1 and 7.2, and the Elo
-ladders of Section 7.3 and Remark 2.1 — were run with a single-file C++
-engine, <code>sgo.cpp</code>: a transcription of the executable Lean
-layer (<code>SgoDisplay</code>, <code>SgoSerial</code>,
-<code>SgoGo</code>) with Monte Carlo agents on top. It is hosted here
-with every run log:</p>
+<p>The computer experiments of the paper are those of Section 2.1: the
+depth ladder of Table 1 and the play of strong networks of Table 2, on
+the 9×9 board, for SGo and for Go. They were run with <code>sgoz</code>,
+a self-play trainer. The paper’s rules engine (below) plays many games
+at once. A PyTorch network (10 residual blocks of 128 channels with
+global pooling, after KataGo) evaluates their positions on a GPU.
+Section 7 of the paper gives the method. The networks also play in <a
+href="https://claude.ai/artifact/SVrxvsBVMGSEYUu9ZyJyrw">SGo Arena</a>,
+in the browser.</p>
+<ul>
+<li><a href="sgoz_experiments.zip">sgoz_experiments.zip</a> — the
+trainer, the configurations, every game of Table 1 (the scores, one file
+per pair), the games of Table 2, the training logs, and the networks of
+generations 48 and 56 of both lines. Its README gives the conventions
+and the commands.</li>
+</ul>
+<p>The two tables from the hosted games need Python 3 and numpy
+only:</p>
+<pre><code>unzip sgoz_experiments.zip &amp;&amp; cd sgoz_experiments
+python3 code/fit_paper.py sgo/runs/ladder_o4 go/runs/ladder_o4     # Table 1 and the climbs (a few minutes)
+python3 code/stats.py --table sgo/runs/stats_g48_match.json go/runs/stats_g48_match.json   # Table 2</code></pre>
+<p>Replaying the experiments needs PyTorch and an NVIDIA GPU. On one RTX
+4070 Ti each line trained to generation 56 in about 16 hours, a ladder
+took two to four hours, and the strong play ten minutes. A new training
+run gives other networks and other numbers, within the printed
+errors.</p>
+<p>The rules engine is <code>sgo.cpp</code>, a single C++ file: a
+transcription of the executable Lean layer (<code>SgoDisplay</code>,
+<code>SgoSerial</code>, <code>SgoGo</code>). It is in both packages. The
+trainer uses it unchanged, except that its scratch state is per
+thread.</p>
 <ul>
 <li><a href="sgo_engine.zip">sgo_engine.zip</a> — <code>sgo.cpp</code>,
-the test sheets, the ladder scripts, all RESULT files and per-game logs,
-and a README with the conventions and the command for every figure of
-the paper.</li>
+the test sheets, and the Monte Carlo experiments of earlier versions of
+the paper (random play tables, 13×13 Monte Carlo ladders, a small
+self-play net). These are no longer in the paper; the package README
+documents them.</li>
 </ul>
-<p>What ties it to this formalization. <code>./sgo test</code> replays
-the three Lean test sheets through the engine — <code>TestsDAll</code>
+<p>What ties the engine to this formalization.
+<code>SGO_ORPHAN=1 SGO_PLACE=4 ./sgo test</code> replays the four Lean
+test sheets of release 1.6 through the engine — <code>TestsDAll</code>
 (1,722 display resolutions), <code>Tests</code> (1,844 classical moves),
-<code>TestSerial</code> (240 SGo games, 2,009 turns, displays and
-entanglement states alike) — with 0 mismatches. The engine keeps the
+<code>TestSerial</code> (240 SGo games, 1,917 turns) and
+<code>TestDelta</code> (390 DSGo and k-DSGo games, 3,199 turns),
+displays and entanglement states alike — with 0 mismatches.
+<code>SGO_ORPHAN=1</code> is Condition 4 of def_captured,
+<code>SGO_PLACE=4</code> the placement rule of Section 2.3; plain
+<code>./sgo test</code> replays the sheets of releases up to 1.4,
+<code>SGO_ORPHAN=1 ./sgo test</code> those of 1.5. The engine keeps the
 slow, literal transcription of the rules as an oracle and drives play
 through a chain-table layer; <code>./sgo difftest 300</code> plays 300
 lockstep random games on the boards 3×3 to 9×9 comparing the two, cell
 by cell, and <code>SGO_CHECK=1</code> cross-checks every capture
-evaluation inside a match. Caveats: the formalization fixes the simplest
-placement rule (a conflict always yields a q-stone); the three-tier rule
-of Section 2.3 is <code>SGO_PLACE=3</code> in the engine in its August
-wording (the <code>threetier</code> text) and <code>SGO_PLACE=4</code>
-in its December wording (the <code>Dec</code> text: the local color only
-when no q-stone is adjacent either), tested against the oracle, not
-formalized. The conditions of the main theorem concern commuting turns,
-at which no conflict occurs.</p>
-<p>The conventions of the <code>Dec</code> text: SGo by its rules,
-without any Ko rule; Go under the positional superko rule
-(<code>SGO_SUPERKO=1</code>, a move that recreates an earlier position
-of the game is illegal; the playouts keep a simple Ko); the Monte Carlo
-move set admits the fill of an own single point eye at which an own
-chain has its last liberty (<code>SGO_EYEDEF=1</code>), which in SGo is
-the Ko defense of Section 3.3 — without it the agents could not defend a
-Ko and informed SGo play cycled; komi 0.</p>
-<p>Reproducing the 13×13 Elo ladder of Section 7.3 (budgets 16·2^k
-playouts per turn, each rung played until its 68% band is at most 40 Elo
-wide, 100 to 600 games; about four hours for SGo and a day for Go on two
-cores, resumable):</p>
+evaluation inside a match.</p>
 <pre><code>unzip sgo_engine.zip &amp;&amp; cd sgo_engine
-g++ -O2 -std=c++17 sgo.cpp -o sgo &amp;&amp; ./sgo test
-SGO_N=13 SGO_PLACE=4 SGO_KOFLAG=0 SGO_EYEDEF=1 ./ladder13p.sh sgo 300 250   # SGo: cap 300 turns, playouts 250 turns
-SGO_N=13 SGO_SUPERKO=1 ./ladder13p.sh go 600 400                            # Go: cap 600 plies, playouts 400 plies
-python3 summarize.py                                                        # the rung tables with 68% bands</code></pre>
-<p>The scripts write RESULT lines to
-<code>runs/&lt;game&gt;_ko&lt;k&gt;_n13[_p4][_sk][_ed]_tot.txt</code>
-and per-game logs beside them; a killed run resumes where it stopped
-(each game is seeded on its own, so the figures reproduce exactly). The
-smaller boards of Section 7.3 and the simplest-rule ladders of Remark
-2.1 are <code>runsmall.sh</code>. The tables of Sections 2.2 and 7.1–7.2
-take seconds to minutes (<code>runstats4.sh</code>):</p>
-<pre><code>SGO_PLACE=4 ./sgo table sgo 1000 40                   # random play, SGo 5×5, bound 40 turns
-SGO_N=19 SGO_PLACE=4 ./sgo table sgo 1000 0
-./sgo table go 1000 40 ; SGO_N=19 ./sgo table go 200 1500
-SGO_PLACE=4 SGO_EYEDEF=1 ./sgo eqplay 1000 16 5 400   # equilibrium guided SGo
-SGO_SUPERKO=1 ./sgo greedygo 1000 6 12 5 800          # greedy rollout Go</code></pre>
-<p>The engine’s README lists the remaining commands (the
-disabled-reduction run, the earlier conventions, the Ko variants, the
-position analysis and the exact solver of small boards) and the
-conventions: the playout policy, the caps, the Elo formula.</p>
+g++ -O2 -std=c++17 sgo.cpp -o sgo &amp;&amp; SGO_ORPHAN=1 SGO_PLACE=4 ./sgo test</code></pre>
 <h2 id="notes-on-core-lean-for-readers-of-the-proofs">Notes on core Lean
 (for readers of the proofs)</h2>
 <p>Core Lean 4.15 lacks Mathlib’s <code>by_contra</code>,

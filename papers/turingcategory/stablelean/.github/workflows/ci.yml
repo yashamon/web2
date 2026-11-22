@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          use-mathlib-cache: false
+          build: true
+      - name: audit
+        run: |
+          lake env lean Audit.lean | tee audit.txt
+          ! grep -q sorryAx audit.txt
+          test "$(grep -c 'propext, Classical.choice, Quot.sound' audit.txt)" -eq 65

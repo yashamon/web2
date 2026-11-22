@@ -267,15 +267,51 @@ theorem stoneTrappedBy_swapD (D : Display n) (z : Nat) (attacker : DKind)
         show (DKind.b == attacker.opp) = (DKind.w == attacker.opp.opp) from by
           cases attacker <;> rfl]
 
+theorem stoneTrapped_swapD (D : Display n) (z : Nat) (attacker : DKind) :
+    stoneTrapped (swapD D) z attacker = stoneTrapped D z attacker.opp := by
+  unfold stoneTrapped
+  rw [kindAt_swapD]
+  cases h : kindAt D z with
+  | none => rfl
+  | some k =>
+    cases k with
+    | r =>
+      show noLibD (replaceKind (swapD D) z attacker.opp)
+          (componentD (replaceKind (swapD D) z attacker.opp) z)
+        = noLibD (replaceKind D z attacker.opp.opp)
+          (componentD (replaceKind D z attacker.opp.opp) z)
+      rw [← replaceKind_swapD D z attacker, componentD_swapD,
+        noLibD_swapD, show attacker.opp.opp = attacker from
+        opp_opp_all attacker]
+    | b =>
+      show (if (DKind.w == attacker.opp) = true
+          then noLibD (swapD D) (componentD (swapD D) z)
+          else false)
+        = (if (DKind.b == attacker.opp.opp) = true
+          then noLibD D (componentD D z) else false)
+      rw [componentD_swapD, noLibD_swapD,
+        show (DKind.w == attacker.opp) = (DKind.b == attacker.opp.opp) from by
+          cases attacker <;> rfl]
+    | w =>
+      show (if (DKind.b == attacker.opp) = true
+          then noLibD (swapD D) (componentD (swapD D) z)
+          else false)
+        = (if (DKind.w == attacker.opp.opp) = true
+          then noLibD D (componentD D z) else false)
+      rw [componentD_swapD, noLibD_swapD,
+        show (DKind.b == attacker.opp) = (DKind.w == attacker.opp.opp) from by
+          cases attacker <;> rfl]
+
 theorem isCaptured_swapD (D : Display n) (comp : List Nat) (c : DKind)
     (t : Nat) :
     isCaptured (swapD D) comp c t = isCaptured D comp c.opp t := by
   have hs : stampAt (swapD D) = stampAt D := funext (stampAt_swapD D)
   have hcomp : ∀ z, componentD (swapD D) z = componentD D z :=
     componentD_swapD D
-  simp only [isCaptured, trappedOnTurn_swapD, red_swap, red_bne_swap,
-    realStone_swap, neq_c_swap, eq_copp_swap, noLibD_swapD, hcomp, hs,
-    occD_swapD, stoneTrappedBy_swapD, opp_opp_all, opp_r]
+  simp only [isCaptured, isCapturedOT, residualCap, trappedOnTurn_swapD,
+    red_swap, red_bne_swap, realStone_swap, neq_c_swap, eq_copp_swap,
+    noLibD_swapD, hcomp, hs, occD_swapD, stoneTrappedBy_swapD,
+    stoneTrapped_swapD, opp_opp_all, opp_r]
 
 /-! ### capturedOf and basicCap commute with the swap -/
 
@@ -312,10 +348,7 @@ theorem recolor_excl (D : Display n) (t p : Nat) (hp : p < n*n)
   obtain ⟨pw, hpwb, hpwk, hpwcap, hqwc⟩ := hqwmem
   have hqbboard : qb ∈ allIdx n := componentD_board hpbb hpbk hqbc
   -- unpack the white capture's unambiguity clause
-  have hwc := hpwcap
-  unfold isCaptured at hwc
-  rw [Bool.and_eq_true, Bool.and_eq_true] at hwc
-  have hunamb := hwc.1.2
+  have hunamb := cond2_of_isCaptured hpwcap
   -- p is a red adjacent to comp_w
   have hpred : p ∈ (allIdx n).filter fun z =>
       kindAt D z == some .r && (componentD D pw).any fun q => adjI n z q := by
@@ -328,18 +361,11 @@ theorem recolor_excl (D : Display n) (t p : Nat) (hp : p < n*n)
   have hz := (List.all_eq_true.mp hqball) qb hqbboard
   -- qb is black, adjacent to p, in a captured (trapped) component ≠ comp_w
   have hqbk : kindAt D qb = some .b := componentD_kind D pb .b hpbk qb hqbc
-  have hbc := hpbcap
-  unfold isCaptured at hbc
-  rw [Bool.and_eq_true, Bool.and_eq_true] at hbc
-  have hbtrap := hbc.1.1
   have hqbcomp : ∀ x, x ∈ componentD D qb ↔ x ∈ componentD D pb :=
     componentD_eq_mem D pb qb .b hpbb hpbk hqbc
   have hnolib : noLibD D (componentD D qb) = true := by
     rw [noLibD_congr D _ _ hqbcomp]
-    have := hbtrap
-    unfold trappedOnTurn at this
-    rw [Bool.and_eq_true] at this
-    exact this.1
+    exact noLibD_of_isCaptured hpbcap
   -- comp_w ≠ comp_b (different colors)
   have hne : (!((componentD D qb).all (componentD D pw).contains
       && (componentD D pw).all (componentD D qb).contains)) = true := by
@@ -534,6 +560,44 @@ theorem set_set_comm (D : Display n) (i j : Nat) (ci cj : Cell)
       · rw [get_set_ne (D.set i ci) j p cj hpj, get_set_ne D i p ci hpi,
           get_set_ne (D.set j cj) i p ci hpi, get_set_ne D j p cj hpj]
 
+/-! ### The placement rule is color-symmetric -/
+
+theorem wouldTrap_swapD (D : Display n) (t i : Nat) (c : DKind) :
+    wouldTrap (swapD D) t i c = wouldTrap D t i c.opp := by
+  have hset : (swapD D).set i (some (c, t)) = swapD (D.set i (some (c.opp, t))) := by
+    rw [swapD_set]
+    show (swapD D).set i (some (c, t)) = (swapD D).set i (some (c.opp.opp, t))
+    rw [opp_opp_all]
+  show ((allIdx n).any fun q => adjI n q i
+          && kindAt ((swapD D).set i (some (c, t))) q == some c.opp
+          && noLibD ((swapD D).set i (some (c, t)))
+               (componentD ((swapD D).set i (some (c, t))) q))
+     = ((allIdx n).any fun q => adjI n q i
+          && kindAt (D.set i (some (c.opp, t))) q == some c.opp.opp
+          && noLibD (D.set i (some (c.opp, t)))
+               (componentD (D.set i (some (c.opp, t))) q))
+  rw [hset]
+  congr 1
+  funext q
+  rw [eq_copp_swap, componentD_swapD, noLibD_swapD, opp_opp_all]
+
+theorem adjKind_swapD (D : Display n) (i : Nat) (k : DKind) :
+    adjKind (swapD D) i k = adjKind D i k.opp := by
+  unfold adjKind
+  congr 1
+  funext q
+  rw [eq_c_swap]
+
+theorem conflictKind_swapD (D : Display n) (t i : Nat) :
+    conflictKind (swapD D) t i = (conflictKind D t i).opp := by
+  unfold conflictKind
+  rw [wouldTrap_swapD, wouldTrap_swapD, adjKind_swapD, adjKind_swapD,
+    adjKind_swapD]
+  simp only [opp_b, opp_w, opp_r]
+  by_cases h1 : wouldTrap D t i .b = true <;> by_cases h2 : wouldTrap D t i .w = true <;>
+  by_cases h3 : adjKind D i .b = true <;> by_cases h4 : adjKind D i .w = true <;>
+  by_cases h5 : adjKind D i .r = true <;> simp [h1, h2, h3, h4, h5]
+
 theorem placeJoint_swapD (D : Display n) (t : Nat) (m0 m1 : Option Nat) :
     placeJoint (swapD D) t m1 m0 = swapD (placeJoint D t m0 m1) := by
   cases m0 with
@@ -555,7 +619,8 @@ theorem placeJoint_swapD (D : Display n) (t : Nat) (m0 m1 : Option Nat) :
           = swapD (placeJoint D t (some p0) (some p0))
         simp only [placeJoint]
         rw [if_pos (beq_iff_eq.mpr rfl), if_pos (beq_iff_eq.mpr rfl),
-          swapD_set]; rfl
+          swapD_set, conflictKind_swapD]
+        rfl
       · show placeJoint (swapD D) t (some p1) (some p0)
           = swapD (placeJoint D t (some p0) (some p1))
         simp only [placeJoint]

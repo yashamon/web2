@@ -520,7 +520,8 @@ theorem dead_old_captured (A D : Display n) (t i0 i1 : Nat)
       rfl
   -- assemble the capture
   have hcap : isCaptured E (componentD E z0) kz t = true := by
-    simp only [isCaptured]
+    apply isCaptured_of_OT
+    simp only [isCapturedOT]
     rw [Bool.and_eq_true, Bool.and_eq_true]
     refine ⟨⟨htrap, cond2_true E hclassE (componentD E z0) kz⟩, ?_⟩
     rw [Bool.or_eq_true]
@@ -1088,7 +1089,8 @@ theorem dead_fresh_captured_when_unblocked (A D : Display n)
     rw [hnob z hzE hznc hzany]
     simp
   have hcap : isCaptured E (componentD E z0) kz t = true := by
-    simp only [isCaptured]
+    apply isCaptured_of_OT
+    simp only [isCapturedOT]
     rw [Bool.and_eq_true, Bool.and_eq_true]
     refine ⟨⟨htrap, cond2_true E hclassE (componentD E z0) kz⟩, ?_⟩
     rw [Bool.or_eq_true]

@@ -275,6 +275,51 @@ theorem kd5_kind (hn : 5 ≤ n) (w : Nat) :
   · rw [if_pos h, if_pos h]
   · rw [if_neg h, if_neg h, kd4_kind hn]
 
+theorem kd5_kind_0 (hn : 5 ≤ n) : kindAt (kd5 (n := n)) 0 = some .w := by
+  rw [kd5_kind hn, if_pos rfl]
+
+theorem kd5_kind_n (hn : 5 ≤ n) : kindAt (kd5 (n := n)) n = some .b := by
+  obtain ⟨_, _, _, _, hw1_n, _, _, _, _, _, _, _, hw2_n, _⟩ := pk_ne hn
+  rw [kd5_kind hn, if_neg (by omega), if_neg (Ne.symm hw2_n),
+    if_neg (Ne.symm hw1_n), if_pos rfl]
+
+/-- The witness conflict at A2 is trapping (rule (1) of the placement
+    rule): a black stone at A2 leaves the white A1 without liberties,
+    its other neighbor being the black B1. -/
+theorem kwit_trap1 (hn : 5 ≤ n) {D : Display n} (hsc : SameCells D (kd5 n))
+    (hwf : WFD D) (t : Nat) : wouldTrap D t 1 .b = true := by
+  have hb1 : (1 : Nat) < n*n := (sb hn).2.2.1
+  have hk : ∀ w, kindAt (D.set 1 (some (.b, t))) w
+      = if w = 1 then some .b else kindAt (kd5 (n := n)) w := by
+    intro w
+    rw [kind_set _ _ hb1 hwf]
+    by_cases h : w = 1
+    · rw [if_pos h, if_pos h]
+    · rw [if_neg h, if_neg h, hsc]
+  have hk0 : kindAt (D.set 1 (some (.b, t))) 0 = some .w := by
+    rw [hk 0, if_neg (by omega), kd5_kind_0 hn]
+  have hkn : kindAt (D.set 1 (some (.b, t))) n = some .b := by
+    rw [hk n, if_neg (show n ≠ 1 by omega), kd5_kind_n hn]
+  have hk1 : kindAt (D.set 1 (some (.b, t))) 1 = some .b := by
+    rw [hk 1, if_pos rfl]
+  have hcomp : ∀ q, q ∈ componentD (D.set 1 (some (.b, t))) 0 ↔ q = 0 := by
+    apply comp_singleton _ 0 .w hk0
+    intro q hq hadj
+    rcases nbr_0 (by omega) hadj with h | h
+    · subst h; rw [hk1]; decide
+    · rw [h, hkn]; decide
+  apply wouldTrap_of (q := 0) (sb hn).2.2.2.1 (adj_0_1 (by omega))
+  · show kindAt (D.set 1 (some (.b, t))) 0 = some .w
+    exact hk0
+  · apply noLibD_true_of
+    intro q hq hqocc m hm hadj
+    rw [(hcomp m).mp hm] at hadj
+    rcases nbr_0 (by omega) hadj with h | h
+    · subst h
+      rw [occ_true_of_kind hk1] at hqocc; exact Bool.noConfusion hqocc
+    · rw [h, occ_true_of_kind hkn] at hqocc
+      exact Bool.noConfusion hqocc
+
 /-! ### The setup moves (quiet single placements) -/
 
 theorem adj_2_3 (hn : 5 ≤ n) : adjI n 2 3 = true := by
@@ -1098,7 +1143,9 @@ theorem coll_step (hn : 5 ≤ n) {k : Nat} {s0 : KState n}
   -- the delta computes the collision display and keeps both branches
   have hpj : placeJoint (execV n emptyV s0.disp) s0.next (some 1) (some 1)
       = Dcol s0.disp s0.next := by
-    rw [execV_empty]; exact placeJoint_collision s0.disp s0.next 1
+    rw [execV_empty]
+    show placeJoint s0.disp s0.next (some 1) (some 1) = s0.disp.set 1 (some (.r, s0.next))
+    rw [placeJoint_collision, conflictKind_of_trapB (kwit_trap1 hn hd hwf s0.next)]
   have hdelta : delta n s0.next (placeJoint (execV n emptyV s0.disp) s0.next
       (some 1) (some 1)) dec = (Dcol s0.disp s0.next, recut n (Dcol s0.disp s0.next) dec) := by
     rw [hpj]; exact delta_fix (dcol_round_fix hn hd hwf s0.next s0.next hdecmem)

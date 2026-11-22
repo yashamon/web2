@@ -426,11 +426,63 @@ theorem noLibD_true_of (D : Display n) (comp : List Nat)
       rcases List.any_eq_true.mp hany with ⟨m, hm, hadj⟩
       exact h q (List.mem_range.mp hq) hocc m hm hadj
 
-/-- The collision placement. -/
+/-- The collision placement: the stone of the placement rule. -/
 theorem placeJoint_collision (D : Display n) (t i : Nat) :
-    placeJoint D t (some i) (some i) = D.set i (some (.r, t)) := by
+    placeJoint D t (some i) (some i) = D.set i (some (conflictKind D t i, t)) := by
   simp only [placeJoint]
   rw [if_pos (beq_iff_eq.mpr rfl)]
+
+/-- Rule (1): a trapping conflict places a q-stone. -/
+theorem conflictKind_of_trapB {D : Display n} {t i : Nat}
+    (h : wouldTrap D t i .b = true) : conflictKind D t i = .r := by
+  unfold conflictKind
+  rw [if_pos (by rw [h]; rfl)]
+
+/-- Components read the kinds only. -/
+theorem componentKAux_samecells {D E : Display n} (h : SameCells D E) (k : DKind) :
+    ∀ (fuel : Nat) (comp frontier : List Nat),
+      componentKAux n D k fuel comp frontier
+        = componentKAux n E k fuel comp frontier := by
+  have hk : kindAt D = kindAt E := funext h
+  intro fuel
+  induction fuel with
+  | zero => intro comp frontier; rfl
+  | succ f ih =>
+    intro comp frontier
+    unfold componentKAux
+    rw [hk]
+    cases ((allIdx n).filter fun q =>
+        kindAt E q == some k && !comp.contains q
+          && frontier.any fun r => adjI n q r) with
+    | nil => rfl
+    | cons a l => exact ih (comp ++ (a :: l)) (a :: l)
+
+theorem componentD_samecells {D E : Display n} (h : SameCells D E) (i : Nat) :
+    componentD D i = componentD E i := by
+  unfold componentD
+  rw [h i]
+  cases kindAt E i with
+  | none => rfl
+  | some k => exact componentKAux_samecells h k _ _ _
+
+theorem noLibD_samecells {D E : Display n} (h : SameCells D E) (l : List Nat) :
+    noLibD D l = noLibD E l := by
+  have ho : occD D = occD E := funext (occ_eq_of_samecells h)
+  unfold noLibD
+  rw [ho]
+
+/-- wouldTrap from a neighbor of the other color left without liberties. -/
+theorem wouldTrap_of {D : Display n} {t i q : Nat} {c : DKind} (hq : q < n*n)
+    (hadj : adjI n q i = true)
+    (hk : kindAt (D.set i (some (c, t))) q = some c.opp)
+    (hnl : noLibD (D.set i (some (c, t)))
+      (componentD (D.set i (some (c, t))) q) = true) :
+    wouldTrap D t i c = true := by
+  unfold wouldTrap
+  apply List.any_eq_true.mpr
+  refine ⟨q, List.mem_range.mpr hq, ?_⟩
+  rw [hadj, hk, hnl]
+  simp
 
 /-- With both capture lists empty the basic reduction is the
     identity — no classicality needed. -/
@@ -876,6 +928,26 @@ theorem witP6b_nolibn (hn : 3 ≤ n) :
         if_pos rfl] : kindAt _ (2*n) = some .b)] at hocc
     cases hocc
 
+/-- The witness conflict at A1 is trapping (rule (1) of the placement
+    rule): a black stone at A1 leaves the white A2 without liberties. -/
+theorem wit_trap0 (hn : 3 ≤ n) (D : Display n) (t : Nat) (hwfD : WFD D)
+    (hcells : SameCells D (witD5 (n := n))) :
+    wouldTrap D t 0 .b = true := by
+  have hb0 : (0 : Nat) < n*n := (wb hn).2.2.2.2.2.2.2
+  have hsc : SameCells (D.set 0 (some (.b, t))) (witP6b (n := n)) := by
+    intro w
+    show kindAt (D.set 0 (some (.b, t))) w = kindAt ((witD5).set 0 (some (.b, 0))) w
+    rw [kind_set _ _ hb0 hwfD, kind_set _ _ hb0 witD5_wfd]
+    by_cases h : w = 0
+    · rw [if_pos h, if_pos h]
+    · rw [if_neg h, if_neg h, hcells]
+  apply wouldTrap_of (q := 1) (wb hn).2.1 (adjI_symm (adj_0_1 hn))
+  · show kindAt (D.set 0 (some (.b, t))) 1 = some .w
+    rw [hsc 1, witP6b_kind hn, if_neg (by omega), witD5_kind hn,
+      if_neg (by omega), if_neg (by omega), if_neg (by omega), if_pos rfl]
+  · rw [componentD_samecells hsc, noLibD_samecells hsc]
+    exact witP6b_nolib1 hn
+
 /-- Both whites die to Black's A1. -/
 theorem wit_dead1 (hn : 3 ≤ n) : 1 ∈ deadOppN n (witD5 (n := n)) .b 0 := by
   rw [mem_deadOppN_iff]
@@ -1317,8 +1389,9 @@ theorem wit_display_idle (hn : 3 ≤ n) (D : Display n) (t : Nat)
     occD (resolveTurn D t (some 0) (some 0)) 1 = true := by
   have hb0 : (0 : Nat) < n*n := (wb hn).2.2.2.2.2.2.2
   -- the placed display and its readers
-  have hP6 : placeJoint D t (some 0) (some 0) = placedT D t .r 0 :=
-    placeJoint_collision D t 0
+  have hP6 : placeJoint D t (some 0) (some 0) = placedT D t .r 0 := by
+    show placeJoint D t (some 0) (some 0) = D.set 0 (some (.r, t))
+    rw [placeJoint_collision, conflictKind_of_trapB (wit_trap0 hn D t hwfD hcells)]
   have hk0 : kindAt (placedT D t .r 0) 0 = some .r :=
     pT_kind_self D t .r 0 hwfD hb0
   have hkne : ∀ w, w ≠ 0 →
@@ -1457,8 +1530,8 @@ theorem wit_display_idle (hn : 3 ≤ n) (D : Display n) (t : Nat)
       cases hocc
   -- black components are not trapped: they keep a liberty
   have hnotb : ∀ p, kindAt (placedT D t .r 0) p = some .b →
-      trappedOnTurn (placedT D t .r 0)
-        (componentD (placedT D t .r 0) p) t = false := by
+      noLibD (placedT D t .r 0)
+        (componentD (placedT D t .r 0) p) = false := by
     intro p hkp
     rcases hinv p .b hkp with ⟨-, hk⟩ | ⟨-, hk⟩ | ⟨-, hk⟩
       | ⟨hp, -⟩ | ⟨hp, -⟩ | ⟨hp, -⟩
@@ -1466,31 +1539,19 @@ theorem wit_display_idle (hn : 3 ≤ n) (D : Display n) (t : Nat)
     · exact absurd hk (by decide)
     · exact absurd hk (by decide)
     · subst hp
-      simp only [trappedOnTurn]
-      rw [show noLibD (placedT D t .r 0)
-          (componentD (placedT D t .r 0) 2) = false from
-        (noLibD_eq_false_iff _ _).mpr ⟨n+2,
+      exact (noLibD_eq_false_iff _ _).mpr ⟨n+2,
           List.mem_range.mpr (wb hn).2.2.2.2.2.1, hoccn2, 2,
-          componentD_mem_self _ 2 .b hk2, adjI_symm (adj_2_n2 hn)⟩]
-      rfl
+          componentD_mem_self _ 2 .b hk2, adjI_symm (adj_2_n2 hn)⟩
     · subst hp
-      simp only [trappedOnTurn]
-      rw [show noLibD (placedT D t .r 0)
-          (componentD (placedT D t .r 0) (n+1)) = false from
-        (noLibD_eq_false_iff _ _).mpr ⟨n+2,
+      exact (noLibD_eq_false_iff _ _).mpr ⟨n+2,
           List.mem_range.mpr (wb hn).2.2.2.2.2.1, hoccn2, n+1,
           componentD_mem_self _ (n+1) .b hkn1,
-          adjI_symm (adj_n1_n2 hn)⟩]
-      rfl
+          adjI_symm (adj_n1_n2 hn)⟩
     · subst hp
-      simp only [trappedOnTurn]
-      rw [show noLibD (placedT D t .r 0)
-          (componentD (placedT D t .r 0) (2*n)) = false from
-        (noLibD_eq_false_iff _ _).mpr ⟨2*n+1,
+      exact (noLibD_eq_false_iff _ _).mpr ⟨2*n+1,
           List.mem_range.mpr (wb hn).2.2.2.2.2.2.1, hocc2n1, 2*n,
           componentD_mem_self _ (2*n) .b hk2n,
-          adjI_symm (adj_2n_2n1 hn)⟩]
-      rfl
+          adjI_symm (adj_2n_2n1 hn)⟩
   -- nothing black is captured
   have hcapb : capturedOf (placedT D t .r 0) t .b = [] := by
     cases hcl : capturedOf (placedT D t .r 0) t .b with
@@ -1501,14 +1562,10 @@ theorem wit_display_idle (hn : 3 ≤ n) (D : Display n) (t : Nat)
         rw [hcl]
         exact List.mem_cons_self y tl
       rcases (mem_capturedOf _ t .b y).mp hy with ⟨p, -, hkp, hcap, -⟩
-      have htr : trappedOnTurn (placedT D t .r 0)
-          (componentD (placedT D t .r 0) p) t = true := by
-        have h := hcap
-        simp only [isCaptured] at h
-        rw [Bool.and_eq_true, Bool.and_eq_true] at h
-        exact h.1.1
-      rw [hnotb p hkp] at htr
-      exact Bool.noConfusion htr
+      -- each route of def_captured needs a trapped component
+      have hnl := noLibD_of_isCaptured hcap
+      rw [hnotb p hkp] at hnl
+      exact Bool.noConfusion hnl
   -- the recolored q-stone: trapped by the defender
   have hstone0 : stoneTrappedBy (placedT D t .r 0) 0 .w t = true := by
     simp only [stoneTrappedBy, hk0, DKind.opp]
@@ -1614,9 +1671,19 @@ theorem wit_display_idle (hn : 3 ≤ n) (D : Display n) (t : Nat)
               (hcompp 0).mp (List.contains_iff_mem.mp hcnt)
             rcases hp1n with h | h <;> omega
         · exact List.any_eq_true.mpr ⟨p, (hcompp p).mpr rfl, hadj0⟩
+      -- the residual route (Condition 4) fails at the q-stone as 3a does
+      rcases (isCaptured_cases hcap).symm with hres | h
+      · simp only [residualCap, Bool.and_eq_true] at hres
+        have hbody := List.all_eq_true.mp hres.2 0 h0fil
+        rw [show (kindAt (placedT D t .r 0) 0 == some DKind.w.opp
+            || kindAt (placedT D t .r 0) 0 == some DKind.r) = true from by
+          rw [hk0]
+          apply bool_or_right
+          exact beq_iff_eq.mpr rfl] at hbody
+        rw [Bool.true_and, stoneTrapped_of_stoneTrappedBy hstone0] at hbody
+        cases hbody
       -- extract the or of 3a and 3b and refute both
-      have h := hcap
-      simp only [isCaptured] at h
+      simp only [isCapturedOT] at h
       rw [Bool.and_eq_true, Bool.and_eq_true] at h
       rcases bool_or_elim h.2 with h3a | h3b
       · have hbody := List.all_eq_true.mp h3a 0 h0fil

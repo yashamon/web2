@@ -396,6 +396,98 @@ theorem own_color_comp_not_trapped
         (pT_kind_self D t c z' hwfD hi) m hm hadjm)
     · exact pT_stamp_old D t c i hst z' hz'i
 
+/-- Condition 4 adds nothing at the placement turn: on the singly
+    placed display a libertyless component holds the fresh stone (the
+    mover's color: A is legal) or touches it (the opposite color), so it
+    is trapped on the turn. -/
+theorem pT_trapped_on_t
+    (t : Nat) (A D : Display n) (c : DKind) (i : Nat)
+    (hwfA : WFD A) (hwfD : WFD D) (hi : i < n*n) (hc : c ≠ .r)
+    (hclass : IsClassical A) (hlegal : IsLegal A)
+    (hcells : SameCells D A) (hst : StampsBelow D t)
+    (hemp : occD A i = false)
+    (p : Nat) (k : DKind) (hkp : kindAt (placedT D t c i) p = some k)
+    (hnl : noLibD (placedT D t c i)
+      (componentD (placedT D t c i) p) = true) :
+    trappedOnTurn (placedT D t c i) (componentD (placedT D t c i) p) t
+      = true := by
+  have hle := pT_stamp_le D t c i hwfD hi hst
+  by_cases hip : i ∈ componentD (placedT D t c i) p
+  · exact trappedOnTurn_of_member _ _ t hnl (fun z _ => hle z)
+      (fun z hz => occD_of_kind (componentD_kind _ p k hkp z hz))
+      i hip (pT_stamp_self D t c i hwfD hi)
+  · have hknr : k ≠ .r := fun h =>
+      (pT_classical t A D c i hwfD hi hcells hclass hc) p (h ▸ hkp)
+    rcases kind_c_or_opp c k hc hknr with hkc | hkopp
+    · -- the mover's color without the fresh stone: impossible, A legal
+      exfalso
+      subst hkc
+      have hpi : p ≠ i := by
+        intro h
+        apply hip
+        have hm := componentD_mem_self (placedT D t k i) p k hkp
+        rw [h] at hm ⊢
+        exact hm
+      have hkpA : kindAt A p = some k := by
+        rw [← hcells p, ← pT_kind_ne D t k i p hpi]
+        exact hkp
+      have hsub := componentD_transport_rel A (placedT D t k i) k p hkpA
+        (fun m hm => by
+          have hkmA := componentD_kind A p k hkpA m hm
+          have hmi : m ≠ i := by
+            intro h
+            rw [h] at hkmA
+            have hocc := occD_of_kind hkmA
+            rw [hemp] at hocc
+            exact Bool.noConfusion hocc
+          rw [pT_kind_ne D t k i m hmi, hcells m]
+          exact hkmA)
+      rcases (noLibD_eq_false_iff _ _).mp (hlegal p (occD_of_kind hkpA))
+        with ⟨q, hqb, hqemp, w, hw, hadj⟩
+      have hwT := hsub w hw
+      by_cases hqi : q = i
+      · subst hqi
+        exact hip (componentD_maximal _ p k hkp q hqb
+          (pT_kind_self D t k q hwfD hi) w hwT hadj)
+      · have hqP : occD (placedT D t k i) q = false := by
+          rw [pT_occ_ne D t k i q hqi, occ_eq_of_samecells hcells q]
+          exact hqemp
+        have hlib := (noLibD_eq_false_iff _ _).mpr ⟨q, hqb, hqP, w, hwT, hadj⟩
+        rw [hnl] at hlib
+        exact Bool.noConfusion hlib
+    · -- the opposite color: its last liberty was the placement
+      subst hkopp
+      have hkPL : kindAt (placedN n A c i) p = some c.opp := by
+        rw [← pT_samecells t A D c i hwfA hwfD hi hcells p]
+        exact hkp
+      have hcompiff := pT_comp t A D c i hwfA hwfD hi hcells p c.opp hkp
+      have hnlPL : noLibD (placedN n A c i)
+          (componentD (placedN n A c i) p) = true := by
+        rw [← noLibD_congr _ _ _ hcompiff,
+          ← pT_noLib t A D c i hwfA hwfD hi hcells]
+        exact hnl
+      rcases dead_adjacent_opp A c i hwfA hi hc hlegal hemp p hkPL hnlPL
+        with ⟨w, hwPL, hadj⟩
+      exact trapped_on_t _ t hle _ hnl i hi (pT_occ_self D t c i hwfD hi)
+        (pT_stamp_self D t c i hwfD hi) hip
+        (List.any_eq_true.mpr ⟨w, (hcompiff w).mpr hwPL, hadj⟩)
+
+/-- So a capture at the placement turn satisfies Conditions 1-3. -/
+theorem pT_isCapturedOT
+    (t : Nat) (A D : Display n) (c : DKind) (i : Nat)
+    (hwfA : WFD A) (hwfD : WFD D) (hi : i < n*n) (hc : c ≠ .r)
+    (hclass : IsClassical A) (hlegal : IsLegal A)
+    (hcells : SameCells D A) (hst : StampsBelow D t)
+    (hemp : occD A i = false)
+    (p : Nat) (k : DKind) (hkp : kindAt (placedT D t c i) p = some k)
+    (hcap : isCaptured (placedT D t c i)
+      (componentD (placedT D t c i) p) k t = true) :
+    isCapturedOT (placedT D t c i) (componentD (placedT D t c i) p) k t
+      = true :=
+  isCapturedOT_of_isCaptured hcap
+    (pT_trapped_on_t t A D c i hwfA hwfD hi hc hclass hlegal hcells hst
+      hemp p k hkp (noLibD_of_isCaptured hcap))
+
 /-- Bool bridge: the right disjunct decides an or. -/
 theorem bool_or_right {a b : Bool} (h : b = true) : (a || b) = true := by
   rw [h]
@@ -419,8 +511,9 @@ theorem capturedOf_opp_iff
     rcases (mem_capturedOf _ t c.opp x).mp hx with ⟨p, hpb, hkp, hcap, hxc⟩
     have htrap : trappedOnTurn (placedT D t c i)
         (componentD (placedT D t c i) p) t = true := by
-      have h := hcap
-      simp only [isCaptured] at h
+      have h := pT_isCapturedOT t A D c i hwfA hwfD hi hc hclass hlegal
+        hcells hst hemp p c.opp hkp hcap
+      simp only [isCapturedOT] at h
       rw [Bool.and_eq_true, Bool.and_eq_true] at h
       exact h.1.1
     have hnlP : noLibD (placedT D t c i)
@@ -475,7 +568,8 @@ theorem capturedOf_opp_iff
       exact List.any_eq_true.mpr ⟨w, hwP, hadj⟩
     have hcap : isCaptured (placedT D t c i)
         (componentD (placedT D t c i) x) c.opp t = true := by
-      simp only [isCaptured]
+      apply isCaptured_of_OT
+      simp only [isCapturedOT]
       rw [Bool.and_eq_true, Bool.and_eq_true]
       refine ⟨⟨htrap, cond2_true _
         (pT_classical t A D c i hwfD hi hcells hclass hc) _ c.opp⟩, ?_⟩
@@ -608,11 +702,13 @@ theorem capturedOf_own_nosui
     have hy : y ∈ capturedOf (placedT D t c i) t c := by
       rw [hcl]
       exact List.mem_cons_self y tl
-    rcases (mem_capturedOf _ t c y).mp hy with ⟨p, hpb, hkp, hcap, _⟩
+    rcases (mem_capturedOf _ t c y).mp hy with ⟨p, hpb, hkp, hcap0, _⟩
+    have hcap := pT_isCapturedOT t A D c i hwfA hwfD hi hc hclass hlegal
+      hcells hst hemp p c hkp hcap0
     have htrap : trappedOnTurn (placedT D t c i)
         (componentD (placedT D t c i) p) t = true := by
       have h := hcap
-      simp only [isCaptured] at h
+      simp only [isCapturedOT] at h
       rw [Bool.and_eq_true, Bool.and_eq_true] at h
       exact h.1.1
     by_cases hip : i ∈ componentD (placedT D t c i) p
@@ -685,7 +781,7 @@ theorem capturedOf_own_nosui
           simp
         have h3or := by
           have h := hcap
-          simp only [isCaptured] at h
+          simp only [isCapturedOT] at h
           rw [Bool.and_eq_true, Bool.and_eq_true] at h
           exact h.2
         rcases bool_or_elim h3or with h3a | h3b
@@ -816,7 +912,8 @@ theorem capturedOf_own_sui
     exact hnlPL
   have hcap : isCaptured (placedT D t c i)
       (componentD (placedT D t c i) i) c t = true := by
-    simp only [isCaptured]
+    apply isCaptured_of_OT
+    simp only [isCapturedOT]
     rw [Bool.and_eq_true, Bool.and_eq_true]
     refine ⟨⟨?_, cond2_true _
       (pT_classical t A D c i hwfD hi hcells hclass hc) _ c⟩, ?_⟩
@@ -881,8 +978,9 @@ theorem capturedOf_own_sui
     · exfalso
       have htrapp : trappedOnTurn (placedT D t c i)
           (componentD (placedT D t c i) p) t = true := by
-        have h := hcapp
-        simp only [isCaptured] at h
+        have h := pT_isCapturedOT t A D c i hwfA hwfD hi hc hclass hlegal
+          hcells hst hemp p c hkp hcapp
+        simp only [isCapturedOT] at h
         rw [Bool.and_eq_true, Bool.and_eq_true] at h
         exact h.1.1
       rw [own_color_comp_not_trapped t ht D c i hwfD hi hst p hkp hip]

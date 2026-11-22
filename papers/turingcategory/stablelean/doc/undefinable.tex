@@ -1,0 +1,378 @@
+\documentclass{amsart}  %[12pt] %\textwidth=125mm \usepackage{etoolbox}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip} 
+\usepackage{amsfonts, amscd, mathrsfs, amsmath, amssymb, amsthm}
+\usepackage{url}
+\usepackage[backref]{hyperref}
+\hypersetup{pdfpagemode=FullScreen,colorlinks=true}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{color, verbatim}
+\usepackage{bm}
+\usepackage[hmargin=3cm,vmargin=3cm]{geometry}
+% \usepackage[
+%     backend=biber,
+%     % defernumbers=true,
+%     style=numeric,
+%     % autocite=plain, 
+%     sorting=none,
+%     % sortlocale=us_US,
+%     % natbib=true,
+%     url=true, 
+%     doi=false,
+%     eprint=true
+% ]{biblatex}
+% \addbibresource{~/workspacemodules/link.bib}
+\usepackage{indentfirst}
+
+\newenvironment{itquote}
+  {\begin{quote}\itshape}
+  {\end{quote}\ignorespacesafterend}
+\newenvironment{itpars}
+  {\par\itshape}
+  {\par}
+
+\numberwithin{equation}{section}
+\newtheorem{thm}[equation]{Theorem} 
+\newtheorem{axiom}[equation]{Axiom} 
+\newtheorem{pseudotheorem}[equation]{Pseudo-theorem} 
+\newtheorem{theorem}[equation]{Theorem} 
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{lma}[equation]{Lemma} 
+\newtheorem{lemma}[equation]{Lemma} 
+\newtheorem{cpt}[equation]{Computation} 
+\newtheorem{corollary}[equation]{Corollary} 
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{clm}[equation]{Claim} 
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{definition}[equation]{Definition}
+\theoremstyle{definition}
+% \newtheorem{definition}[equation]{Definition}
+\newtheorem{ft}{Fact}
+\newtheorem{notation}[equation]{Notation}
+\newtheorem{descr}{Description}[equation]
+
+\theoremstyle{remark}
+\newtheorem*{pf}{Proof}
+\newtheorem*{pfs}{Proof (sketch)}
+\newtheorem{example}[equation]{Example}
+\newtheorem{question}[equation]{Question}
+\newtheorem{objection}{Objection}
+\newtheorem{claim}{Claim}
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+% \newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\D}{{\mathbb{D}}}
+\newcommand{\HH}{{\mathbb{H}}}
+
+\newcommand{\bs}{\bigskip}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\del}{\partial}
+\newcommand{\ddel}[1]{\frac{\partial}{\partial{#1}}}
+\newcommand{\sm}[1]{C^\infty(#1)}
+
+\newcommand{\delbar}{\overline{\partial}}
+\newcommand{\Sum}{\Sigma}
+% \newcommand{\G}{\mathcal{G}}
+\newcommand{\Pe}{\mathcal{P}}
+\newcommand{\X}{\mathfrak{X}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\K}{\mathcal{K}}
+
+\newcommand{\ZZ}{\mathcal{Z}}
+\newcommand{\eL}{\mathcal{L}}
+
+\newcommand{\mone}{{-1}}
+\newcommand{\st}{{^s_t}}
+\newcommand{\oi}{_0^1}
+\newcommand{\intoi}{\int_0^1}
+\newcommand{\til}[1]{\widetilde{#1}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\arr}[1]{\overrightarrow{#1}}
+\newcommand{\paph}[1]{\{ #1 \}_{t=0}^1}
+\newcommand{\con}{\#\;}
+\newcommand{\codim}{\text{codim}}
+\newcommand {\ham} {\text{Ham} (M, \omega)}
+\newcommand {\isom} {\text{Isom} ^{h}  (M, \omega, j)}
+\newcommand {\lham} {lie \text{Ham} (M, \omega)}
+\newcommand {\hamcp} {\text{Ham} (\mathbb{CP} ^{r-1}, \omega )}
+\newcommand{\overbar}{\overline}
+\newcommand {\vM} {{(T^*)} ^{vert} \cM}
+\newcommand{\om}{\omega}
+\newcommand{\al}{\alpha}
+\newcommand{\la}{\lambda}
+\newcommand{\Om}{\Omega}
+\newcommand{\ga}{\gamma}
+\newcommand{\eps}{\epsilon}
+
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+% \newcommand{\cJ}{\mathcal{J}}
+
+%\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cS}{\mathcal{S}}
+
+\newcommand{\cU}{\mathcal{U}}
+
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cM}{\bm{M}}
+\newcommand{\cP}{\bm{P}}
+\newcommand{\cL}{\bm{L}}
+
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fk}{\mathfrak{k}}
+\newcommand{\fg}{\mathfrak{g}}
+% \newcommand{\fz}{\mathfrak{z}}
+\newcommand{\fZ}{\mathfrak{Z}}
+\newcommand\vol{\operatorname{vol}}
+\newcommand {\hatcp}{\widehat{\mathbb {CP}} ^{r-1} }
+\newcommand{\rJ}{\mathrm{J}}
+\newcommand{\rB}{\mathrm{B}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand {\Hpm} {\mathcal{H}^{\pm}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\dividor}{\, | \,}
+
+\DeclareMathOperator {\period} {period}
+\DeclareMathOperator {\sign} {sign}
+\DeclareMathOperator {\Id} {Id}
+\DeclareMathOperator {\halt} {halt}
+
+\DeclareMathOperator {\floor} {floor}
+\DeclareMathOperator {\ceil} {ceil}
+\DeclareMathOperator {\mult} {mult}
+\DeclareMathOperator {\Symp} {Symp}
+\DeclareMathOperator {\Det} {Det}
+\DeclareMathOperator {\comp} {comp}
+\DeclareMathOperator {\growth} {growth}
+\DeclareMathOperator {\energy} {energy}
+\DeclareMathOperator {\Reeb} {Reeb}
+\DeclareMathOperator {\Lin} {Lin}
+\DeclareMathOperator {\Diff} {Diff}
+\DeclareMathOperator {\fix} {fix}
+% \newcommand{\M}{\mathbb{CP} ^{r-1} }
+\DeclareMathOperator {\grad} {grad}
+\DeclareMathOperator {\area} {area}
+\DeclareMathOperator {\diam} {diam}
+% \DeclareMathOperator {\rank} {rank}
+\DeclareMathOperator {\dvol} {dvol}
+\DeclareMathOperator {\quant} {Quant}
+\DeclareMathOperator {\ho} {ho}
+\DeclareMathOperator {\length} {length}
+\DeclareMathOperator {\Proj} {P}
+\renewcommand{\i}{\sqrt{-1}}
+\DeclareMathOperator{\mVol}{\mathrm{Vol}(M_0,\omega_0)}
+\DeclareMathOperator{\Lie}{\mathrm{Lie}}
+\DeclareMathOperator{\lie}{\mathrm{lie}}
+\DeclareMathOperator{\op}{\mathrm{op}}
+\DeclareMathOperator{\rank}{\mathrm{rank}}
+\DeclareMathOperator{\ind}{\mathrm{ind}}
+\DeclareMathOperator{\trace}{\mathrm{trace}}
+\DeclareMathOperator{\image}{\mathrm{image}}
+\DeclareMathOperator{\domain}{\mathrm{domain}}
+\DeclareMathOperator{\Sym}{\mathrm{Sym}}
+\DeclareMathOperator{\Ham}{\mathrm{Ham}}
+\DeclareMathOperator{\Aut}{\mathrm{Aut}}
+\DeclareMathOperator{\Quant}{\mathrm{Quant}}
+\DeclareMathOperator{\Fred}{\mathrm{Fred}}
+\DeclareMathOperator{\id}{\mathrm{1}}
+\DeclareMathOperator{\lcs}{l.c.s.}
+\DeclareMathOperator{\lcsm}{l.c.s.m.}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\coker}{coker}
+
+\begin{document}
+\title{A translation inducing an undefinable theory}
+\author{Yasha Savelyev}
+\begin{abstract}
+This note accompanies the paper \emph{Incompleteness theorems via stable computability} and its Lean 4 formalization. It contains the proofs of the two statements on translations in Remark 5.25 of the paper. They are Propositions \ref{proposition_undefinable} and \ref{proposition_undefinableZFC} below. The note was Appendix B of an earlier version of the paper, and keeps its numbering. Notation, and references to numbered statements and sections outside this note, are those of the paper. In particular $\mathcal{A}$ and $\mathcal{Z}$ are the languages of arithmetic and of set theory, $a ^{\ast}$ is the standard interpretation of a sentence $a$ of $\mathcal{A}$ in set theory, and the meta-theory is $ZFC$.
+\end{abstract}
+\maketitle
+\setcounter{section}{1}
+\renewcommand{\thesection}{\Alph{section}}
+\section{A translation inducing an undefinable theory} \label{section_undefinable}
+We first fix some notation for translations, Definition 2.6. It is used only in this note.
+
+A translation $i: \mathcal{L}' \to \mathcal{L}$ may be computable, as $i _{\mathcal{A}, \mathcal{Z}}$ is. The following weakens this property.
+\begin{definition}\label{definition_ntranslation}
+ For
+a translation $i: \mathcal{A} \to \mathcal{L} $, if the 
+restriction of $i$ to the subset of $\Sigma ^{0} _{n}$
+sentences (a computable subset of $\mathcal{A}$, with the induced encoding) is computable we say that $i$ is
+an \textbf{\emph{$n$-translation}}. Likewise, for a translation $i: \mathcal{Z} \to \mathcal{L}$ we say it is an $n$-translation if the composite translation $j := i \circ i _{\mathcal{A}, \mathcal{Z}}: \mathcal{A} \to \mathcal{L}$, where $i _{\mathcal{A}, \mathcal{Z}}$ is the translation of Example 2.8, is an $n$-translation.
+\end{definition}
+
+
+
+
+\begin{definition}
+\label{definition_inducedtheory} Given a translation $i: \mathcal{L}'
+\to \mathcal{L} $ and an $\mathcal{L} $-theory $F$, we set $$F
+_{i, \mathcal{L}'} = i ^{-1} (\overline{F}) \subset
+\mathcal{L}'. $$ To paraphrase, this is the set of $\mathcal{L}'$-sentences proved by $F$ under the given translation. We call it the \textbf{\emph{theory induced}} by $F$ through $i$.
+\end{definition}
+
+The following is immediate from the definitions, by property (2) of a translation.
+\begin{lemma} \label{lemma_inducedclosed} For $\mathcal{L}, \mathcal{L}',
+i, F$ as above, $F _{i,\mathcal{L}'}$ is a deductively closed
+theory.
+\end{lemma}
+%.
+% Note that $F _{\mathcal{L}'}$ may not be $\mathcal{L}'
+% $-definable even if $F$ is c.e., because $emb$ is
+% not assumed to be computable.
+\begin{definition}\label{definition_interprets}
+For a given translation $i: \mathcal{L}' \to  \mathcal{L}
+$, given an $\mathcal{L} $-theory $F$ and a sentence $\alpha
+\in \mathcal{L}'$,  we write $F \vdash ^{i}  \alpha$ if
+\begin{equation*}
+F _{i,\mathcal{L}'} \vdash \alpha. 
+\end{equation*}
+Likewise, for an $\mathcal{L}'$-theory $F'$ we write $F \vdash ^{i} F'$ if $F \vdash ^{i} \alpha$ for every $\alpha \in F'$, and we write $F \nvdash ^{i} \alpha$ if $F \vdash ^{i} \alpha$ fails. 
+\end{definition}
+\begin{lemma} \label{lemma_vdashi}
+For $i: \mathcal{L}' \to \mathcal{L}$ a translation, $F$ an $\mathcal{L}$-theory and $\alpha \in \mathcal{L}'$: $F \vdash ^{i} \alpha$ if and only if $F \vdash i (\alpha)$.
+\end{lemma}
+\begin{proof}
+If $F \vdash i (\alpha)$ then $\alpha \in i ^{-1} (\overline{F}) = F _{i, \mathcal{L}'}$, so $F \vdash ^{i} \alpha$. Conversely if $F _{i, \mathcal{L}'} \vdash \alpha$ then $\alpha \in F _{i, \mathcal{L}'}$ by Lemma \ref{lemma_inducedclosed}, that is $i (\alpha) \in \overline{F}$, so $F \vdash i (\alpha)$.
+\end{proof}
+\begin{definition} \label{definition_relative}
+Let $F$ be a theory in a first order language $\mathcal{L}$, and let $i: \mathcal{A} \to \mathcal{L}$ be a translation. We say that $F$ is \textbf{\emph{$1$-consistent relative to $i$}}, resp. \textbf{\emph{$2$-consistent relative to $i$}}, resp. \textbf{\emph{$\Sigma _{n}$-sound relative to $i$}}, if the induced theory $F _{i, \mathcal{A}}$ is $1$-consistent, resp. $2$-consistent, resp. $\Sigma _{n}$-sound, see Definitions 2.9 and 6.5. For a translation $i: \mathcal{Z} \to \mathcal{L}$, these notions relative to $i$ mean the same notions relative to $j := i \circ i _{\mathcal{A}, \mathcal{Z}}$.
+\end{definition}
+By Definition \ref{definition_interprets}, these are the conditions of Definitions 2.9 and 6.5 with $\vdash ^{i}$ in place of $\vdash$. By Lemma \ref{lemma_vdashi}, $\Sigma _{n}$-soundness relative to $i$ depends only on the restriction of $i$ to $\Sigma ^{0} _{n}$ sentences. Lemma 6.6, applied to $F _{i, \mathcal{A}}$, gives its parts (1) and (2) relative to $i$, with the hypothesis $F \vdash ^{i} Q$ in (1).
+
+An $(n+1)$-translation $i: \mathcal{A} \to \mathcal{L}$ is computable on the set $\mathcal{B} _{n+1}$ of Section 6, as it preserves the connectives and $Q$ has finitely many axioms. So Example 5.23 applies to $2$-translations, and its form at level $n$ applies to $(n+1)$-translations. In the notation above, the first part of that example reads as follows. The set $i ^{-1} (\overline{F _{1}})$ is the induced theory $(F _{1}) _{i, \mathcal{A}}$. The hypotheses read: $F _{1}$ is $1$-consistent, resp. $2$-consistent, relative to $i$. The conclusions read: $F _{1} \nvdash ^{i} \mathcal{G} (T)$, resp. $F _{1} \nvdash ^{i} \neg \mathcal{G} (T)$. In the last part, $i$ is a translation $\mathcal{Z} \to \mathcal{L}$. There $H$ is the induced theory $(F _{1}) _{i, \mathcal{Z}}$, and $j ^{-1} (\overline{F _{1}})$ is $(F _{1}) _{j, \mathcal{A}}$. The hypotheses read: $F _{1} \vdash ^{i} ZFC$, and $F _{1}$ is $1$-consistent relative to $j$. The conclusion reads: $F _{1} \nvdash ^{i} Con _{1} (T) ^{\ast}$. Here we use Lemma \ref{lemma_vdashi}.
+
+The induced theory $F _{i, \mathcal{L}'}$ need not be arithmetical, even for $F = PA$ and $\mathcal{L}' = \mathcal{L} = \mathcal{A}$. This instance, and that of Proposition \ref{proposition_undefinableZFC} below, are examples for Section 5.2: translations whose induced theories are not arithmetical. The translation $j$ of the next proposition is the identity on $\Sigma ^{0} _{2}$ sentences, so Example 5.23 applies to $PA$ and $j$; the undefinability sits in how $j$ moves the sentences of higher complexity.
+\begin{proposition} \label{proposition_undefinable}
+There is a $2$-translation $j: \mathcal{A} \to \mathcal{A}$, equal to the identity on $\Sigma ^{0} _{2}$ and on $\Pi ^{0} _{2}$ sentences, s.t.\ neither $PA _{j, \mathcal{A}}$ nor $Q _{j, \mathcal{A}}$ is arithmetical, and $PA$ and $Q$ are $1$- and $2$-consistent relative to $j$.
+\end{proposition}
+We take both quantifiers as primitive symbols. So every sentence is uniquely a Boolean combination of \emph{prime} sentences: atomic sentences and sentences beginning with a quantifier. The prime sentences occurring in this combination are the \emph{prime constituents} of the sentence. Let $\mathcal{B} \subset \mathcal{A}$ be the set of Boolean combinations of $\Sigma ^{0} _{2}$ and $\Pi ^{0} _{2}$ sentences, and $Tr _{\mathcal{B}}$ the set of its true elements, a $\Delta ^{0} _{3}$ set. $\ulcorner \beta \urcorner$ denotes the numeral of the code of $\beta$. We use three classical facts. In the first two, $PA _{r}$ is the conjunction of the axioms of a finite fragment of $PA$, with $r$ fixed large enough for both.
+\begin{enumerate}
+\item (Partial truth definition.) There is a $\Sigma ^{0} _{3}$ formula $Sat _{\mathcal{B}} (v)$ of $\mathcal{A}$, true in $\mathbb{N}$ only at codes of sentences of $\mathcal{B}$, s.t. $PA _{r} \vdash \beta \leftrightarrow Sat _{\mathcal{B}} (\ulcorner \beta \urcorner)$ for every $\beta \in \mathcal{B}$. Indeed, a computable map sends each $\beta \in \mathcal{B}$ to a logically equivalent $\Sigma ^{0} _{3}$ sentence; compose it with the partial truth definition for $\Sigma ^{0} _{3}$ sentences, see~\cite[Chapter I, Section 1(d)]{cite_HajekPudlak1993Metamathematics}.
+\item (Arithmetized completeness.) For a formula $\tau (v)$ of $\mathcal{A}$ let $Con _{\tau}$ be the sentence ``no derivation from sentences whose codes satisfy $\tau$ ends in $\neg (0 = 0)$''. For every $\Sigma ^{0} _{3}$ formula $\tau$ there is an interpretation $\iota _{\tau}$ of $\mathcal{A}$ in $\mathcal{A}$, computable from $\tau$, with the following property. For every model $M$ of $PA _{r} \land Con _{\tau}$, the structure $M ^{\iota _{\tau}}$ that $\iota _{\tau}$ defines in $M$ satisfies every sentence $\beta$ with $M \models \tau (\ulcorner \beta \urcorner)$. This is the Hilbert--Bernays arithmetized completeness theorem, see~\cite[Chapter I, Section 4]{cite_HajekPudlak1993Metamathematics}. For a theory defined by a $\Sigma ^{0} _{n+1}$ formula the formalized Henkin construction is carried out in $I \Sigma _{n+1}$ in~\cite{cite_McAloon1978Completeness}, see also~\cite[Fact 3.17]{cite_Blanck2021Hierarchical}; here $n = 2$. For an interpretation $\iota$ and a sentence $\beta$ let $\beta ^{\iota}$ be its $\iota$-translation. The map $\beta \mapsto \beta ^{\iota}$ is computable and commutes with the connectives, and $M \models \beta ^{\iota}$ iff $M ^{\iota} \models \beta$ whenever $M ^{\iota}$ is defined, $M ^{\iota}$ being the quotient by the interpretation of equality, a congruence.
+\item The set of true $\Pi ^{0} _{3}$ sentences is $\Pi ^{0} _{3}$-complete, so it is not $\Sigma ^{0} _{3}$, see~\cite[Theorem 4.2.2 and Corollary 4.2.3]{cite_Soare}.
+\end{enumerate}
+\begin{proof} [Proof of Proposition \ref{proposition_undefinable}]
+Fix a computable bijective enumeration $(b _{k}) _{k \in \mathbb{N}}$ of the sentences of $\mathcal{A}$. For a sentence $b$ let $k (b)$ be its index, and let $b ^{\mathbb{N}} := b$ if $\mathbb{N} \models b$ and $b ^{\mathbb{N}} := \neg b$ otherwise. An empty conjunction is read as $0 = 0$, an empty disjunction as $\neg (0 = 0)$. Fix $X \subset \mathbb{N}$ not computable from the set of true sentences of $\mathcal{A}$. We construct false, pairwise inconsistent sentences $\epsilon _{n}$, computably in the set of true sentences, and interpretations $\iota _{n}$ of $\mathcal{A}$ in $\mathcal{A}$. The translation $j$ is then defined so that, on the models of $\epsilon _{n}$ with $n \in X$, $j (b)$ is equivalent to $b ^{\iota _{n}}$, and on all other structures to $b$. This makes $\neg \epsilon _{n} \in F _{j, \mathcal{A}}$ iff $n \in X$, for $F = PA$ and $F = Q$.
+
+\emph{Construction.} By recursion on $n$ we define sentences $d _{n}$, $x _{n}$, $\epsilon _{n}$, true, true and false in $\mathbb{N}$ respectively, and an interpretation $\iota _{n}$. Suppose $d _{m}$, $\epsilon _{m}$ are defined for $m < n$. Let $\rho _{n} := \neg \bigwedge _{k \leq n} b _{k} ^{\mathbb{N}} \lor \bigvee _{m < n} \epsilon _{m}$, a false sentence. Let $d _{n}$ be the first true $\Pi ^{0} _{3}$ sentence $d$ in the enumeration with $Tr _{\mathcal{B}} \nvdash d \lor \rho _{n}$. It exists: otherwise every true $\Pi ^{0} _{3}$ sentence $d$ would satisfy $Tr _{\mathcal{B}} \vdash d \lor \rho _{n}$, and conversely $Tr _{\mathcal{B}} \vdash d \lor \rho _{n}$ gives $\mathbb{N} \models d$, as $Tr _{\mathcal{B}}$ is true and $\rho _{n}$ false; so the set of true $\Pi ^{0} _{3}$ sentences would be $\Sigma ^{0} _{3}$, being $\Sigma ^{0} _{1}$ in the $\Delta ^{0} _{3}$ set $Tr _{\mathcal{B}}$, contradicting fact (3). Let $\tau _{n} (v)$ be a $\Sigma ^{0} _{3}$ formula logically equivalent to
+$$\text{``$Sat _{\mathcal{B}} (v)$, or $v$ is the code of one of $b _{0} ^{\mathbb{N}}, \ldots, b _{n} ^{\mathbb{N}}, \neg \epsilon _{0}, \ldots, \neg \epsilon _{n-1}, \neg d _{n}$''},$$
+and $U _{n}$ the set of sentences it defines in $\mathbb{N}$: $U _{n} = Tr _{\mathcal{B}} \cup \{b _{k} ^{\mathbb{N}}\} _{k \leq n} \cup \{\neg \epsilon _{m}\} _{m < n} \cup \{\neg d _{n}\}$. It is consistent, as $Tr _{\mathcal{B}} \nvdash d _{n} \lor \rho _{n}$. Let $\iota _{n} := \iota _{\tau _{n}}$ and $x _{n} := PA _{r} \land Con _{\tau _{n}}$, a true sentence. Let
+$$w _{n} := x _{n} \land \bigwedge _{k \leq n} b _{k} ^{\mathbb{N}} \land \bigwedge _{m < n} (\neg \epsilon _{m} \land d _{m}) \land d _{n},$$
+a true sentence. $PA + w _{n}$ is a consistent c.e.\ theory, so it is incomplete, and some true sentence $b _{t}$ is not provable in it; then $PA + w _{n} + \neg b _{t}$ is consistent. Let $t (n)$ be the least such $t$ and $\epsilon _{n} := w _{n} \land \neg b _{t (n)}$. So $\epsilon _{n}$ is false, and $PA + \epsilon _{n}$ is consistent. Each step is a search or a test computable from the set of true sentences, uniformly in $n$, and $X$ is not used. So $n \mapsto \epsilon _{n}$ is computable from the set of true sentences.
+
+\emph{Properties.} Let $M$ be an $\mathcal{A}$-structure with $M \models \epsilon _{n}$. Then $M \models x _{n}$, so $M ^{\iota _{n}}$ is defined, and by fact (2) it satisfies every sentence $\beta$ with $M \models \tau _{n} (\ulcorner \beta \urcorner)$, in particular every $\beta$ with $M \models Sat _{\mathcal{B}} (\ulcorner \beta \urcorner)$ and every $\beta$ among $b _{0} ^{\mathbb{N}}, \ldots, b _{n} ^{\mathbb{N}}, \neg \epsilon _{0}, \ldots, \neg \epsilon _{n-1}, \neg d _{n}$. Hence: (i) $M ^{\iota _{n}} \models b$ iff $M \models b$, for every sentence $b$ logically equivalent to some $\beta \in \mathcal{B}$; indeed $M \models \beta$ gives $M \models Sat _{\mathcal{B}} (\ulcorner \beta \urcorner)$ by fact (1), as $M \models PA _{r}$, so $M ^{\iota _{n}} \models \beta$, and $\neg \beta \in \mathcal{B}$. (ii) $M ^{\iota _{n}} \models b _{k} ^{\mathbb{N}}$ for $k \leq n$, $M ^{\iota _{n}} \models \neg \epsilon _{m}$ for $m < n$, and $M ^{\iota _{n}} \models \neg d _{n}$.
+
+Further, by the definition of $w _{n}$: $\epsilon _{n} \vdash b _{k} ^{\mathbb{N}}$ for $k \leq n$, $\epsilon _{n} \vdash \neg \epsilon _{m}$ and $\epsilon _{n} \vdash d _{m}$ for $m < n$, and $\epsilon _{n} \vdash d _{n}$. So the $\epsilon _{n}$ are pairwise inconsistent. And $k (\epsilon _{n}) > n$ and $k (\neg \epsilon _{n}) > n$: otherwise $\epsilon _{n} \vdash b _{k} ^{\mathbb{N}}$ with $b _{k} = \epsilon _{n}$ or $b _{k} = \neg \epsilon _{n}$ would make $\epsilon _{n}$ inconsistent, as $\epsilon _{n}$ is false. Finally, for every sentence $b$ and every $n \geq k (b)$:
+\begin{equation} \label{equation_eventual}
+\epsilon _{n} \vdash b \leftrightarrow b ^{\iota _{n}}.
+\end{equation}
+Indeed if $M \models \epsilon _{n}$ then $M \models b ^{\mathbb{N}}$ and $M ^{\iota _{n}} \models b ^{\mathbb{N}}$, by the above and (ii), as $b = b _{k (b)}$ with $k (b) \leq n$.
+
+\emph{The map $\theta$.} For a sentence $b$ and $K \in \mathbb{N}$ let $X _{K} := \{n \in X \,|\, n < K\}$ and, with the bracketing displayed,
+$$\theta _{K} (b) := \left( b \land \neg \bigvee _{n \in X _{K}} \epsilon _{n} \right) \lor \left( \bigvee _{n \in X _{K}} \left( b ^{\iota _{n}} \land \epsilon _{n} \right) \right).$$
+As the $\epsilon _{n}$ are pairwise inconsistent, $\theta _{K} (b)$ says: $b ^{\iota _{n}}$ on the models of $\epsilon _{n}$, $n \in X _{K}$, and $b$ elsewhere. So $\theta _{K}$ commutes with the connectives up to logical equivalence. By \eqref{equation_eventual}, $\theta _{K} (b)$ and $\theta _{K+1} (b)$ are logically equivalent for $K \geq k (b)$. Set $\theta (b) := \theta _{k (b) + 1} (b)$. Then $\theta (b \land c)$ and $\theta (b) \land \theta (c)$ are logically equivalent, taking $K$ above $k (b), k (c), k (b \land c)$, and likewise for the other connectives. By (i), $\theta (b)$ is logically equivalent to $b$ for every $b$ logically equivalent to a sentence of $\mathcal{B}$. And if $b$ is logically valid so is $\theta (b)$: on the models of $\epsilon _{n}$, $b ^{\iota _{n}}$ holds as $M ^{\iota _{n}} \models b$.
+
+\emph{The translation $j$.} For a prime sentence $p$ let $j (p) := p$ if $p$ is a $\Sigma ^{0} _{2}$ or a $\Pi ^{0} _{2}$ sentence, and $j (p) := \forall y \, (y = y \land \theta (p))$ otherwise; extend $j$ to all sentences by the connectives. So $j$ is the identity on $\mathcal{B}$, whose prime constituents are $\Sigma ^{0} _{2}$ or $\Pi ^{0} _{2}$ sentences. And $j (b)$ is logically equivalent to $\theta (b)$ for every $b$, by induction on $b$: $\theta$ commutes with the connectives and fixes $\mathcal{B}$, up to logical equivalence. $j$ is injective. Indeed the sentences $\forall y \, (y = y \land \theta (p))$ are prime, and not in $\Sigma ^{0} _{2} \cup \Pi ^{0} _{2}$: that would force the conjunction $y = y \land \theta (p)$ to be $\Delta _{0}$, so its subformula $p$ too, but $\Delta _{0}$ sentences are $\Sigma ^{0} _{2}$ sentences. And they determine $p$, the first conjunct of the first disjunct of $\theta (p)$. Then use unique readability. $j$ preserves the connectives by construction. Let $S$ be a set of sentences with $S \vdash \alpha$. By compactness, $\gamma := (\alpha _{1} \land \ldots \land \alpha _{k}) \to \alpha$ is logically valid for some $\alpha _{1}, \ldots, \alpha _{k} \in S$, or $\gamma := \alpha$ is. Then $\theta (\gamma)$ is valid, hence so is $j (\gamma)$, which is $(j (\alpha _{1}) \land \ldots \land j (\alpha _{k})) \to j (\alpha)$, resp. $j (\alpha)$. So $j (S) \vdash j (\alpha)$. Thus $j$ is a translation, Definition 2.6, and a $2$-translation, being the identity on $\Sigma ^{0} _{2}$ sentences.
+
+Each axiom $q$ of $Q$ is logically equivalent to a $\Pi ^{0} _{2}$ sentence, so $j (q)$ is logically equivalent to $q$; and $j$ is the identity on the sentences $\exists \bar{x} \, \phi$ and $\neg \phi (\bar{n})$ of Definition 2.9, and on their $\Pi ^{0} _{1}$ variants in $2$-consistency, as these are in $\mathcal{B}$. So the sound theories $PA$ and $Q$ are $1$- and $2$-consistent relative to $j$, by Lemma \ref{lemma_vdashi}.
+
+\emph{The induced theory.} Let $F$ be $PA$ or $Q$. We show that $\neg \epsilon _{n} \in F _{j, \mathcal{A}}$ iff $n \in X$. By Definition \ref{definition_inducedtheory}, $\neg \epsilon _{n} \in F _{j, \mathcal{A}}$ iff $F \vdash j (\neg \epsilon _{n})$ iff $F \vdash \theta (\neg \epsilon _{n})$. Let $K := k (\neg \epsilon _{n}) + 1$. So $\theta (\neg \epsilon _{n}) = \theta _{K} (\neg \epsilon _{n})$, and $K > n$ as $k (\neg \epsilon _{n}) > n$. Suppose $n \in X$, and let $M$ be any $\mathcal{A}$-structure. If $M \models \epsilon _{m}$ for no $m \in X _{K}$, then $M \models \neg \epsilon _{n}$, as $n \in X _{K}$, so $M \models \theta (\neg \epsilon _{n})$. If $M \models \epsilon _{m}$ with $m \in X _{K}$, we need $M ^{\iota _{m}} \models \neg \epsilon _{n}$. For $m = n$: $M ^{\iota _{n}} \models \neg d _{n}$ and $\epsilon _{n} \vdash d _{n}$. For $m < n$: $M ^{\iota _{m}} \models \neg d _{m}$ and $\epsilon _{n} \vdash d _{m}$. For $m > n$: $M ^{\iota _{m}} \models \neg \epsilon _{n}$ by (ii). So $\theta (\neg \epsilon _{n})$ is logically valid, and $\neg \epsilon _{n} \in F _{j, \mathcal{A}}$. Suppose $n \notin X$. Let $M \models PA + \epsilon _{n}$, so $M \models F$. Then $M \models \epsilon _{m}$ for no $m \in X _{K}$, and $M \models \epsilon _{n}$, so $M \not \models \theta (\neg \epsilon _{n})$; hence $F \nvdash \theta (\neg \epsilon _{n})$.
+
+So $X$ is computable from $F _{j, \mathcal{A}}$ together with $n \mapsto \epsilon _{n}$, hence from $F _{j, \mathcal{A}}$ together with the set of true sentences. If $F _{j, \mathcal{A}}$ were arithmetical, $X$ would be computable from the set of true sentences, contrary to its choice.
+\end{proof}
+\begin{remark} \label{remark_undefinable}
+The proof gives more. The sentences $\epsilon _{n}$ do not depend on $X$, and $\neg \epsilon _{n} \in PA _{j, \mathcal{A}}$ iff $n \in X$. So $X \mapsto PA _{j, \mathcal{A}}$ is injective, and there are $2 ^{\aleph _{0}}$ theories of the form $PA _{j, \mathcal{A}}$, $j$ a $2$-translation; only countably many are arithmetical. This counting argument, which does not need the choice of $X$, is the form in which the proposition is verified in Lean 4, see the readme file of this repository. Next, for $n \in X$, $\theta (\neg \epsilon _{n})$ is logically valid, and for $n \notin X$ a model of $PA + \epsilon _{n}$ refutes it. So, for $X$ as chosen in the proof, $F _{j, \mathcal{A}}$ is not arithmetical, indeed not computable from the set of true sentences of $\mathcal{A}$, for every theory $F$ whose axioms are theorems of $PA$, the empty theory included. Nor is $j$ arithmetical, as $PA _{j, \mathcal{A}} = \{b \,|\, PA \vdash j (b)\}$ by Definition \ref{definition_inducedtheory}.
+
+By Lemma \ref{lemma_inducedclosed}, $PA _{j, \mathcal{A}}$ is a deductively closed theory of arithmetic. It contains $Q$, and $PA _{j, \mathcal{A}} \cap \mathcal{B} = \overline{PA} \cap \mathcal{B}$, as $j$ is the identity on $\mathcal{B}$. Example 5.23, with $\mathcal{L} = \mathcal{A}$, $i = j$ and $T _{1}$ stably enumerating $PA$, gives a sentence $\mathcal{G} (T)$ independent of $PA _{j, \mathcal{A}}$: $PA \nvdash ^{j} \mathcal{G} (T)$ and $PA \nvdash ^{j} \neg \mathcal{G} (T)$. As $\mathcal{G} (T) \in \mathcal{B}$, this says that $\mathcal{G} (T)$ is independent of $PA$.
+\end{remark}
+We now give an instance of the last part of Example 5.23, and so of Theorem 5.11, in which the arithmetic theorems of $H$ do not form an arithmetical set. There $H$ contains $ZFC$, and the hypotheses of that theorem imply that $ZFC$ is consistent. So an assumption on $ZFC$ is needed. Say that $ZFC$ is \textbf{\emph{arithmetically sound}} if $\mathbb{N}$ is a model of $ZFC _{i _{\mathcal{A}, \mathcal{Z}}, \mathcal{A}}$, that is if $\mathbb{N} \models a$ for every sentence $a$ of $\mathcal{A}$ with $ZFC \vdash i _{\mathcal{A}, \mathcal{Z}} (a)$. This is not a theorem of $ZFC$, our meta-theory: it implies that $ZFC$ is consistent. It holds if $ZFC$ has an $\omega$-model.
+\begin{proposition} \label{proposition_undefinableZFC}
+Suppose that $ZFC$ is arithmetically sound. Then there is a $2$-translation $i: \mathcal{Z} \to \mathcal{Z}$ s.t.\ $ZFC \vdash ^{i} ZFC$, $ZFC$ is $1$- and $2$-consistent relative to $i$, and $ZFC _{j, \mathcal{A}}$ is not arithmetical, where $j := i \circ i _{\mathcal{A}, \mathcal{Z}}$.
+\end{proposition}
+So the last part of Example 5.23 applies to $\mathcal{L} = \mathcal{Z}$, $F _{1} = ZFC$, this $i$, and any $T _{1}$ stably enumerating $ZFC$. Here $H = ZFC _{i, \mathcal{Z}}$, and its arithmetic theorems form the set $ZFC _{j, \mathcal{A}}$.
+
+We keep the notation of the proof of Proposition \ref{proposition_undefinable}, and write $a ^{\ast} := i _{\mathcal{A}, \mathcal{Z}} (a)$. For a $\mathcal{Z}$-structure $M \models \zeta$ let $\omega ^{M}$ be the $\mathcal{A}$-structure on its $\omega$, see Example 2.8. So $M \models a ^{\ast}$ iff $\omega ^{M} \models a$. Let $Tr _{\mathcal{A}}$ be the set of true sentences of $\mathcal{A}$. A sentence of $\mathcal{Z}$ is prime if it begins with a quantifier. In $\mathcal{Z}$, an empty conjunction is read as $\forall x \, (x = x)$, an empty disjunction as $\neg \forall x \, (x = x)$. We fix the unwinding of Example 2.8 so that, for an atomic sentence $\eta$ of $\mathcal{A}$, $\eta ^{\omega}$ has the form $\exists \bar{u} \, \chi$, the terms of $\eta$ being unwound by the quantifiers $\exists \bar{u}$. The block $\bar{u}$ is nonempty, as every closed term contains $0$. So $\eta ^{\omega}$ is prime. Let $P _{0}$ be the set of prime constituents of the sentences $a ^{\ast}$, $a \in \mathcal{B}$. Its elements are: the sentences $a ^{\ast}$ for $a$ a $\Sigma ^{0} _{2}$ or $\Pi ^{0} _{2}$ sentence beginning with a quantifier; the prime constituents of $\zeta$; and the sentences $\eta ^{\omega}$ for $\eta$ an atomic sentence of $\mathcal{A}$. The translation $i$ below is given on $P _{0}$ by a fixed syntactic operation, so that $j$ is computable on $\mathcal{B}$.
+
+We use facts (1) and (3) above, and fact (2) for theories in the language $\mathcal{Z}$. That is, for every $\Sigma ^{0} _{3}$ formula $\tau (v)$ of $\mathcal{A}$ there is an interpretation $\iota _{\tau}$ of $\mathcal{Z}$ in $\mathcal{A}$ with the following property. For every model $N$ of $PA _{r} \land Con _{\tau}$, the $\mathcal{Z}$-structure $N ^{\iota _{\tau}}$ satisfies every sentence $\beta$ of $\mathcal{Z}$ with $N \models \tau (\ulcorner \beta \urcorner)$. Here $Con _{\tau}$ is defined as in fact (2), with derivations in $\mathcal{Z}$ and with $\neg \forall x \, (x = x)$ in place of $\neg (0 = 0)$, and $r$ is enlarged if needed, also so that $PA _{r} \vdash Q$. The proof is the same formalized Henkin construction, which does not depend on the language, see the references given for fact (2). For a sentence $b$ of $\mathcal{Z}$, $b ^{\iota _{\tau}}$ is a sentence of $\mathcal{A}$, and $N \models b ^{\iota _{\tau}}$ iff $N ^{\iota _{\tau}} \models b$, for every model $N$ of $PA _{r} \land Con _{\tau}$.
+\begin{proof} [Proof of Proposition \ref{proposition_undefinableZFC}]
+Fix a computable bijective enumeration $(b _{k}) _{k \in \mathbb{N}}$ of the sentences of $\mathcal{Z}$, and let $k (b)$ be the index of $b$. The plan is that of the proof of Proposition \ref{proposition_undefinable}, with one change. There the sentence $\epsilon _{n}$ decides $b _{0}, \ldots, b _{n}$. Here $\epsilon _{n}$ must be a sentence of arithmetic, while $b _{0}, \ldots, b _{n}$ are sentences of $\mathcal{Z}$. If $ZFC \cup \{\epsilon _{n} ^{\ast}\}$ is consistent, it proves neither the continuum hypothesis nor its negation, by G\"odel's $L$ and Cohen's forcing, as $\epsilon _{n} ^{\ast}$ is absolute for both. So the structure replacing a model $M$ is chosen by cases on the truth values of $b _{0}, \ldots, b _{n}$ in $M$.
+
+\emph{Construction.} By recursion on $n$ we define sentences $d _{n}$, $\epsilon _{n}$ of $\mathcal{A}$, true and false in $\mathbb{N}$ respectively, and a sentence $E _{n}$ of $\mathcal{Z}$. Suppose $d _{m}$, $\epsilon _{m}$ are defined for $m < n$. Let $\Gamma _{n}$ be the finite set consisting of $b _{0}, \ldots, b _{n}$ and the prime constituents of $\zeta$. For $\nu: \Gamma _{n} \to \{0,1\}$ let $\psi _{\nu}$ be the conjunction of the sentences $b$ with $\nu (b) = 1$ and $\neg b$ with $\nu (b) = 0$, $b \in \Gamma _{n}$. Let $V _{n}$ be the set of the $\nu$ for which $ZFC \cup Tr _{\mathcal{A}} ^{\ast} \cup \{\psi _{\nu}\}$ is consistent. For $\nu \notin V _{n}$ fix, by compactness, a true sentence $a _{\nu}$ of $\mathcal{A}$ with $ZFC \vdash a _{\nu} ^{\ast} \to \neg \psi _{\nu}$. For $\nu \in V _{n}$ let
+$$U ^{0} _{\nu} := ZFC \cup Tr _{\mathcal{B}} ^{\ast} \cup \{\psi _{\nu}\} \cup \{\neg \epsilon _{m} ^{\ast}\} _{m < n}.$$
+This set, and $d _{\nu}$, $\tau _{\nu}$, $U _{\nu}$, $\iota _{\nu}$ below, depend on $n$ as well as on $\nu$; we suppress $n$, which is always the stage at hand. $U ^{0} _{\nu}$ is contained in $ZFC \cup Tr _{\mathcal{A}} ^{\ast} \cup \{\psi _{\nu}\}$, which is consistent. So if $U ^{0} _{\nu} \vdash d ^{\ast}$ then $d$ is true. For $\nu \in V _{n}$ the set of $\Pi ^{0} _{3}$ sentences $d$ with $U ^{0} _{\nu} \vdash d ^{\ast}$ is $\Sigma ^{0} _{1}$ in the $\Delta ^{0} _{3}$ set $Tr _{\mathcal{B}}$, so $\Sigma ^{0} _{3}$, and it consists of true sentences. So by fact (3) there is a true $\Pi ^{0} _{3}$ sentence $d$ with $U ^{0} _{\nu} \nvdash d ^{\ast}$. Let $d _{\nu}$ be the first one, in the order of codes, and let $d _{n} := \bigwedge _{\nu \in V _{n}} d _{\nu}$. So $d _{n}$ is true, and $U ^{0} _{\nu} \nvdash d _{n} ^{\ast}$ for every $\nu \in V _{n}$.
+
+For $\nu \in V _{n}$ let $\tau _{\nu} (v)$ be a $\Sigma ^{0} _{3}$ prenex form of
+$$Ax (v) \lor \exists u \, \left( Sat _{\mathcal{B}} (u) \land Star (u, v) \right) \lor \bigvee _{\gamma} \, v = \ulcorner \gamma \urcorner,$$
+with $\gamma$ ranging over $\psi _{\nu}, \neg \epsilon _{0} ^{\ast}, \ldots, \neg \epsilon _{n-1} ^{\ast}, \neg d _{n} ^{\ast}$. Here $Ax$ and $Star$ are $\Sigma ^{0} _{1}$ formulas of $\mathcal{A}$ defining the set of codes of axioms of $ZFC$, and the graph of $\beta \mapsto \beta ^{\ast}$ on codes. By the $\Sigma _{1}$-completeness of $Q$, every model $N$ of $PA _{r}$ satisfies $\tau _{\nu} (\ulcorner \gamma \urcorner)$ for each axiom $\gamma$ of $ZFC$ and each $\gamma$ listed, and satisfies $\tau _{\nu} (\ulcorner \beta ^{\ast} \urcorner)$ whenever $N \models Sat _{\mathcal{B}} (\ulcorner \beta \urcorner)$. In $\mathbb{N}$, $\tau _{\nu}$ defines $U _{\nu} := U ^{0} _{\nu} \cup \{\neg d _{n} ^{\ast}\}$, which is consistent. Let $\iota _{\nu} := \iota _{\tau _{\nu}}$, and
+$$x _{n} := PA _{r} \land \bigwedge _{\nu \in V _{n}} Con _{\tau _{\nu}}, \qquad w _{n} := x _{n} \land \bigwedge _{\nu \notin V _{n}} a _{\nu} \land \bigwedge _{m < n} (\neg \epsilon _{m} \land d _{m}) \land d _{n},$$
+both true sentences. The set of sentences $a$ of $\mathcal{A}$ with $ZFC \vdash (w _{n} \to a) ^{\ast}$ is c.e., and it consists of true sentences, as $ZFC$ is arithmetically sound and $w _{n}$ is true. As $Tr _{\mathcal{A}}$ is not c.e., some true $c$ is not in this set. Let $c _{n}$ be the first such $c$, in the order of codes, and let
+$$\epsilon _{n} := w _{n} \land \neg c _{n}, \qquad E _{n} := \epsilon _{n} ^{\ast} \land \zeta \land \bigwedge _{\nu \notin V _{n}} \neg \psi _{\nu}.$$
+So $\epsilon _{n}$ is false, and $ZFC \cup \{\epsilon _{n} ^{\ast}\}$ is consistent. Moreover $E _{n} \vdash \epsilon _{n} ^{\ast}$, and $ZFC \vdash \epsilon _{n} ^{\ast} \to E _{n}$, as $\epsilon _{n} \vdash a _{\nu}$ for $\nu \notin V _{n}$. The $E _{n}$ are pairwise inconsistent: for $m < n$, $\neg \epsilon _{m}$ is a conjunct of $\epsilon _{n}$, so $E _{n} \vdash \neg \epsilon _{m} ^{\ast}$.
+
+\emph{Properties.} Let $M$ be a $\mathcal{Z}$-structure with $M \models E _{n}$. Then $M \models \zeta$, and $N := \omega ^{M}$ satisfies $\epsilon _{n}$. Exactly one $\nu: \Gamma _{n} \to \{0,1\}$ has $M \models \psi _{\nu}$, and this $\nu$ is in $V _{n}$. As $N \models PA _{r} \land Con _{\tau _{\nu}}$, the $\mathcal{Z}$-structure $M ^{(n)} := N ^{\iota _{\nu}}$ is defined. It satisfies every sentence $\beta$ of $\mathcal{Z}$ with $N \models \tau _{\nu} (\ulcorner \beta \urcorner)$. Hence:
+\begin{enumerate}
+\item[(i)] $M ^{(n)} \models ZFC$.
+\item[(ii)] $M ^{(n)} \models \beta ^{\ast}$ iff $M \models \beta ^{\ast}$, for $\beta \in \mathcal{B}$. Indeed $M \models \beta ^{\ast}$ gives $N \models \beta$, so $N \models Sat _{\mathcal{B}} (\ulcorner \beta \urcorner)$ by fact (1), so $M ^{(n)} \models \beta ^{\ast}$; and $\neg \beta \in \mathcal{B}$.
+\item[(iii)] $M ^{(n)} \models b$ iff $M \models b$, for $b \in \Gamma _{n}$, as $M ^{(n)} \models \psi _{\nu}$.
+\item[(iv)] $M ^{(n)} \models \neg \epsilon _{m} ^{\ast}$ for $m < n$, and $M ^{(n)} \models \neg d _{n} ^{\ast}$.
+\end{enumerate}
+It follows that $M ^{(n)} \models p$ iff $M \models p$, for every $p \in P _{0}$. For $p = a ^{\ast}$ this is (ii), and for the prime constituents of $\zeta$ it is (iii). For $p = \eta ^{\omega}$ it follows from (ii) for the atomic sentence $\eta \in \mathcal{B}$: $\eta ^{\ast}$ is $\zeta \to \eta ^{\omega}$ or $\zeta \land \eta ^{\omega}$, and $\zeta$ holds in $M$ and in $M ^{(n)}$. For a sentence $b$ of $\mathcal{Z}$ set
+$$b ^{(n)} := \bigvee _{\nu \in V _{n}} \left( \psi _{\nu} \land (b ^{\iota _{\nu}}) ^{\ast} \right).$$
+Then $M \models b ^{(n)}$ iff $M ^{(n)} \models b$, for every $M \models E _{n}$.
+
+\emph{The map $\theta$.} Fix $X \subset \mathbb{N}$. For a sentence $b$ of $\mathcal{Z}$ and $K \in \mathbb{N}$ let $X _{K} := \{n \in X \,|\, n < K\}$,
+$$\theta _{K} (b) := \left( b \land \neg \bigvee _{n \in X _{K}} E _{n} \right) \lor \left( \bigvee _{n \in X _{K}} \left( b ^{(n)} \land E _{n} \right) \right),$$
+and $\theta (b) := \theta _{k (b) + 1} (b)$. For a $\mathcal{Z}$-structure $M$ let $M ^{X} := M ^{(n)}$ if $M \models E _{n}$ for some $n \in X$, and $M ^{X} := M$ otherwise. This is well defined, as the $E _{n}$ are pairwise inconsistent. Then, for every $M$ and $b$:
+\begin{equation} \label{equation_thetaZFC}
+M \models \theta (b) \text{ iff } M ^{X} \models b.
+\end{equation}
+Indeed, if $M \models E _{n}$ with $n \in X$ and $n \leq k (b)$, both sides say $M ^{(n)} \models b$. If $M \models E _{n}$ with $n \in X$ and $n > k (b)$, then $M \models \theta (b)$ iff $M \models b$, iff $M ^{(n)} \models b$ by (iii), as $b \in \Gamma _{n}$. Otherwise both sides say $M \models b$. By \eqref{equation_thetaZFC}, $\theta$ commutes with the connectives up to logical equivalence, $\theta (b)$ is logically valid if $b$ is, and $\theta (p)$ is logically equivalent to $p$ for $p \in P _{0}$. And $M ^{X} \models ZFC$ for every $M \models ZFC$, by (i).
+
+\emph{The translation $i$.} For a prime sentence $p$ of $\mathcal{Z}$ let $i (p) := \forall y \, (y = y \land p)$ if $p \in P _{0}$, and $i (p) := \forall y \, (y = y \land \theta (p))$ otherwise; extend $i$ to all sentences by the connectives. So $i (b)$ is logically equivalent to $\theta (b)$ for every $b$. $i$ is injective: the images of prime sentences are prime, and they determine $p$, as a prime sentence is not of the form $\theta (p')$; then use unique readability. As in the proof of Proposition \ref{proposition_undefinable}, $i$ preserves derivability, so it is a translation. For $a \in \mathcal{B}$, $i (a ^{\ast})$ is obtained from $a ^{\ast}$ by replacing each prime constituent $p$ by $\forall y \, (y = y \land p)$. So $j = i \circ i _{\mathcal{A}, \mathcal{Z}}$ is computable on $\mathcal{B}$, $i$ is a $2$-translation, and $j (a)$ is logically equivalent to $a ^{\ast}$ for $a \in \mathcal{B}$.
+
+For every axiom $\varphi$ of $ZFC$ and every $M \models ZFC$ we have $M ^{X} \models \varphi$, so $M \models i (\varphi)$ by \eqref{equation_thetaZFC}. So $ZFC \vdash ^{i} ZFC$, by Lemma \ref{lemma_vdashi}. Hence $ZFC \vdash ^{j} Q$: for each axiom $q$ of $Q$, $ZFC \vdash q ^{\ast}$, so $ZFC \vdash i (q ^{\ast})$, as $ZFC _{i, \mathcal{Z}}$ is deductively closed and contains $ZFC$. On $\mathcal{B}$, $j$ agrees with $i _{\mathcal{A}, \mathcal{Z}}$ up to logical equivalence. So $ZFC$ is $\Sigma _{2}$-sound relative to $j$, Definition \ref{definition_relative}, as it is arithmetically sound. So $ZFC$ is $2$-consistent, hence $1$-consistent, relative to $j$, by Lemma 6.6 (1), that is relative to $i$, Definition \ref{definition_relative}.
+
+\emph{The induced theory.} We show that $\neg \epsilon _{n} \in ZFC _{j, \mathcal{A}}$ iff $n \in X$. By Definition \ref{definition_inducedtheory} and \eqref{equation_thetaZFC}, $\neg \epsilon _{n} \in ZFC _{j, \mathcal{A}}$ iff $M ^{X} \models \neg \epsilon _{n} ^{\ast}$ for every $M \models ZFC$. Suppose $n \in X$, and let $M \models ZFC$. If $M \models E _{m}$ for no $m \in X$, then $M ^{X} = M$ and $M \not \models E _{n}$, so $M \models \neg \epsilon _{n} ^{\ast}$, as $ZFC \vdash \epsilon _{n} ^{\ast} \to E _{n}$. If $M \models E _{m}$ with $m \in X$, then $M ^{X} = M ^{(m)}$. For $m = n$: $M ^{(n)} \models \neg d _{n} ^{\ast}$ and $\epsilon _{n} \vdash d _{n}$. For $m < n$: $M ^{(m)} \models \neg d _{m} ^{\ast}$ and $\epsilon _{n} \vdash d _{m}$. For $m > n$: $M ^{(m)} \models \neg \epsilon _{n} ^{\ast}$ by (iv). Suppose $n \notin X$. Let $M \models ZFC \cup \{\epsilon _{n} ^{\ast}\}$. Then $M \models E _{n}$, so $M \models E _{m}$ for no $m \in X$, and $M ^{X} = M \not \models \neg \epsilon _{n} ^{\ast}$.
+
+The sentences $\epsilon _{n}$ do not depend on $X$. So $X \mapsto ZFC _{j, \mathcal{A}}$ is injective. As only countably many subsets of $\mathcal{A}$ are arithmetical, $ZFC _{j, \mathcal{A}}$ is not arithmetical for all but countably many $X$.
+\end{proof}
+
+\def\cprime{$'$}
+\begin{thebibliography}{1}
+
+\bibitem{cite_Blanck2021Hierarchical}
+{\sc R.~Blanck}, {\em Hierarchical incompleteness results for arithmetically
+  definable extensions of fragments of arithmetic}, Rev. Symb. Log., 14 (2021),
+  pp.~624--644.
+
+\bibitem{cite_HajekPudlak1993Metamathematics}
+{\sc P.~H{\'a}jek and P.~Pudl{\'a}k}, {\em Metamathematics of first-order
+  arithmetic}, Perspectives in Mathematical Logic, Springer-Verlag, Berlin,
+  1993.
+
+\bibitem{cite_McAloon1978Completeness}
+{\sc K.~McAloon}, {\em Completeness theorems, incompleteness theorems and
+  models of arithmetic}, Trans. Amer. Math. Soc., 239 (1978), pp.~253--277.
+
+\bibitem{cite_Soare}
+{\sc R.~I. {Soare}}, {\em {Turing computability. Theory and applications}},
+  Berlin: Springer, 2016.
+
+\end{thebibliography}
+
+\end{document}

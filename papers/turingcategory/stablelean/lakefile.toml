@@ -1,0 +1,6 @@
+name = "stablelean"
+version = "0.4.9"
+defaultTargets = ["Stable"]
+
+[[lean_lib]]
+name = "Stable"
